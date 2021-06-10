@@ -1,0 +1,346 @@
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button:active, button:focus, input[type=submit]:active, input[type=submit]:focus,
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, textarea:focus {
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #F8F5FA;
+  background-color: #09000D;
+  letter-spacing: 0.5px;
+}
+
+h1, h2, h3 {
+  font-family: 'Codystar', cursive;
+  font-weight: 300;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #09000D;
+  padding: 0 20px;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header * {
+  cursor: pointer;
+}
+
+header #Logo {
+  max-height: 30px;
+  width: auto;
+}
+
+header nav ul, header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .navItem, header .icons {
+  line-height: 60px;
+}
+
+header .navItem {
+  margin: 0 25px;
+  font-size: 13px;
+}
+
+header .icons {
+  margin: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#banner {
+  width: 100%;
+  height: 85vh;
+  background-image: url(./images/pexels-oleg-magni-1813137.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 80px;
+}
+
+#banner #bannerMask {
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(32, 0, 47, 0)), color-stop(70%, #20002f));
+  background: linear-gradient(to right, rgba(32, 0, 47, 0), #20002f 70%);
+}
+
+#banner #bannerContent {
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 60%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#banner #bannerContent img {
+  width: 230px;
+  margin-bottom: 40px;
+}
+
+#banner #bannerContent h1 {
+  width: 770px;
+  font-size: 45px;
+  text-shadow: -5px 10px 6px #F8F5FA;
+}
+
+#banner #bannerContent h1 span {
+  padding-left: 40px;
+}
+
+#NewsletterIcon {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  fill: #09000D;
+  stroke: #C66FD0;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 35px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+h2::before, h2::after {
+  content: '';
+  display: block;
+  position: relative;
+  width: 70%;
+  height: 1px;
+}
+
+h2::before {
+  margin-bottom: 8px;
+  background: -webkit-gradient(linear, left top, right top, from(#f480ff), color-stop(70%, rgba(244, 128, 255, 0)));
+  background: linear-gradient(to right, #f480ff, rgba(244, 128, 255, 0) 70%);
+}
+
+h2::after {
+  margin-top: 8px;
+  background: -webkit-gradient(linear, left top, right top, from(#f480ff), to(rgba(244, 128, 255, 0)));
+  background: linear-gradient(to right, #f480ff, rgba(244, 128, 255, 0));
+}
+
+h3 {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+h3::before, h3::after {
+  content: '';
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 1px;
+}
+
+h3::before {
+  margin-bottom: 4px;
+  background: -webkit-gradient(linear, left top, right top, from(#f480ff), color-stop(70%, rgba(244, 128, 255, 0)));
+  background: linear-gradient(to right, #f480ff, rgba(244, 128, 255, 0) 70%);
+}
+
+h3::after {
+  margin-top: 4px;
+  background: -webkit-gradient(linear, left top, right top, from(#f480ff), to(rgba(244, 128, 255, 0)));
+  background: linear-gradient(to right, #f480ff, rgba(244, 128, 255, 0));
+}
+
+.eventCardContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.eventCardBig {
+  width: 230px;
+  height: auto;
+  background-color: #20002f;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.eventCardBig img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.eventCardBig .title, .eventCardBig .time {
+  margin-bottom: 15px;
+}
+
+.eventCardBig .date, .eventCardBig .time, .eventCardBig .detailsButton {
+  font-size: 13px;
+}
+
+.eventCardBig .date, .eventCardBig .time {
+  color: #8F8097;
+}
+
+.eventCardBig .detailsButton {
+  padding: 15px 0 0 12px;
+  margin-bottom: 10px;
+  display: block;
+  color: #C66FD0;
+  font-weight: 600;
+}
+
+.eventCardBig .detailsButton::after {
+  content: url(./icons/ArrowRight.svg);
+  position: relative;
+  padding-left: 12px;
+}
+
+.eventContainerSmall {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 260px;
+  text-align: left;
+}
+
+.eventContainerSmall .eventCardSmall {
+  position: relative;
+  padding: 5px;
+  width: 100%;
+  background-color: #20002f;
+  margin-bottom: 4px;
+}
+
+.eventContainerSmall .eventCardSmall img {
+  width: 85px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  float: left;
+  margin-right: 8px;
+}
+
+.eventContainerSmall .eventCardSmall .title, .eventContainerSmall .eventCardSmall .time {
+  margin-bottom: 4px;
+}
+
+.eventContainerSmall .eventCardSmall .date, .eventContainerSmall .eventCardSmall .time, .eventContainerSmall .eventCardSmall .detailsButton, .eventContainerSmall .eventCardSmall .title {
+  font-size: 13px;
+}
+
+.eventContainerSmall .eventCardSmall .date, .eventContainerSmall .eventCardSmall .time {
+  color: #8F8097;
+}
+
+.eventContainerSmall .eventCardSmall .detailsButton {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  text-align: center;
+  width: 100px;
+  height: 20px;
+  border: 1px solid #C66FD0;
+  color: #C66FD0;
+  background-color: #09000D;
+}
+
+.bigButtonBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.bigButtonBlock .buttonBig {
+  display: block;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 300px;
+  height: 60px;
+  font-weight: 600;
+  border: 1px solid #C66FD0;
+  text-align: center;
+  line-height: 60px;
+  color: #C66FD0;
+  margin: 0 10px;
+}
+
+.bigButtonBlock hr {
+  width: auto;
+  height: 1px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: #C66FD0;
+  border: none;
+}
+/*# sourceMappingURL=styles.css.map */
