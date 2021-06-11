@@ -111,9 +111,12 @@ header{
     margin: 0 auto;
 }
 
-h2{
+.eventSectionTitle, h2{
     font-size: 35px;
     width: 100%;
+}
+
+.eventSectionTitle{
     margin-bottom: 10px;
     &::before, &::after{
         content: '';
@@ -236,6 +239,7 @@ h3{
     display: flex;
     align-items: center;
     width: 100%;
+    margin-bottom: 100px;
     .buttonBig{
         display: block;
         justify-self: center;
@@ -254,5 +258,59 @@ h3{
         flex-grow: 1;
         background-color: $pink;
         border: none;
+    }
+}
+
+#Gallery{
+    padding-top: 50px;
+    background: linear-gradient(to bottom, $purpleDark, $black);
+    #GalleryTitle{
+    text-align: center;
+    margin-bottom: 50px;
+    }
+    #GalleryGrid{
+        width: 1000px;
+        margin: 0 auto 100px;
+        display: grid;
+        gap: 10px 10px;
+        justify-content: center;
+        grid-template-columns: repeat(5, 19%);
+        grid-template-rows: repeat(2,200px);
+        grid-template-areas: "im1 im1 im2 im3 im4"
+                            "im6 im7 im7 im3 im5";
+    }
+
+    img{
+        border: 3px solid $white;
+        object-fit: cover;
+        height: 200px;
+        justify-self: stretch;
+    }
+
+    #img1{
+        grid-area: im1;
+        
+    }
+    #img2{
+        grid-area: im2;
+    }
+
+    #img3{
+        grid-area: im3;
+        height: 100%;
+    }
+    #img4{
+        grid-area: im4;
+
+    }
+    #img5{
+        grid-area: im5;
+
+    }
+    #img6{
+        grid-area: im6;
+    }
+    #img7{
+        grid-area: im7;
     }
 }
