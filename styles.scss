@@ -383,19 +383,25 @@ footer{
     flex-direction: column;
     align-items: center;
     padding: 100px;
-    div::before, div::after{
-        content: '';
-        display: block;
+    hr{
+        width: 50%;
+        height: 1px;
         position: relative;
         left: 50%;
         transform: translateX(-50%);
-        width: 50%;
-        height: 1px;
         background-color: $pink;
+        border: none;
+        &:last-of-type{
+            margin-bottom: 50px;
+        }
     }
     img{
         height: 40px;
         width: auto;
-        
+        margin: 20px 0;
+    }
+    .footerLink{
+        text-align: center;
+        margin: 40px 0;
     }
 }

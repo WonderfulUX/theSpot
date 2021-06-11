@@ -533,20 +533,29 @@ footer {
   padding: 100px;
 }
 
-footer div::before, footer div::after {
-  content: '';
-  display: block;
+footer hr {
+  width: 50%;
+  height: 1px;
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 50%;
-  height: 1px;
   background-color: #C66FD0;
+  border: none;
+}
+
+footer hr:last-of-type {
+  margin-bottom: 50px;
 }
 
 footer img {
   height: 40px;
   width: auto;
+  margin: 20px 0;
+}
+
+footer .footerLink {
+  text-align: center;
+  margin: 40px 0;
 }
 /*# sourceMappingURL=styles.css.map */
