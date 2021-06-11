@@ -520,6 +520,7 @@ h3::after {
 }
 
 footer {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -531,6 +532,8 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   padding: 100px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#20002f), to(#09000D));
+  background: linear-gradient(to top, #20002f, #09000D);
 }
 
 footer hr {
@@ -557,5 +560,23 @@ footer img {
 footer .footerLink {
   text-align: center;
   margin: 40px 0;
+  font-size: 13px;
+  position: relative;
+}
+
+footer .footerLink:not(:first-of-type)::before {
+  content: url(./icons/dotFooter.svg);
+  position: absolute;
+  left: 50%;
+  top: -100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+footer .copyright {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
 }
 /*# sourceMappingURL=styles.css.map */
