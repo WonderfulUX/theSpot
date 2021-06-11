@@ -131,7 +131,7 @@ header .icons {
 }
 
 #banner #bannerContent h1 {
-  width: 770px;
+  width: auto;
   font-size: 45px;
   text-shadow: -5px 10px 6px #F8F5FA;
 }
@@ -369,7 +369,7 @@ h3::after {
   margin-bottom: 10px;
   display: -ms-grid;
   display: grid;
-  gap: 10px 10px;
+  gap: 8px 8px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -381,7 +381,7 @@ h3::after {
 }
 
 #Gallery img {
-  border: 3px solid #F8F5FA;
+  border: 4px solid #F8F5FA;
   -o-object-fit: cover;
      object-fit: cover;
   height: 200px;
@@ -449,5 +449,104 @@ h3::after {
 
 #SocialNetworksLinks svg {
   margin: 30px 20px;
+}
+
+#about {
+  height: auto;
+  width: 100%;
+  background-image: url(./images/aboutBG.jpg);
+  background-size: cover;
+}
+
+#about #aboutContainer {
+  background-color: rgba(9, 0, 13, 0.8);
+  padding: 100px;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50%)[2];
+      grid-template-columns: repeat(2, 50%);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about #aboutContainer #slogan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 30px;
+  height: 100%;
+  font-weight: 600;
+}
+
+#about #aboutContainer #aboutContent {
+  padding-left: 100px;
+  width: 90%;
+}
+
+#about #aboutContainer #aboutContent p {
+  margin-bottom: 50px;
+}
+
+#about #aboutContainer #aboutContent #contactInfo > div {
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+#about #aboutContainer #aboutContent #contactInfo > div address {
+  font-style: normal;
+}
+
+#about #aboutContainer #aboutContent #contactInfo > div img {
+  margin-right: 10px;
+}
+
+#about #aboutContainer #aboutContent #contactInfo > div #phoneNumber {
+  margin-right: 30px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 100px;
+}
+
+footer div::before, footer div::after {
+  content: '';
+  display: block;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 50%;
+  height: 1px;
+  background-color: #C66FD0;
+}
+
+footer img {
+  height: 40px;
+  width: auto;
 }
 /*# sourceMappingURL=styles.css.map */
