@@ -264,13 +264,17 @@ h3{
 #Gallery{
     padding-top: 50px;
     background: linear-gradient(to bottom, $purpleDark, $black);
+    #GalleryContainer{
+        width: 1000px;
+        margin: 0 auto 150px;
+    }
     #GalleryTitle{
     text-align: center;
     margin-bottom: 50px;
     }
     #GalleryGrid{
-        width: 1000px;
-        margin: 0 auto 100px;
+        width: 100%;
+        margin-bottom: 10px;
         display: grid;
         gap: 10px 10px;
         justify-content: center;
@@ -312,5 +316,18 @@ h3{
     }
     #img7{
         grid-area: im7;
+    }
+    .galleryLegend{
+        width: 100%;
+        text-align: right;
+        font-size: 12px;
+        margin-bottom: 50px;
+    }
+}
+#SocialNetworksLinks{
+    margin: 0 auto;
+    text-align: center;
+    svg{
+        margin: 30px 20px;
     }
 }

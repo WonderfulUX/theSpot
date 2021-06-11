@@ -354,14 +354,19 @@ h3::after {
   background: linear-gradient(to bottom, #20002f, #09000D);
 }
 
+#Gallery #GalleryContainer {
+  width: 1000px;
+  margin: 0 auto 150px;
+}
+
 #Gallery #GalleryTitle {
   text-align: center;
   margin-bottom: 50px;
 }
 
 #Gallery #GalleryGrid {
-  width: 1000px;
-  margin: 0 auto 100px;
+  width: 100%;
+  margin-bottom: 10px;
   display: -ms-grid;
   display: grid;
   gap: 10px 10px;
@@ -428,5 +433,21 @@ h3::after {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: im7;
+}
+
+#Gallery .galleryLegend {
+  width: 100%;
+  text-align: right;
+  font-size: 12px;
+  margin-bottom: 50px;
+}
+
+#SocialNetworksLinks {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#SocialNetworksLinks svg {
+  margin: 30px 20px;
 }
 /*# sourceMappingURL=styles.css.map */
