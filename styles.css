@@ -160,12 +160,60 @@ header .icons {
   margin: 0 auto;
 }
 
+#Events {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 28%;
+      grid-template-columns: 70% 28%;
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas: "thisWeekend nextWeekend" "cantMiss bestSellers" "button button";
+}
+
+#Events #ThisWeekend {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: thisWeekend;
+}
+
+#Events #NextWeekend {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: nextWeekend;
+  padding-top: 70px;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+#Events #SeeAgenda {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: button;
+}
+
+#Events #CantMiss {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: cantMiss;
+}
+
+#Events #BestSellers {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: bestSellers;
+  padding-top: 70px;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
 .eventSectionTitle, h2 {
   font-size: 35px;
   width: 100%;
 }
 
 .eventSectionTitle {
+  grid-area: h2;
   margin-bottom: 10px;
 }
 
@@ -173,7 +221,7 @@ header .icons {
   content: '';
   display: block;
   position: relative;
-  width: 70%;
+  width: 100%;
   height: 1px;
 }
 
@@ -361,8 +409,7 @@ h3::after {
   background: linear-gradient(to bottom, #20002f, #09000D);
 }
 
-#Gallery #GalleryContainer {
-  width: 1000px;
+#Gallery .container {
   margin: 0 auto 150px;
 }
 
@@ -465,7 +512,7 @@ h3::after {
   background-size: cover;
 }
 
-#about #aboutContainer {
+#about .container {
   background-color: rgba(9, 0, 13, 0.8);
   padding: 100px 90px;
   width: 100%;
@@ -480,13 +527,13 @@ h3::after {
 }
 
 @media screen and (max-width: 1200px) {
-  #about #aboutContainer {
+  #about .container {
     -ms-grid-columns: (60%)[2];
         grid-template-columns: repeat(2, 60%);
   }
 }
 
-#about #aboutContainer #slogan {
+#about .container #slogan {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -501,17 +548,17 @@ h3::after {
   font-weight: 600;
 }
 
-#about #aboutContainer #aboutContent {
+#about .container #aboutContent {
   padding-left: 90px;
   width: 90%;
 }
 
-#about #aboutContainer #aboutContent p {
+#about .container #aboutContent p {
   margin-bottom: 50px;
   line-height: 1.3em;
 }
 
-#about #aboutContainer #aboutContent #contactInfo > div {
+#about .container #aboutContent #contactInfo > div {
   font-size: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -522,15 +569,15 @@ h3::after {
   margin-bottom: 10px;
 }
 
-#about #aboutContainer #aboutContent #contactInfo > div address {
+#about .container #aboutContent #contactInfo > div address {
   font-style: normal;
 }
 
-#about #aboutContainer #aboutContent #contactInfo > div img {
+#about .container #aboutContent #contactInfo > div img {
   margin-right: 10px;
 }
 
-#about #aboutContainer #aboutContent #contactInfo > div #phoneNumber {
+#about .container #aboutContent #contactInfo > div #phoneNumber {
   margin-right: 30px;
 }
 

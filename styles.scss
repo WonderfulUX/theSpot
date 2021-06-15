@@ -117,18 +117,48 @@ header{
     margin: 0 auto;
 }
 
+#Events{
+    display: grid;
+    grid-template-columns: 70% 28%;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "thisWeekend nextWeekend"
+                        "cantMiss bestSellers"
+                        "button button"
+    ;
+    #ThisWeekend{
+        grid-area: thisWeekend;
+    }
+    #NextWeekend{
+        grid-area: nextWeekend;
+        padding-top: 70px;
+        justify-self: end;
+    }
+    #SeeAgenda{
+        grid-area: button;
+    }
+    #CantMiss{
+        grid-area: cantMiss;
+    }
+    #BestSellers{
+        grid-area: bestSellers;
+        padding-top: 70px;
+        justify-self: end;
+    }
+}
+
 .eventSectionTitle, h2{
     font-size: 35px;
     width: 100%;
 }
 
 .eventSectionTitle{
+    grid-area: h2;
     margin-bottom: 10px;
     &::before, &::after{
         content: '';
         display: block;
         position: relative;
-        width: 70%;
+        width: 100%;
         height: 1px;
     }
     &::before{
@@ -270,8 +300,7 @@ h3{
 #Gallery{
     padding-top: 50px;
     background: linear-gradient(to bottom, $purpleDark, $black);
-    #GalleryContainer{
-        width: 1000px;
+    .container{
         margin: 0 auto 150px;
     }
     #GalleryTitle{
@@ -343,7 +372,7 @@ h3{
     width: 100%;
     background-image: url(./images/aboutBG.jpg);
     background-size: cover;
-    #aboutContainer{
+    .container{
         background-color: rgba($color: $black, $alpha: 0.8);
         padding: 100px 90px;
         width: 100%;
