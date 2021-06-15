@@ -22,6 +22,36 @@ html {
   scroll-behavior: smooth;
 }
 
+#bannerContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header, header .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#banner {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   color: #F8F5FA;
@@ -43,12 +73,6 @@ header {
   background-color: #09000D;
   padding: 0 20px;
   z-index: 10;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -80,71 +104,44 @@ header .navItem {
 
 header .icons {
   margin: 0 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 #banner {
   width: 100%;
   height: 85vh;
   background-image: url(./images/pexels-oleg-magni-1813137.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   margin-bottom: 80px;
 }
 
-#banner #bannerMask {
+#bannerMask {
   width: 100%;
   height: 100%;
   background: -webkit-gradient(linear, left top, right top, from(rgba(32, 0, 47, 0)), color-stop(70%, #20002f));
   background: linear-gradient(to right, rgba(32, 0, 47, 0), #20002f 70%);
 }
 
-#banner #bannerContent {
+#bannerContent {
   position: absolute;
   right: 0;
   top: -50px;
   padding-right: 3%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-size: 45px;
 }
 
-#banner #bannerContent img {
+#bannerContent img {
   width: 230px;
   margin-bottom: 40px;
 }
 
-#banner #bannerContent h1 {
+#bannerContent h1 {
   width: auto;
   font-size: 45px;
   text-shadow: -5px 10px 6px #F8F5FA;
 }
 
-#banner #bannerContent h1 span {
+#bannerContent h1 span {
   padding-left: 40px;
-}
-
-@media screen and (max-width: 1300px) {
-  #banner #bannerContent h1 {
-    font-size: 40px;
-  }
 }
 
 #NewsletterIcon {
@@ -163,8 +160,8 @@ header .icons {
 #Events {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 70% 28%;
-      grid-template-columns: 70% 28%;
+  -ms-grid-columns: 71% 28%;
+      grid-template-columns: 71% 28%;
   -ms-grid-rows: (auto)[3];
       grid-template-rows: repeat(3, auto);
       grid-template-areas: "thisWeekend nextWeekend" "cantMiss bestSellers" "button button";
@@ -337,7 +334,7 @@ h3::after {
 
 .eventContainerSmall .eventCardSmall img {
   width: 85px;
-  height: 100%;
+  height: 85px;
   -o-object-fit: cover;
      object-fit: cover;
   float: left;
@@ -514,43 +511,30 @@ h3::after {
 
 #about .container {
   background-color: rgba(9, 0, 13, 0.8);
-  padding: 100px 90px;
+  padding: 100px 0;
   width: 100%;
   height: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (50%)[2];
-      grid-template-columns: repeat(2, 50%);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media screen and (max-width: 1200px) {
-  #about .container {
-    -ms-grid-columns: (60%)[2];
-        grid-template-columns: repeat(2, 60%);
-  }
-}
-
-#about .container #slogan {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#about .container #slogan {
   font-size: 30px;
-  height: 100%;
   font-weight: 600;
+  text-align: right;
+  width: 45%;
 }
 
 #about .container #aboutContent {
-  padding-left: 90px;
-  width: 90%;
+  padding-left: 8%;
+  width: 50%;
 }
 
 #about .container #aboutContent p {

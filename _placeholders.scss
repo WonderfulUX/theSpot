@@ -1,0 +1,50 @@
+%flexC{
+    display: flex;
+    flex-direction: column;
+}
+
+%flexR{
+    display: flex;
+}
+
+%flexRcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flexCcenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+%flexRcenterX{
+    display: flex;
+    justify-content: center;
+}
+
+%flexCcenterX{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+%flexRcenterY{
+    display: flex;
+    align-items: center;
+}
+
+%flexCcenterY{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+%covNoRep{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
