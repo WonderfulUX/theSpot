@@ -47,11 +47,11 @@ header{
     }
 
     .navItem{
-        margin: 0 25px;
-        font-size: 13px;
+        margin: 0 1.9em;
+        font-size: 0.8em;
     }
     .icons{
-        margin: 0 15px;
+        margin: 0 1rem;
         @extend %flexRcenterY;
     }
 }
@@ -73,11 +73,10 @@ header{
 #bannerContent{
     position: absolute;
     right: 0;
-    top: -50px;
+    top: -3rem;
     padding-right: 3%;
     height: 100%;
     @extend %flexCcenter;
-    font-size: 45px;
     
     img{
         width: 230px;
@@ -85,8 +84,8 @@ header{
     }
     h1{
         width: auto;
-        font-size: 45px;
-        text-shadow: -5px 10px 6px $white;
+        font-size: 2.8em;
+        text-shadow: -0.3rem 10px 6px $white;
         span{
             padding-left: 40px;
         }
@@ -287,6 +286,8 @@ h3{
     }
 }
 
+//*************** GALLERY ***********
+
 #Gallery{
     padding-top: 50px;
     background: linear-gradient(to bottom, $purpleDark, $black);
@@ -357,12 +358,13 @@ h3{
     }
 }
 
+//*************** ABOUT ***********
+
 #about{
     height: auto;
     width: 100%;
     background-image: url(./images/aboutBG.jpg);
     background-size: cover;
-    
     .container{
         background-color: rgba($color: $black, $alpha: 0.8);
         padding: 100px 0;
@@ -446,4 +448,8 @@ footer{
         right: 10px;
         font-size: 12px;
     }
+}
+
+@media screen and (max-width:1200px){
+    
 }

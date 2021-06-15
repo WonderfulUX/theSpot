@@ -19,6 +19,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, textarea
 }
 
 html {
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
@@ -98,12 +99,12 @@ header .navItem, header .icons {
 }
 
 header .navItem {
-  margin: 0 25px;
-  font-size: 13px;
+  margin: 0 1.9em;
+  font-size: 0.8em;
 }
 
 header .icons {
-  margin: 0 15px;
+  margin: 0 1rem;
 }
 
 #banner {
@@ -123,10 +124,9 @@ header .icons {
 #bannerContent {
   position: absolute;
   right: 0;
-  top: -50px;
+  top: -3rem;
   padding-right: 3%;
   height: 100%;
-  font-size: 45px;
 }
 
 #bannerContent img {
@@ -136,8 +136,8 @@ header .icons {
 
 #bannerContent h1 {
   width: auto;
-  font-size: 45px;
-  text-shadow: -5px 10px 6px #F8F5FA;
+  font-size: 2.8em;
+  text-shadow: -0.3rem 10px 6px #F8F5FA;
 }
 
 #bannerContent h1 span {
