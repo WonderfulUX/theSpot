@@ -651,7 +651,7 @@ footer .copyright {
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 970px) {
   #DesktopNavIconLinks {
     display: none;
   }
@@ -678,15 +678,19 @@ footer .copyright {
     border: transparent;
     z-index: 30;
   }
-  #MobileMenuButton div {
+  #MobileMenuButton .menuLine {
     width: 20px;
     height: 1px;
     background-color: #F8F5FA;
     margin: 3px 0;
+    -webkit-transition: -webkit-transform all 0.3s linear;
+    transition: -webkit-transform all 0.3s linear;
+    transition: transform all 0.3s linear;
+    transition: transform all 0.3s linear, -webkit-transform all 0.3s linear;
   }
   #NavTextLinksContainer {
     position: absolute;
-    top: -100vh;
+    top: -800px;
     right: 0;
     width: 100%;
     height: 100vh;
@@ -736,8 +740,25 @@ footer .copyright {
     margin: 30px 10px;
   }
   .displayed {
-    -webkit-transform: translateY(100vh);
-            transform: translateY(100vh);
+    -webkit-transform: translateY(800px);
+            transform: translateY(800px);
+  }
+  #NewsletterIcon {
+    display: none;
+  }
+  #Events {
+    width: 620px;
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
+    -ms-grid-rows: (auto)[4];
+        grid-template-rows: repeat(4, auto);
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+        grid-template-areas: "thisWeekend thisWeekend" "cantMiss cantMiss" "nextWeekend bestSellers" "button button";
+  }
+  .eventGridSmall {
+    width: 90%;
+    margin: 0 auto 100px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
