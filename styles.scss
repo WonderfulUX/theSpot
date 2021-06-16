@@ -435,7 +435,7 @@ footer{
     .footerLink{
         text-align: center;
         margin: 3em 0;
-        font-size: 0.9em;
+        font-size: 0.8em;
         position: relative;
         &:not(:first-of-type)::before{
             content: url(./icons/dotFooter.svg);
@@ -449,7 +449,7 @@ footer{
         position: absolute;
         bottom: 10px;
         right: 10px;
-        font-size: 0.75em;
+        font-size: 0.7em;
     }
 }
 
