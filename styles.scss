@@ -7,7 +7,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     color: $white;
     background-color: $black;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.031em;
 }
 
 h1, h2, h3{
@@ -51,7 +51,7 @@ header{
         font-size: 0.8em;
     }
     .icons{
-        margin: 0 1rem;
+        margin: 0 1em;
         @extend %flexRcenterY;
     }
 }
@@ -62,7 +62,7 @@ header{
     height: 85vh;
     background-image: url(./images/pexels-oleg-magni-1813137.jpg);
     @extend %covNoRep;
-    margin-bottom: 80px;
+    margin-bottom: 5em;
 }
 #bannerMask{
     width: 100%;
@@ -79,15 +79,15 @@ header{
     @extend %flexCcenter;
     
     img{
-        width: 230px;
-        margin-bottom: 40px;
+        width: 14.375em;
+        margin-bottom: 2.5em;
     }
     h1{
         width: auto;
-        font-size: 2.8em;
-        text-shadow: -0.3rem 10px 6px $white;
+        font-size: 2.6em;
+        text-shadow: -0.2em 0.2em 0.17em $white;
         span{
-            padding-left: 40px;
+            padding-left: 2.5em;
         }
     }
 }
@@ -108,19 +108,20 @@ header{
 
 #Events{
     display: grid;
-    grid-template-columns: 71% 28%;
+    grid-template-columns: 71% 26%;
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "thisWeekend nextWeekend"
                         "cantMiss bestSellers"
                         "button button"
     ;
+    justify-content: space-between;
     #ThisWeekend{
         grid-area: thisWeekend;
     }
     #NextWeekend{
         grid-area: nextWeekend;
-        padding-top: 70px;
-        justify-self: end;
+        padding-top: 4.375em;
+        justify-self: stretch;
     }
     #SeeAgenda{
         grid-area: button;
@@ -130,19 +131,19 @@ header{
     }
     #BestSellers{
         grid-area: bestSellers;
-        padding-top: 70px;
-        justify-self: end;
+        padding-top: 4.375em;
+        justify-self: stretch;
     }
 }
 
 .eventSectionTitle, h2{
-    font-size: 35px;
+    font-size: 2.188em;
     width: 100%;
 }
 
 .eventSectionTitle{
     grid-area: h2;
-    margin-bottom: 10px;
+    margin-bottom: 0.286em;
     &::before, &::after{
         content: '';
         display: block;
@@ -151,11 +152,11 @@ header{
         height: 1px;
     }
     &::before{
-        margin-bottom: 8px;
+        margin-bottom: 0.229em;
         background: linear-gradient(to right, $h2borderTopLeft, $h2borderTopRight 70%) ;
     }
     &::after{
-        margin-top: 8px;
+        margin-top: 0.229em;
         background: linear-gradient(to right, $h2borderTopLeft, $h2borderTopRight);
     }
 }
@@ -168,13 +169,14 @@ h3{
         height: 1px;
     }
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 0.427em;
+    justify-self: stretch;
     &::before{
-        margin-bottom: 4px;
+        margin-bottom: 0.267em;
         background: linear-gradient(to right, $h2borderTopLeft, $h2borderTopRight 70%) ;
     }
     &::after{
-        margin-top: 4px;
+        margin-top: 0.267em;
         background: linear-gradient(to right, $h2borderTopLeft, $h2borderTopRight);
     }
 }
@@ -182,78 +184,79 @@ h3{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 6.247em;
 }
 
 .eventCardBig{
-    width: 230px;
+    width: 14.368em;
     height: auto;
     background-color: $purpleDark;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 0.75em;
     img{
         width: 100%;
-        height: 300px;
+        height: 18.750em;
         object-fit: cover;
-        margin-bottom: 12px;
+        margin-bottom: 0.75em;
     }
     .title, .time{
-        margin-bottom: 15px;
+        margin-bottom: 0.95em;
     }
     .date, .time, .detailsButton{
-        font-size: 13px;
+        font-size: 0.813em;
     }
     .date, .time{
         color: $white50;
     }
 
     .detailsButton{
-        padding: 15px 0 0 12px;
-        margin-bottom: 10px;
+        padding: 1em 0 0 0.75em;
+        margin-bottom: 0.75em;
         display: block;
         color: $pink;
         font-weight: 600;
         &::after{
             content: url(./icons/ArrowRight.svg);
             position: relative;
-            padding-left: 12px;
+            padding-left: 0.75em;
         }
     }
 }
 .eventContainerSmall{
     display: flex;
     flex-direction: column;
-    width: 260px;
+    width: 100%;
     text-align: left;
     .eventCardSmall{
         position: relative;
-        padding: 5px;
+        padding: 0.313em;
         width: 100%;
         background-color: $purpleDark;
-        margin-bottom: 4px;
+        margin-bottom: 0.5em;
         img{
             width: $smallImageWH;
             height: $smallImageWH;
             object-fit: cover;
             float: left;
-            margin-right: 8px;
+            margin-right: 0.5em;
         }
         .title, .time{
-            margin-bottom: 4px;
+            margin-bottom: 0.7em;
         }
         .date, .time, .detailsButton, .title{
-            font-size: 13px;
+            font-size: 0.8em;
         }
         .date, .time{
             color: $white50;
         }
         .detailsButton{
             position: absolute;
-            bottom: 5px;
-            right: 5px;
+            bottom: 0.313em;
+            right: 0.313em;
             text-align: center;
-            width: 100px;
-            height: 20px;
+            width: 7.8em;
+            height: 1.5em;
+            line-height: 1.5em;
             border: 1px solid $pink;
             color: $pink;
             background-color: $black;
@@ -268,12 +271,12 @@ h3{
     .buttonBig{
         display: block;
         justify-self: center;
-        width: 300px;
-        height: 60px;
+        width: 18.750em;
+        height: 3.750em;
         font-weight: 600;
         border: 1px solid $pink;
         text-align: center;
-        line-height: 60px;
+        line-height: 3.750em;
         color: $pink;
         margin: 0 10px;
     }
@@ -289,31 +292,31 @@ h3{
 //*************** GALLERY ***********
 
 #Gallery{
-    padding-top: 50px;
+    padding-top: 3.725em;
     background: linear-gradient(to bottom, $purpleDark, $black);
     .container{
-        margin: 0 auto 150px;
+        margin: 0 auto 11em;
     }
     #GalleryTitle{
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 2em;
     }
     #GalleryGrid{
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 0.625em;
         display: grid;
-        gap: 8px 8px;
+        gap: 0.6em 0.6em;
         justify-content: center;
         grid-template-columns: repeat(5, 19%);
-        grid-template-rows: repeat(2,200px);
+        grid-template-rows: repeat(2,12.5em);
         grid-template-areas: "im1 im1 im2 im3 im4"
                             "im6 im7 im7 im3 im5";
     }
 
     img{
-        border: 4px solid $white;
+        border: 0.3em solid $white;
         object-fit: cover;
-        height: 200px;
+        height: 12.5em;
         justify-self: stretch;
     }
 
@@ -346,15 +349,15 @@ h3{
     .galleryLegend{
         width: 100%;
         text-align: right;
-        font-size: 12px;
-        margin-bottom: 50px;
+        font-size: 0.77em;
+        margin-bottom: 4.5em;
     }
 }
 #SocialNetworksLinks{
     margin: 0 auto 100px;
     text-align: center;
     svg{
-        margin: 30px 20px;
+        margin: 2.25em 2em;
     }
 }
 
@@ -367,14 +370,14 @@ h3{
     background-size: cover;
     .container{
         background-color: rgba($color: $black, $alpha: 0.8);
-        padding: 100px 0;
+        padding: 7.5em 0;
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         #slogan{
-            font-size: 30px;
+            font-size: 1.75em;
             font-weight: 600;
             text-align: right;
             width: 45%;
@@ -383,22 +386,22 @@ h3{
             padding-left: 8%;
             width: 50%;
             p{
-                margin-bottom: 50px;
+                margin-bottom: 3.125em;
                 line-height: 1.3em;
             }
             #contactInfo>div{
-                font-size: 14px;
+                font-size: 0.88em;
                 display: flex;
                 align-items: center;
-                margin-bottom: 10px;
+                margin-bottom: 0.75em;
                 address{
                     font-style: normal;
                 }
                 img{
-                    margin-right: 10px;
+                    margin-right: 0.75em;
                 }
                 #phoneNumber{
-                    margin-right: 30px;
+                    margin-right: 2.25em;
                 }
             }
         }
@@ -410,7 +413,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px;
+    padding: 7em;
     background: linear-gradient(to top, $purpleDark, $black);
     hr{
         width: 50%;
@@ -425,14 +428,14 @@ footer{
         }
     }
     img{
-        height: 40px;
+        height: 3em;
         width: auto;
-        margin: 20px 0;
+        margin: 1.25em 0;
     }
     .footerLink{
         text-align: center;
-        margin: 40px 0;
-        font-size: 13px;
+        margin: 3em 0;
+        font-size: 0.9em;
         position: relative;
         &:not(:first-of-type)::before{
             content: url(./icons/dotFooter.svg);
@@ -446,10 +449,12 @@ footer{
         position: absolute;
         bottom: 10px;
         right: 10px;
-        font-size: 12px;
+        font-size: 0.75em;
     }
 }
 
-@media screen and (max-width:1200px){
-    
+@media screen and (max-width:1100px){
+    html{
+        font-size: 14px;
+    }
 }
