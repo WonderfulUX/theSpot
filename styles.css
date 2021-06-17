@@ -878,5 +878,104 @@ footer .copyright {
   h2 {
     font-size: 24px;
   }
+  .eventCardBig .title, .eventCardBig .date, .eventCardBig .time,
+  .eventCardSmall .title, .eventCardSmall .date, .eventCardSmall .time {
+    font-size: 16px;
+  }
+  .container {
+    width: 90%;
+    max-width: 500px;
+  }
+  #Events {
+    width: 500px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (auto)[5];
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "thisWeekend" "cantMiss" "nextWeekend" "bestSellers" "button";
+  }
+  .eventGridBig {
+    width: 90%;
+    margin: 0 auto 100px;
+  }
+  .eventCardContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .eventCardContainer .eventCardBig {
+    position: relative;
+    padding: 5px;
+    width: 100%;
+    background-color: #20002f;
+    margin-bottom: 8px;
+    text-align: left;
+  }
+  .eventCardContainer img {
+    width: 150px;
+    height: 150px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    float: left;
+    margin: 0 8px 0 0;
+  }
+  .eventCardContainer .title, .eventCardContainer .time {
+    margin-bottom: 6px;
+    width: 100%;
+  }
+  .eventCardContainer .detailsButton {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    text-align: center;
+    width: 60%;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #C66FD0;
+    border-radius: 20px;
+    color: #C66FD0;
+    background-color: #09000D;
+    padding: 0;
+  }
+  .eventCardContainer .detailsButton::after {
+    display: none;
+  }
+  #about .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #about .container #slogan, #about .container #aboutContent {
+    width: 400px;
+  }
+  #about .container #slogan {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  #about .container #aboutContent {
+    padding: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #about .container #aboutContent p {
+    margin-bottom: 70px;
+  }
+  #Gallery #GalleryGrid {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: 120px 120px 120px 120px 30px;
+        grid-template-rows: 120px 120px 120px 120px 30px;
+        grid-template-areas: "im1 im1 im2" "im5 im6 im6" "im3 im3 im4" "im3 im3 im7" ". . legend";
+  }
+  #Gallery img {
+    height: 150px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

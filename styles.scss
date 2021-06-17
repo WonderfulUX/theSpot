@@ -700,4 +700,100 @@ footer{
         font-size: 24px;
     }
 
+    .eventCardBig .title,.eventCardBig .date,.eventCardBig .time,
+    .eventCardSmall .title,.eventCardSmall .date,.eventCardSmall .time{
+        font-size: 16px;
+    }
+    .container{
+        width: 90%;
+        max-width: 500px;
+    }
+
+    #Events{
+        width: 500px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "thisWeekend"
+                             "cantMiss"
+                             "nextWeekend"
+                             "bestSellers"
+                                "button";
+    }
+    .eventGridBig{
+        width: 90%;
+        margin: 0 auto 100px;
+    }
+    .eventCardContainer{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+        .eventCardBig{
+            position: relative;
+            padding: 5px;
+            width: 100%;
+            background-color: $purpleDark;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+        img{
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            float: left;
+            margin:  0 8px 0 0;
+        }
+        .title, .time{
+            margin-bottom: 6px;
+            width: 100%;
+        }
+        .detailsButton{
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            text-align: center;
+            width: 60%;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid $pink;
+            border-radius: 20px;
+            color: $pink;
+            background-color: $black;
+            padding: 0;
+            &::after{
+                display: none;
+            }
+        }
+    }
+    #about .container{
+        flex-direction: column;
+        #slogan, #aboutContent{
+            width: 400px;
+        }
+        #slogan{
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        #aboutContent{
+            padding: 0;
+            align-items: center;
+            p{
+                margin-bottom: 70px;
+            }
+        }
+    }
+
+    #Gallery #GalleryGrid{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 120px 120px 120px 120px 30px;
+        grid-template-areas: "im1 im1 im2"
+                                "im5 im6 im6"
+                                "im3 im3 im4"
+                                "im3 im3 im7"
+                                ". . legend";
+    }
+
+    #Gallery img{
+        height: 150px;
+    }
 }
