@@ -251,6 +251,7 @@ h2 {
 h3 {
   width: 100%;
   margin-bottom: 0.427em;
+  font-size: 18px;
   -ms-grid-column-align: stretch;
       justify-self: stretch;
 }
@@ -434,7 +435,7 @@ h3::after {
 
 #Gallery #GalleryGrid {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
   display: -ms-grid;
   display: grid;
   gap: 10px;
@@ -510,7 +511,6 @@ h3::after {
   width: 100%;
   text-align: right;
   font-size: 10px;
-  margin-bottom: 50px;
 }
 
 #SocialNetworksLinks {
@@ -518,8 +518,12 @@ h3::after {
   text-align: center;
 }
 
+#SocialNetworksLinks p {
+  margin-bottom: 50px;
+}
+
 #SocialNetworksLinks svg {
-  margin: 40px 30px;
+  margin: 0 20px;
 }
 
 #about {
@@ -657,7 +661,7 @@ footer .copyright {
     font-size: 30px;
   }
   h3 {
-    font-size: 14px;
+    font-size: 16px;
   }
   .eventCardBig .title, .eventCardBig .date, .eventCardBig .time,
   .eventCardSmall .title, .eventCardSmall .date, .eventCardSmall .time {
@@ -692,7 +696,7 @@ footer .copyright {
   #about .container #slogan {
     font-size: 25px;
   }
-  footer img {
+  footer img, #banner img {
     height: 40px;
   }
   header .navItem, footer.navItem {
@@ -701,6 +705,12 @@ footer .copyright {
 }
 
 @media screen and (max-width: 970px) {
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 27px;
+  }
   #DesktopNavIconLinks {
     display: none;
   }
@@ -809,6 +819,9 @@ footer .copyright {
   #NewsletterIcon {
     display: none;
   }
+  #banner {
+    height: 70vh;
+  }
   .container {
     width: 610px;
   }
@@ -845,6 +858,25 @@ footer .copyright {
   }
   #about .container #aboutContent p {
     margin-bottom: 70px;
+  }
+  #Gallery #GalleryGrid {
+    -ms-grid-columns: (200px)[3];
+        grid-template-columns: repeat(3, 200px);
+    -ms-grid-rows: 150px 150px 150px 150px 30px;
+        grid-template-rows: 150px 150px 150px 150px 30px;
+        grid-template-areas: "im1 im1 im2" "im5 im6 im6" "im3 im3 im4" "im3 im3 im7" ". . legend";
+  }
+  #Gallery img {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 24px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

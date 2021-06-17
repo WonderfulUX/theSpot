@@ -178,6 +178,7 @@ h3{
     }
     width: 100%;
     margin-bottom: 0.427em;
+    font-size: 18px;
     justify-self: stretch;
     &::before{
         margin-bottom: 0.267em;
@@ -311,7 +312,7 @@ h3{
     }
     #GalleryGrid{
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 50px;
         display: grid;
         gap: 10px;
         justify-content: space-between;
@@ -360,7 +361,6 @@ h3{
         width: 100%;
         text-align: right;
         font-size: 10px;
-        margin-bottom: 50px;
     }
 }
 
@@ -369,8 +369,11 @@ h3{
 #SocialNetworksLinks{
     margin: 0 auto 100px;
     text-align: center;
+    p{
+        margin-bottom: 50px;
+    }
     svg{
-        margin: 40px 30px;
+        margin: 0 20px;
     }
 }
 
@@ -485,7 +488,7 @@ footer{
     }
 
     h3{
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .eventCardBig .title,.eventCardBig .date,.eventCardBig .time,
@@ -525,7 +528,7 @@ footer{
         font-size: 25px;
     }
 
-    footer img{
+    footer img, #banner img{
         height: 40px;
     }
     header .navItem, footer.navItem{
@@ -536,7 +539,13 @@ footer{
 
 //*************** BREAKPOINT 970PX ***********
 @media screen and (max-width:970px){
+    h1{
+        font-size: 32px;
+    }
 
+    h2{
+        font-size: 27px;
+    }
     #DesktopNavIconLinks{
         display: none;
     }
@@ -622,6 +631,10 @@ footer{
     #NewsletterIcon{
         display: none;
     }
+
+    #banner{
+        height: 70vh;
+    }
     .container{
         width: 610px;
     }
@@ -657,6 +670,34 @@ footer{
                 margin-bottom: 70px;
             }
         }
+    }
+
+    #Gallery #GalleryGrid{
+        grid-template-columns: repeat(3, 200px);
+        grid-template-rows: 150px 150px 150px 150px 30px;
+        grid-template-areas: "im1 im1 im2"
+                                "im5 im6 im6"
+                                "im3 im3 im4"
+                                "im3 im3 im7"
+                                ". . legend";
+    }
+
+    #Gallery img{
+        height: 150px;
+    }
+
+}
+
+
+//*************** BREAKPOINT 750PX ***********
+@media screen and (max-width:700px){
+
+    h1{
+        font-size: 28px;
+    }
+
+    h2{
+        font-size: 24px;
     }
 
 }
