@@ -87,18 +87,16 @@ header{
     padding-right: 3%;
     height: 100%;
     @extend %flexCcenter;
-    
     img{
         height: 50px;
         margin-bottom: 2.5em;
     }
-    h1{
-        width: auto;
-        font-size: 42px;
-        text-shadow: -8px 10px 7px $white;
-        span{
-            padding-left: 50px;
-        }
+}
+h1{
+    font-size: 44px;
+    text-shadow: -8px 10px 7px $white;
+    span{
+        padding-left: 50px;
     }
 }
 
@@ -118,7 +116,7 @@ header{
 
 #Events{
     display: grid;
-    grid-template-columns: 71% 26%;
+    grid-template-columns: 71% 27%;
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "thisWeekend nextWeekend"
                         "cantMiss bestSellers"
@@ -146,7 +144,7 @@ header{
     }
 }
 
-.eventSectionTitle, h2{
+h2{
     font-size: 35px;
     width: 100%;
 }
@@ -243,34 +241,34 @@ h3{
         width: 100%;
         background-color: $purpleDark;
         margin-bottom: 8px;
-        img{
-            width: $smallImageWH;
-            height: $smallImageWH;
-            object-fit: cover;
-            float: left;
-            margin-right: 8px;
-        }
-        .title, .time{
-            margin-bottom: 6px;
-        }
-        .date, .time, .detailsButton, .title{
-            font-size: 13px;
-        }
-        .date, .time{
-            color: $white50;
-        }
-        .detailsButton{
-            position: absolute;
-            bottom: 5px;
-            right: 5px;
-            text-align: center;
-            width: 110px;
-            height: 20px;
-            line-height: 20px;
-            border: 1px solid $pink;
-            color: $pink;
-            background-color: $black;
-        }
+    }
+    img{
+        width: $smallImageWH;
+        height: $smallImageWH;
+        object-fit: cover;
+        float: left;
+        margin-right: 8px;
+    }
+    .title, .time{
+        margin-bottom: 6px;
+    }
+    .date, .time, .detailsButton, .title{
+        font-size: 13px;
+    }
+    .date, .time{
+        color: $white50;
+    }
+    .detailsButton{
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        text-align: center;
+        width: 110px;
+        height: 20px;
+        line-height: 20px;
+        border: 1px solid $pink;
+        color: $pink;
+        background-color: $black;
     }
 }
 .bigButtonBlock{
@@ -473,10 +471,68 @@ footer{
 
 //*************** BREAKPOINT 1100PX ***********
 @media screen and (max-width:1100px){
-    html{
+    $containerW: 850px;
+    $smallImageWH : 75px;
+    body{
         font-size: 14px;
     }
+    h1{
+        font-size: 40px;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+
+    h3{
+        font-size: 14px;
+    }
+
+    .eventCardBig .title,.eventCardBig .date,.eventCardBig .time,
+    .eventCardSmall .title,.eventCardSmall .date,.eventCardSmall .time{
+        font-size: 12px;
+    }
+    .eventCardBig .detailsButton,.eventCardSmall .detailsButton{
+        font-size: 11px;
+    }
+    
+    .container{
+        width: $containerW;
+    }
+    .eventCardBig{
+        width: 195px;
+    }
+    .eventCardBig img{
+        height: 270px;
+    }
+
+    .eventCardSmall img{
+        width: $smallImageWH;
+        height: $smallImageWH;
+    }
+    .eventCardSmall .detailsButton{
+        width: 100px;
+        height: 18px;
+    }
+    .bigButtonBlock .buttonBig{
+        width: 250px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 13px;
+    }
+
+    #about .container #slogan{
+        font-size: 25px;
+    }
+
+    footer img{
+        height: 40px;
+    }
+    header .navItem, footer.navItem{
+        font-size: 12px;
+    }
 }
+
 
 //*************** BREAKPOINT 970PX ***********
 @media screen and (max-width:970px){
@@ -567,11 +623,11 @@ footer{
         display: none;
     }
     .container{
-        width: 620px;
+        width: 610px;
     }
 
     #Events{
-        width: 620px;
+        width: 610px;
         grid-template-columns: repeat(2, 50%);
         grid-template-rows: repeat(4, auto);
         grid-template-areas: "thisWeekend thisWeekend"
@@ -603,14 +659,4 @@ footer{
         }
     }
 
-}
-
-//*************** BREAKPOINT 800PX ***********
-@media screen and (max-width:800px){
-    html{
-        font-size: 12px;
-    }
-    h1{
-        font-size: 12px;
-    }
 }
