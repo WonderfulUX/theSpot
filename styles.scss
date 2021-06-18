@@ -1,799 +1,873 @@
-@import '_variables.scss';
-@import '_reset.scss';
-@import '_placeholders.scss';
+@import "_variables.scss";
+@import "_reset.scss";
+@import "_placeholders.scss";
 
 //*************** GÉNÉRAL ***********
-body{
-    font-family: 'Montserrat', sans-serif;
-    color: $white;
-    background-color: $black;
-    letter-spacing: 0.031em;
+body {
+  font-family: "Montserrat", sans-serif;
+  color: $white;
+  background-color: $black;
+  letter-spacing: 0.031em;
 }
 
-h1, h2, h3{
-    font-family: 'Codystar', cursive;
-    font-weight: 300;
+h1,
+h2,
+h3 {
+  font-family: "Codystar", cursive;
+  font-weight: 300;
 }
-
 
 //*************** HEADER ***********
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: $headerHeight;
-    background-color: $black;
-    padding: 0 20px;
-    z-index: 10;
-    
-    nav{
-        @extend %flexRcenterY;
-        justify-content: space-between;
-        *{
-            color: $white;
-            vertical-align: middle;
-        }
-        a, button{
-            cursor: pointer;
-        }
-    }
-    
-    #Logo{
-        max-height: 30px;
-        width: auto;
-    }
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $headerHeight;
+  background-color: $black;
+  padding: 0 20px;
+  z-index: 10;
 
-    nav ul, ul{
-        display: flex;
+  nav {
+    @extend %flexRcenterY;
+    justify-content: space-between;
+    * {
+      color: $white;
+      vertical-align: middle;
     }
+    a,
+    button {
+      cursor: pointer;
+    }
+  }
 
-    .logo, .navItem, .icons{
-        display: block;
-        line-height: $headerHeight;
-    }
+  #Logo {
+    max-height: 30px;
+    width: auto;
+  }
 
-    .navItem{
-        margin: 0 20px;
-        font-size: 13px;
-    }
-    .icons{
-        margin: 0 15px;
-        @extend %flexRcenterY;
-    }
+  nav ul,
+  ul {
+    display: flex;
+  }
+
+  .logo,
+  .navItem,
+  .icons {
+    display: block;
+    line-height: $headerHeight;
+  }
+
+  .navItem {
+    margin: 0 20px;
+    font-size: 13px;
+  }
+  .icons {
+    margin: 0 15px;
+    @extend %flexRcenterY;
+  }
 }
-#mobileNavIconLinks, #MobileMenuButton, #MenuHead{
-    display: none;
+#mobileNavIconLinks,
+#MobileMenuButton,
+#MenuHead {
+  display: none;
 }
 
 //*************** BANNER ***********
-#banner{
-    width: 100%;
-    height: 85vh;
-    background-image: url(./images/pexels-oleg-magni-1813137.jpg);
-    @extend %covNoRep;
-    margin-bottom: 80px;
+#banner {
+  width: 100%;
+  height: 85vh;
+  background-image: url(./images/pexels-oleg-magni-1813137.jpg);
+  @extend %covNoRep;
+  margin-bottom: 80px;
 }
-#bannerMask{
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, $maskLeft, $maskRight 70%);
-}
-
-#bannerContent{
-    position: absolute;
-    right: 0;
-    top: -50px;
-    padding-right: 3%;
-    height: 100%;
-    @extend %flexCcenter;
-    img{
-        height: 50px;
-        margin-bottom: 2.5em;
-    }
-}
-h1{
-    font-size: 44px;
-    text-shadow: -8px 10px 7px $white;
-    span{
-        padding-left: 50px;
-    }
+#bannerMask {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, $maskLeft, $maskRight 70%);
 }
 
-#NewsletterIcon{
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-    fill: $black;
-    stroke: $pink;    
+#bannerContent {
+  position: absolute;
+  right: 0;
+  top: -50px;
+  padding-right: 3%;
+  height: 100%;
+  @extend %flexCcenter;
+  img {
+    height: 50px;
+    margin-bottom: 2.5em;
+  }
+}
+h1 {
+  font-size: 44px;
+  text-shadow: -8px 10px 7px $white;
+  span {
+    padding-left: 50px;
+  }
+}
+
+#NewsletterIcon {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  fill: $black;
+  stroke: $pink;
 }
 
 //*************** EVENTS ***********
-.container{
-    width: $containerW;
-    margin: 0 auto;
+.container {
+  width: $containerW;
+  margin: 0 auto;
 }
 
-#Events{
-    display: grid;
-    grid-template-columns: 71% 27%;
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas: "thisWeekend nextWeekend"
-                        "cantMiss bestSellers"
-                        "button button"
-    ;
-    justify-content: space-between;
-    #ThisWeekend{
-        grid-area: thisWeekend;
-    }
-    #NextWeekend{
-        grid-area: nextWeekend;
-        padding-top: 70px;
-        justify-self: stretch;
-    }
-    #SeeAgenda{
-        grid-area: button;
-    }
-    #CantMiss{
-        grid-area: cantMiss;
-    }
-    #BestSellers{
-        grid-area: bestSellers;
-        padding-top: 70px;
-        justify-self: stretch;
-    }
-}
-
-h2{
-    font-size: 35px;
-    width: 100%;
-}
-
-.eventSectionTitle{
-    grid-area: h2;
-    margin-bottom: 10px;
-    &::before, &::after{
-        content: '';
-        display: block;
-        position: relative;
-        width: 100%;
-        height: 1px;
-    }
-    &::before{
-        margin-bottom: 8px;
-        background: linear-gradient(to right, $h2borderTopLeft, $h2borderTopRight 70%) ;
-    }
-    &::after{
-        margin-top: 8px;
-        background: linear-gradient(to right, $h2borderTopLeft, $h2borderTopRight);
-    }
-}
-h3{
-    &::before, &::after{
-        content: '';
-        display: block;
-        position: relative;
-        width: 100%;
-        height: 1px;
-    }
-    width: 100%;
-    margin-bottom: 0.427em;
-    font-size: 18px;
+#Events {
+  display: grid;
+  grid-template-columns: 71% 28%;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "thisWeekend nextWeekend"
+    "cantMiss bestSellers"
+    "button button";
+  justify-content: space-between;
+  #ThisWeekend {
+    grid-area: thisWeekend;
+  }
+  #NextWeekend {
+    grid-area: nextWeekend;
+    padding-top: 70px;
     justify-self: stretch;
-    &::before{
-        margin-bottom: 0.267em;
-        background: linear-gradient(to right, $h2borderTopLeft, $h2borderTopRight 70%) ;
-    }
-    &::after{
-        margin-top: 0.267em;
-        background: linear-gradient(to right, $h2borderTopLeft, $h2borderTopRight);
-    }
-}
-.eventCardContainer{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 100px;
+  }
+  #SeeAgenda {
+    grid-area: button;
+  }
+  #CantMiss {
+    grid-area: cantMiss;
+  }
+  #BestSellers {
+    grid-area: bestSellers;
+    padding-top: 70px;
+    justify-self: stretch;
+  }
 }
 
-.eventCardBig{
-    width: 230px;
-    height: auto;
+h2 {
+  font-size: 35px;
+  width: 100%;
+}
+
+.eventSectionTitle {
+  grid-area: h2;
+  margin-bottom: 10px;
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 1px;
+  }
+  &::before {
+    margin-bottom: 8px;
+    background: linear-gradient(
+      to right,
+      $h2borderTopLeft,
+      $h2borderTopRight 70%
+    );
+  }
+  &::after {
+    margin-top: 8px;
+    background: linear-gradient(to right, $h2borderTopLeft, $h2borderTopRight);
+  }
+}
+h3 {
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 1px;
+  }
+  width: 100%;
+  margin-bottom: 0.427em;
+  font-size: 18px;
+  justify-self: stretch;
+  &::before {
+    margin-bottom: 0.267em;
+    background: linear-gradient(
+      to right,
+      $h2borderTopLeft,
+      $h2borderTopRight 70%
+    );
+  }
+  &::after {
+    margin-top: 0.267em;
+    background: linear-gradient(to right, $h2borderTopLeft, $h2borderTopRight);
+  }
+}
+.eventCardContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.eventCardBig {
+  width: 230px;
+  height: auto;
+  background-color: $purpleDark;
+  text-align: center;
+  padding-bottom: 12px;
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 12px;
+  }
+  .title,
+  .time {
+    margin-bottom: 0.95em;
+  }
+  .date,
+  .time,
+  .detailsButton {
+    font-size: 13px;
+  }
+  .date,
+  .time {
+    color: $white50;
+  }
+
+  .detailsButton {
+    padding: 15px 0 0 12px;
+    margin-bottom: 12px;
+    display: block;
+    color: $pink;
+    font-weight: 600;
+    &::after {
+      content: url(./icons/ArrowRight.svg);
+      position: relative;
+      padding-left: 12px;
+    }
+  }
+}
+.eventContainerSmall {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+  .eventCardSmall {
+    position: relative;
+    padding: 5px;
+    width: 100%;
     background-color: $purpleDark;
+    margin-bottom: 8px;
+  }
+  img {
+    width: $smallImageWH;
+    height: $smallImageWH;
+    object-fit: cover;
+    float: left;
+    margin-right: 8px;
+  }
+  .title,
+  .time {
+    margin-bottom: 6px;
+  }
+  .date,
+  .time,
+  .detailsButton,
+  .title {
+    font-size: 13px;
+  }
+  .date,
+  .time {
+    color: $white50;
+  }
+  .detailsButton {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
     text-align: center;
-    padding-bottom: 12px;
-    img{
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        margin-bottom: 12px;
-    }
-    .title, .time{
-        margin-bottom: 0.95em;
-    }
-    .date, .time, .detailsButton{
-        font-size: 13px;
-    }
-    .date, .time{
-        color: $white50;
-    }
-
-    .detailsButton{
-        padding: 15px 0 0 12px;
-        margin-bottom: 12px;
-        display: block;
-        color: $pink;
-        font-weight: 600;
-        &::after{
-            content: url(./icons/ArrowRight.svg);
-            position: relative;
-            padding-left: 12px;
-        }
-    }
+    width: 110px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid $pink;
+    color: $pink;
+    background-color: $black;
+  }
 }
-.eventContainerSmall{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: left;
-    .eventCardSmall{
-        position: relative;
-        padding: 5px;
-        width: 100%;
-        background-color: $purpleDark;
-        margin-bottom: 8px;
-    }
-    img{
-        width: $smallImageWH;
-        height: $smallImageWH;
-        object-fit: cover;
-        float: left;
-        margin-right: 8px;
-    }
-    .title, .time{
-        margin-bottom: 6px;
-    }
-    .date, .time, .detailsButton, .title{
-        font-size: 13px;
-    }
-    .date, .time{
-        color: $white50;
-    }
-    .detailsButton{
-        position: absolute;
-        bottom: 5px;
-        right: 5px;
-        text-align: center;
-        width: 110px;
-        height: 20px;
-        line-height: 20px;
-        border: 1px solid $pink;
-        color: $pink;
-        background-color: $black;
-    }
-}
-.bigButtonBlock{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 100px;
-    .buttonBig{
-        display: block;
-        justify-self: center;
-        width: 300px;
-        height: 60px;
-        font-weight: 600;
-        border: 1px solid $pink;
-        text-align: center;
-        line-height: 60px;
-        color: $pink;
-        margin: 0 10px;
-    }
-    hr{
-        width: auto;
-        height: 1px;
-        flex-grow: 1;
-        background-color: $pink;
-        border: none;
-    }
+.bigButtonBlock {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 100px;
+  .buttonBig {
+    display: block;
+    justify-self: center;
+    width: 300px;
+    height: 60px;
+    font-weight: 600;
+    border: 1px solid $pink;
+    text-align: center;
+    line-height: 60px;
+    color: $pink;
+    margin: 0 10px;
+  }
+  hr {
+    width: auto;
+    height: 1px;
+    flex-grow: 1;
+    background-color: $pink;
+    border: none;
+  }
 }
 
 //*************** GALLERY ***********
 
-#Gallery{
-    padding-top: 70px;
-    background: linear-gradient(to bottom, $purpleDark, $black);
-    .container{
-        margin: 0 auto 150px;
-    }
-    #GalleryTitle{
+#Gallery {
+  padding-top: 70px;
+  background: linear-gradient(to bottom, $purpleDark, $black);
+  .container {
+    margin: 0 auto 150px;
+  }
+  #GalleryTitle {
     text-align: center;
     margin-bottom: 32px;
-    }
-    #GalleryGrid{
-        width: 100%;
-        margin-bottom: 50px;
-        display: grid;
-        gap: 10px;
-        justify-content: space-between;
-        grid-template-columns: repeat(5, 19%);
-        grid-template-rows: 200px 200px auto;
-        grid-template-areas: "im1 im1 im2 im3 im4"
-                            "im6 im7 im7 im3 im5"
-                            ". . . . legend";
-    }
+  }
+  #GalleryGrid {
+    width: 100%;
+    margin-bottom: 50px;
+    display: grid;
+    gap: 10px;
+    justify-content: space-between;
+    grid-template-columns: repeat(5, 19%);
+    grid-template-rows: 200px 200px auto;
+    grid-template-areas:
+      "im1 im1 im2 im3 im4"
+      "im6 im7 im7 im3 im5"
+      ". . . . legend";
+  }
 
-    img{
-        border: 3px solid $white;
-        object-fit: cover;
-        height: 200px;
-        justify-self: stretch;
-    }
+  img {
+    border: 3px solid $white;
+    object-fit: cover;
+    height: 200px;
+    justify-self: stretch;
+  }
 
-    #img1{
-        grid-area: im1;
-        
-    }
-    #img2{
-        grid-area: im2;
-    }
+  #img1 {
+    grid-area: im1;
+  }
+  #img2 {
+    grid-area: im2;
+  }
 
-    #img3{
-        grid-area: im3;
-        height: 100%;
-    }
-    #img4{
-        grid-area: im4;
-
-    }
-    #img5{
-        grid-area: im5;
-
-    }
-    #img6{
-        grid-area: im6;
-    }
-    #img7{
-        grid-area: im7;
-    }
-    .galleryLegend{
-        grid-area: legend;
-        width: 100%;
-        text-align: right;
-        font-size: 10px;
-    }
+  #img3 {
+    grid-area: im3;
+    height: 100%;
+  }
+  #img4 {
+    grid-area: im4;
+  }
+  #img5 {
+    grid-area: im5;
+  }
+  #img6 {
+    grid-area: im6;
+  }
+  #img7 {
+    grid-area: im7;
+  }
+  .galleryLegend {
+    grid-area: legend;
+    width: 100%;
+    text-align: right;
+    font-size: 10px;
+  }
 }
 
-
 //*************** SOCIAL NETWORKS ***********
-#SocialNetworksLinks{
-    margin: 0 auto 100px;
-    text-align: center;
-    p{
-        margin-bottom: 50px;
-    }
-    svg{
-        margin: 0 20px;
-    }
+#SocialNetworksLinks {
+  margin: 0 auto 100px;
+  text-align: center;
+  p {
+    margin-bottom: 50px;
+  }
+  svg {
+    margin: 0 20px;
+  }
 }
 
 //*************** ABOUT ***********
 
-#about{
-    height: auto;
+#about {
+  height: auto;
+  width: 100%;
+  background-image: url(./images/aboutBG.jpg);
+  background-size: cover;
+  .container {
+    background-color: rgba($color: $black, $alpha: 0.8);
+    padding: 150px 0;
     width: 100%;
-    background-image: url(./images/aboutBG.jpg);
-    background-size: cover;
-    .container{
-        background-color: rgba($color: $black, $alpha: 0.8);
-        padding: 150px 0;
-        width: 100%;
-        height: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #slogan {
+      font-size: 30px;
+      font-weight: 600;
+      text-align: right;
+      width: 45%;
+    }
+    #aboutContent {
+      padding-left: 8%;
+      width: 50%;
+      p {
+        margin-bottom: 50px;
+        line-height: 1.5em;
+      }
+      #contactInfo > div {
+        font-size: 13px;
         display: flex;
         align-items: center;
-        justify-content: center;
-        #slogan{
-            font-size: 30px;
-            font-weight: 600;
-            text-align: right;
-            width: 45%;
+        margin-bottom: 0.75em;
+        address {
+          font-style: normal;
         }
-        #aboutContent{
-            padding-left: 8%;
-            width: 50%;
-            p{
-                margin-bottom: 50px;
-                line-height: 1.5em;
-            }
-            #contactInfo>div{
-                font-size: 13px;
-                display: flex;
-                align-items: center;
-                margin-bottom: 0.75em;
-                address{
-                    font-style: normal;
-                }
-                img{
-                    margin-right: 10px;
-                }
-                #phoneNumber{
-                    margin-right: 50px;
-                }
-            }
+        img {
+          margin-right: 10px;
         }
+        #phoneNumber {
+          margin-right: 50px;
+        }
+      }
     }
+  }
 }
-
 
 //*************** FOOTER ***********
-footer{
+footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7em;
+  background: linear-gradient(to top, $purpleDark, $black);
+  hr {
+    width: 50%;
+    height: 1px;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 7em;
-    background: linear-gradient(to top, $purpleDark, $black);
-    hr{
-        width: 50%;
-        height: 1px;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: $pink;
-        border: none;
-        &:last-of-type{
-            margin-bottom: 50px;
-        }
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $pink;
+    border: none;
+    &:last-of-type {
+      margin-bottom: 50px;
     }
-    img{
-        height: 50px;
-        width: auto;
-        margin: 1.25em 0;
+  }
+  img {
+    height: 50px;
+    width: auto;
+    margin: 1.25em 0;
+  }
+  .footerLink {
+    text-align: center;
+    margin: 50px 0;
+    font-size: 13px;
+    position: relative;
+    &:not(:first-of-type)::before {
+      content: url(./icons/dotFooter.svg);
+      position: absolute;
+      left: 50%;
+      top: -130%;
+      transform: translate(-50%, -50%);
     }
-    .footerLink{
-        text-align: center;
-        margin: 50px 0;
-        font-size: 13px;
-        position: relative;
-        &:not(:first-of-type)::before{
-            content: url(./icons/dotFooter.svg);
-            position: absolute;
-            left: 50%;
-            top: -130%;
-            transform: translate(-50%, -50%);
-        }
-    }
-    .copyright{
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        font-size: 10px;
-    }
+  }
+  .copyright {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 10px;
+  }
 }
-
 
 //*************** BREAKPOINT 1100PX ***********
-@media screen and (max-width:1100px){
-    $containerW: 850px;
-    $smallImageWH : 75px;
-    body{
-        font-size: 14px;
-    }
-    h1{
-        font-size: 40px;
-    }
+@media screen and (max-width: 1100px) {
+  $containerW: 850px;
+  $smallImageWH: 75px;
+  body {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 40px;
+  }
 
-    h2{
-        font-size: 30px;
-    }
+  h2 {
+    font-size: 30px;
+  }
 
-    h3{
-        font-size: 16px;
-    }
+  h3 {
+    font-size: 16px;
+  }
 
-    .eventCardBig .title,.eventCardBig .date,.eventCardBig .time,
-    .eventCardSmall .title,.eventCardSmall .date,.eventCardSmall .time{
-        font-size: 12px;
-    }
-    .eventCardBig .detailsButton,.eventCardSmall .detailsButton{
-        font-size: 11px;
-    }
-    
-    .container{
-        width: $containerW;
-    }
-    .eventCardBig{
-        width: 195px;
-    }
-    .eventCardBig img{
-        height: 270px;
-    }
+  .eventCardBig .title,
+  .eventCardBig .date,
+  .eventCardBig .time,
+  .eventCardSmall .title,
+  .eventCardSmall .date,
+  .eventCardSmall .time {
+    font-size: 12px;
+  }
+  .eventCardBig .detailsButton,
+  .eventCardSmall .detailsButton {
+    font-size: 11px;
+  }
 
-    .eventCardSmall img{
-        width: $smallImageWH;
-        height: $smallImageWH;
-    }
-    .eventCardSmall .detailsButton{
-        width: 100px;
-        height: 18px;
-    }
-    .bigButtonBlock .buttonBig{
-        width: 250px;
-        height: 50px;
-        line-height: 50px;
-        font-size: 13px;
-    }
+  .container {
+    width: $containerW;
+  }
+  .eventCardBig {
+    width: 195px;
+  }
+  .eventCardBig img {
+    height: 270px;
+  }
 
-    #about .container #slogan{
-        font-size: 25px;
-    }
+  .eventCardSmall img {
+    width: $smallImageWH;
+    height: $smallImageWH;
+  }
+  .eventCardSmall .detailsButton {
+    width: 100px;
+    height: 18px;
+  }
+  .bigButtonBlock .buttonBig {
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 13px;
+  }
 
-    footer img, #banner img{
-        height: 40px;
-    }
-    header .navItem, footer.navItem{
-        font-size: 12px;
-    }
+  #about .container #slogan {
+    font-size: 25px;
+  }
+
+  footer img,
+  #banner img {
+    height: 40px;
+  }
+  header .navItem,
+  footer.navItem {
+    font-size: 12px;
+  }
 }
-
 
 //*************** BREAKPOINT 970PX ***********
-@media screen and (max-width:970px){
-    h1{
-        font-size: 32px;
-    }
+@media screen and (max-width: 970px) {
+  h1 {
+    font-size: 32px;
+  }
 
-    h2{
-        font-size: 27px;
+  h2 {
+    font-size: 27px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  #DesktopNavIconLinks {
+    display: none;
+  }
+  #mobileNavIconLinks,
+  #MenuHead {
+    display: block;
+  }
+  #MobileMenuButton {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: transparent;
+    z-index: 30;
+    .menuLine {
+      width: 20px;
+      height: 1px;
+      background-color: $white;
+      margin: 3px 0;
+      transition: transform 0.3s linear;
     }
-    #DesktopNavIconLinks{
-        display: none;
+  }
+  #NavTextLinksContainer {
+    position: absolute;
+    top: -1100px;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $black;
+    z-index: 20;
+    transition: transform 0.4s linear;
+    #NavTextLinks {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: $black;
     }
-    #mobileNavIconLinks, #MenuHead{
-        display: block;
+    #MenuHead {
+      font-size: 35px;
+      padding-top: 50px;
+      font-family: "Codystar", cursive;
+      font-weight: 300;
+      color: $pink;
+      margin-bottom: 75px;
     }
-    #MobileMenuButton{
-        position: relative;
+    .navItem {
+      height: 50px;
+      line-height: 50px;
+      margin: 10px 0;
+    }
+    #mobileNavIconLinks {
+      display: flex;
+      justify-self: center;
+      & a {
         width: 50px;
         height: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: transparent;
-        border: transparent;
-        z-index: 30;
-        .menuLine{
-            width: 20px;
-            height: 1px;
-            background-color: $white;
-            margin: 3px 0;
-            transition: transform 0.3s linear;
-        }
+        text-align: center;
+        margin: 30px 10px;
+      }
     }
-    #NavTextLinksContainer{
-        position: absolute;
-        top: -1100px;
-        right: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: rgba($color: $black, $alpha: 0.8);
-        z-index: 20;    
-        transition: transform 0.4s linear;
-        #NavTextLinks{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: $black;
-        }
-        #MenuHead{
-            font-size: 35px;
-            padding-top: 50px;
-            font-family: 'Codystar', cursive;
-            font-weight: 300;
-            color: $pink;
-            margin-bottom: 75px;
-        }
-        .navItem{
-            height: 50px;
-            line-height: 50px;
-            margin: 10px 0;
-        }
-        #mobileNavIconLinks{
-            display: flex;
-            justify-self: center;
-            & a{
-                width: 50px;
-                height: 50px;
-                text-align: center;
-                margin: 30px 10px;
-            }
-        }
-    }
-    .displayed{
-        transform: translateY(1100px);
-    }
+  }
+  .displayed {
+    transform: translateY(1100px);
+  }
 
-    .topMenuBarChange{
-        margin: 0;
-        transform: translateY(50%) rotate(45deg);
-    }
+  .topMenuBarChange {
+    margin: 0;
+    transform: translateY(50%) rotate(45deg);
+  }
 
-    .bottomMenuBarChange{
-        margin: 0;
-        transform: translateY(-50%) rotate(-45deg);
-    }
+  .bottomMenuBarChange {
+    margin: 0;
+    transform: translateY(-50%) rotate(-45deg);
+  }
 
-    .middleMenuBarChange{
-        display: none;
-    }
+  .middleMenuBarChange {
+    display: none;
+  }
 
-    #NewsletterIcon{
-        display: none;
-    }
+  #NewsletterIcon {
+    display: none;
+  }
 
-    #banner{
-        height: 70vh;
-    }
-    .container{
-        width: 610px;
-    }
+  #banner {
+    height: 70vh;
+  }
+  .container {
+    width: 610px;
+  }
 
-    #Events{
-        width: 610px;
-        grid-template-columns: repeat(2, 50%);
-        grid-template-rows: repeat(4, auto);
-        grid-template-areas: "thisWeekend thisWeekend"
-                                "cantMiss cantMiss"
-                                "nextWeekend bestSellers"
-                                "button button";
-    }
+  #Events {
+    width: 610px;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "thisWeekend thisWeekend"
+      "cantMiss cantMiss"
+      "nextWeekend bestSellers"
+      "button button";
+  }
 
-    .eventGridSmall{
-        width: 90%;
-        margin: 0 auto 100px;
-    }
+  .eventGridSmall {
+    width: 95%;
+    margin: 0 0 100px;
+  }
 
-    #about .container{
-        flex-direction: column;
-        #slogan, #aboutContent{
-            width: 500px;
-        }
-        #slogan{
-            text-align: center;
-            margin-bottom: 70px;
-        }
-        #aboutContent{
-            padding: 0;
-            align-items: center;
-            p{
-                margin-bottom: 70px;
-            }
-        }
-    }
+  #Events #BestSellers, #Events #NextWeekend{
+      padding-top: 0;
+  }
+  #Events #BestSellers{
+      margin-left: 5%;
+  }
 
-    #Gallery #GalleryGrid{
-        grid-template-columns: repeat(3, 200px);
-        grid-template-rows: 150px 150px 150px 150px 30px;
-        grid-template-areas: "im1 im1 im2"
-                                "im5 im6 im6"
-                                "im3 im3 im4"
-                                "im3 im3 im7"
-                                ". . legend";
+  #about .container {
+    flex-direction: column;
+    #slogan,
+    #aboutContent {
+      width: 500px;
     }
-
-    #Gallery img{
-        height: 150px;
+    #slogan {
+      text-align: center;
+      margin-bottom: 70px;
     }
+    #aboutContent {
+      padding: 0;
+      align-items: center;
+      p {
+        margin-bottom: 70px;
+      }
+    }
+  }
 
+  #Gallery #GalleryGrid {
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: 150px 150px 150px 150px 30px;
+    grid-template-areas:
+      "im1 im1 im2"
+      "im5 im6 im6"
+      "im3 im3 im4"
+      "im3 im3 im7"
+      ". . legend";
+  }
+
+  #Gallery img {
+    height: 150px;
+  }
 }
 
-
 //*************** BREAKPOINT 750PX ***********
-@media screen and (max-width:700px){
+@media screen and (max-width: 750px) {
+  h1 {
+    font-size: 28px;
+  }
 
-    h1{
-        font-size: 28px;
-    }
+  h2, h3 {
+    font-size: 24px;
+  }
 
-    h2{
-        font-size: 24px;
-    }
+  .eventCardBig .title,
+  .eventCardBig .date,
+  .eventCardBig .time,
+  .eventCardSmall .title,
+  .eventCardSmall .date,
+  .eventCardSmall .time {
+    font-size: 16px;
+  }
+  .container {
+    width: 90%;
+    min-width: 500px;
+  }
 
-    .eventCardBig .title,.eventCardBig .date,.eventCardBig .time,
-    .eventCardSmall .title,.eventCardSmall .date,.eventCardSmall .time{
-        font-size: 16px;
-    }
-    .container{
-        width: 90%;
-        max-width: 500px;
-    }
+  #Events {
+    width: 500px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "thisWeekend"
+      "cantMiss"
+      "nextWeekend"
+      "bestSellers"
+      "button";
+  }
+  .eventGridBig {
+    width: 90%;
+    margin: 0 auto 100px;
+  }
+  .eventCardContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0;
 
-    #Events{
-        width: 500px;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, auto);
-        grid-template-areas: "thisWeekend"
-                             "cantMiss"
-                             "nextWeekend"
-                             "bestSellers"
-                                "button";
+    .eventCardBig {
+      position: relative;
+      padding: 10px;
+      width: 100%;
+      background-color: $purpleDark;
+      margin-bottom: 8px;
+      text-align: left;
     }
-    .eventGridBig{
-        width: 90%;
-        margin: 0 auto 100px;
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      float: left;
+      margin: 0 15px 0 0;
     }
-    .eventCardContainer{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        
-        .eventCardBig{
-            position: relative;
-            padding: 5px;
-            width: 100%;
-            background-color: $purpleDark;
-            margin-bottom: 8px;
-            text-align: left;
-        }
-        img{
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            float: left;
-            margin:  0 8px 0 0;
-        }
-        .title, .time{
-            margin-bottom: 6px;
-            width: 100%;
-        }
-        .detailsButton{
-            position: absolute;
-            bottom: 5px;
-            right: 5px;
-            text-align: center;
-            width: 60%;
-            height: 40px;
-            line-height: 40px;
-            border: 1px solid $pink;
-            border-radius: 20px;
-            color: $pink;
-            background-color: $black;
-            padding: 0;
-            &::after{
-                display: none;
-            }
-        }
+    .title,
+    .time {
+      margin-bottom: 6px;
+      width: 100%;
     }
-    #about .container{
-        flex-direction: column;
-        #slogan, #aboutContent{
-            width: 400px;
-        }
-        #slogan{
-            text-align: center;
-            margin-bottom: 70px;
-        }
-        #aboutContent{
-            padding: 0;
-            align-items: center;
-            p{
-                margin-bottom: 70px;
-            }
-        }
+    .detailsButton {
+      position: absolute;
+      bottom: 0px;
+      right: 10px;
+      text-align: center;
+      width: 60%;
+      height: 40px;
+      line-height: 40px;
+      border: 1px solid $pink;
+      border-radius: 20px;
+      color: $pink;
+      padding: 0;
+      &::after {
+        display: none;
+      }
     }
+  }
+  #about .container {
+    flex-direction: column;
+    #slogan,
+    #aboutContent {
+      width: 400px;
+    }
+    #slogan {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+    #aboutContent {
+      padding: 0;
+      align-items: center;
+      p {
+        margin-bottom: 70px;
+      }
+    }
+  }
 
-    #Gallery #GalleryGrid{
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 120px 120px 120px 120px 30px;
-        grid-template-areas: "im1 im1 im2"
-                                "im5 im6 im6"
-                                "im3 im3 im4"
-                                "im3 im3 im7"
-                                ". . legend";
-    }
+  #Gallery #GalleryGrid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 150px 150px 150px 150px 30px;
+    grid-template-areas:
+      "im1 im1 im2"
+      "im5 im6 im6"
+      "im3 im3 im4"
+      "im3 im3 im7"
+      ". . legend";
+  }
 
-    #Gallery img{
-        height: 150px;
-    }
+  #Gallery img {
+    height: 150px;
+  }
+
+  #Events #NextWeekend, #Events #BestSellers{
+      padding-top: 0;
+      margin: 0 auto 100px;
+  }
+  .eventContainerSmall .eventCardSmall {
+    padding: 10px;
+  }
+  .eventContainerSmall .detailsButton {
+    width: 40%;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid $pink;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: transparent;
+  }
+
+  .eventContainerSmall img {
+    width: 150px;
+    height: 150px;
+    margin-right: 15px;
+  }
+
+  .eventGridSmall{
+      width: 90%;
+  }
 }

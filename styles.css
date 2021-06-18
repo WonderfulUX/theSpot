@@ -53,14 +53,16 @@ header nav, header .icons {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #F8F5FA;
   background-color: #09000D;
   letter-spacing: 0.031em;
 }
 
-h1, h2, h3 {
-  font-family: 'Codystar', cursive;
+h1,
+h2,
+h3 {
+  font-family: "Codystar", cursive;
   font-weight: 300;
 }
 
@@ -86,7 +88,8 @@ header nav * {
   vertical-align: middle;
 }
 
-header nav a, header nav button {
+header nav a,
+header nav button {
   cursor: pointer;
 }
 
@@ -95,13 +98,16 @@ header #Logo {
   width: auto;
 }
 
-header nav ul, header ul {
+header nav ul,
+header ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header .logo, header .navItem, header .icons {
+header .logo,
+header .navItem,
+header .icons {
   display: block;
   line-height: 60px;
 }
@@ -115,7 +121,9 @@ header .icons {
   margin: 0 15px;
 }
 
-#mobileNavIconLinks, #MobileMenuButton, #MenuHead {
+#mobileNavIconLinks,
+#MobileMenuButton,
+#MenuHead {
   display: none;
 }
 
@@ -171,8 +179,8 @@ h1 span {
 #Events {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 71% 27%;
-      grid-template-columns: 71% 27%;
+  -ms-grid-columns: 71% 28%;
+      grid-template-columns: 71% 28%;
   -ms-grid-rows: (auto)[3];
       grid-template-rows: repeat(3, auto);
       grid-template-areas: "thisWeekend nextWeekend" "cantMiss bestSellers" "button button";
@@ -229,7 +237,7 @@ h2 {
 }
 
 .eventSectionTitle::before, .eventSectionTitle::after {
-  content: '';
+  content: "";
   display: block;
   position: relative;
   width: 100%;
@@ -257,7 +265,7 @@ h3 {
 }
 
 h3::before, h3::after {
-  content: '';
+  content: "";
   display: block;
   position: relative;
   width: 100%;
@@ -303,15 +311,19 @@ h3::after {
   margin-bottom: 12px;
 }
 
-.eventCardBig .title, .eventCardBig .time {
+.eventCardBig .title,
+.eventCardBig .time {
   margin-bottom: 0.95em;
 }
 
-.eventCardBig .date, .eventCardBig .time, .eventCardBig .detailsButton {
+.eventCardBig .date,
+.eventCardBig .time,
+.eventCardBig .detailsButton {
   font-size: 13px;
 }
 
-.eventCardBig .date, .eventCardBig .time {
+.eventCardBig .date,
+.eventCardBig .time {
   color: #8F8097;
 }
 
@@ -358,15 +370,20 @@ h3::after {
   margin-right: 8px;
 }
 
-.eventContainerSmall .title, .eventContainerSmall .time {
+.eventContainerSmall .title,
+.eventContainerSmall .time {
   margin-bottom: 6px;
 }
 
-.eventContainerSmall .date, .eventContainerSmall .time, .eventContainerSmall .detailsButton, .eventContainerSmall .title {
+.eventContainerSmall .date,
+.eventContainerSmall .time,
+.eventContainerSmall .detailsButton,
+.eventContainerSmall .title {
   font-size: 13px;
 }
 
-.eventContainerSmall .date, .eventContainerSmall .time {
+.eventContainerSmall .date,
+.eventContainerSmall .time {
   color: #8F8097;
 }
 
@@ -663,11 +680,16 @@ footer .copyright {
   h3 {
     font-size: 16px;
   }
-  .eventCardBig .title, .eventCardBig .date, .eventCardBig .time,
-  .eventCardSmall .title, .eventCardSmall .date, .eventCardSmall .time {
+  .eventCardBig .title,
+  .eventCardBig .date,
+  .eventCardBig .time,
+  .eventCardSmall .title,
+  .eventCardSmall .date,
+  .eventCardSmall .time {
     font-size: 12px;
   }
-  .eventCardBig .detailsButton, .eventCardSmall .detailsButton {
+  .eventCardBig .detailsButton,
+  .eventCardSmall .detailsButton {
     font-size: 11px;
   }
   .container {
@@ -696,10 +718,12 @@ footer .copyright {
   #about .container #slogan {
     font-size: 25px;
   }
-  footer img, #banner img {
+  footer img,
+  #banner img {
     height: 40px;
   }
-  header .navItem, footer.navItem {
+  header .navItem,
+  footer.navItem {
     font-size: 12px;
   }
 }
@@ -711,10 +735,14 @@ footer .copyright {
   h2 {
     font-size: 27px;
   }
+  h3 {
+    font-size: 18px;
+  }
   #DesktopNavIconLinks {
     display: none;
   }
-  #mobileNavIconLinks, #MenuHead {
+  #mobileNavIconLinks,
+  #MenuHead {
     display: block;
   }
   #MobileMenuButton {
@@ -754,7 +782,7 @@ footer .copyright {
     right: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(9, 0, 13, 0.8);
+    background-color: #09000D;
     z-index: 20;
     -webkit-transition: -webkit-transform 0.4s linear;
     transition: -webkit-transform 0.4s linear;
@@ -777,7 +805,7 @@ footer .copyright {
   #NavTextLinksContainer #MenuHead {
     font-size: 35px;
     padding-top: 50px;
-    font-family: 'Codystar', cursive;
+    font-family: "Codystar", cursive;
     font-weight: 300;
     color: #C66FD0;
     margin-bottom: 75px;
@@ -834,8 +862,14 @@ footer .copyright {
         grid-template-areas: "thisWeekend thisWeekend" "cantMiss cantMiss" "nextWeekend bestSellers" "button button";
   }
   .eventGridSmall {
-    width: 90%;
-    margin: 0 auto 100px;
+    width: 95%;
+    margin: 0 0 100px;
+  }
+  #Events #BestSellers, #Events #NextWeekend {
+    padding-top: 0;
+  }
+  #Events #BestSellers {
+    margin-left: 5%;
   }
   #about .container {
     -webkit-box-orient: vertical;
@@ -843,7 +877,8 @@ footer .copyright {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #about .container #slogan, #about .container #aboutContent {
+  #about .container #slogan,
+  #about .container #aboutContent {
     width: 500px;
   }
   #about .container #slogan {
@@ -871,20 +906,24 @@ footer .copyright {
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   h1 {
     font-size: 28px;
   }
-  h2 {
+  h2, h3 {
     font-size: 24px;
   }
-  .eventCardBig .title, .eventCardBig .date, .eventCardBig .time,
-  .eventCardSmall .title, .eventCardSmall .date, .eventCardSmall .time {
+  .eventCardBig .title,
+  .eventCardBig .date,
+  .eventCardBig .time,
+  .eventCardSmall .title,
+  .eventCardSmall .date,
+  .eventCardSmall .time {
     font-size: 16px;
   }
   .container {
     width: 90%;
-    max-width: 500px;
+    min-width: 500px;
   }
   #Events {
     width: 500px;
@@ -907,10 +946,11 @@ footer .copyright {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
+    margin-bottom: 0;
   }
   .eventCardContainer .eventCardBig {
     position: relative;
-    padding: 5px;
+    padding: 10px;
     width: 100%;
     background-color: #20002f;
     margin-bottom: 8px;
@@ -922,16 +962,17 @@ footer .copyright {
     -o-object-fit: cover;
        object-fit: cover;
     float: left;
-    margin: 0 8px 0 0;
+    margin: 0 15px 0 0;
   }
-  .eventCardContainer .title, .eventCardContainer .time {
+  .eventCardContainer .title,
+  .eventCardContainer .time {
     margin-bottom: 6px;
     width: 100%;
   }
   .eventCardContainer .detailsButton {
     position: absolute;
-    bottom: 5px;
-    right: 5px;
+    bottom: 0px;
+    right: 10px;
     text-align: center;
     width: 60%;
     height: 40px;
@@ -939,7 +980,6 @@ footer .copyright {
     border: 1px solid #C66FD0;
     border-radius: 20px;
     color: #C66FD0;
-    background-color: #09000D;
     padding: 0;
   }
   .eventCardContainer .detailsButton::after {
@@ -951,7 +991,8 @@ footer .copyright {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #about .container #slogan, #about .container #aboutContent {
+  #about .container #slogan,
+  #about .container #aboutContent {
     width: 400px;
   }
   #about .container #slogan {
@@ -970,12 +1011,37 @@ footer .copyright {
   #Gallery #GalleryGrid {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
-    -ms-grid-rows: 120px 120px 120px 120px 30px;
-        grid-template-rows: 120px 120px 120px 120px 30px;
+    -ms-grid-rows: 150px 150px 150px 150px 30px;
+        grid-template-rows: 150px 150px 150px 150px 30px;
         grid-template-areas: "im1 im1 im2" "im5 im6 im6" "im3 im3 im4" "im3 im3 im7" ". . legend";
   }
   #Gallery img {
     height: 150px;
+  }
+  #Events #NextWeekend, #Events #BestSellers {
+    padding-top: 0;
+    margin: 0 auto 100px;
+  }
+  .eventContainerSmall .eventCardSmall {
+    padding: 10px;
+  }
+  .eventContainerSmall .detailsButton {
+    width: 40%;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #C66FD0;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: transparent;
+  }
+  .eventContainerSmall img {
+    width: 150px;
+    height: 150px;
+    margin-right: 15px;
+  }
+  .eventGridSmall {
+    width: 90%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
