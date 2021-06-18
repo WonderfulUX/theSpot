@@ -91,6 +91,7 @@ position: relative;
 #bannerContent {
   position: absolute;
   right: 0;
+  bottom: -5%;
   padding-right: 3%;
   height: 100%;
   @extend %flexCcenter;
@@ -896,8 +897,12 @@ footer {
 
 //*************** BREAKPOINT 750PX ***********
 @media screen and (max-width: 600px) {
+    $headerHeight:50px;
+    header{
+        height: $headerHeight;
+    }
     #banner{
-        height: 45vh;
+        height: 60vh;
         img{
             height: 30px;
             margin-bottom: 20px;

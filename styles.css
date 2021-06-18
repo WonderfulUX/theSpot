@@ -145,6 +145,7 @@ header .icons {
 #bannerContent {
   position: absolute;
   right: 0;
+  bottom: -5%;
   padding-right: 3%;
   height: 100%;
 }
@@ -1061,8 +1062,11 @@ footer .copyright {
 }
 
 @media screen and (max-width: 600px) {
+  header {
+    height: 50px;
+  }
   #banner {
-    height: 45vh;
+    height: 60vh;
   }
   #banner img {
     height: 30px;
