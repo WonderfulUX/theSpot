@@ -320,6 +320,7 @@ h3::after {
 .eventCardBig .time,
 .eventCardBig .detailsButton {
   font-size: 13px;
+  text-transform: uppercase;
 }
 
 .eventCardBig .date,
@@ -788,6 +789,15 @@ footer .copyright {
     transition: -webkit-transform 0.4s linear;
     transition: transform 0.4s linear;
     transition: transform 0.4s linear, -webkit-transform 0.4s linear;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #NavTextLinksContainer #NavTextLinks {
     display: -webkit-box;
@@ -854,7 +864,6 @@ footer .copyright {
     width: 610px;
   }
   #Events {
-    width: 610px;
     -ms-grid-columns: (50%)[2];
         grid-template-columns: repeat(2, 50%);
     -ms-grid-rows: (auto)[4];
@@ -895,8 +904,8 @@ footer .copyright {
     margin-bottom: 70px;
   }
   #Gallery #GalleryGrid {
-    -ms-grid-columns: (200px)[3];
-        grid-template-columns: repeat(3, 200px);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
     -ms-grid-rows: 150px 150px 150px 150px 30px;
         grid-template-rows: 150px 150px 150px 150px 30px;
         grid-template-areas: "im1 im1 im2" "im5 im6 im6" "im3 im3 im4" "im3 im3 im7" ". . legend";
@@ -922,8 +931,7 @@ footer .copyright {
     font-size: 16px;
   }
   .container {
-    width: 90%;
-    min-width: 500px;
+    width: 500px;
   }
   #Events {
     width: 500px;
@@ -971,8 +979,9 @@ footer .copyright {
   }
   .eventCardContainer .detailsButton {
     position: absolute;
-    bottom: 0px;
+    bottom: 10px;
     right: 10px;
+    margin-bottom: 0;
     text-align: center;
     width: 60%;
     height: 40px;
@@ -984,12 +993,6 @@ footer .copyright {
   }
   .eventCardContainer .detailsButton::after {
     display: none;
-  }
-  #about .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   #about .container #slogan,
   #about .container #aboutContent {
@@ -1009,8 +1012,6 @@ footer .copyright {
     margin-bottom: 70px;
   }
   #Gallery #GalleryGrid {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
     -ms-grid-rows: 150px 150px 150px 150px 30px;
         grid-template-rows: 150px 150px 150px 150px 30px;
         grid-template-areas: "im1 im1 im2" "im5 im6 im6" "im3 im3 im4" "im3 im3 im7" ". . legend";
@@ -1034,6 +1035,8 @@ footer .copyright {
     text-transform: uppercase;
     font-weight: 600;
     background-color: transparent;
+    bottom: 10px;
+    right: 10px;
   }
   .eventContainerSmall img {
     width: 150px;
@@ -1042,6 +1045,14 @@ footer .copyright {
   }
   .eventGridSmall {
     width: 90%;
+  }
+  #Gallery #GalleryGrid {
+    -ms-grid-rows: 140px 140px 140px 140px 30px;
+        grid-template-rows: 140px 140px 140px 140px 30px;
+        grid-template-areas: "im1 im1 im2" "im5 im6 im6" "im3 im3 im4" "im3 im3 im7" ". . legend";
+  }
+  #Gallery img {
+    height: 140px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

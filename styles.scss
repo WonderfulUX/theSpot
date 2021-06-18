@@ -233,6 +233,7 @@ h3 {
   .time,
   .detailsButton {
     font-size: 13px;
+    text-transform: uppercase;
   }
   .date,
   .time {
@@ -611,6 +612,9 @@ footer {
     background-color: $black;
     z-index: 20;
     transition: transform 0.4s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     #NavTextLinks {
       display: flex;
       flex-direction: column;
@@ -671,7 +675,6 @@ footer {
   }
 
   #Events {
-    width: 610px;
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(4, auto);
     grid-template-areas:
@@ -713,7 +716,7 @@ footer {
   }
 
   #Gallery #GalleryGrid {
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 150px 150px 150px 150px 30px;
     grid-template-areas:
       "im1 im1 im2"
@@ -747,8 +750,7 @@ footer {
     font-size: 16px;
   }
   .container {
-    width: 90%;
-    min-width: 500px;
+    width: 500px;
   }
 
   #Events {
@@ -794,8 +796,9 @@ footer {
     }
     .detailsButton {
       position: absolute;
-      bottom: 0px;
+      bottom: 10px;
       right: 10px;
+      margin-bottom: 0;
       text-align: center;
       width: 60%;
       height: 40px;
@@ -810,7 +813,6 @@ footer {
     }
   }
   #about .container {
-    flex-direction: column;
     #slogan,
     #aboutContent {
       width: 400px;
@@ -829,7 +831,6 @@ footer {
   }
 
   #Gallery #GalleryGrid {
-    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 150px 150px 150px 150px 30px;
     grid-template-areas:
       "im1 im1 im2"
@@ -859,6 +860,8 @@ footer {
     text-transform: uppercase;
     font-weight: 600;
     background-color: transparent;
+    bottom: 10px;
+    right: 10px;
   }
 
   .eventContainerSmall img {
@@ -870,4 +873,20 @@ footer {
   .eventGridSmall{
       width: 90%;
   }
+
+  #Gallery #GalleryGrid {
+    grid-template-rows: 140px 140px 140px 140px 30px;
+    grid-template-areas:
+      "im1 im1 im2"
+      "im5 im6 im6"
+      "im3 im3 im4"
+      "im3 im3 im7"
+      ". . legend";
+  }
+
+  #Gallery img {
+    height: 140px;
+  }
 }
+
+
