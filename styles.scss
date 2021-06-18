@@ -82,6 +82,7 @@ header {
   margin-bottom: 80px;
 }
 #bannerMask {
+position: relative;
   width: 100%;
   height: 100%;
   background: linear-gradient(to right, $maskLeft, $maskRight 70%);
@@ -90,7 +91,6 @@ header {
 #bannerContent {
   position: absolute;
   right: 0;
-  top: -50px;
   padding-right: 3%;
   height: 100%;
   @extend %flexCcenter;
@@ -103,7 +103,7 @@ h1 {
   font-size: 44px;
   text-shadow: -8px 10px 7px $white;
   span {
-    padding-left: 50px;
+    padding-left: 5vh;
   }
 }
 
@@ -233,8 +233,12 @@ h3 {
   .time,
   .detailsButton {
     font-size: 13px;
+  }
+
+  .detailsButton {
     text-transform: uppercase;
   }
+
   .date,
   .time {
     color: $white50;
@@ -733,100 +737,100 @@ footer {
 
 //*************** BREAKPOINT 750PX ***********
 @media screen and (max-width: 750px) {
-  h1 {
-    font-size: 28px;
-  }
-
-  h2, h3 {
-    font-size: 24px;
-  }
-
-  .eventCardBig .title,
-  .eventCardBig .date,
-  .eventCardBig .time,
-  .eventCardSmall .title,
-  .eventCardSmall .date,
-  .eventCardSmall .time {
-    font-size: 16px;
-  }
-  .container {
-    width: 500px;
-  }
-
-  #Events {
-    width: 500px;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, auto);
-    grid-template-areas:
-      "thisWeekend"
-      "cantMiss"
-      "nextWeekend"
-      "bestSellers"
-      "button";
-  }
-  .eventGridBig {
-    width: 90%;
-    margin: 0 auto 100px;
-  }
-  .eventCardContainer {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 0;
-
-    .eventCardBig {
-      position: relative;
-      padding: 10px;
-      width: 100%;
-      background-color: $purpleDark;
-      margin-bottom: 8px;
-      text-align: left;
+    h1 {
+        font-size: 28px;
     }
-    img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      float: left;
-      margin: 0 15px 0 0;
+
+    h2, h3 {
+        font-size: 24px;
     }
-    .title,
-    .time {
-      margin-bottom: 6px;
-      width: 100%;
+
+    .eventCardBig .title,
+    .eventCardBig .date,
+    .eventCardBig .time,
+    .eventCardSmall .title,
+    .eventCardSmall .date,
+    .eventCardSmall .time {
+        font-size: 16px;
     }
-    .detailsButton {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      margin-bottom: 0;
-      text-align: center;
-      width: 60%;
-      height: 40px;
-      line-height: 40px;
-      border: 1px solid $pink;
-      border-radius: 20px;
-      color: $pink;
-      padding: 0;
-      &::after {
-        display: none;
-      }
+    .container {
+        width: 500px;
+    }
+
+    #Events {
+        width: 500px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+        "thisWeekend"
+        "cantMiss"
+        "nextWeekend"
+        "bestSellers"
+        "button";
+    }
+    .eventGridBig {
+        width: 90%;
+        margin: 0 auto 100px;
+    }
+    .eventCardContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0;
+
+        .eventCardBig {
+        position: relative;
+        padding: 10px;
+        width: 100%;
+        background-color: $purpleDark;
+        margin-bottom: 8px;
+        text-align: center;
+        }
+        img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        float: left;
+        margin: 0 15px 0 0;
+        }
+        .title,
+        .time {
+        margin-bottom: 12px;
+        width: 100%;
+        }
+        .detailsButton {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        margin-bottom: 0;
+        text-align: center;
+        width: 60%;
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid $pink;
+        border-radius: 20px;
+        color: $pink;
+        padding: 0;
+        &::after {
+            display: none;
+        }
     }
   }
   #about .container {
     #slogan,
     #aboutContent {
-      width: 400px;
+    width: 400px;
     }
     #slogan {
       text-align: center;
       margin-bottom: 70px;
     }
     #aboutContent {
-      padding: 0;
-      align-items: center;
-      p {
-        margin-bottom: 70px;
-      }
+        padding: 0;
+        align-items: center;
+        p {
+            margin-bottom: 70px;
+        }
     }
   }
 
@@ -850,9 +854,10 @@ footer {
   }
   .eventContainerSmall .eventCardSmall {
     padding: 10px;
+    text-align: center;
   }
   .eventContainerSmall .detailsButton {
-    width: 40%;
+    width: 60%;
     height: 40px;
     line-height: 40px;
     border: 1px solid $pink;
@@ -889,4 +894,59 @@ footer {
   }
 }
 
+//*************** BREAKPOINT 750PX ***********
+@media screen and (max-width: 600px) {
+    #banner{
+        height: 45vh;
+        img{
+            height: 30px;
+            margin-bottom: 20px;
+        }
+        h1 span {
+            padding-left: 0;
+          }
+          #bannerContent{
+              top: -6%;
+          }
+    }
+    h1 {
+        font-size: 20px;
+        text-align: right;
+      }
+    
+      h2, h3 {
+        font-size: 16px;
+      }
+      .container, #Events{
+          width: 330px;
+      }
+      .eventCardContainer img, .eventCardSmall img{
+          width: 100px;
+          height: 112px;
+      }
 
+      .eventCardContainer .eventCardBig, .eventContainerSmall .eventCardSmall {
+          padding: 5px;
+      }
+    .eventCardBig .title,
+    .eventCardBig .date,
+    .eventCardBig .time,
+    .eventCardSmall .title,
+    .eventCardSmall .date,
+    .eventCardSmall .time {
+        font-size: 13px;
+    }
+
+    .eventCardSmall .detailsButton, .eventCardContainer .detailsButton {
+        font-size: 10px;
+        width: 60%;
+        bottom: 5px;
+        right: 5px;
+    }
+
+    .bigButtonBlock .buttonBig{
+        width: 180px;
+        font-size: 11px;
+    }
+
+}

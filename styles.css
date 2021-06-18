@@ -135,6 +135,7 @@ header .icons {
 }
 
 #bannerMask {
+  position: relative;
   width: 100%;
   height: 100%;
   background: -webkit-gradient(linear, left top, right top, from(rgba(32, 0, 47, 0)), color-stop(70%, #20002f));
@@ -144,7 +145,6 @@ header .icons {
 #bannerContent {
   position: absolute;
   right: 0;
-  top: -50px;
   padding-right: 3%;
   height: 100%;
 }
@@ -160,7 +160,7 @@ h1 {
 }
 
 h1 span {
-  padding-left: 50px;
+  padding-left: 5vh;
 }
 
 #NewsletterIcon {
@@ -320,6 +320,9 @@ h3::after {
 .eventCardBig .time,
 .eventCardBig .detailsButton {
   font-size: 13px;
+}
+
+.eventCardBig .detailsButton {
   text-transform: uppercase;
 }
 
@@ -962,7 +965,7 @@ footer .copyright {
     width: 100%;
     background-color: #20002f;
     margin-bottom: 8px;
-    text-align: left;
+    text-align: center;
   }
   .eventCardContainer img {
     width: 150px;
@@ -974,7 +977,7 @@ footer .copyright {
   }
   .eventCardContainer .title,
   .eventCardContainer .time {
-    margin-bottom: 6px;
+    margin-bottom: 12px;
     width: 100%;
   }
   .eventCardContainer .detailsButton {
@@ -1025,9 +1028,10 @@ footer .copyright {
   }
   .eventContainerSmall .eventCardSmall {
     padding: 10px;
+    text-align: center;
   }
   .eventContainerSmall .detailsButton {
-    width: 40%;
+    width: 60%;
     height: 40px;
     line-height: 40px;
     border: 1px solid #C66FD0;
@@ -1053,6 +1057,57 @@ footer .copyright {
   }
   #Gallery img {
     height: 140px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #banner {
+    height: 45vh;
+  }
+  #banner img {
+    height: 30px;
+    margin-bottom: 20px;
+  }
+  #banner h1 span {
+    padding-left: 0;
+  }
+  #banner #bannerContent {
+    top: -6%;
+  }
+  h1 {
+    font-size: 20px;
+    text-align: right;
+  }
+  h2, h3 {
+    font-size: 16px;
+  }
+  .container, #Events {
+    width: 330px;
+  }
+  .eventCardContainer img, .eventCardSmall img {
+    width: 100px;
+    height: 112px;
+  }
+  .eventCardContainer .eventCardBig, .eventContainerSmall .eventCardSmall {
+    padding: 5px;
+  }
+  .eventCardBig .title,
+  .eventCardBig .date,
+  .eventCardBig .time,
+  .eventCardSmall .title,
+  .eventCardSmall .date,
+  .eventCardSmall .time {
+    font-size: 13px;
+  }
+  .eventCardSmall .detailsButton, .eventCardContainer .detailsButton {
+    font-size: 10px;
+    width: 60%;
+    bottom: 5px;
+    right: 5px;
+  }
+  .bigButtonBlock .buttonBig {
+    width: 180px;
+    font-size: 11px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
