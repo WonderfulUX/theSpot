@@ -588,7 +588,7 @@ h3::after {
   line-height: 1.5em;
 }
 
-#about .container #aboutContent #contactInfo > div {
+#about .container #aboutContent #ContactInfo > div {
   font-size: 13px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -599,15 +599,15 @@ h3::after {
   margin-bottom: 0.75em;
 }
 
-#about .container #aboutContent #contactInfo > div address {
+#about .container #aboutContent #ContactInfo > div address {
   font-style: normal;
 }
 
-#about .container #aboutContent #contactInfo > div img {
+#about .container #aboutContent #ContactInfo > div img {
   margin-right: 10px;
 }
 
-#about .container #aboutContent #contactInfo > div #phoneNumber {
+#about .container #aboutContent #ContactInfo > div #phoneNumber {
   margin-right: 50px;
 }
 
@@ -908,8 +908,9 @@ footer .copyright {
     margin-bottom: 70px;
   }
   #Gallery #GalleryGrid {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: (32%)[3];
+        grid-template-columns: repeat(3, 32%);
+    gap: 6px;
     -ms-grid-rows: 150px 150px 150px 150px 30px;
         grid-template-rows: 150px 150px 150px 150px 30px;
         grid-template-areas: "im1 im1 im2" "im5 im6 im6" "im3 im3 im4" "im3 im3 im7" ". . legend";
@@ -1062,6 +1063,9 @@ footer .copyright {
 }
 
 @media screen and (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
   header {
     height: 50px;
   }
@@ -1111,6 +1115,28 @@ footer .copyright {
   }
   .bigButtonBlock .buttonBig {
     width: 180px;
+    font-size: 11px;
+  }
+  #Gallery #GalleryGrid {
+    -ms-grid-rows: 100px 100px 100px 100px 20px;
+        grid-template-rows: 100px 100px 100px 100px 20px;
+        grid-template-areas: "im1 im1 im2" "im5 im6 im6" "im3 im3 im4" "im3 im3 im7" ". legend legend";
+  }
+  #Gallery img {
+    height: 100px;
+  }
+  #about .container #slogan,
+  #about .container #aboutContent {
+    width: 330px;
+  }
+  #about .container #slogan #ContactInfo > div,
+  #about .container #aboutContent #ContactInfo > div {
+    font-size: 11px;
+  }
+  #about .container #slogan {
+    font-size: 18px;
+  }
+  footer .footerLink {
     font-size: 11px;
   }
 }

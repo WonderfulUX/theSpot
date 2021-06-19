@@ -434,7 +434,7 @@ h3 {
         margin-bottom: 50px;
         line-height: 1.5em;
       }
-      #contactInfo > div {
+      #ContactInfo > div {
         font-size: 13px;
         display: flex;
         align-items: center;
@@ -721,7 +721,8 @@ footer {
   }
 
   #Gallery #GalleryGrid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 32%);
+    gap: 6px;
     grid-template-rows: 150px 150px 150px 150px 30px;
     grid-template-areas:
       "im1 im1 im2"
@@ -895,9 +896,12 @@ footer {
   }
 }
 
-//*************** BREAKPOINT 750PX ***********
+//*************** BREAKPOINT 600PX ***********
 @media screen and (max-width: 600px) {
     $headerHeight:50px;
+    body{
+        font-size: 12px;
+    }
     header{
         height: $headerHeight;
     }
@@ -954,4 +958,34 @@ footer {
         font-size: 11px;
     }
 
+    #Gallery #GalleryGrid {
+        grid-template-rows: 100px 100px 100px 100px 20px;
+        grid-template-areas:
+          "im1 im1 im2"
+          "im5 im6 im6"
+          "im3 im3 im4"
+          "im3 im3 im7"
+          ". legend legend";
+      }
+    
+      #Gallery img {
+        height: 100px;
+      }
+
+      #about .container {
+        #slogan,
+        #aboutContent {
+        width: 330px;
+        #ContactInfo > div{
+            font-size: 11px;
+        }
+        }
+        #slogan {
+          font-size: 18px;
+        }
+        
+    }
+    footer .footerLink{
+        font-size: 11px;
+    }
 }
