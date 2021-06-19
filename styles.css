@@ -1090,7 +1090,7 @@ footer .copyright {
     font-size: 16px;
   }
   .container, #Events {
-    width: 330px;
+    width: 320px;
   }
   .eventCardContainer img, .eventCardSmall img {
     width: 100px;
@@ -1127,7 +1127,7 @@ footer .copyright {
   }
   #about .container #slogan,
   #about .container #aboutContent {
-    width: 330px;
+    width: 320px;
   }
   #about .container #slogan #ContactInfo > div,
   #about .container #aboutContent #ContactInfo > div {
