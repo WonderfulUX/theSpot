@@ -22,7 +22,7 @@ html {
   scroll-behavior: smooth;
 }
 
-#bannerContent {
+#BannerContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,7 +47,7 @@ header nav, header .icons {
           align-items: center;
 }
 
-#banner {
+#Banner {
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -128,14 +128,14 @@ header .icons {
   display: none;
 }
 
-#banner {
+#Banner {
   width: 100%;
   height: 85vh;
   background-image: url(./images/pexels-oleg-magni-1813137.jpg);
   margin-bottom: 80px;
 }
 
-#bannerMask {
+#BannerMask {
   position: relative;
   width: 100%;
   height: 100%;
@@ -143,7 +143,7 @@ header .icons {
   background: linear-gradient(to right, rgba(32, 0, 47, 0), #20002f 70%);
 }
 
-#bannerContent {
+#BannerContent {
   position: absolute;
   right: 0;
   bottom: -5%;
@@ -151,7 +151,7 @@ header .icons {
   height: 100%;
 }
 
-#bannerContent img {
+#BannerContent img {
   height: 50px;
   margin-bottom: 2.5em;
 }
@@ -686,6 +686,9 @@ footer .copyright {
   h3 {
     font-size: 16px;
   }
+  #Banner {
+    margin-bottom: 50px;
+  }
   .eventCardBig .title,
   .eventCardBig .date,
   .eventCardBig .time,
@@ -725,7 +728,7 @@ footer .copyright {
     font-size: 25px;
   }
   footer img,
-  #banner img {
+  #Banner img {
     height: 40px;
   }
   header .navItem,
@@ -863,7 +866,7 @@ footer .copyright {
   #NewsletterIcon {
     display: none;
   }
-  #banner {
+  #Banner {
     height: 70vh;
   }
   .container {
@@ -1072,20 +1075,20 @@ footer .copyright {
     height: 50px;
     padding: 0 10px;
   }
-  #banner {
+  #Banner {
     height: 60vh;
   }
-  #banner img {
+  #Banner img {
     height: 30px;
     margin-bottom: 20px;
   }
-  #banner h1 span {
+  #Banner h1 span {
     padding-left: 0;
   }
-  #banner #bannerContent {
+  #Banner #BannerContent {
     top: -6%;
   }
-  #banner #bannerMask {
+  #Banner #BannerMask {
     background: rgba(32, 0, 47, 0.7);
   }
   h1 {
