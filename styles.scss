@@ -522,6 +522,9 @@ footer {
     position: relative;
     cursor: pointer;
     transition: filter 0.2s linear;
+    a{
+        color: $white;
+    }
     &:not(:first-of-type)::before {
       content: url(./icons/dotFooter.svg);
       position: absolute;
@@ -539,7 +542,7 @@ footer {
 }
 
 //*************** HOVER EFFECTS ***********
-#NavTextLinks a:hover, header svg:hover, .footerLink:hover{
+#NavTextLinks a:hover, header svg:hover, .footerLink a:hover{
     color: $brightPink;
     fill: $brightPink;
     filter: drop-shadow(0 0 5px $brightPink);
@@ -548,6 +551,88 @@ footer {
 .detailsButton:hover, .buttonBig:hover,
 #SocialNetworksLinks svg:hover, #NewsletterIcon:hover{
     filter: drop-shadow(0 0 5px $brightPink);
+}
+
+
+//*************** EVENTS ***********
+
+.pageTitles{
+    padding-top: 150px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.topBgFade{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    z-index: -10;
+    background: linear-gradient(to bottom, $purpleDark, $black);
+}
+
+#Filters{
+    display: flex;
+    justify-content: center;
+}
+
+#FilterButton, #SearchBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $grey;
+    height: 40px;
+    padding: 10px;
+}
+
+#FilterButton{
+    width: 120px;
+    border: none;
+    color: $white;
+    font-family: "Montserrat", sans-serif;
+}
+
+#SearchBarContainer{
+    position: relative;
+    margin: 0 135px 60px 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border: none;
+    overflow: hidden;
+    #SearchBar{
+        margin-left: 15px;
+        width: 350px;
+        height: 100%;
+        color: $white;
+        font-family: "Montserrat", sans-serif;
+        line-height: 100%;
+        border: 0;
+        &::placeholder{
+            color:$white50;
+            font-style: italic;
+        }
+    }
+    img{
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }     
+}
+
+#EventsList .container ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    .eventCardBig{
+        margin-bottom: 30px;
+    }
+
+}
+
+.bigButtonBlock{
+    padding-top: 70px;
 }
 
 
