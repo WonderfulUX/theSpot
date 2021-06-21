@@ -353,7 +353,6 @@ h3::after {
 }
 
 .eventCardBig .title {
-  max-width: 230px;
   height: 38.4px;
 }
 
@@ -801,7 +800,7 @@ footer .copyright {
 
 #SearchBarContainer {
   position: relative;
-  margin: 0 135px 60px 0;
+  margin-bottom: 60px;
   height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -854,8 +853,11 @@ footer .copyright {
 #EventsList .container ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (250px)[auto-fill];
-      grid-template-columns: repeat(auto-fill, 250px);
+  -ms-grid-columns: (230px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 230px);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #EventsList .container ul .eventCardBig {
@@ -927,6 +929,10 @@ footer .copyright {
   header .navItem,
   footer .footerLink {
     font-size: 12px;
+  }
+  #EventsList .container ul {
+    -ms-grid-columns: (195px)[auto-fill];
+        grid-template-columns: repeat(auto-fill, 195px);
   }
 }
 
@@ -1116,6 +1122,10 @@ footer .copyright {
   #Gallery img {
     height: 150px;
   }
+  #EventsList .container ul {
+    -ms-grid-columns: (195px)[3];
+        grid-template-columns: repeat(3, 195px);
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -1165,14 +1175,13 @@ footer .copyright {
     width: 100%;
     background-color: #20002f;
     margin-bottom: 8px;
-    text-align: center;
   }
   .eventCardContainer img {
+    float: left;
     width: 150px;
     height: 150px;
     -o-object-fit: cover;
        object-fit: cover;
-    float: left;
     margin: 0 15px 0 0;
   }
   .eventCardContainer .title,

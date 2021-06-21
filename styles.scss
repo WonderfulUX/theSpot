@@ -249,7 +249,6 @@ h3 {
         overflow-y: auto;
     }
     .title{
-        max-width: 230px;
         height: 38.4px;
     }
     .date,
@@ -537,7 +536,6 @@ footer {
     text-align: center;
     margin-bottom: 50px;
 }
-
 .topBgFade{
     position: absolute;
     top: 0;
@@ -567,7 +565,7 @@ footer {
 }
 #SearchBarContainer{
     position: relative;
-    margin: 0 135px 60px 0;
+    margin-bottom: 60px;
     height: 40px;
     display: flex;
     align-items: center;
@@ -595,9 +593,10 @@ footer {
 }
 #EventsList .container ul{
     display: grid;
-    grid-template-columns: repeat(auto-fill, 250px);
+    grid-template-columns: repeat(auto-fill, 230px);
+    justify-content: space-between;
     .eventCardBig{
-        margin-bottom: 30px;
+        margin-bottom:  30px;
     }
 }
 .bigButtonBlock{
@@ -672,8 +671,10 @@ footer {
     footer .footerLink {
         font-size: 12px;
     }
+    #EventsList .container ul{
+        grid-template-columns: repeat(auto-fill, 195px);
+    }
 }
-
 //*************** BREAKPOINT 970PX ***********
 @media screen and (max-width: 970px) {
     h1 {
@@ -829,6 +830,9 @@ footer {
     #Gallery img {
         height: 150px;
     }
+    #EventsList .container ul{
+        grid-template-columns: repeat(3,195px);
+    }
 }
 //*************** BREAKPOINT 750PX ***********
 @media screen and (max-width: 750px) {
@@ -872,40 +876,38 @@ footer {
         flex-direction: column;
         width: 100%;
         margin-bottom: 0;
-
         .eventCardBig {
-        position: relative;
-        padding: 10px;
-        width: 100%;
-        background-color: $purpleDark;
-        margin-bottom: 8px;
-        text-align: center;
+            position: relative;
+            padding: 10px;
+            width: 100%;
+            background-color: $purpleDark;
+            margin-bottom: 8px;
         }
         img {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        float: left;
-        margin: 0 15px 0 0;
+            float: left;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin: 0 15px 0 0;
         }
         .title,
         .time {
-        margin-bottom: 12px;
-        width: 100%;
+            margin-bottom: 12px;
+            width: 100%;
         }
         .detailsButton {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        margin-bottom: 0;
-        text-align: center;
-        width: 60%;
-        height: 40px;
-        line-height: 40px;
-        border: 1px solid $pink;
-        border-radius: 20px;
-        color: $pink;
-        padding: 0;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            margin-bottom: 0;
+            text-align: center;
+            width: 60%;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid $pink;
+            border-radius: 20px;
+            color: $pink;
+            padding: 0;
         &::after {
             display: none;
         }
