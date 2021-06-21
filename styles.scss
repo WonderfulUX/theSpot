@@ -31,6 +31,7 @@ header {
   nav {
     @extend %flexRcenterY;
     justify-content: space-between;
+    height: 100%;
     * {
       color: $white;
       vertical-align: middle;
@@ -59,8 +60,9 @@ header {
   }
 
   .navItem {
-    margin: 0 20px;
     font-size: 13px;
+    margin: 0 1.250em;
+    
   }
   .icons {
     margin: 0 15px;
@@ -632,7 +634,7 @@ footer {
       font-family: "Codystar", cursive;
       font-weight: 300;
       color: $pink;
-      margin-bottom: 75px;
+      margin-bottom: 70px;
     }
     .navItem {
       height: 50px;
@@ -642,11 +644,12 @@ footer {
     #mobileNavIconLinks {
       display: flex;
       justify-self: center;
+      margin-top: 50px;
       & a {
         width: 50px;
         height: 50px;
         text-align: center;
-        margin: 30px 10px;
+        margin: 20px 10px;
       }
     }
   }
@@ -771,7 +774,7 @@ footer {
         "button";
     }
     .eventGridBig {
-        width: 90%;
+        width: 100%;
         margin: 0 auto 100px;
     }
     .eventCardContainer {
@@ -878,7 +881,7 @@ footer {
   }
 
   .eventGridSmall{
-      width: 90%;
+      width: 100%;
   }
 
   #Gallery #GalleryGrid {
@@ -904,6 +907,7 @@ footer {
     }
     header{
         height: $headerHeight;
+        padding: 0 10px;
     }
     #banner{
         height: 60vh;
@@ -917,6 +921,9 @@ footer {
           #bannerContent{
               top: -6%;
           }
+          #bannerMask{
+              background: rgba($color: $purpleDark, $alpha: 0.7);
+          }
     }
     h1 {
         font-size: 20px;
@@ -924,10 +931,10 @@ footer {
       }
     
       h2, h3 {
-        font-size: 16px;
+        font-size: 18px;
       }
       .container, #Events{
-          width: 320px;
+          width: 330px;
       }
       .eventCardContainer img, .eventCardSmall img{
           width: 100px;
@@ -971,11 +978,14 @@ footer {
       #Gallery img {
         height: 100px;
       }
+      #Gallery .galleryLegend {
+        font-size: 9px;
+      }
 
       #about .container {
         #slogan,
         #aboutContent {
-        width: 320px;
+        width: 330px;
         #ContactInfo > div{
             font-size: 11px;
         }
@@ -987,5 +997,11 @@ footer {
     }
     footer .footerLink{
         font-size: 11px;
+    }
+    footer img{
+        height: 30px;
+    }
+    footer .copyright{
+        font-size: 9px;
     }
 }
