@@ -77,6 +77,12 @@ header {
   z-index: 10;
 }
 
+header svg {
+  fill: #F8F5FA;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
 header nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -116,6 +122,8 @@ header .icons {
 header .navItem {
   font-size: 13px;
   margin: 0 1.80em;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 header .icons {
@@ -169,8 +177,8 @@ h1 span {
   position: absolute;
   bottom: 5%;
   right: 5%;
-  fill: #09000D;
-  stroke: #C66FD0;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .container {
@@ -326,6 +334,8 @@ h3::after {
 
 .eventCardBig .detailsButton {
   text-transform: uppercase;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .eventCardBig .date,
@@ -404,6 +414,8 @@ h3::after {
   border: 1px solid #C66FD0;
   color: #C66FD0;
   background-color: #09000D;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .bigButtonBlock {
@@ -428,7 +440,10 @@ h3::after {
   text-align: center;
   line-height: 60px;
   color: #C66FD0;
+  background-color: #09000D;
   margin: 0 10px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .bigButtonBlock hr {
@@ -547,6 +562,8 @@ h3::after {
 
 #SocialNetworksLinks svg {
   margin: 0 20px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 #about {
@@ -655,6 +672,9 @@ footer .footerLink {
   margin: 50px 0;
   font-size: 13px;
   position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 footer .footerLink:not(:first-of-type)::before {
@@ -671,6 +691,19 @@ footer .copyright {
   bottom: 10px;
   right: 10px;
   font-size: 10px;
+}
+
+#NavTextLinks a:hover, header svg:hover, .footerLink:hover {
+  color: #f480ff;
+  fill: #f480ff;
+  -webkit-filter: drop-shadow(0 0 5px #f480ff);
+          filter: drop-shadow(0 0 5px #f480ff);
+}
+
+.detailsButton:hover, .buttonBig:hover,
+#SocialNetworksLinks svg:hover, #NewsletterIcon:hover {
+  -webkit-filter: drop-shadow(0 0 5px #f480ff);
+          filter: drop-shadow(0 0 5px #f480ff);
 }
 
 @media screen and (max-width: 1100px) {
@@ -732,7 +765,7 @@ footer .copyright {
     height: 40px;
   }
   header .navItem,
-  footer.navItem {
+  footer .footerLink {
     font-size: 12px;
   }
 }
