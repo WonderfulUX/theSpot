@@ -102,10 +102,8 @@ header {
 
 header svg {
   fill: #F8F5FA;
-  -webkit-transition: -webkit-filter 0.2s linear;
-  transition: -webkit-filter 0.2s linear;
-  transition: filter 0.2s linear;
-  transition: filter 0.2s linear, -webkit-filter 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 header nav {
@@ -215,6 +213,41 @@ h1 span {
   margin: 0 auto;
 }
 
+#ThisWeekend {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: thisWeekend;
+}
+
+#NextWeekend {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: nextWeekend;
+  padding-top: 70px;
+      justify-self: stretch;
+}
+
+#SeeAgenda {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: button;
+}
+
+#CantMiss {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: cantMiss;
+}
+
+#BestSellers {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: bestSellers;
+  padding-top: 70px;
+      justify-self: stretch;
+}
+
 #Events {
   display: -ms-grid;
   display: grid;
@@ -226,43 +259,6 @@ h1 span {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-#Events #ThisWeekend {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: thisWeekend;
-}
-
-#Events #NextWeekend {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: nextWeekend;
-  padding-top: 70px;
-  -ms-grid-column-align: stretch;
-      justify-self: stretch;
-}
-
-#Events #SeeAgenda {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: button;
-}
-
-#Events #CantMiss {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: cantMiss;
-}
-
-#Events #BestSellers {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: bestSellers;
-  padding-top: 70px;
-  -ms-grid-column-align: stretch;
-      justify-self: stretch;
 }
 
 h2 {
@@ -512,22 +508,6 @@ h3::after {
   margin-bottom: 32px;
 }
 
-#Gallery #GalleryGrid {
-  width: 100%;
-  margin-bottom: 50px;
-  display: -ms-grid;
-  display: grid;
-  gap: 10px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-grid-columns: (19%)[5];
-      grid-template-columns: repeat(5, 19%);
-  -ms-grid-rows: 200px 200px auto;
-      grid-template-rows: 200px 200px auto;
-      grid-template-areas: "im1 im1 im2 im3 im4" "im6 im7 im7 im3 im5" ". . . . legend";
-}
-
 #Gallery img {
   border: 3px solid #F8F5FA;
   -o-object-fit: cover;
@@ -592,6 +572,22 @@ h3::after {
   font-size: 10px;
 }
 
+#Gallery #GalleryGrid {
+  width: 100%;
+  margin-bottom: 50px;
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-grid-columns: (19%)[5];
+      grid-template-columns: repeat(5, 19%);
+  -ms-grid-rows: 200px 200px auto;
+      grid-template-rows: 200px 200px auto;
+      grid-template-areas: "im1 im1 im2 im3 im4" "im6 im7 im7 im3 im5" ". . . . legend";
+}
+
 #SocialNetworksLinks {
   margin: 0 auto 100px;
   text-align: center;
@@ -632,24 +628,24 @@ h3::after {
           justify-content: center;
 }
 
-#about .container #slogan {
+#about #slogan {
   font-size: 30px;
   font-weight: 600;
   text-align: right;
   width: 45%;
 }
 
-#about .container #aboutContent {
+#about #aboutContent {
   padding-left: 8%;
   width: 50%;
 }
 
-#about .container #aboutContent p {
+#about #aboutContent p {
   margin-bottom: 50px;
   line-height: 1.5em;
 }
 
-#about .container #aboutContent #ContactInfo > div {
+#about #ContactInfo > div {
   font-size: 13px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -660,15 +656,15 @@ h3::after {
   margin-bottom: 0.75em;
 }
 
-#about .container #aboutContent #ContactInfo > div address {
+#about #ContactInfo > div address {
   font-style: normal;
 }
 
-#about .container #aboutContent #ContactInfo > div img {
+#about #ContactInfo > div img {
   margin-right: 10px;
 }
 
-#about .container #aboutContent #ContactInfo > div #phoneNumber {
+#about #ContactInfo > div #phoneNumber {
   margin-right: 50px;
 }
 
@@ -1004,7 +1000,7 @@ footer .copyright {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  #NavTextLinksContainer #NavTextLinks {
+  #NavTextLinks {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1017,7 +1013,7 @@ footer .copyright {
             align-items: center;
     background-color: #09000D;
   }
-  #NavTextLinksContainer #MenuHead {
+  #MenuHead {
     font-size: 35px;
     padding-top: 50px;
     font-family: "Codystar", cursive;
@@ -1025,19 +1021,19 @@ footer .copyright {
     color: #C66FD0;
     margin-bottom: 70px;
   }
-  #NavTextLinksContainer .navItem {
+  .navItem {
     height: 50px;
     line-height: 50px;
     margin: 10px 0;
   }
-  #NavTextLinksContainer #mobileNavIconLinks {
+  #mobileNavIconLinks {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     justify-self: center;
     margin-top: 50px;
   }
-  #NavTextLinksContainer #mobileNavIconLinks a {
+  #mobileNavIconLinks a {
     width: 50px;
     height: 50px;
     text-align: center;
