@@ -57,6 +57,29 @@ body {
   color: #F8F5FA;
   background-color: #09000D;
   letter-spacing: 0.031em;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+body ::-webkit-scrollbar {
+  width: 3px;
+}
+
+body ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px #C66FD0;
+          box-shadow: inset 0 0 2px #C66FD0;
+  border-radius: 10px;
+}
+
+body ::-webkit-scrollbar-thumb {
+  background: #C66FD0;
+  border-radius: 10px;
+}
+
+body ::-webkit-scrollbar-thumb:hover {
+  background: #f480ff;
 }
 
 h1,
@@ -79,8 +102,10 @@ header {
 
 header svg {
   fill: #F8F5FA;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+  -webkit-transition: -webkit-filter 0.2s linear;
+  transition: -webkit-filter 0.2s linear;
+  transition: filter 0.2s linear;
+  transition: filter 0.2s linear, -webkit-filter 0.2s linear;
 }
 
 header nav {
@@ -122,8 +147,10 @@ header .icons {
 header .navItem {
   font-size: 13px;
   margin: 0 1.80em;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+  -webkit-transition: -webkit-filter 0.2s linear;
+  transition: -webkit-filter 0.2s linear;
+  transition: filter 0.2s linear;
+  transition: filter 0.2s linear, -webkit-filter 0.2s linear;
 }
 
 header .icons {
@@ -177,8 +204,10 @@ h1 span {
   position: absolute;
   bottom: 5%;
   right: 5%;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+  -webkit-transition: -webkit-filter 0.2s linear;
+  transition: -webkit-filter 0.2s linear;
+  transition: filter 0.2s linear;
+  transition: filter 0.2s linear, -webkit-filter 0.2s linear;
 }
 
 .container {
@@ -189,8 +218,8 @@ h1 span {
 #Events {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 71% 28%;
-      grid-template-columns: 71% 28%;
+  -ms-grid-columns: 71% 27%;
+      grid-template-columns: 71% 27%;
   -ms-grid-rows: (auto)[3];
       grid-template-rows: repeat(3, auto);
       grid-template-areas: "thisWeekend nextWeekend" "cantMiss bestSellers" "button button";
@@ -324,6 +353,12 @@ h3::after {
 .eventCardBig .title,
 .eventCardBig .time {
   margin-bottom: 0.95em;
+  overflow-y: auto;
+}
+
+.eventCardBig .title {
+  max-width: 230px;
+  height: 38.4px;
 }
 
 .eventCardBig .date,
@@ -334,8 +369,10 @@ h3::after {
 
 .eventCardBig .detailsButton {
   text-transform: uppercase;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+  -webkit-transition: -webkit-filter 0.2s linear;
+  transition: -webkit-filter 0.2s linear;
+  transition: filter 0.2s linear;
+  transition: filter 0.2s linear, -webkit-filter 0.2s linear;
 }
 
 .eventCardBig .date,
@@ -379,7 +416,7 @@ h3::after {
 
 .eventContainerSmall img {
   width: 85px;
-  height: 85px;
+  height: 100px;
   -o-object-fit: cover;
      object-fit: cover;
   float: left;
@@ -414,8 +451,10 @@ h3::after {
   border: 1px solid #C66FD0;
   color: #C66FD0;
   background-color: #09000D;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+  -webkit-transition: -webkit-filter 0.2s linear;
+  transition: -webkit-filter 0.2s linear;
+  transition: filter 0.2s linear;
+  transition: filter 0.2s linear, -webkit-filter 0.2s linear;
 }
 
 .bigButtonBlock {
@@ -442,8 +481,10 @@ h3::after {
   color: #C66FD0;
   background-color: #09000D;
   margin: 0 10px;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+  -webkit-transition: -webkit-filter 0.2s linear;
+  transition: -webkit-filter 0.2s linear;
+  transition: filter 0.2s linear;
+  transition: filter 0.2s linear, -webkit-filter 0.2s linear;
 }
 
 .bigButtonBlock hr {
@@ -562,8 +603,10 @@ h3::after {
 
 #SocialNetworksLinks svg {
   margin: 0 20px;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+  -webkit-transition: -webkit-filter 0.2s linear;
+  transition: -webkit-filter 0.2s linear;
+  transition: filter 0.2s linear;
+  transition: filter 0.2s linear, -webkit-filter 0.2s linear;
 }
 
 #about {
@@ -673,8 +716,10 @@ footer .footerLink {
   font-size: 13px;
   position: relative;
   cursor: pointer;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+  -webkit-transition: -webkit-filter 0.2s linear;
+  transition: -webkit-filter 0.2s linear;
+  transition: filter 0.2s linear;
+  transition: filter 0.2s linear, -webkit-filter 0.2s linear;
 }
 
 footer .footerLink:not(:first-of-type)::before {
