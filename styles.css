@@ -349,7 +349,6 @@ h3::after {
 .eventCardBig .title,
 .eventCardBig .time {
   margin-bottom: 0.95em;
-  overflow-y: auto;
 }
 
 .eventCardBig .title {
