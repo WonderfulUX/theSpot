@@ -145,10 +145,8 @@ header .icons {
 header .navItem {
   font-size: 13px;
   margin: 0 1.80em;
-  -webkit-transition: -webkit-filter 0.2s linear;
-  transition: -webkit-filter 0.2s linear;
-  transition: filter 0.2s linear;
-  transition: filter 0.2s linear, -webkit-filter 0.2s linear;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 
 header .icons {
@@ -208,9 +206,16 @@ h1 span {
   transition: filter 0.2s linear, -webkit-filter 0.2s linear;
 }
 
+.container, .container2 {
+  margin: 0 auto;
+}
+
 .container {
   width: 1100px;
-  margin: 0 auto;
+}
+
+.container2 {
+  width: 960px;
 }
 
 #ThisWeekend {
@@ -465,6 +470,9 @@ h3::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   margin-bottom: 100px;
 }
@@ -489,11 +497,8 @@ h3::after {
 }
 
 .bigButtonBlock hr {
-  width: auto;
+  width: 20%;
   height: 1px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   background-color: #C66FD0;
   border: none;
 }
@@ -902,6 +907,9 @@ footer .copyright {
   .container {
     width: 950px;
   }
+  .container2 {
+    width: 850px;
+  }
   .eventCardBig {
     width: 200px;
   }
@@ -1077,7 +1085,7 @@ footer .copyright {
   #Banner {
     height: 70vh;
   }
-  .container {
+  .container, .container2 {
     width: 650px;
   }
   #Events {
@@ -1163,7 +1171,7 @@ footer .copyright {
   .eventCardSmall .time {
     font-size: 14px;
   }
-  .container {
+  .container, .container2 {
     width: 500px;
   }
   #Events {
@@ -1326,7 +1334,7 @@ footer .copyright {
   h2, h3 {
     font-size: 18px;
   }
-  .container, #Events {
+  .container, .container2, #Events {
     width: 330px;
   }
   .eventCardContainer img, .eventCardSmall img {

@@ -84,7 +84,7 @@ header {
     .navItem {
         font-size: 13px;
         margin: 0 1.80em;
-        transition: filter 0.2s linear;
+        transition: color 0.2s linear;
     }
     .icons {
         margin: 0 15px;
@@ -138,9 +138,14 @@ h1 {
     transition: filter 0.2s linear;
 }
 //*************** EVENTS ***********
-.container {
-    width: $containerW;
+.container, .container2 {
     margin: 0 auto;
+}
+.container{
+    width: $containerW;;
+}
+.container2{
+    width: 960px;
 }
 #ThisWeekend {
     grid-area: thisWeekend;
@@ -331,6 +336,7 @@ h3 {
 .bigButtonBlock {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
     margin-bottom: 100px;
     .buttonBig {
@@ -348,9 +354,8 @@ h3 {
         transition: filter 0.2s linear;
     }
     hr {
-        width: auto;
+        width: 20%;
         height: 1px;
-        flex-grow: 1;
         background-color: $pink;
         border: none;
     }
@@ -359,7 +364,7 @@ h3 {
 #Gallery {
     padding-top: 70px;
     background: linear-gradient(to bottom, $purpleDark, $black);
-    .container {
+    .container{
         margin: 0 auto 150px;
     }
     #GalleryTitle {
@@ -645,6 +650,9 @@ footer {
     .container {
         width: $containerW;
     }
+    .container2{
+        width: 850px;
+    }
     .eventCardBig {
         width: 200px;
     }
@@ -790,9 +798,10 @@ footer {
     #Banner {
         height: 70vh;
     }
-    .container {
+    .container, .container2 {
         width: 650px;
     }
+
     #Events {
         grid-template-columns: repeat(2, 50%);
         grid-template-rows: repeat(4, auto);
@@ -874,7 +883,7 @@ footer {
     .eventCardSmall .time {
         font-size: 14px;
     }
-    .container {
+    .container, .container2 {
         width: 500px;
     }
     #Events {
@@ -1043,7 +1052,7 @@ footer {
       h2, h3 {
         font-size: 18px;
       }
-      .container, #Events{
+      .container, .container2, #Events{
           width: 330px;
       }
       .eventCardContainer img, .eventCardSmall img{
