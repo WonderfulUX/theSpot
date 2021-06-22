@@ -1290,6 +1290,9 @@ footer .copyright {
   #EventsList .bigButtonBlock {
     padding-top: 30px;
   }
+  #EventsList .eventCardBig {
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -1388,6 +1391,9 @@ footer .copyright {
   }
   footer .copyright {
     font-size: 9px;
+  }
+  .pageTitles {
+    padding-top: 100px;
   }
   #Filters #FilterButton {
     width: 90px;
