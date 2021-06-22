@@ -256,8 +256,8 @@ h1 span {
 #Events {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 67% 30%;
-      grid-template-columns: 67% 30%;
+  -ms-grid-columns: 66% 30%;
+      grid-template-columns: 66% 30%;
   -ms-grid-rows: (auto)[3];
       grid-template-rows: repeat(3, auto);
       grid-template-areas: "thisWeekend nextWeekend" "cantMiss bestSellers" "button button";
@@ -768,6 +768,63 @@ footer .copyright {
   padding-top: 150px;
   text-align: center;
   margin-bottom: 50px;
+}
+
+.eventTitles {
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: none;
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.eventBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 100px;
+  padding-top: 150px;
+}
+
+.eventBlock .left {
+  width: 50%;
+}
+
+.eventBlock .right img {
+  width: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.eventBlock .eventDescriptionContainer {
+  height: 300px;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.eventBlock .readMoreMask {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, #0C0012));
+  background: linear-gradient(to bottom, transparent, #0C0012 50%);
+}
+
+.eventBlock .readMore {
+  position: relative;
+  top: -30px;
+  width: 100%;
+  height: 30px;
+  border: none;
+  color: #C66FD0;
+  text-decoration: underline;
+  background-color: transparent;
 }
 
 .topBgFade {
