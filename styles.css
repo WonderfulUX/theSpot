@@ -251,8 +251,8 @@ h1 span {
 #Events {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 66% 30%;
-      grid-template-columns: 66% 30%;
+  -ms-grid-columns: 67% 30%;
+      grid-template-columns: 67% 30%;
   -ms-grid-rows: (auto)[3];
       grid-template-rows: repeat(3, auto);
       grid-template-areas: "thisWeekend nextWeekend" "cantMiss bestSellers" "button button";
@@ -326,6 +326,8 @@ h3::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
   margin-bottom: 100px;
 }
@@ -857,18 +859,8 @@ footer .copyright {
           transform: translateY(-50%);
 }
 
-#EventsList .container ul {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (230px)[auto-fill];
-      grid-template-columns: repeat(auto-fill, 230px);
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#EventsList .container ul .eventCardBig {
-  margin-bottom: 30px;
+#EventsList .eventCardBig {
+  margin-bottom: 50px;
 }
 
 .bigButtonBlock {
@@ -943,10 +935,6 @@ footer .copyright {
   header .navItem,
   footer .footerLink {
     font-size: 12px;
-  }
-  #EventsList .container ul {
-    -ms-grid-columns: (200px)[auto-fill];
-        grid-template-columns: repeat(auto-fill, 200px);
   }
 }
 
@@ -1147,10 +1135,6 @@ footer .copyright {
   }
   #Gallery img {
     height: 200px;
-  }
-  #EventsList .container ul {
-    -ms-grid-columns: (195px)[3];
-        grid-template-columns: repeat(3, 195px);
   }
 }
 

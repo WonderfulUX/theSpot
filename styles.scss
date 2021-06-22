@@ -163,7 +163,7 @@ h1 {
 }
 #Events {
     display: grid;
-    grid-template-columns: 66% 30%;
+    grid-template-columns: 67% 30%;
     grid-template-rows: repeat(3, auto);
     grid-template-areas:
         "thisWeekend nextWeekend"
@@ -228,6 +228,7 @@ h3 {
 .eventCardContainer {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
     margin-bottom: 100px;
 }
@@ -535,7 +536,7 @@ footer {
 #SocialNetworksLinks svg:hover, #NewsletterIcon:hover{
     filter: drop-shadow(0 0 5px $brightPink);
 }
-//*************** EVENTS ***********
+//*************** EVENTS LIST PAGE***********
 .pageTitles{
     padding-top: 150px;
     text-align: center;
@@ -596,12 +597,9 @@ footer {
         transform: translateY(-50%);
     }     
 }
-#EventsList .container ul{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 230px);
-    justify-content: space-between;
+#EventsList{
     .eventCardBig{
-        margin-bottom:  30px;
+        margin-bottom:  50px;
     }
 }
 .bigButtonBlock{
@@ -683,9 +681,9 @@ footer {
     footer .footerLink {
         font-size: 12px;
     }
-    #EventsList .container ul{
-        grid-template-columns: repeat(auto-fill, 200px);
-    }
+    // #EventsList .container ul{
+    //     grid-template-columns: repeat(auto-fill, 200px);
+    // }
 }
 //*************** BREAKPOINT 1100PX ***********
 @media screen and (max-width: 1100px) {
@@ -849,9 +847,9 @@ footer {
     #Gallery img {
         height: 200px;
     }
-    #EventsList .container ul{
-        grid-template-columns: repeat(3,195px);
-    }
+    // #EventsList .container ul{
+    //     grid-template-columns: repeat(3,195px);
+    // }
 }
 //*************** BREAKPOINT 750PX ***********
 @media screen and (max-width: 750px) {
@@ -887,7 +885,7 @@ footer {
         width: 100%;
         margin: 0 auto 100px;
     }
-    .eventCardContainer {
+    .eventCardContainer{
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -951,7 +949,6 @@ footer {
             }
         }
     }
-
     #Gallery #GalleryGrid {
         grid-template-rows: repeat(4, 150px) 30px;
         gap: 6px;
