@@ -687,7 +687,7 @@ footer {
         grid-template-columns: repeat(auto-fill, 200px);
     }
 }
-//*************** BREAKPOINT 1000PX ***********
+//*************** BREAKPOINT 1100PX ***********
 @media screen and (max-width: 1100px) {
     h1 {
     font-size: 32px;
@@ -814,33 +814,37 @@ footer {
         flex-direction: column;
         #slogan,
         #aboutContent {
-            width: 500px;
-            }
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+        }
         #slogan {
             text-align: center;
             margin-bottom: 70px;
-            }
+        }
+        #ContactInfo{
+            align-self: center;
+        }
         #aboutContent {
             padding: 0;
-            align-items: center;
-            p {            
+            p {
                 margin-bottom: 70px;
             }
         }
     }
     #Gallery #GalleryGrid {
-        grid-template-columns: repeat(3, 32%);
-        gap: 6px;
-        grid-template-rows: 150px 150px 150px 150px 30px;
+        grid-template-columns: repeat(4, 25%);
+        gap: 8px;
+        grid-template-rows: repeat(4,200px) 30px;
         grid-template-areas:
-        "im1 im1 im2"
-        "im5 im6 im6"
-        "im3 im3 im4"
-        "im3 im3 im7"
-        ". . legend";
+        "im1 im1 im2 im2"
+        "im5 im5 im6 im6"
+        "im3 im3 im4 im4"
+        "im3 im3 im7 im7"
+        ". . legend legend";
     }
     #Gallery img {
-        height: 150px;
+        height: 200px;
     }
     #EventsList .container ul{
         grid-template-columns: repeat(3,195px);
