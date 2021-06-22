@@ -163,7 +163,7 @@ h1 {
 }
 #Events {
     display: grid;
-    grid-template-columns: 71% 27%;
+    grid-template-columns: 66% 30%;
     grid-template-rows: repeat(3, auto);
     grid-template-areas:
         "thisWeekend nextWeekend"
@@ -239,7 +239,7 @@ h3 {
     padding-bottom: 12px;
     img {
         width: 100%;
-        height: 300px;
+        height: 350px;
         object-fit: cover;
         margin-bottom: 12px;
     }
@@ -248,7 +248,8 @@ h3 {
         margin-bottom: 0.95em;
     }
     .title{
-        height: 38.4px;
+        font-size: 14px;
+        height: 32px;
     }
     .date,
     .time,
@@ -290,7 +291,7 @@ h3 {
     }
     img {
         width: $smallImageWH;
-        height: 100px;
+        height: 120px;
         object-fit: cover;
         float: left;
         margin-right: 8px;
@@ -308,6 +309,9 @@ h3 {
     .date,
     .time {
         color: $white50;
+    }
+    .title{
+        height: auto;
     }
     .detailsButton {
         position: absolute;
@@ -339,7 +343,7 @@ h3 {
         line-height: 60px;
         color: $pink;
         background-color: $black;
-        margin: 0 10px;
+        margin: 0 30px;
         transition: filter 0.2s linear;
     }
     hr {
@@ -592,7 +596,7 @@ footer {
 }
 #EventsList .container ul{
     display: grid;
-    grid-template-columns: repeat(auto-fill, 230px);
+    grid-template-columns: repeat(auto-fill, 220px);
     justify-content: space-between;
     .eventCardBig{
         margin-bottom:  30px;
@@ -601,10 +605,10 @@ footer {
 .bigButtonBlock{
     padding-top: 70px;
 }
-//*************** BREAKPOINT 1100PX ***********
-@media screen and (max-width: 1100px) {
-    $containerW: 850px;
-    $smallImageWH: 75px;
+//*************** BREAKPOINT 1200PX ***********
+@media screen and (max-width: 1200px) {
+    $containerW: 950px;
+    $smallImageWH: 80px;
     body {
         font-size: 14px;
     }
@@ -639,14 +643,14 @@ footer {
         width: $containerW;
     }
     .eventCardBig {
-        width: 195px;
+        width: 200px;
     }
     .eventCardBig img {
-        height: 270px;
+        height: 300px;
     }
     .eventCardSmall img {
         width: $smallImageWH;
-        height: $smallImageWH;
+        height: 96px;
     }
     .eventCardSmall .detailsButton {
         width: 100px;
@@ -674,8 +678,8 @@ footer {
         grid-template-columns: repeat(auto-fill, 195px);
     }
 }
-//*************** BREAKPOINT 970PX ***********
-@media screen and (max-width: 970px) {
+//*************** BREAKPOINT 1000PX ***********
+@media screen and (max-width: 1000px) {
     h1 {
     font-size: 32px;
     }
@@ -775,7 +779,7 @@ footer {
         height: 70vh;
     }
     .container {
-        width: 610px;
+        width: 650px;
     }
     #Events {
         grid-template-columns: repeat(2, 50%);

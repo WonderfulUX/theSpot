@@ -209,7 +209,7 @@ h1 span {
 }
 
 .container {
-  width: 1000px;
+  width: 1100px;
   margin: 0 auto;
 }
 
@@ -251,8 +251,8 @@ h1 span {
 #Events {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 71% 27%;
-      grid-template-columns: 71% 27%;
+  -ms-grid-columns: 66% 30%;
+      grid-template-columns: 66% 30%;
   -ms-grid-rows: (auto)[3];
       grid-template-rows: repeat(3, auto);
       grid-template-areas: "thisWeekend nextWeekend" "cantMiss bestSellers" "button button";
@@ -340,7 +340,7 @@ h3::after {
 
 .eventCardBig img {
   width: 100%;
-  height: 300px;
+  height: 350px;
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 12px;
@@ -352,7 +352,8 @@ h3::after {
 }
 
 .eventCardBig .title {
-  height: 38.4px;
+  font-size: 14px;
+  height: 32px;
 }
 
 .eventCardBig .date,
@@ -409,8 +410,8 @@ h3::after {
 }
 
 .eventContainerSmall img {
-  width: 85px;
-  height: 100px;
+  width: 100px;
+  height: 120px;
   -o-object-fit: cover;
      object-fit: cover;
   float: left;
@@ -432,6 +433,10 @@ h3::after {
 .eventContainerSmall .date,
 .eventContainerSmall .time {
   color: #8F8097;
+}
+
+.eventContainerSmall .title {
+  height: auto;
 }
 
 .eventContainerSmall .detailsButton {
@@ -474,7 +479,7 @@ h3::after {
   line-height: 60px;
   color: #C66FD0;
   background-color: #09000D;
-  margin: 0 10px;
+  margin: 0 30px;
   -webkit-transition: -webkit-filter 0.2s linear;
   transition: -webkit-filter 0.2s linear;
   transition: filter 0.2s linear;
@@ -852,8 +857,8 @@ footer .copyright {
 #EventsList .container ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (230px)[auto-fill];
-      grid-template-columns: repeat(auto-fill, 230px);
+  -ms-grid-columns: (220px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 220px);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -867,7 +872,7 @@ footer .copyright {
   padding-top: 70px;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
   body {
     font-size: 14px;
   }
@@ -896,17 +901,17 @@ footer .copyright {
     font-size: 11px;
   }
   .container {
-    width: 850px;
+    width: 950px;
   }
   .eventCardBig {
-    width: 195px;
+    width: 200px;
   }
   .eventCardBig img {
-    height: 270px;
+    height: 300px;
   }
   .eventCardSmall img {
-    width: 75px;
-    height: 75px;
+    width: 80px;
+    height: 96px;
   }
   .eventCardSmall .detailsButton {
     width: 100px;
@@ -935,7 +940,7 @@ footer .copyright {
   }
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1000px) {
   h1 {
     font-size: 32px;
   }
@@ -1068,7 +1073,7 @@ footer .copyright {
     height: 70vh;
   }
   .container {
-    width: 610px;
+    width: 650px;
   }
   #Events {
     -ms-grid-columns: (50%)[2];
