@@ -1366,7 +1366,7 @@ footer .copyright {
         grid-template-rows: repeat(4, 100px) 20px;
     gap: 4px;
   }
-  #Gallery #GalleryGrid img {
+  #Gallery #GalleryGrid img:not(#img3) {
     height: 100px;
   }
   #Gallery #GalleryGrid .galleryLegend {
