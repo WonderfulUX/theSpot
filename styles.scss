@@ -368,7 +368,7 @@ h3 {
     img {
         border: 3px solid $white;
         object-fit: cover;
-        height: 200px;
+        height: 250px;
         justify-self: stretch;
     }
     #img1 {
@@ -406,7 +406,7 @@ h3 {
         gap: 10px;
         justify-content: space-between;
         grid-template-columns: repeat(5, 19%);
-        grid-template-rows: 200px 200px auto;
+        grid-template-rows: 250px 250px auto;
         grid-template-areas:
         "im1 im1 im2 im3 im4"
         "im6 im7 im7 im3 im5"
@@ -433,11 +433,13 @@ h3 {
     width: 100%;
     background-image: url(./images/aboutBG.jpg);
     background-size: cover;
-    .container {
+    .mask{
         background-color: rgba($color: $black, $alpha: 0.8);
-        padding: 150px 0;
         width: 100%;
         height: 100%;
+    }
+    .container {
+        padding: 150px 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -596,7 +598,7 @@ footer {
 }
 #EventsList .container ul{
     display: grid;
-    grid-template-columns: repeat(auto-fill, 220px);
+    grid-template-columns: repeat(auto-fill, 230px);
     justify-content: space-between;
     .eventCardBig{
         margin-bottom:  30px;
@@ -665,7 +667,14 @@ footer {
     #about .container #slogan {
         font-size: 25px;
     }
-
+    #Gallery{
+        #GalleryGrid{
+            grid-template-rows: 220px 220px auto;
+        }
+        img{
+            height: 220px;
+        }
+    }
     footer img,
     #Banner img {
         height: 40px;
@@ -675,11 +684,11 @@ footer {
         font-size: 12px;
     }
     #EventsList .container ul{
-        grid-template-columns: repeat(auto-fill, 195px);
+        grid-template-columns: repeat(auto-fill, 200px);
     }
 }
 //*************** BREAKPOINT 1000PX ***********
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
     h1 {
     font-size: 32px;
     }
