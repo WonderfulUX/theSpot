@@ -859,12 +859,16 @@ footer .copyright {
           transform: translateY(-50%);
 }
 
+.bigButtonBlock {
+  padding-top: 70px;
+}
+
 #EventsList .eventCardBig {
   margin-bottom: 50px;
 }
 
-.bigButtonBlock {
-  padding-top: 70px;
+#EventsList .bigButtonBlock {
+  padding-top: 0px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -935,6 +939,9 @@ footer .copyright {
   header .navItem,
   footer .footerLink {
     font-size: 12px;
+  }
+  #EventsList .eventCardBig {
+    margin-bottom: 40px;
   }
 }
 
@@ -1030,8 +1037,8 @@ footer .copyright {
     margin-bottom: 70px;
   }
   .navItem {
-    height: 50px;
-    line-height: 50px;
+    height: 60px;
+    line-height: 60px;
     margin: 10px 0;
   }
   #mobileNavIconLinks {
@@ -1135,6 +1142,9 @@ footer .copyright {
   }
   #Gallery img {
     height: 200px;
+  }
+  #EventsList .eventCardBig {
+    margin-bottom: 30px;
   }
 }
 
@@ -1277,6 +1287,9 @@ footer .copyright {
   .bigButtonBlock .buttonBig {
     margin: 0 20px;
   }
+  #EventsList .bigButtonBlock {
+    padding-top: 30px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -1375,6 +1388,12 @@ footer .copyright {
   }
   footer .copyright {
     font-size: 9px;
+  }
+  #Filters #FilterButton {
+    width: 90px;
+  }
+  #Filters #SearchBar {
+    width: 230px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
