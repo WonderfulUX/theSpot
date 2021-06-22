@@ -1393,7 +1393,8 @@ footer .copyright {
     width: 90px;
   }
   #Filters #SearchBar {
-    width: 230px;
+    width: 240px;
+    margin-left: 10px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
