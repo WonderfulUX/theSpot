@@ -1115,7 +1115,9 @@ footer {
     }
     .pageTitles{
         padding-top: 100px;
+        margin-bottom: 20px;
     }
+
     #Filters{
         #FilterButton{
             width: 90px;
@@ -1123,6 +1125,9 @@ footer {
         #SearchBar{
             width: 240px;
             margin-left: 10px;
+        }
+        #SearchBarContainer{
+            margin-bottom: 50px;
         }
     }
 }

@@ -1394,6 +1394,7 @@ footer .copyright {
   }
   .pageTitles {
     padding-top: 100px;
+    margin-bottom: 20px;
   }
   #Filters #FilterButton {
     width: 90px;
@@ -1401,6 +1402,9 @@ footer .copyright {
   #Filters #SearchBar {
     width: 240px;
     margin-left: 10px;
+  }
+  #Filters #SearchBarContainer {
+    margin-bottom: 50px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
