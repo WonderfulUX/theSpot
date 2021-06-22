@@ -1102,6 +1102,9 @@ footer .copyright {
   #Events #BestSellers {
     margin-left: 5%;
   }
+  .bigButtonBlock {
+    padding: 0;
+  }
   #about .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1135,8 +1138,8 @@ footer .copyright {
     margin-bottom: 70px;
   }
   #Gallery #GalleryGrid {
-    -ms-grid-columns: (25%)[4];
-        grid-template-columns: repeat(4, 25%);
+    -ms-grid-columns: (24%)[4];
+        grid-template-columns: repeat(4, 24%);
     gap: 8px;
     -ms-grid-rows: (200px)[4] 30px;
         grid-template-rows: repeat(4, 200px) 30px;
@@ -1164,7 +1167,7 @@ footer .copyright {
   .eventCardSmall .title,
   .eventCardSmall .date,
   .eventCardSmall .time {
-    font-size: 16px;
+    font-size: 14px;
   }
   .container {
     width: 500px;
@@ -1212,6 +1215,9 @@ footer .copyright {
     margin-bottom: 12px;
     width: 100%;
   }
+  .eventCardContainer .title {
+    height: 33.6px;
+  }
   .eventCardContainer .detailsButton {
     position: absolute;
     bottom: 10px;
@@ -1229,27 +1235,29 @@ footer .copyright {
   .eventCardContainer .detailsButton::after {
     display: none;
   }
-  #about .container #slogan,
-  #about .container #aboutContent {
-    width: 400px;
+  .eventCardContainer .eventCardSmall .title {
+    height: 33.6px;
   }
-  #about .container #slogan {
+  .eventCardContainer #about .container #aboutContent {
+    width: 100%;
+  }
+  .eventCardContainer #about .container #slogan {
     text-align: center;
     margin-bottom: 70px;
   }
-  #about .container #aboutContent {
+  .eventCardContainer #about .container #aboutContent {
     padding: 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  #about .container #aboutContent p {
+  .eventCardContainer #about .container #aboutContent p {
     margin-bottom: 70px;
   }
   #Gallery #GalleryGrid {
-    -ms-grid-rows: 150px 150px 150px 150px 30px;
-        grid-template-rows: 150px 150px 150px 150px 30px;
-        grid-template-areas: "im1 im1 im2" "im5 im6 im6" "im3 im3 im4" "im3 im3 im7" ". . legend";
+    -ms-grid-rows: (150px)[4] 30px;
+        grid-template-rows: repeat(4, 150px) 30px;
+    gap: 6px;
   }
   #Gallery img {
     height: 150px;
@@ -1282,13 +1290,8 @@ footer .copyright {
   .eventGridSmall {
     width: 100%;
   }
-  #Gallery #GalleryGrid {
-    -ms-grid-rows: 140px 140px 140px 140px 30px;
-        grid-template-rows: 140px 140px 140px 140px 30px;
-        grid-template-areas: "im1 im1 im2" "im5 im6 im6" "im3 im3 im4" "im3 im3 im7" ". . legend";
-  }
-  #Gallery img {
-    height: 140px;
+  .bigButtonBlock .buttonBig {
+    margin: 0 20px;
   }
 }
 
@@ -1328,7 +1331,7 @@ footer .copyright {
   }
   .eventCardContainer img, .eventCardSmall img {
     width: 100px;
-    height: 112px;
+    height: 132px;
   }
   .eventCardContainer .eventCardBig, .eventContainerSmall .eventCardSmall {
     padding: 5px;
@@ -1339,7 +1342,11 @@ footer .copyright {
   .eventCardSmall .title,
   .eventCardSmall .date,
   .eventCardSmall .time {
-    font-size: 13px;
+    font-size: 12px;
+  }
+  .eventCardSmall .title, .eventCardBig .title {
+    height: 30.4px;
+    margin-bottom: 6px;
   }
   .eventCardSmall .detailsButton, .eventCardContainer .detailsButton {
     font-size: 10px;
@@ -1350,16 +1357,19 @@ footer .copyright {
   .bigButtonBlock .buttonBig {
     width: 180px;
     font-size: 11px;
+    height: 45px;
+    line-height: 45px;
+    margin: 0 10px;
   }
   #Gallery #GalleryGrid {
-    -ms-grid-rows: 100px 100px 100px 100px 20px;
-        grid-template-rows: 100px 100px 100px 100px 20px;
-        grid-template-areas: "im1 im1 im2" "im5 im6 im6" "im3 im3 im4" "im3 im3 im7" ". legend legend";
+    -ms-grid-rows: (100px)[4] 20px;
+        grid-template-rows: repeat(4, 100px) 20px;
+    gap: 4px;
   }
-  #Gallery img {
+  #Gallery #GalleryGrid img {
     height: 100px;
   }
-  #Gallery .galleryLegend {
+  #Gallery #GalleryGrid .galleryLegend {
     font-size: 9px;
   }
   #about .container #slogan,
