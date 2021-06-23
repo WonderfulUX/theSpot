@@ -794,37 +794,178 @@ footer .copyright {
   width: 50%;
 }
 
-.eventBlock .right img {
-  width: 350px;
+.eventBlock .right {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.eventBlock #RightContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.eventBlock #RightContainer img {
+  width: 80%;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-bottom: 12px;
 }
 
 .eventBlock .eventDescriptionContainer {
-  height: 300px;
   position: relative;
-  overflow-y: hidden;
+  height: 250px;
+  margin-bottom: 70px;
 }
 
-.eventBlock .readMoreMask {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, #0C0012));
-  background: linear-gradient(to bottom, transparent, #0C0012 50%);
+.eventBlock .eventDescription {
+  height: 100%;
+  overflow: hidden;
 }
 
 .eventBlock .readMore {
-  position: relative;
-  top: -30px;
-  width: 100%;
-  height: 30px;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: auto;
+  height: auto;
   border: none;
   color: #C66FD0;
   text-decoration: underline;
   background-color: transparent;
+}
+
+.eventBlock #mainEventInfo {
+  width: 100%;
+  padding: 20px 15px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#5b4963), to(transparent));
+  background: linear-gradient(to bottom, #5b4963, transparent);
+}
+
+.eventBlock .dot {
+  margin-right: 3px;
+  fill: #C66FD0;
+}
+
+.eventBlock .infoLine {
+  margin-bottom: 5px;
+}
+
+.eventBlock .share {
+  margin: 10px;
+  fill: #C66FD0;
+}
+
+.eventBlock #Share {
+  position: relative;
+  border-radius: 30px;
+  margin-left: 12px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#5b4963), to(transparent));
+  background: linear-gradient(to bottom, #5b4963, transparent);
+}
+
+.eventBlock #Share::before {
+  content: url(./icons/shareIcon.svg);
+  position: absolute;
+  top: 50%;
+  left: -25%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#TicketSection {
+  margin-bottom: 200px;
+}
+
+#TicketSection h2 {
+  text-shadow: -8px 10px 7px #F8F5FA;
+  margin-bottom: 80px;
+}
+
+#TicketSection table {
+  width: 100%;
+}
+
+#TicketSection thead {
+  height: 40px;
+}
+
+#TicketSection tbody tr:first-of-type td {
+  padding-top: 20px;
+}
+
+#TicketSection tbody tr:first-of-type td .fareDescription {
+  padding-top: 10px;
+}
+
+#TicketSection th {
+  font-weight: 600;
+  text-align: right;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#TicketSection th::after {
+  position: absolute;
+  bottom: 0;
+  content: '';
+  display: block;
+  width: 102%;
+  height: 1px;
+  background-color: #5b4963;
+}
+
+#TicketSection .xLeft {
+  text-align: left;
+  width: 50%;
+  position: relative;
+}
+
+#TicketSection tr:not(:first-of-type) {
+  height: 100px;
+  position: relative;
+}
+
+#TicketSection .xRight {
+  width: 15%;
+  text-align: right;
+}
+
+#TicketSection select {
+  width: 50px;
+  height: 40px;
+  color: #F8F5FA;
+  background-color: #09000D;
+  border-radius: 2px;
+}
+
+#TicketSection .fareDescription {
+  color: #5b4963;
+  margin-top: 6px;
+  position: absolute;
+  top: 60%;
+}
+
+#TicketSection .fareDescription:first-of-type {
+  padding-top: 20px;
 }
 
 .topBgFade {
@@ -857,7 +998,7 @@ footer .copyright {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #5B4963;
+  background-color: #5b4963;
   height: 40px;
   padding: 10px;
 }
