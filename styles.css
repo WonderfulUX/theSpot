@@ -57,6 +57,7 @@ body {
   color: #F8F5FA;
   background-color: #09000D;
   letter-spacing: 0.031em;
+  font-size: 15px;
   /* width */
   /* Track */
   /* Handle */
@@ -64,22 +65,21 @@ body {
 }
 
 body ::-webkit-scrollbar {
-  width: 3px;
+  width: 5px;
 }
 
 body ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 2px #C66FD0;
-          box-shadow: inset 0 0 2px #C66FD0;
+  background-color: #5b4963;
   border-radius: 10px;
 }
 
 body ::-webkit-scrollbar-thumb {
-  background: #C66FD0;
+  background: #8F8097;
   border-radius: 10px;
 }
 
 body ::-webkit-scrollbar-thumb:hover {
-  background: #f480ff;
+  background: #C66FD0;
 }
 
 h1,
@@ -815,7 +815,7 @@ footer .copyright {
 }
 
 .eventBlock #RightContainer img {
-  width: 80%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 12px;
@@ -886,6 +886,7 @@ footer .copyright {
 
 #TicketSection {
   margin-bottom: 200px;
+  width: 780px;
 }
 
 #TicketSection h2 {
@@ -895,10 +896,12 @@ footer .copyright {
 
 #TicketSection table {
   width: 100%;
+  margin-bottom: 50px;
 }
 
 #TicketSection thead, #TicketSection tfoot {
   height: 40px;
+  font-weight: 500;
 }
 
 #TicketSection tbody tr {
@@ -906,7 +909,6 @@ footer .copyright {
 }
 
 #TicketSection th {
-  font-weight: 600;
   text-align: right;
   position: relative;
   margin-bottom: 20px;
@@ -969,6 +971,40 @@ footer .copyright {
 
 #TicketSection .fareDescription:first-of-type {
   padding-top: 20px;
+}
+
+#TicketSection #Validation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+#TicketSection label[for=Message] {
+  margin-bottom: 5px;
+}
+
+#TicketSection textarea {
+  background-color: #09000D;
+  margin-bottom: 20px;
+  border: 1px solid #5b4963;
+  color: #8F8097;
+  padding: 10px;
+}
+
+#TicketSection #ValidateChoice {
+  width: 300px;
+  height: 50px;
+  background-color: #C66FD0;
+  border: none;
+  color: #20002f;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 #SimilarEvents h2 {
