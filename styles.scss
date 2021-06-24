@@ -38,6 +38,8 @@ h2,
 h3 {
   font-family: "Codystar", cursive;
   font-weight: 300;
+  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: $white;
 }
 
 //*************** HEADER ***********
@@ -128,7 +130,7 @@ header {
 }
 h1 {
     font-size: 44px;
-    text-shadow: -8px 10px 7px $white;
+    text-shadow: -5px 10px 5px $white;
     span {
         padding-left: 5vh;
     }
