@@ -963,7 +963,7 @@ footer .copyright {
 }
 
 #TicketSection .fareDescription {
-  color: #5b4963;
+  color: rgba(248, 245, 250, 0.47);
   margin-top: 6px;
   position: absolute;
   top: 50%;
@@ -993,7 +993,7 @@ footer .copyright {
   background-color: #09000D;
   margin-bottom: 20px;
   border: 1px solid #5b4963;
-  color: #8F8097;
+  color: rgba(248, 245, 250, 0.6);
   padding: 10px;
 }
 
