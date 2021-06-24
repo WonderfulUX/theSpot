@@ -346,8 +346,8 @@ h3::after {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%;
-  margin-bottom: 100px;
+  width: 960px;
+  margin: 0 0 100px;
 }
 
 .eventCardBig {
@@ -771,6 +771,7 @@ footer .copyright {
 }
 
 .eventTitles {
+  display: inline-block;
   text-align: left;
   font-family: "Montserrat", sans-serif;
   text-shadow: none;
@@ -781,7 +782,7 @@ footer .copyright {
 }
 
 .eventBlock {
-  margin-bottom: 100px;
+  margin-bottom: 150px;
   padding-top: 150px;
 }
 
@@ -891,14 +892,14 @@ footer .copyright {
           transform: translateY(-50%);
 }
 
+.sectionHeader {
+  text-shadow: 0 10px 4px #F8F5FA;
+  margin-bottom: 50px;
+}
+
 #TicketSection {
   margin-bottom: 200px;
   width: 100%;
-}
-
-#TicketSection h2 {
-  text-shadow: 0 10px 4px #F8F5FA;
-  margin-bottom: 80px;
 }
 
 #TicketSection table {
@@ -1009,7 +1010,35 @@ footer .copyright {
   cursor: pointer;
 }
 
-#SimilarEvents h2 {
+#SimilarEvents {
+  position: relative;
+}
+
+#SimilarEvents svg {
+  position: absolute;
+  top: 45%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  fill: #5b4963;
+  cursor: pointer;
+  -webkit-transition: fill 0.2s linear;
+  transition: fill 0.2s linear;
+}
+
+#SimilarEvents #arrowLeft {
+  left: -6%;
+}
+
+#SimilarEvents #arrowRight {
+  right: -6%;
+}
+
+#SimilarEvents .eventCardContainer {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+#SimilarEvents .eventCardContainer h2 {
   text-shadow: 0 10px 4px #F8F5FA;
   margin-bottom: 50px;
 }
@@ -1144,6 +1173,10 @@ footer .copyright {
   color: #f480ff;
   -webkit-filter: drop-shadow(0 0 5px #f480ff);
           filter: drop-shadow(0 0 5px #f480ff);
+}
+
+#SimilarEvents svg:hover {
+  fill: white;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1427,7 +1460,8 @@ footer .copyright {
   .eventBlock {
     padding-top: 100px;
   }
-  .eventBlock h1 {
+  .eventBlock .eventTitles {
+    display: block;
     text-align: center;
     margin-bottom: 50px;
   }

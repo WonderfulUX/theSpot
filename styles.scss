@@ -247,8 +247,8 @@ h3 {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 100%;
-    margin-bottom: 100px;
+    width: 960px;
+    margin: 0 0 100px;
 }
 .eventCardBig {
     width: 230px;
@@ -550,6 +550,7 @@ footer {
     margin-bottom: 50px;
 }
 .eventTitles{
+    display: inline-block;
     text-align: left;
     font-family: "Montserrat", sans-serif;
     text-shadow: none;
@@ -559,7 +560,7 @@ footer {
     -webkit-text-stroke-width: 0;
 }
 .eventBlock{ 
-    margin-bottom: 100px;
+    margin-bottom: 150px;
     padding-top: 150px;
     h1{
         margin-bottom: 30px;
@@ -638,14 +639,14 @@ footer {
 
     }
 }
-
+.sectionHeader{
+        text-shadow: 0 10px 4px $white;
+        margin-bottom: 50px;
+    }
 #TicketSection{
     margin-bottom: 200px;
     width: 100%;
-    h2{
-        text-shadow: 0 10px 4px $white;
-        margin-bottom: 80px;
-    }
+    
     table{
         width: 100%;
         margin-bottom: 50px;
@@ -734,6 +735,40 @@ footer {
     
 }
 #SimilarEvents{
+    position: relative;
+    svg{
+        position: absolute;
+        top: 45%;
+        transform: translateY(50%);
+        fill: $grey;
+        cursor: pointer;
+        transition: fill 0.2s linear;
+    }
+    #arrowLeft{
+        left: -6%;
+    }
+    #arrowRight{
+        right: -6%;
+    }
+}
+#SimilarEvents .eventCardContainer{
+    flex-wrap: nowrap;
+
+    // &::before, &:after{
+    //     position: absolute;
+    //     top: 50%;
+    //     transform: translateY(-50%);
+    //     display: block;
+    //     cursor: pointer;
+    // }
+    // &::before{
+    //     left: -6%;
+    //     content: url(./icons/arrowLeftEvents.svg);
+    // }
+    // &::after{
+    //     right: -6%;
+    //     content: url(./icons/arrowRightEvents.svg);
+    // }
     h2{
         text-shadow: 0 10px 4px $white;
         margin-bottom: 50px;
@@ -826,6 +861,9 @@ footer {
 .active{
     color: $brightPink;
     filter: drop-shadow(0 0 5px $brightPink);
+}
+#SimilarEvents svg:hover{
+    fill: white;
 }
 //*************** BREAKPOINT 1200PX ***********
 @media screen and (max-width: 1200px) {
@@ -1082,7 +1120,8 @@ footer {
     }
     .eventBlock{
         padding-top: 100px;
-        h1{
+        .eventTitles{
+            display: block;
             text-align: center;
             margin-bottom: 50px;
         }
