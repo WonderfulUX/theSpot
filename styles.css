@@ -781,25 +781,46 @@ footer .copyright {
 }
 
 .eventBlock {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 100px;
   padding-top: 150px;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 80px auto;
+      grid-template-rows: 80px auto;
+      grid-template-areas: "header right" "left right";
+}
+
+.eventBlock h1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  margin-bottom: 0;
 }
 
 .eventBlock .left {
-  width: 50%;
+  width: 100%;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: left;
 }
 
 .eventBlock .right {
-  width: 40%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: right;
 }
 
 .eventBlock #RightContainer {
@@ -813,6 +834,7 @@ footer .copyright {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 80%;
 }
 
 .eventBlock #RightContainer img {
@@ -890,7 +912,7 @@ footer .copyright {
 
 #TicketSection {
   margin-bottom: 200px;
-  width: 780px;
+  width: 100%;
 }
 
 #TicketSection h2 {

@@ -65,8 +65,8 @@
         <!----------- EVENT BLOCK CONTENT ----------->
         <section class="eventBlock">
             <!----- LEFT ----->
+            <h1 class="eventTitles">Beach Party</h1>
             <div class="left">
-                <h1 class="eventTitles">Beach Party</h1>
                 <div class="eventDescriptionContainer">
                     <p class="eventDescription">
                         Bonjour à tous, <br><br><br>
@@ -128,112 +128,113 @@
         </section>
         <!----------- TCKETS ----------->
         <section id="TicketSection">
-            <h2>Billeterie</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th class="xLeft">Tarifs</th>
-                        <th class="xRight">Prix</th>
-                        <th class="xRight">Qté</th>
-                        <th class="xRight">Sous-Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="xLeft">
-                            <p>Entrée simple</p>
-                            <p class="fareDescription">Entrée valable pour une personne avec une boisson offerte</p>
-                        </td>
-                        <td class="xRight">20,00 €</td>
-                        <td class="xRight">
-                            <select name="quantity" id="Quantity">
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                            </select>
-                        </td>
-                        <td class="xRight">0,00 €</td>
-                    </tr>
-                    <tr>
-                        <td class="xLeft">
-                            <p>Entrée sur Bouteille</p>
-                            <p class="fareDescription">Entrée valable pour un minimum de 10 personnes
-                                Salon réservé + accès au bar privé, softs illimités</p>
-                        </td>
-                        <td class="xRight">30,00 €</td>
-                        <td class="xRight">
-                            <select name="quantity" id="Quantity">
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                            </select>
-                        </td>
-                        <td class="xRight">0,00 €</td>
-                    </tr>
-                    <tr>
-                        <td class="xLeft">
-                            <p>Pack Salon</p>
-                            <p class="fareDescription">Entrée valable pour un minimum de 4 personnes
-                                3 bouteilles au choix *</p>
-                        </td>
-                        <td class="xRight">50,00 €</td>
-                        <td class="xRight">
-                            <select name="quantity" id="Quantity">
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                            </select>
-                        </td>
-                        <td class="xRight">0,00 €</td>
-                    </tr>
-                    <tr>
-                        <td class="xLeft">
-                            <p>Pack VIP</p>
-                            <p class="fareDescription">Entrée valable pour un minimum de 6 personnes
-                                Salon réservé, 2 bouteilles au choix * + softs</p>
-                        </td>
-                        <td class="xRight">80,00 €</td>
-                        <td class="xRight">
-                            <select name="quantity" id="Quantity">
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                            </select>
-                        </td>
-                        <td class="xRight">0,00 €</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td class="xLeft">Total</td>
-                        <td class="xRight"></td>
-                        <td class="xRight"></td>
-                        <td class="xRight">0,00 €</td>
-                    </tr>
-                </tfoot>
-            </table>
-            <form id="Validation">
-                <label for="Message">Message</label>
-                <textarea name="Message" id="Message" rows="6" cols="auto"></textarea>
-                <input id="ValidateChoice" class="secondaryButton" type="submit" value="Valider ma sélection">
-            </form>
-            
+            <div class="container2">
+                <h2>Billeterie</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="xLeft">Tarifs</th>
+                            <th class="xRight">Prix</th>
+                            <th class="xRight">Qté</th>
+                            <th class="xRight">Sous-Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="xLeft">
+                                <p>Entrée simple</p>
+                                <p class="fareDescription">Entrée valable pour une personne avec une boisson offerte</p>
+                            </td>
+                            <td class="xRight">20,00 €</td>
+                            <td class="xRight">
+                                <select name="quantity" id="Quantity">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </td>
+                            <td class="xRight">0,00 €</td>
+                        </tr>
+                        <tr>
+                            <td class="xLeft">
+                                <p>Entrée sur Bouteille</p>
+                                <p class="fareDescription">Entrée valable pour un minimum de 10 personnes
+                                    Salon réservé + accès au bar privé, softs illimités</p>
+                            </td>
+                            <td class="xRight">30,00 €</td>
+                            <td class="xRight">
+                                <select name="quantity" id="Quantity">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </td>
+                            <td class="xRight">0,00 €</td>
+                        </tr>
+                        <tr>
+                            <td class="xLeft">
+                                <p>Pack Salon</p>
+                                <p class="fareDescription">Entrée valable pour un minimum de 4 personnes
+                                    3 bouteilles au choix *</p>
+                            </td>
+                            <td class="xRight">50,00 €</td>
+                            <td class="xRight">
+                                <select name="quantity" id="Quantity">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </td>
+                            <td class="xRight">0,00 €</td>
+                        </tr>
+                        <tr>
+                            <td class="xLeft">
+                                <p>Pack VIP</p>
+                                <p class="fareDescription">Entrée valable pour un minimum de 6 personnes
+                                    Salon réservé, 2 bouteilles au choix * + softs</p>
+                            </td>
+                            <td class="xRight">80,00 €</td>
+                            <td class="xRight">
+                                <select name="quantity" id="Quantity">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </td>
+                            <td class="xRight">0,00 €</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="xLeft">Total</td>
+                            <td class="xRight"></td>
+                            <td class="xRight"></td>
+                            <td class="xRight">0,00 €</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <form id="Validation">
+                    <label for="Message">Message</label>
+                    <textarea name="Message" id="Message" rows="6" cols="auto"></textarea>
+                    <input id="ValidateChoice" class="secondaryButton" type="submit" value="Valider ma sélection">
+                </form>
+            </div>
         </section>
         <!----------- SIMILAR EVENTS ----------->
         <section id="SimilarEvents">
