@@ -558,28 +558,20 @@ footer {
     margin-bottom: 50px;
     -webkit-text-stroke-width: 0;
 }
-.eventBlock{
-    display: grid;
-    justify-content: space-between; 
+.eventBlock{ 
     margin-bottom: 100px;
     padding-top: 150px;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 80px auto;
-    grid-template-areas: "header right"
-                            "left right";
     h1{
-        grid-area: header;
-        margin-bottom: 0;
+        margin-bottom: 30px;
     }
     .left{
-        width: 100%;
-        grid-area: left;
+        width: 50%;
     }
     .right{
-        width: 100%;
+        float: right;
+        width: 40%;
         display: flex;
         justify-content: flex-end;
-        grid-area: right;
     }
     #RightContainer{
         display: flex;
@@ -829,6 +821,10 @@ footer {
 }
 .secondaryButton:hover{
     background-color: $brightPink;
+    filter: drop-shadow(0 0 5px $brightPink);
+}
+.active{
+    color: $brightPink;
     filter: drop-shadow(0 0 5px $brightPink);
 }
 //*************** BREAKPOINT 1200PX ***********
@@ -1082,6 +1078,31 @@ footer {
     #EventsList{
         .eventCardBig{
             margin-bottom:  30px;
+        }
+    }
+    .eventBlock{
+        padding-top: 100px;
+        h1{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .left{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .eventDescriptionContainer, #mainEventInfo{
+            width: 80%;
+        }
+        .right{
+            float: none;
+            width: 100%;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+        #RightContainer{
+            width: 40%;
         }
     }
 }

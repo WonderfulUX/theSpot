@@ -781,46 +781,27 @@ footer .copyright {
 }
 
 .eventBlock {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-bottom: 100px;
   padding-top: 150px;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
-  -ms-grid-rows: 80px auto;
-      grid-template-rows: 80px auto;
-      grid-template-areas: "header right" "left right";
 }
 
 .eventBlock h1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: header;
-  margin-bottom: 0;
+  margin-bottom: 30px;
 }
 
 .eventBlock .left {
-  width: 100%;
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: left;
+  width: 50%;
 }
 
 .eventBlock .right {
-  width: 100%;
+  float: right;
+  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 2;
-  grid-area: right;
 }
 
 .eventBlock #RightContainer {
@@ -1159,6 +1140,12 @@ footer .copyright {
           filter: drop-shadow(0 0 5px #f480ff);
 }
 
+.active {
+  color: #f480ff;
+  -webkit-filter: drop-shadow(0 0 5px #f480ff);
+          filter: drop-shadow(0 0 5px #f480ff);
+}
+
 @media screen and (max-width: 1200px) {
   body {
     font-size: 14px;
@@ -1436,6 +1423,40 @@ footer .copyright {
   }
   #EventsList .eventCardBig {
     margin-bottom: 30px;
+  }
+  .eventBlock {
+    padding-top: 100px;
+  }
+  .eventBlock h1 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .eventBlock .left {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .eventBlock .eventDescriptionContainer, .eventBlock #mainEventInfo {
+    width: 80%;
+  }
+  .eventBlock .right {
+    float: none;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 50px;
+  }
+  .eventBlock #RightContainer {
+    width: 40%;
   }
 }
 
