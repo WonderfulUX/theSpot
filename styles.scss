@@ -33,6 +33,7 @@ body {
     }
 }
 
+//TITLES
 h1,
 h2,
 h3 {
@@ -40,6 +41,14 @@ h3 {
   font-weight: 300;
   -webkit-text-stroke-width: 0.3px;
   -webkit-text-stroke-color: $white;
+}
+
+//BUTTONS
+.secondaryButton{
+    background-color: $pink;
+    color: $purpleDark;
+    transition: background-color 0.3s linear, filter 0.2s linear;
+    transition: all 0.2s linear;
 }
 
 //*************** HEADER ***********
@@ -534,17 +543,6 @@ footer {
         font-size: 10px;
     }
 }
-//*************** HOVER EFFECTS ***********
-#NavTextLinks a:hover, header svg:hover, .footerLink a:hover{
-    color: $brightPink;
-    fill: $brightPink;
-    filter: drop-shadow(0 0 5px $brightPink);
-}
-
-.detailsButton:hover, .buttonBig:hover,
-#SocialNetworksLinks svg:hover, #NewsletterIcon:hover{
-    filter: drop-shadow(0 0 5px $brightPink);
-}
 //*************** EVENTS PAGES***********
 .pageTitles{
     padding-top: 150px;
@@ -558,6 +556,7 @@ footer {
     font-size: 38px;
     font-weight: 600;
     margin-bottom: 50px;
+    -webkit-text-stroke-width: 0;
 }
 .eventBlock{
     display: flex;
@@ -618,6 +617,8 @@ footer {
     .share{
         margin: 10px;
         fill: $pink;
+        cursor: pointer;
+        transition: all 0.2s linear;
     }
     #Share{
         position: relative;
@@ -723,10 +724,9 @@ footer {
     #ValidateChoice{
         width: 300px;
         height: 50px;
-        background-color: $pink;
         border: none;
-        color: $purpleDark;
         align-self: flex-end;
+        cursor: pointer;
     }
     
 }
@@ -803,6 +803,22 @@ footer {
     .bigButtonBlock{
         padding-top: 0px;
     }
+}
+//*************** HOVER EFFECTS ***********
+#NavTextLinks a:hover, header svg:hover,
+.footerLink a:hover, .share:hover{
+    color: $brightPink;
+    fill: $brightPink;
+    filter: drop-shadow(0 0 5px $brightPink);
+}
+
+.detailsButton:hover, .buttonBig:hover,
+#SocialNetworksLinks svg:hover, #NewsletterIcon:hover{
+    filter: drop-shadow(0 0 5px $brightPink);
+}
+.secondaryButton:hover{
+    background-color: $brightPink;
+    filter: drop-shadow(0 0 5px $brightPink);
 }
 //*************** BREAKPOINT 1200PX ***********
 @media screen and (max-width: 1200px) {

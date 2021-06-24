@@ -91,6 +91,17 @@ h3 {
   -webkit-text-stroke-color: #F8F5FA;
 }
 
+.secondaryButton {
+  background-color: #C66FD0;
+  color: #20002f;
+  -webkit-transition: background-color 0.3s linear, -webkit-filter 0.2s linear;
+  transition: background-color 0.3s linear, -webkit-filter 0.2s linear;
+  transition: background-color 0.3s linear, filter 0.2s linear;
+  transition: background-color 0.3s linear, filter 0.2s linear, -webkit-filter 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -753,19 +764,6 @@ footer .copyright {
   font-size: 10px;
 }
 
-#NavTextLinks a:hover, header svg:hover, .footerLink a:hover {
-  color: #f480ff;
-  fill: #f480ff;
-  -webkit-filter: drop-shadow(0 0 5px #f480ff);
-          filter: drop-shadow(0 0 5px #f480ff);
-}
-
-.detailsButton:hover, .buttonBig:hover,
-#SocialNetworksLinks svg:hover, #NewsletterIcon:hover {
-  -webkit-filter: drop-shadow(0 0 5px #f480ff);
-          filter: drop-shadow(0 0 5px #f480ff);
-}
-
 .pageTitles {
   padding-top: 150px;
   text-align: center;
@@ -779,6 +777,7 @@ footer .copyright {
   font-size: 38px;
   font-weight: 600;
   margin-bottom: 50px;
+  -webkit-text-stroke-width: 0;
 }
 
 .eventBlock {
@@ -867,6 +866,9 @@ footer .copyright {
 .eventBlock .share {
   margin: 10px;
   fill: #C66FD0;
+  cursor: pointer;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .eventBlock #Share {
@@ -998,11 +1000,10 @@ footer .copyright {
 #TicketSection #ValidateChoice {
   width: 300px;
   height: 50px;
-  background-color: #C66FD0;
   border: none;
-  color: #20002f;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  cursor: pointer;
 }
 
 #SimilarEvents h2 {
@@ -1114,6 +1115,26 @@ footer .copyright {
 
 #EventsList .bigButtonBlock {
   padding-top: 0px;
+}
+
+#NavTextLinks a:hover, header svg:hover,
+.footerLink a:hover, .share:hover {
+  color: #f480ff;
+  fill: #f480ff;
+  -webkit-filter: drop-shadow(0 0 5px #f480ff);
+          filter: drop-shadow(0 0 5px #f480ff);
+}
+
+.detailsButton:hover, .buttonBig:hover,
+#SocialNetworksLinks svg:hover, #NewsletterIcon:hover {
+  -webkit-filter: drop-shadow(0 0 5px #f480ff);
+          filter: drop-shadow(0 0 5px #f480ff);
+}
+
+.secondaryButton:hover {
+  background-color: #f480ff;
+  -webkit-filter: drop-shadow(0 0 5px #f480ff);
+          filter: drop-shadow(0 0 5px #f480ff);
 }
 
 @media screen and (max-width: 1200px) {
