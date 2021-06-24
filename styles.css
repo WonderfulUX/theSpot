@@ -905,7 +905,7 @@ footer .copyright {
 }
 
 #TicketSection tbody tr {
-  height: 80px;
+  height: 90px;
 }
 
 #TicketSection th {
@@ -925,17 +925,17 @@ footer .copyright {
 }
 
 #TicketSection tbody tr td {
-  padding-bottom: 20px;
+  padding-bottom: 35px;
 }
 
 #TicketSection tfoot td {
-  padding-top: 25px;
+  padding-top: 0;
   position: relative;
 }
 
 #TicketSection tfoot td::before {
   position: absolute;
-  top: 10px;
+  top: 0;
   content: '';
   display: block;
   width: 102%;
@@ -956,7 +956,7 @@ footer .copyright {
 
 #TicketSection select {
   width: 50px;
-  height: 40px;
+  height: 35px;
   color: #F8F5FA;
   background-color: #09000D;
   border-radius: 2px;
@@ -966,11 +966,7 @@ footer .copyright {
   color: rgba(248, 245, 250, 0.47);
   margin-top: 6px;
   position: absolute;
-  top: 50%;
-}
-
-#TicketSection .fareDescription:first-of-type {
-  padding-top: 20px;
+  top: 35%;
 }
 
 #TicketSection #Validation {
