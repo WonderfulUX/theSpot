@@ -731,6 +731,8 @@ footer {
     #ValidateChoice{
         width: 300px;
         height: 50px;
+        line-height: 50px;
+        text-align: center;
         border: none;
         align-self: flex-end;
         cursor: pointer;
@@ -835,6 +837,92 @@ footer {
     .bigButtonBlock{
         padding-top: 0px;
     }
+}
+.headerLines{
+    width: 150px;
+    height: 1px;
+    background-color: $pink;
+    border: none;
+    margin: 0 auto 50px;
+}
+.margin2{
+    margin-bottom: 30px;
+}
+#EventDetailsRecap{
+    margin: 0 auto 50px;
+}
+.resaEventTitle, .resaEventDate{
+    text-align: center;
+}
+
+.resaEventTitle{
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+.resaEventDate{
+    font-size: 15px;
+}
+.resaBlock{
+    width: 100%;
+    padding: 30px 20px;
+    background-color: $purpleDark;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px 0 #450066;
+    margin-bottom: 20px;
+}
+.recapHeader{
+    font-size: 20px;
+    color: $pink;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: $pink;
+    margin-bottom: 20px;
+}
+.mainExplanation{
+    margin-bottom: 10px;
+}
+.instructions{
+    color: $white50;
+    font-size: 14px;
+    list-style: inside;
+    margin-bottom: 50px;
+}
+.dataCollection{
+    color: $white50;
+    width: 100%;
+    padding-right: 10%;
+    th{
+        font-weight: normal;
+        font-size: 14px;
+        height: 40px;
+    }
+
+    .rowLabel{
+        width: 16%;
+    }
+    .ticket{
+        height: 50px;
+    }
+    .dataToCollect{
+        width: 21%;
+    }
+    td{
+        text-align: center;
+    }
+    input{
+        width: 90%;
+        height: 40px;
+        border: 1px solid $grey;
+        background-color: transparent;
+        padding: 5px;
+        color: $white;
+    }
+}
+.tableHeader{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 500;
 }
 //*************** HOVER EFFECTS ***********
 #NavTextLinks a:hover, header svg:hover,
@@ -1307,6 +1395,7 @@ footer {
     #TicketSection #ValidateChoice{
         width: 100%;
         height: 42px;
+        line-height: 42px;
     }
     #SimilarEvents{
         .eventCardBig{
