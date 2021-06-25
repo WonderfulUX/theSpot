@@ -646,11 +646,14 @@ footer {
 #TicketSection{
     margin-bottom: 200px;
     width: 100%;
-    
-    table{
+    #TableSmall{
+        display: none;
+    }
+    #TableBig{
         width: 100%;
         margin-bottom: 50px;
     }
+
     thead, tfoot{
         height: 40px;
         font-weight: 500;
@@ -1303,6 +1306,7 @@ footer {
     }
     #TicketSection #ValidateChoice{
         width: 100%;
+        height: 42px;
     }
     #SimilarEvents{
         .eventCardBig{
@@ -1425,7 +1429,7 @@ footer {
         font-size: 9px;
     }
     .pageTitles{
-        padding-top: 100px;
+        padding-top: 90px;
         margin-bottom: 20px;
     }
 
@@ -1443,9 +1447,102 @@ footer {
     }
     .eventBlock{
         padding-top: 80px;
+        margin-bottom: 100px;
         .eventTitles{
             font-size: 22px;
             margin-bottom: 20px;
+        }
+    }
+    #TicketSection{
+        margin-bottom: 100px;
+    }
+    #TableBig{
+        display: none;
+    }
+    .sectionHeader{
+        margin-bottom: 15px;
+    }
+    #TicketSection #TableSmall{
+        display: flex;
+        height: 900px;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        thead{
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+        }
+        th{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            font-weight: 500;
+            height: 20px;
+            &::after, &::before{
+                display: none;
+            }
+        }
+        .fare{
+            position: relative;
+            margin-bottom: 65px;
+            padding-top: 10px;
+            &::before{
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '';
+                display: block;
+                width: 101%;
+                height: 1px;
+                background-color: $grey;
+            }
+
+        }
+        tbody{
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            tr{
+                display: flex;
+                flex-direction: column;
+                height: 205px;
+                text-align: left;
+                color: rgba($color: $white, $alpha: 0.7);
+            }
+            td{
+                height: 20px;
+                padding-bottom: 0;
+                margin-bottom: 10px;
+            }
+            select{
+                color: rgba($color: $white, $alpha: 0.7);
+            }
+            .amount{
+                padding-top: 5px;
+            }
+            .quantity{
+                height: 40px;
+                margin-bottom: 5px;
+            }
+        }
+        tfoot{
+            width: 100%;
+            height: 30px;
+            background: linear-gradient(to right, $pink, transparent);
+            padding: 5px;
+            tr{
+                display: flex;
+                justify-content: space-between;
+                font-weight: 500;
+            }
+            td{
+                display: inline-block;
+                font-size: 13px;
+                height: 20px;
+                &::before, &::after{
+                    display: none;
+                }
+            }
         }
     }
     .eventBlock .eventDescriptionContainer,
