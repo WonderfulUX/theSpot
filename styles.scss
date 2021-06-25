@@ -1484,7 +1484,7 @@ footer {
         }
         .fare{
             position: relative;
-            margin-bottom: 65px;
+            margin-bottom: 75px;
             padding-top: 10px;
             &::before{
                 position: absolute;
@@ -1505,7 +1505,7 @@ footer {
             tr{
                 display: flex;
                 flex-direction: column;
-                height: 205px;
+                height: 215px;
                 text-align: left;
                 color: rgba($color: $white, $alpha: 0.7);
             }
@@ -1523,6 +1523,9 @@ footer {
             .quantity{
                 height: 40px;
                 margin-bottom: 5px;
+            }
+            .fareDescriptionMobile{
+                color: rgba($color: $white, $alpha: 0.3);
             }
         }
         tfoot{
