@@ -900,31 +900,32 @@ footer {
 .dataCollection{
     color: $white50;
     width: 100%;
-    padding-right: 12.5%;
+    padding-right: 5%;
     th{
         font-weight: normal;
         font-size: 14px;
         height: 40px;
     }
     .rowLabel{
-        width: 16%;
+        width: 4%;
     }
     .ticket{
         height: 50px;
     }
     .dataToCollect{
-        width: 21%;
+        width: 24%;
     }
     td{
         text-align: center;
     }
     input{
-        width: 90%;
+        width: 92%;
         height: 40px;
         border: 1px solid $grey;
         background-color: transparent;
         padding: 5px;
-        color: $white;
+        color: rgba($color: $white, $alpha: 0.75);
+        letter-spacing: 0.3px;
     }
 }
 .tableHeader{
@@ -933,6 +934,43 @@ footer {
     height: 100px;
     padding-top: 55px;
     font-weight: 500;
+    color: rgba($color: $white, $alpha: 0.7);
+}
+.productList{
+    display: flex;
+    flex-wrap: wrap;
+    width: 750px;
+    margin: 0 auto;
+}
+.product{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px 40px;
+    text-align: center;
+    width: 170px;
+}
+.productMask{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 170px;
+    height: 170px;
+    background-color: rgba($color: $purpleDark, $alpha: 0.3);
+
+}
+.productName, .productPrice{
+    color: rgba($color: $white, $alpha: 0.7);
+}
+.productName{
+    width: 110%;
+}
+.product img{
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    margin-bottom: 8px;
 }
 //*************** HOVER EFFECTS ***********
 #NavTextLinks a:hover, header svg:hover,
@@ -955,7 +993,7 @@ footer {
     filter: drop-shadow(0 0 5px $brightPink);
 }
 #SimilarEvents svg:hover{
-    fill: white;
+    fill: $white;
 }
 //*************** BREAKPOINT 1200PX ***********
 @media screen and (max-width: 1200px) {
