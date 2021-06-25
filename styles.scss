@@ -246,8 +246,8 @@ h3 {
 .eventCardContainer {
     display: flex;
     justify-content: space-between;
+    width: 100%;
     flex-wrap: wrap;
-    width: 960px;
     margin: 0 0 100px;
 }
 .eventCardBig {
@@ -750,28 +750,19 @@ footer {
     #arrowRight{
         right: -6%;
     }
-}
-#SimilarEvents .eventCardContainer{
-    flex-wrap: nowrap;
-
-    // &::before, &:after{
-    //     position: absolute;
-    //     top: 50%;
-    //     transform: translateY(-50%);
-    //     display: block;
-    //     cursor: pointer;
-    // }
-    // &::before{
-    //     left: -6%;
-    //     content: url(./icons/arrowLeftEvents.svg);
-    // }
-    // &::after{
-    //     right: -6%;
-    //     content: url(./icons/arrowRightEvents.svg);
-    // }
-    h2{
-        text-shadow: 0 10px 4px $white;
-        margin-bottom: 50px;
+    .eventCardBig{
+        display: inline-block;
+    }
+    .eventCardBig{
+        margin-right: 13px;
+    }
+    .eventCardContainer{
+        width: 2880px;
+        justify-content: initial;
+    }
+    .caroussel{
+        width: 960px;
+        overflow: hidden;
     }
 }
 
@@ -947,6 +938,14 @@ footer {
     #EventsList{
         .eventCardBig{
             margin-bottom:  40px;
+        }
+    }
+    #SimilarEvents{
+        .eventCardBig{
+            margin-right: 16px;
+        }
+        .caroussel{
+            width: 850px;
         }
     }
 }
@@ -1144,6 +1143,14 @@ footer {
             width: 40%;
         }
     }
+    #SimilarEvents{
+        .eventCardBig{
+            margin-right: 24px;
+        }
+        .caroussel{
+            width: 650px;
+        }
+    }
 }
 //*************** BREAKPOINT 750PX ***********
 @media screen and (max-width: 750px) {
@@ -1292,6 +1299,20 @@ footer {
         }
         .eventCardBig{
             margin-bottom: 10px;
+        }
+    }
+    #SimilarEvents{
+        .eventCardBig{
+            margin-right: 24px;
+        }
+        .caroussel{
+            width: 500px;
+        }
+        .eventCardContainer{
+            width: 100%;
+        }
+        svg{
+            display: none;
         }
     }
 }

@@ -344,9 +344,9 @@ h3::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 960px;
   margin: 0 0 100px;
 }
 
@@ -1033,14 +1033,24 @@ footer .copyright {
   right: -6%;
 }
 
-#SimilarEvents .eventCardContainer {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+#SimilarEvents .eventCardBig {
+  display: inline-block;
 }
 
-#SimilarEvents .eventCardContainer h2 {
-  text-shadow: 0 10px 4px #F8F5FA;
-  margin-bottom: 50px;
+#SimilarEvents .eventCardBig {
+  margin-right: 13px;
+}
+
+#SimilarEvents .eventCardContainer {
+  width: 2880px;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+}
+
+#SimilarEvents .caroussel {
+  width: 960px;
+  overflow: hidden;
 }
 
 .topBgFade {
@@ -1253,6 +1263,12 @@ footer .copyright {
   }
   #EventsList .eventCardBig {
     margin-bottom: 40px;
+  }
+  #SimilarEvents .eventCardBig {
+    margin-right: 16px;
+  }
+  #SimilarEvents .caroussel {
+    width: 850px;
   }
 }
 
@@ -1492,6 +1508,12 @@ footer .copyright {
   .eventBlock #RightContainer {
     width: 40%;
   }
+  #SimilarEvents .eventCardBig {
+    margin-right: 24px;
+  }
+  #SimilarEvents .caroussel {
+    width: 650px;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -1638,6 +1660,18 @@ footer .copyright {
   }
   #EventsList .eventCardBig {
     margin-bottom: 10px;
+  }
+  #SimilarEvents .eventCardBig {
+    margin-right: 24px;
+  }
+  #SimilarEvents .caroussel {
+    width: 500px;
+  }
+  #SimilarEvents .eventCardContainer {
+    width: 100%;
+  }
+  #SimilarEvents svg {
+    display: none;
   }
 }
 
