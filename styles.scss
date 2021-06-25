@@ -1441,4 +1441,32 @@ footer {
             margin-bottom: 50px;
         }
     }
+    .eventBlock{
+        padding-top: 80px;
+        .eventTitles{
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+    }
+    .eventBlock .eventDescriptionContainer,
+    .eventBlock #mainEventInfo{
+        width: 100%;
+    }
+    .eventBlock #RightContainer{
+        width: 70%;
+    }
+    .eventBlock .share{
+        margin: 10px 20px;
+    }
+    #SimilarEvents{
+        .caroussel{
+            width: 330px;
+        }
+        .eventCardContainer{
+            width: 100%;
+        }
+        svg{
+            display: none;
+        }
+    }
 }
