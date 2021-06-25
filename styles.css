@@ -1901,7 +1901,7 @@ footer .copyright {
     color: rgba(248, 245, 250, 0.3);
   }
   #TicketSection #TableSmall tfoot {
-    width: 100%;
+    width: 55%;
     height: 30px;
     background: -webkit-gradient(linear, left top, right top, from(#C66FD0), to(transparent));
     background: linear-gradient(to right, #C66FD0, transparent);
