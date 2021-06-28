@@ -900,26 +900,35 @@ footer {
 .dataCollection{
     color: $white50;
     width: 100%;
-    padding-right: 5%;
-    th{
-        font-weight: normal;
-        font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .customerDetail{
+        display: flex;
+        width: 95%;
+        justify-content: center;
+        margin-right: 1%;
+    }
+    .customerInput, .customerInputId{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .customerInput{
+        width: 33%;
+    }
+    .customerInputId{
         height: 40px;
+        padding-top: 30px;
     }
-    .rowLabel{
-        width: 4%;
+    .desktopHidden{
+        visibility: hidden;
     }
-    .ticket{
-        height: 50px;
-    }
-    .dataToCollect{
-        width: 24%;
-    }
-    td{
-        text-align: center;
+    label{
+        height: 20px;
     }
     input{
-        width: 92%;
+        width: 93%;
         height: 40px;
         border: 1px solid $grey;
         background-color: transparent;

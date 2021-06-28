@@ -1235,33 +1235,61 @@ footer .copyright {
 .dataCollection {
   color: #8F8097;
   width: 100%;
-  padding-right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.dataCollection th {
-  font-weight: normal;
-  font-size: 14px;
+.dataCollection .customerDetail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 95%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 1%;
+}
+
+.dataCollection .customerInput, .dataCollection .customerInputId {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dataCollection .customerInput {
+  width: 33%;
+}
+
+.dataCollection .customerInputId {
   height: 40px;
+  padding-top: 30px;
 }
 
-.dataCollection .rowLabel {
-  width: 4%;
+.dataCollection .desktopHidden {
+  visibility: hidden;
 }
 
-.dataCollection .ticket {
-  height: 50px;
-}
-
-.dataCollection .dataToCollect {
-  width: 24%;
-}
-
-.dataCollection td {
-  text-align: center;
+.dataCollection label {
+  height: 20px;
 }
 
 .dataCollection input {
-  width: 92%;
+  width: 93%;
   height: 40px;
   border: 1px solid #5b4963;
   background-color: transparent;

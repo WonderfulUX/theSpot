@@ -80,76 +80,102 @@
                     <li>Seules les informations de la personne collectant les billets sont obligatoires</li>
                     <li>Si vous souhaitez transmettre un ticket directement à une personne de votre groupe, reseignez nom, prénom et email</li>
                 </ul>
-                <table class="dataCollection">
+                <form class="dataCollection">
+                    <!-- ENTRIES TYPE 1 -->
                     <p class="tableHeader">Entrées simples</p>
-                    <thead>
-                        <tr>
-                            <th style="visibility: hidden;" class="rowLabel">Tickets</th>
-                            <th class="dataToCollect">Prénom</th>
-                            <th class="dataToCollect">Nom</th>
-                            <th class="dataToCollect">Téléphone</th>
-                            <th class="dataToCollect">Email</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="rowLabel ticket">1</td>
-                            <td class="dataToCollect"><input type="text"></td>
-                            <td class="dataToCollect"><input type="text"></td>
-                            <td class="dataToCollect"><input type="text"></td>
-                            <td class="dataToCollect"><input type="text"></td>
-                        </tr>
-                        <tr>
-                            <td class="rowLabel ticket">2</td>
-                            <td class="dataToCollect"><input type="text"></td>
-                            <td class="dataToCollect"><input type="text"></td>
-                            <td class="dataToCollect"><input type="text"></td>
-                            <td class="dataToCollect"><input type="text"></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table class="dataCollection">
-                    <p class="tableHeader">Entrées sur Bouteille</p>
-                    <thead>
-                        <tr>
-                            <th style="visibility: hidden;" class="rowLabel">Tickets</th>
-                            <th class="dataToCollect">Prénom</th>
-                            <th class="dataToCollect">Nom</th>
-                            <th class="dataToCollect">Téléphone</th>
-                            <th class="dataToCollect">Email</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="rowLabel ticket">1</td>
-                            <td class="dataToCollect"><input type="text"></td>
-                            <td class="dataToCollect"><input type="text"></td>
-                            <td class="dataToCollect"><input type="text"></td>
-                            <td class="dataToCollect"><input type="text"></td>
-                        </tr>
-                        <tr>
-                            <td class="rowLabel ticket">2</td>
-                            <td class="dataToCollect"><input type="text"></td>
-                            <td class="dataToCollect"><input type="text"></td>
-                            <td class="dataToCollect"><input type="text"></td>
-                            <td class="dataToCollect"><input type="text"></td>
-                        </tr>
-                        <tr>
-                            <td class="rowLabel ticket">3</td>
-                            <td class="dataToCollect"><input type="text"></td>
-                            <td class="dataToCollect"><input type="text"></td>
-                            <td class="dataToCollect"><input type="text"></td>
-                            <td class="dataToCollect"><input type="text"></td>
-                        </tr>
-                        <tr>
-                            <td class="rowLabel ticket">4</td>
-                            <td class="dataToCollect"><input type="text"></td>
-                            <td class="dataToCollect"><input type="text"></td>
-                            <td class="dataToCollect"><input type="text"></td>
-                            <td class="dataToCollect"><input type="text"></td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <div class="customerDetail">
+                        <div class="customerInputId">1</div>
+                        <div class="customerInput">
+                            <label for="name6_fname">Prénom</label>
+                            <input type="text" id="name6_fname" name="name1">
+                        </div>
+                        <div class="customerInput">
+                            <label for="name6_lname">Nom</label>
+                            <input type="text" id="name6_lname" name="name1">
+                        </div>
+                        <div class="customerInput">
+                            <label for="name6_email">Email</label>
+                            <input type="email" id="name6_email" name="name1">
+                        </div>
+                    </div>
+                    <div class="customerDetail">
+                        <div class="customerInputId">2</div>
+                        <div class="customerInput">
+                            <label for="name6_fname" class="desktopHidden">Prénom</label>
+                            <input type="text" id="name6_fname" name="name2">
+                        </div>
+                        <div class="customerInput">
+                            <label for="name6_lname" class="desktopHidden">Nom</label>
+                            <input type="text" id="name6_lname" name="name2">
+                        </div>
+                        <div class="customerInput">
+                            <label for="name6_email" class="desktopHidden">Email</label>
+                            <input type="email" id="name6_email" name="name2">
+                        </div>
+                    </div>
+                    <!-- ENTRIES TYPE 2 -->
+                    <p class="tableHeader">Entrées sur bouteilles</p>
+                    <div class="customerDetail">
+                        <div class="customerInputId">1</div>
+                        <div class="customerInput">
+                            <label for="name6_fname">Prénom</label>
+                            <input type="text" id="name1_fname" name="name3">
+                        </div>
+                        <div class="customerInput">
+                            <label for="name6_lname">Nom</label>
+                            <input type="text" id="name6_lname" name="name3">
+                        </div>
+                        <div class="customerInput">
+                            <label for="name6_email">Email</label>
+                            <input type="email" id="name6_email" name="name3">
+                        </div>
+                    </div>
+                    <div class="customerDetail">
+                        <div class="customerInputId">2</div>
+                        <div class="customerInput">
+                            <label for="name6_fname" class="desktopHidden">Prénom</label>
+                            <input type="text" id="name6_fname" name="name4">
+                        </div>
+                        <div class="customerInput">
+                            <label for="name6_lname" class="desktopHidden">Nom</label>
+                            <input type="text" id="name6_lname" name="name4">
+                        </div>
+                        <div class="customerInput">
+                            <label for="name6_email" class="desktopHidden">Email</label>
+                            <input type="email" id="name6_email" name="name4">
+                        </div>
+                    </div>
+                    <div class="customerDetail">
+                        <div class="customerInputId">3</div>
+                        <div class="customerInput">
+                            <label for="name6_fname" class="desktopHidden">Prénom</label>
+                            <input type="text" id="name6_fname" name="name5">
+                        </div>
+                        <div class="customerInput">
+                            <label for="name6_lname" class="desktopHidden">Nom</label>
+                            <input type="text" id="name6_lname" name="name5">
+                        </div>
+                        <div class="customerInput">
+                            <label for="name6_email" class="desktopHidden">Email</label>
+                            <input type="email" id="name6_email" name="name5">
+                        </div>
+                    </div>
+                    <div class="customerDetail">
+                        <div class="customerInputId">4</div>
+                        <div class="customerInput">
+                            <label for="name6_fname" class="desktopHidden">Prénom</label>
+                            <input type="text" id="name6_fname" name="name6">
+                        </div>
+                        <div class="customerInput">
+                            <label for="name6_lname" class="desktopHidden">Nom</label>
+                            <input type="text" id="name6_lname" name="name6">
+                        </div>
+                        <div class="customerInput">
+                            <label for="name6_email" class="desktopHidden">Email</label>
+                            <input type="email" id="name6_email" name="name6">
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="resaBlock" id="Beverages">
