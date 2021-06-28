@@ -1307,6 +1307,10 @@ footer .copyright {
   letter-spacing: 0.3px;
 }
 
+.dataCollection label {
+  font-size: 14px;
+}
+
 .formHeader {
   text-align: center;
   text-transform: uppercase;
@@ -1957,6 +1961,23 @@ footer .copyright {
   }
   #SimilarEvents svg {
     display: none;
+  }
+  .productMask, .product img {
+    width: 130px;
+    height: 130px;
+  }
+  .recapHeader {
+    font-size: 16px;
+  }
+  .formHeader {
+    font-size: 13px;
+  }
+  .dataCollection label {
+    font-size: 12px;
+  }
+  .resaBlock::before {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
   }
 }
 

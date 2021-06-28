@@ -941,6 +941,9 @@ footer {
         color: rgba($color: $white, $alpha: 0.75);
         letter-spacing: 0.3px;
     }
+    label{
+        font-size: 14px;
+    }
 }
 .formHeader{
     text-align: center;
@@ -1540,6 +1543,22 @@ footer {
         svg{
             display: none;
         }
+    }
+    .productMask, .product img{
+        width: 130px;
+        height: 130px;
+    }
+    .recapHeader{
+        font-size: 16px;
+    }
+    .formHeader{
+        font-size: 13px;
+    }
+    .dataCollection label{
+        font-size: 12px;
+    }
+    .resaBlock::before{
+        transform: scale(0.7);
     }
 }
 
