@@ -1247,7 +1247,7 @@ footer .copyright {
           align-items: center;
 }
 
-.dataCollection .customerDetail {
+.dataCollection .customerDetails {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1258,7 +1258,7 @@ footer .copyright {
   margin-right: 1%;
 }
 
-.dataCollection .customerInput, .dataCollection .customerInputId {
+.dataCollection .customerInput, .dataCollection .customerInputId, .dataCollection .customerInputEmail {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1271,7 +1271,16 @@ footer .copyright {
           align-items: center;
 }
 
-.dataCollection .customerInput {
+.dataCollection .customerInputContainer {
+  width: 99%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.dataCollection .customerInput, .dataCollection .customerInputEmail {
   width: 33%;
 }
 
@@ -1298,11 +1307,11 @@ footer .copyright {
   letter-spacing: 0.3px;
 }
 
-.tableHeader {
+.formHeader {
   text-align: center;
   text-transform: uppercase;
-  height: 100px;
-  padding-top: 55px;
+  height: 120px;
+  padding-top: 60px;
   font-weight: 500;
   color: #C66FD0;
 }
@@ -1335,31 +1344,39 @@ footer .copyright {
 
 .productImgContainer {
   position: relative;
+  margin-bottom: 8px;
 }
 
 .productMask {
   position: absolute;
   top: 0;
   right: 0;
-  width: 170px;
-  height: 170px;
+  width: 160px;
+  height: 160px;
   background-color: rgba(32, 0, 47, 0.3);
 }
 
 .productName, .productPrice {
-  color: rgba(248, 245, 250, 0.7);
+  font-size: 13px;
 }
 
 .productName {
+  margin-bottom: 0.3em;
   width: 110%;
+  color: rgba(248, 245, 250, 0.8);
+}
+
+.productPrice {
+  color: rgba(248, 245, 250, 0.4);
 }
 
 .product img {
-  width: 170px;
-  height: 170px;
+  width: 160px;
+  height: 160px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-bottom: 8px;
+  border-radius: 2px;
+  overflow: hidden;
 }
 
 #NavTextLinks a:hover, header svg:hover,
@@ -1472,6 +1489,19 @@ footer .copyright {
   }
   #SimilarEvents .caroussel {
     width: 850px;
+  }
+  .resaEventTitle {
+    font-size: 32px;
+  }
+  .resaEventDate, .mainExplanation {
+    font-size: 14px;
+  }
+  .instructions {
+    font-size: 13px;
+  }
+  .product img, .productMask {
+    width: 130px;
+    height: 130px;
   }
 }
 
@@ -1716,6 +1746,53 @@ footer .copyright {
   }
   #SimilarEvents .caroussel {
     width: 650px;
+  }
+  .dataCollection .customerDetails {
+    width: 100%;
+    margin: 0;
+  }
+  .dataCollection .customerInputId {
+    width: 4%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .dataCollection .customerInputContainer {
+    width: 96%;
+  }
+  .dataCollection .customerInputEmail, .dataCollection .customerInput {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .dataCollection .customerInputEmail {
+    width: 50%;
+  }
+  .dataCollection .customerInputEmail input {
+    width: 90%;
+  }
+  .dataCollection .customerInput {
+    width: 25%;
+    margin-bottom: 8px;
+  }
+  .productList {
+    width: 100%;
+  }
+  .product {
+    width: 33%;
+  }
+  .resaEventTitle {
+    font-size: 28px;
+  }
+  .resaEventDate, .mainExplanation {
+    font-size: 13px;
+  }
+  .instructions {
+    font-size: 12px;
+  }
+  .product img, .productMask {
+    width: 150px;
+    height: 150px;
   }
 }
 

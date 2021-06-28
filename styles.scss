@@ -903,18 +903,23 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .customerDetail{
+    .customerDetails{
         display: flex;
         width: 95%;
         justify-content: center;
         margin-right: 1%;
     }
-    .customerInput, .customerInputId{
+    .customerInput, .customerInputId, .customerInputEmail{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .customerInput{
+    .customerInputContainer{
+        width: 99%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .customerInput, .customerInputEmail{
         width: 33%;
     }
     .customerInputId{
@@ -937,11 +942,11 @@ footer {
         letter-spacing: 0.3px;
     }
 }
-.tableHeader{
+.formHeader{
     text-align: center;
     text-transform: uppercase;
-    height: 100px;
-    padding-top: 55px;
+    height: 120px;
+    padding-top: 60px;
     font-weight: 500;
     color: $pink;
 }
@@ -961,27 +966,34 @@ footer {
 }
 .productImgContainer{
     position: relative;
+    margin-bottom: 8px;
 }
 .productMask{
     position: absolute;
     top: 0;
     right: 0;
-    width: 170px;
-    height: 170px;
+    width: 160px;
+    height: 160px;
     background-color: rgba($color: $purpleDark, $alpha: 0.3);
 
 }
 .productName, .productPrice{
-    color: rgba($color: $white, $alpha: 0.7);
+    font-size: 13px;
 }
 .productName{
+    margin-bottom: 0.3em;
     width: 110%;
+    color: rgba($color: $white, $alpha: 0.8);
+}
+.productPrice{
+    color: rgba($color: $white, $alpha: 0.4);
 }
 .product img{
-    width: 170px;
-    height: 170px;
+    width: 160px;
+    height: 160px;
     object-fit: cover;
-    margin-bottom: 8px;
+    border-radius: 2px;
+    overflow: hidden;
 }
 //*************** HOVER EFFECTS ***********
 #NavTextLinks a:hover, header svg:hover,
@@ -1097,6 +1109,19 @@ footer {
         .caroussel{
             width: 850px;
         }
+    }
+    .resaEventTitle{
+        font-size: 32px;
+    }
+    .resaEventDate, .mainExplanation{
+        font-size: 14px;
+    }
+    .instructions{
+        font-size: 13px;
+    }
+    .product img, .productMask{
+        width: 130px;
+        height: 130px;
     }
 }
 //*************** BREAKPOINT 1100PX ***********
@@ -1300,6 +1325,52 @@ footer {
         .caroussel{
             width: 650px;
         }
+    }
+    .dataCollection{
+        .customerDetails{
+            width: 100%;
+            margin: 0;
+        }
+        .customerInputId{
+            width: 4%;
+            align-items: flex-start;
+        }
+        .customerInputContainer{
+            width: 96%;
+        }
+        .customerInputEmail, .customerInput{
+            align-items: flex-start;
+        }
+        .customerInputEmail{
+            width: 50%;
+            input{
+                width: 90%;
+            }
+        }
+        .customerInput{
+            width: 25%;
+            margin-bottom: 8px;
+        }
+
+    }
+    .productList{
+        width: 100%;
+    }
+    .product{
+        width: 33%;
+    }
+    .resaEventTitle{
+        font-size: 28px;
+    }
+    .resaEventDate, .mainExplanation{
+        font-size: 13px;
+    }
+    .instructions{
+        font-size: 12px;
+    }
+    .product img, .productMask{
+        width: 150px;
+        height: 150px;
     }
 }
 //*************** BREAKPOINT 750PX ***********
