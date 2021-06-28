@@ -1810,4 +1810,29 @@ footer {
             display: none;
         }
     }
+    .resaEventTitle{
+        font-size: 20px;
+    }
+    .resaEventDate, .mainExplanation, .formHeader{
+        font-size: 12px;
+    }
+    .instructions{
+        font-size: 11px;
+    }
+    .dataCollection .customerDetails{
+        flex-wrap: wrap;
+    }
+    .dataCollection .customerInput{
+        width: 46%;
+    }
+    .dataCollection .customerInputEmail{
+        width: 98.5%;
+        margin-bottom: 30px;
+    }
+    .dataCollection .desktopHidden{
+        visibility: visible;
+    }
+    .product{
+        width: 50%;
+    }
 }
