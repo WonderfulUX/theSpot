@@ -1304,7 +1304,7 @@ footer .copyright {
   height: 100px;
   padding-top: 55px;
   font-weight: 500;
-  color: rgba(248, 245, 250, 0.7);
+  color: #C66FD0;
 }
 
 .productList {
@@ -1313,12 +1313,11 @@ footer .copyright {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 750px;
+  width: 80%;
   margin: 0 auto;
 }
 
 .product {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1329,9 +1328,13 @@ footer .copyright {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 10px 40px;
+  margin-bottom: 40px;
   text-align: center;
-  width: 170px;
+  width: 25%;
+}
+
+.productImgContainer {
+  position: relative;
 }
 
 .productMask {
