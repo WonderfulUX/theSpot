@@ -1229,7 +1229,7 @@ footer .copyright {
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 500;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .mainExplanation {
@@ -1420,8 +1420,12 @@ footer .copyright {
   margin-bottom: 4px;
 }
 
+.ticketFullName, .ticketEmail, .beverageName, .entryTypeName {
+  font-size: 14px;
+}
+
 .ticketEmail {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   color: #8F8097;
 }
 
@@ -1454,8 +1458,8 @@ footer .copyright {
   margin-bottom: 40px;
 }
 
-#Recap {
-  width: 650px;
+#Recap > div {
+  width: 500px;
   margin: 0 auto 50px;
 }
 
@@ -2092,8 +2096,11 @@ footer .copyright {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
   }
-  #Recap {
-    width: 100%;
+  #Recap > div {
+    width: 90%;
+  }
+  .recapHeader {
+    font-size: 16px;
   }
 }
 
@@ -2380,6 +2387,12 @@ footer .copyright {
   .entryTypePrice {
     width: 65px;
     margin-left: 8px;
+  }
+  #Recap > div {
+    width: 100%;
+  }
+  .recapHeader {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

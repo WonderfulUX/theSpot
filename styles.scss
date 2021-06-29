@@ -896,7 +896,7 @@ footer {
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 500;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 .mainExplanation{
     margin-bottom: 10px;
@@ -1029,9 +1029,12 @@ footer {
 .ticketFullName, .beverageName{
     margin-bottom: 4px;
 }
+.ticketFullName, .ticketEmail, .beverageName, .entryTypeName{
+    font-size: 14px;
+}
 
 .ticketEmail{
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     color: $white50;
 }
 .entryTypeLine, .totalLine{
@@ -1054,8 +1057,8 @@ footer {
 .entryType{
     margin-bottom: 40px;
 }
-#Recap{
-    width: 650px;
+#Recap>div{
+    width: 500px;
     margin: 0 auto 50px;
 }
 
@@ -1657,8 +1660,11 @@ footer {
     .resaBlock::before{
         transform: scale(0.7);
     }
-    #Recap{
-        width: 100%;
+    #Recap>div{
+        width: 90%;
+    }
+    .recapHeader{
+        font-size: 16px;
     }
 }
 
@@ -1932,4 +1938,11 @@ footer {
         width: 65px;
         margin-left: 8px;
     }
+    #Recap>div{
+        width: 100%;
+    }
+    .recapHeader{
+        font-size: 14px;
+    }
+    
 }
