@@ -16,7 +16,6 @@ body {
 
   /* Track */
   ::-webkit-scrollbar-track {
-    //box-shadow: inset 0 0 2px $pink;
     background-color: $grey;
     border-radius: 10px;
   }
@@ -644,6 +643,10 @@ footer {
   text-shadow: 0 10px 4px $white;
   margin-bottom: 50px;
 }
+.sectionHeader2{
+    font-size: 28px;
+    margin-bottom: 50px;
+}
 #TicketSection {
   margin-bottom: 200px;
   width: 100%;
@@ -1159,6 +1162,18 @@ footer {
   height: 40px;
   display: none;
 }
+
+.customerInfo{
+    margin-bottom: 8px;
+}
+.profileIcon{
+    fill: $pink;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.customerIdLine{
+    margin-bottom: 8px;
+}
 //*************** HOVER EFFECTS ***********
 #NavTextLinks a:hover,
 header svg:hover,
@@ -1186,6 +1201,34 @@ header svg:hover,
 }
 #SimilarEvents svg:hover {
   fill: $white;
+}
+
+#MyInformation{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    padding-top: 50px;
+}
+#OngoingReservation{
+    height: 120px;
+    width: 300px;
+    background-color: $purpleDark;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px 0 #450066;
+    margin-top: 60px;
+    p{
+        line-height: 50px;
+    }
+    .blockValue{
+        font-size: 30px;
+        color: $pink;
+        font-weight: 500;
+    }
+    .blockHead{
+        text-transform: uppercase;
+    }
 }
 //*************** BREAKPOINT 1200PX ***********
 @media screen and (max-width: 1200px) {

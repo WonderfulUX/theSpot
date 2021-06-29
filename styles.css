@@ -900,6 +900,11 @@ footer .copyright {
   margin-bottom: 50px;
 }
 
+.sectionHeader2 {
+  font-size: 28px;
+  margin-bottom: 50px;
+}
+
 #TicketSection {
   margin-bottom: 200px;
   width: 100%;
@@ -1595,6 +1600,20 @@ footer .copyright {
   display: none;
 }
 
+.customerInfo {
+  margin-bottom: 8px;
+}
+
+.profileIcon {
+  fill: #C66FD0;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.customerIdLine {
+  margin-bottom: 8px;
+}
+
 #NavTextLinks a:hover,
 header svg:hover,
 .footerLink a:hover,
@@ -1628,6 +1647,46 @@ header svg:hover,
 
 #SimilarEvents svg:hover {
   fill: #F8F5FA;
+}
+
+#MyInformation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 80px;
+  padding-top: 50px;
+}
+
+#OngoingReservation {
+  height: 120px;
+  width: 300px;
+  background-color: #20002f;
+  text-align: center;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px 0 #450066;
+          box-shadow: inset 0 1px 2px 0 #450066;
+  margin-top: 60px;
+}
+
+#OngoingReservation p {
+  line-height: 50px;
+}
+
+#OngoingReservation .blockValue {
+  font-size: 30px;
+  color: #C66FD0;
+  font-weight: 500;
+}
+
+#OngoingReservation .blockHead {
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 1200px) {

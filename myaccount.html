@@ -29,8 +29,8 @@
                     <li>
                         <ul id="mobileNavIconLinks">
                             <li><a href="" class="icons"><img src="./icons/favorites.svg" alt="Évènements sauvegardés"></a></li>
-                            <li><a href="./myaccount.html" class="icons"><img src="./icons/profile.svg" alt="Profil"></a></li>
-                            <li><a href="" class="icons active"><img src="./icons/cart.svg" alt="Panier"></a></li>
+                            <li><a href="" class="icons active"><img src="./icons/profile.svg" alt="Profil"></a></li>
+                            <li><a href="./cart.html" class="icons"><img src="./icons/cart.svg" alt="Panier"></a></li>
                         </ul>
                     </li>
                 </ul>
@@ -45,16 +45,16 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./myaccount.html" class="icons">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <a href="" class="icons">
+                        <svg class="active" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M9 0C10.1935 0 11.3381 0.474106 12.182 1.31802C13.0259 2.16193 13.5 3.30653 13.5 4.5C13.5 5.69347 13.0259 6.83807 12.182 7.68198C11.3381 8.52589 10.1935 9 9 9C7.80653 9 6.66193 8.52589 5.81802 7.68198C4.97411 6.83807 4.5 5.69347 4.5 4.5C4.5 3.30653 4.97411 2.16193 5.81802 1.31802C6.66193 0.474106 7.80653 0 9 0ZM9 11.25C13.9725 11.25 18 13.2638 18 15.75V18H0V15.75C0 13.2638 4.0275 11.25 9 11.25Z" />
                         </svg>
                     </a>
                 </li>
                 <li>
-                    <a href="" class="icons">
-                        <svg class="active" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <a href="./cart.html" class="icons">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M16 15C14.89 15 14 15.89 14 17C14 17.5304 14.2107 18.0391 14.5858 18.4142C14.9609 18.7893 15.4696 19 16 19C16.5304 19 17.0391 18.7893 17.4142 18.4142C17.7893 18.0391 18 17.5304 18 17C18 15.89 17.1 15 16 15ZM0 0V2H2L5.6 9.59L4.24 11.04C4.09 11.32 4 11.65 4 12C4 12.5304 4.21071 13.0391 4.58579 13.4142C4.96086 13.7893 5.46957 14 6 14H17V12H6.42C6.3537 12 6.29011 11.9737 6.24322 11.9268C6.19634 11.8799 6.17 11.8163 6.17 11.75C6.17 11.7 6.18 11.66 6.2 11.63L7.1 11H14.55C15.3 11 15.96 10.58 16.3 9.97L19.88 3.5C19.95 3.34 20 3.17 20 3C20 2.73478 19.8946 2.48043 19.7071 2.29289C19.5196 2.10536 19.2652 2 19 2H4.21L3.27 0H0ZM6 15C4.89 15 4 15.89 4 17C4 17.5304 4.21071 18.0391 4.58579 18.4142C4.96086 18.7893 5.46957 19 6 19C6.53043 19 7.03914 18.7893 7.41421 18.4142C7.78929 18.0391 8 17.5304 8 17C8 15.89 7.1 15 6 15Z" />
                         </svg>
@@ -64,24 +64,41 @@
         </nav>
     </header>
     <div class="topBgFade"></div>
-    <!-- BACK -->
-    <a href="javascript:history.back()"class="back">
-        <svg  width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M31.6667 8.73737V11.2626H4.89533L11.9069 18.2071L10.0966 20L0 10L10.0966 0L11.9069 1.79293L4.89533 8.73737H31.6667Z" fill="#C66FD0"/>
-        </svg>
-    </a>
-    <a href="javascript:history.back()" class="backMobile">
-        <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9.2625 13.225L3.5375 7.5L9.2625 1.7625L7.5 0L0 7.5L7.5 15L9.2625 13.225Z" fill="#F8F5FA"/>
-        </svg>
-    </a>
     <div class="container2">
-        <h1 class="pageTitles margin2">Panier</h1>
+        <h1 class="pageTitles margin2">Mon compte</h1>
         <hr class="headerLines">
+        <!----------- CUSTOMER INFO ----------->
+        <section id="MyInformation">
+            <div id="OngoingReservation">
+                <p class="blockHead">Réservations en cours</p>
+                <p class="blockValue">1</p>
+            </div>
+            <div id="CustomerId">
+                <h2 class="sectionHeader2">Mes informations</h2>
+                <div class="customerIdLine">
+                    <svg class="profileIcon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 0C10.1935 0 11.3381 0.474106 12.182 1.31802C13.0259 2.16193 13.5 3.30653 13.5 4.5C13.5 5.69347 13.0259 6.83807 12.182 7.68198C11.3381 8.52589 10.1935 9 9 9C7.80653 9 6.66193 8.52589 5.81802 7.68198C4.97411 6.83807 4.5 5.69347 4.5 4.5C4.5 3.30653 4.97411 2.16193 5.81802 1.31802C6.66193 0.474106 7.80653 0 9 0ZM9 10.125C12.0037 10.125 18 11.6212 18 14.625V18H0V14.625C0 11.6212 5.99625 10.125 9 10.125Z"/>
+                    </svg>
+                    <span>Boris Boulogne</span>
+                </div>
+                <div class="customerIdLine">
+                    <svg class="profileIcon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.62 7.79C5.06 10.62 7.38 12.94 10.21 14.38L12.41 12.18C12.69 11.9 13.08 11.82 13.43 11.93C14.55 12.3 15.75 12.5 17 12.5C17.2652 12.5 17.5196 12.6054 17.7071 12.7929C17.8946 12.9804 18 13.2348 18 13.5V17C18 17.2652 17.8946 17.5196 17.7071 17.7071C17.5196 17.8946 17.2652 18 17 18C12.4913 18 8.1673 16.2089 4.97918 13.0208C1.79107 9.8327 0 5.50868 0 1C0 0.734784 0.105357 0.48043 0.292893 0.292893C0.48043 0.105357 0.734784 0 1 0H4.5C4.76522 0 5.01957 0.105357 5.20711 0.292893C5.39464 0.48043 5.5 0.734784 5.5 1C5.5 2.25 5.7 3.45 6.07 4.57C6.18 4.92 6.1 5.31 5.82 5.59L3.62 7.79Z"/>
+                    </svg>
+                    <span>0690321456</span>
+                </div>
+                <div class="customerIdLine">
+                    <svg class="profileIcon" width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.2 3.6L9 8.1L1.8 3.6V1.8L9 6.3L16.2 1.8V3.6ZM16.2 0H1.8C0.801 0 0 0.801 0 1.8V12.6C0 13.0774 0.189642 13.5352 0.527208 13.8728C0.864773 14.2104 1.32261 14.4 1.8 14.4H16.2C16.6774 14.4 17.1352 14.2104 17.4728 13.8728C17.8104 13.5352 18 13.0774 18 12.6V1.8C18 0.801 17.19 0 16.2 0Z"/>
+                    </svg>
+                    <span>boris@gmail.com</span>
+                </div>
+            </div>
+        </section>
         <!----------- RECAP ----------->
-        <section class="resaBlock" id="Recap">
+        <section id="ticketsListing">
             <div>
-                <h2 class="recapHeader">Récapitulatif</h2>
+                <h2 class="sectionHeader2">Mes Réservations</h2>
                 <p class="resaType">Réservation d'évènement</p>
                 <p class="eventName">Red party</p>
                 <div class="recap">
@@ -156,34 +173,6 @@
                         <span class="totalAmount">2305,00 €</span>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section  class="resaBlock" id="Payment">
-            <div id="PaymentInstructions">
-                <h2 class="recapHeader" style="text-align: left;">paiement</h2>
-                <p class="mainExplanation">Saisissez vos informations bancaires pour procéder à l'achat</p>
-                <p class="instructions">Une confirmation vous sera envoyée par email aux adresses précisées pour cette réservation, 
-                    contenant les billets respectifs ainsi qu'une facture d'achat</p>
-                <p id="PaymentAmount">167,00 €</p>
-            </div>
-            <div id="CardFields">
-                <div id="PaymentInputContainer">
-                    <div class="paymentInput">
-                        <label for="CardNumber">Numéro de carte</label>
-                        <input type="text" id="CardNumber" name="CardNumber">
-                    </div>
-                    <div class="paymentLine2">
-                        <div class="paymentInput smallInput">
-                            <label for="ExpDate">Date d'expiration</label>
-                            <input type="text" id="ExpDate" name="ExpDate">
-                        </div>
-                        <div class="paymentInput smallInput">
-                            <label for="Code">CVV</label>
-                            <input type="text" id="Code" name="Code">
-                        </div>
-                    </div>
-                </div>
-                <button class="secondaryButton addToCart">Procéder au paiement</button>
             </div>
         </section>
     </div>
