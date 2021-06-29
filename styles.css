@@ -1206,7 +1206,7 @@ footer .copyright {
   margin-bottom: 24px;
 }
 
-.recapHeader {
+.resaBlockHeader {
   font-size: 20px;
   color: #C66FD0;
   -webkit-text-stroke-width: 0.3px;
@@ -1219,6 +1219,13 @@ footer .copyright {
   position: absolute;
   top: 24px;
   right: 20px;
+}
+
+.recapHeader {
+  font-family: "Montserrat", sans-serif;
+  color: #C66FD0;
+  text-align: center;
+  -webkit-text-stroke-width: 0;
 }
 
 .mainExplanation {
@@ -1255,7 +1262,6 @@ footer .copyright {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: 1%;
 }
 
 .dataCollection .customerInput, .dataCollection .customerInputId, .dataCollection .customerInputEmail {
@@ -1281,12 +1287,13 @@ footer .copyright {
 }
 
 .dataCollection .customerInput, .dataCollection .customerInputEmail {
-  width: 33%;
+  width: 30%;
 }
 
 .dataCollection .customerInputId {
   height: 40px;
   padding-top: 30px;
+  width: 10%;
 }
 
 .dataCollection .desktopHidden {
@@ -1756,13 +1763,13 @@ footer .copyright {
     margin: 0;
   }
   .dataCollection .customerInputId {
-    width: 4%;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    width: 12%;
   }
   .dataCollection .customerInputContainer {
-    width: 96%;
+    width: 90%;
   }
   .dataCollection .customerInputEmail, .dataCollection .customerInput {
     -webkit-box-align: start;
@@ -1770,13 +1777,13 @@ footer .copyright {
             align-items: flex-start;
   }
   .dataCollection .customerInputEmail {
-    width: 50%;
+    width: 48%;
   }
   .dataCollection .customerInputEmail input {
     width: 90%;
   }
   .dataCollection .customerInput {
-    width: 25%;
+    width: 26%;
     margin-bottom: 8px;
   }
   .productList {
@@ -1966,11 +1973,39 @@ footer .copyright {
     width: 130px;
     height: 130px;
   }
-  .recapHeader {
+  .resaBlockHeader {
     font-size: 16px;
   }
   .formHeader {
     font-size: 13px;
+  }
+  .dataCollection .customerDetails {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .dataCollection .customerInput {
+    width: 50%;
+  }
+  .dataCollection .customerInput input {
+    width: 95%;
+  }
+  .dataCollection .customerInputContainer {
+    width: 100%;
+  }
+  .dataCollection .customerInputEmail {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .dataCollection .customerInputEmail input {
+    width: 98%;
+  }
+  .dataCollection .desktopHidden {
+    visibility: visible;
+  }
+  .dataCollection .customerInputId {
+    width: 100%;
+    margin-bottom: 16px;
+    color: #F8F5FA;
   }
   .dataCollection label {
     font-size: 12px;
@@ -2244,27 +2279,13 @@ footer .copyright {
     display: none;
   }
   .resaEventTitle {
-    font-size: 20px;
+    font-size: 16px;
   }
   .resaEventDate, .mainExplanation, .formHeader {
     font-size: 12px;
   }
   .instructions {
     font-size: 11px;
-  }
-  .dataCollection .customerDetails {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .dataCollection .customerInput {
-    width: 46%;
-  }
-  .dataCollection .customerInputEmail {
-    width: 98.5%;
-    margin-bottom: 30px;
-  }
-  .dataCollection .desktopHidden {
-    visibility: visible;
   }
   .product {
     width: 50%;
