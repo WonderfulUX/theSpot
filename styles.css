@@ -1580,6 +1580,21 @@ footer .copyright {
   margin-bottom: 30px;
 }
 
+.back {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+}
+
+.backMobile {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  width: 40px;
+  height: 40px;
+  display: none;
+}
+
 #NavTextLinks a:hover,
 header svg:hover,
 .footerLink a:hover,
@@ -1849,6 +1864,9 @@ header svg:hover,
   .container2 {
     width: 650px;
   }
+  .pageTitles {
+    padding-top: 100px;
+  }
   .headerLines {
     width: 80px;
   }
@@ -2036,6 +2054,16 @@ header svg:hover,
         -ms-grid-row-align: center;
         align-self: center;
   }
+  #PaymentAmount {
+    font-size: 24px;
+    line-height: 150px;
+  }
+  #CardFields label {
+    font-size: 13px;
+  }
+  #CardFields {
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -2183,6 +2211,14 @@ header svg:hover,
   .bigButtonBlock .buttonBig {
     margin: 0 20px;
   }
+  .back {
+    display: none;
+  }
+  .backMobile {
+    display: block;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
   #EventsList .bigButtonBlock {
     padding-top: 30px;
   }
@@ -2263,6 +2299,13 @@ header svg:hover,
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+  }
+  #PaymentAmount {
+    font-size: 20px;
+    line-height: 100px;
+  }
+  #CardFields label {
+    font-size: 12px;
   }
 }
 
@@ -2514,6 +2557,13 @@ header svg:hover,
   #TicketSection #TableSmall tfoot td::before, #TicketSection #TableSmall tfoot td::after {
     display: none;
   }
+  .backMobile {
+    top: 85px;
+    left: 30px;
+    display: block;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
   .eventBlock .eventDescriptionContainer,
   .eventBlock #mainEventInfo {
     width: 100%;
@@ -2581,6 +2631,13 @@ header svg:hover,
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+  }
+  #PaymentAmount {
+    font-size: 18px;
+    line-height: 80px;
+  }
+  #CardFields label {
+    font-size: 11px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

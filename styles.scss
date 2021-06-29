@@ -1146,6 +1146,19 @@ footer {
 #PaymentInputContainer {
   margin-bottom: 30px;
 }
+.back {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+}
+.backMobile {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  width: 40px;
+  height: 40px;
+  display: none;
+}
 //*************** HOVER EFFECTS ***********
 #NavTextLinks a:hover,
 header svg:hover,
@@ -1386,6 +1399,9 @@ header svg:hover,
   .container2 {
     width: 650px;
   }
+  .pageTitles {
+    padding-top: 100px;
+  }
 
   .headerLines {
     width: 80px;
@@ -1559,7 +1575,18 @@ header svg:hover,
     width: 50%;
     align-self: center;
   }
+  #PaymentAmount {
+    font-size: 24px;
+    line-height: 150px;
+  }
+  #CardFields label {
+    font-size: 13px;
+  }
+  #CardFields {
+    padding: 0;
+  }
 }
+
 //*************** BREAKPOINT 750PX ***********
 @media screen and (max-width: 750px) {
   h1 {
@@ -1708,6 +1735,13 @@ header svg:hover,
       margin: 0 20px;
     }
   }
+  .back {
+    display: none;
+  }
+  .backMobile {
+    display: block;
+    transform: scale(1.5);
+  }
   #EventsList {
     .bigButtonBlock {
       padding-top: 30px;
@@ -1788,6 +1822,13 @@ header svg:hover,
   #CardFields {
     width: 70%;
     align-self: center;
+  }
+  #PaymentAmount {
+    font-size: 20px;
+    line-height: 100px;
+  }
+  #CardFields label {
+    font-size: 12px;
   }
 }
 
@@ -2022,6 +2063,12 @@ header svg:hover,
       }
     }
   }
+  .backMobile {
+    top: 85px;
+    left: 30px;
+    display: block;
+    transform: scale(1.2);
+  }
   .eventBlock .eventDescriptionContainer,
   .eventBlock #mainEventInfo {
     width: 100%;
@@ -2089,5 +2136,12 @@ header svg:hover,
   #CardFields {
     width: 100%;
     align-self: center;
+  }
+  #PaymentAmount {
+    font-size: 18px;
+    line-height: 80px;
+  }
+  #CardFields label {
+    font-size: 11px;
   }
 }
