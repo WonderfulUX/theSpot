@@ -100,6 +100,7 @@ h3 {
   transition: background-color 0.3s linear, filter 0.2s linear, -webkit-filter 0.2s linear;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  cursor: pointer;
 }
 
 header {
@@ -157,7 +158,7 @@ header .icons {
 
 header .navItem {
   font-size: 13px;
-  margin: 0 1.80em;
+  margin: 0 1.8em;
   -webkit-transition: color 0.2s linear;
   transition: color 0.2s linear;
 }
@@ -219,7 +220,8 @@ h1 span {
   transition: filter 0.2s linear, -webkit-filter 0.2s linear;
 }
 
-.container, .container2 {
+.container,
+.container2 {
   margin: 0 auto;
 }
 
@@ -626,6 +628,7 @@ h3::after {
   transition: -webkit-filter 0.2s linear;
   transition: filter 0.2s linear;
   transition: filter 0.2s linear, -webkit-filter 0.2s linear;
+  cursor: pointer;
 }
 
 #about {
@@ -911,7 +914,8 @@ footer .copyright {
   margin-bottom: 50px;
 }
 
-#TicketSection thead, #TicketSection tfoot {
+#TicketSection thead,
+#TicketSection tfoot {
   height: 40px;
   font-weight: 500;
 }
@@ -929,7 +933,7 @@ footer .copyright {
 #TicketSection th::after {
   position: absolute;
   bottom: 0;
-  content: '';
+  content: "";
   display: block;
   width: 102%;
   height: 1px;
@@ -948,7 +952,7 @@ footer .copyright {
 #TicketSection tfoot td::before {
   position: absolute;
   top: 0;
-  content: '';
+  content: "";
   display: block;
   width: 102%;
   height: 1px;
@@ -993,7 +997,7 @@ footer .copyright {
       align-self: flex-start;
 }
 
-#TicketSection label[for=Message] {
+#TicketSection label[for="Message"] {
   margin-bottom: 5px;
 }
 
@@ -1079,7 +1083,8 @@ footer .copyright {
           justify-content: center;
 }
 
-#FilterButton, #SearchBar {
+#FilterButton,
+#SearchBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1181,7 +1186,8 @@ footer .copyright {
   margin: 0 auto 50px;
 }
 
-.resaEventTitle, .resaEventDate {
+.resaEventTitle,
+.resaEventDate {
   text-align: center;
 }
 
@@ -1214,7 +1220,8 @@ footer .copyright {
   margin-bottom: 20px;
 }
 
-#Food::before, #Beverages::before {
+#Food::before,
+#Beverages::before {
   content: url(./icons/arrowExpand.svg);
   position: absolute;
   top: 24px;
@@ -1268,7 +1275,9 @@ footer .copyright {
           justify-content: center;
 }
 
-.dataCollection .customerInput, .dataCollection .customerInputId, .dataCollection .customerInputEmail {
+.dataCollection .customerInput,
+.dataCollection .customerInputId,
+.dataCollection .customerInputEmail {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1290,7 +1299,8 @@ footer .copyright {
       flex-wrap: wrap;
 }
 
-.dataCollection .customerInput, .dataCollection .customerInputEmail {
+.dataCollection .customerInput,
+.dataCollection .customerInputEmail {
   width: 30%;
 }
 
@@ -1371,7 +1381,8 @@ footer .copyright {
   background-color: rgba(32, 0, 47, 0.3);
 }
 
-.productName, .productPrice {
+.productName,
+.productPrice {
   font-size: 13px;
 }
 
@@ -1394,7 +1405,9 @@ footer .copyright {
   overflow: hidden;
 }
 
-.resaType, .eventName, .totalLine {
+.resaType,
+.eventName,
+.totalLine {
   text-transform: uppercase;
   color: #F8F5FA;
   padding: 4px 0;
@@ -1416,11 +1429,19 @@ footer .copyright {
   font-weight: 500;
 }
 
-.ticketFullName, .beverageName {
+.ticketFullName,
+.beverageName {
   margin-bottom: 4px;
 }
 
-.ticketFullName, .ticketEmail, .beverageName, .entryTypeName {
+.ticketFullName,
+.ticketEmail,
+.beverageName,
+.entryTypeName,
+.entryTypePrice,
+.entryTypeQuantity,
+.totalTag,
+.totalAmount {
   font-size: 14px;
 }
 
@@ -1429,7 +1450,8 @@ footer .copyright {
   color: #8F8097;
 }
 
-.entryTypeLine, .totalLine {
+.entryTypeLine,
+.totalLine {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1448,6 +1470,7 @@ footer .copyright {
 .totalLine {
   border-top: 1px solid #5b4963;
   font-weight: 600;
+  margin-bottom: 30px;
 }
 
 .entryTypeQuantity {
@@ -1467,21 +1490,110 @@ footer .copyright {
   display: block;
   height: 50px;
   width: 350px;
-  margin: 0 auto 100px;
+  margin: 0 auto 30px;
   border: none;
   outline: none;
 }
 
-#NavTextLinks a:hover, header svg:hover,
-.footerLink a:hover, .share:hover {
+#AddToCartButtonContainer {
+  padding-top: 50px;
+}
+
+#Payment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#Payment .recapHeader {
+  margin-bottom: 20px;
+}
+
+#PaymentInstructions {
+  width: 55%;
+}
+
+#PaymentAmount {
+  line-height: 150px;
+  text-align: center;
+  color: #C66FD0;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+#CardFields {
+  width: 35%;
+  padding-top: 45px;
+}
+
+#CardFields button {
+  width: 100%;
+}
+
+#CardFields input {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  border: 1px solid #5b4963;
+  height: 30px;
+  padding-left: 10px;
+  color: #F8F5FA;
+  margin-bottom: 12px;
+}
+
+#CardFields label {
+  color: #8F8097;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+#CardFields .smallInput {
+  width: 48%;
+}
+
+.paymentInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.paymentLine2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#PaymentInputContainer {
+  margin-bottom: 30px;
+}
+
+#NavTextLinks a:hover,
+header svg:hover,
+.footerLink a:hover,
+.share:hover {
   color: #f480ff;
   fill: #f480ff;
   -webkit-filter: drop-shadow(0 0 5px #f480ff);
           filter: drop-shadow(0 0 5px #f480ff);
 }
 
-.detailsButton:hover, .buttonBig:hover,
-#SocialNetworksLinks svg:hover, #NewsletterIcon:hover {
+.detailsButton:hover,
+.buttonBig:hover,
+#SocialNetworksLinks svg:hover,
+#NewsletterIcon:hover {
   -webkit-filter: drop-shadow(0 0 5px #f480ff);
           filter: drop-shadow(0 0 5px #f480ff);
 }
@@ -1494,6 +1606,7 @@ footer .copyright {
 
 .active {
   color: #f480ff;
+  fill: #f480ff;
   -webkit-filter: drop-shadow(0 0 5px #f480ff);
           filter: drop-shadow(0 0 5px #f480ff);
 }
@@ -1586,13 +1699,15 @@ footer .copyright {
   .resaEventTitle {
     font-size: 32px;
   }
-  .resaEventDate, .mainExplanation {
+  .resaEventDate,
+  .mainExplanation {
     font-size: 14px;
   }
   .instructions {
     font-size: 13px;
   }
-  .product img, .productMask {
+  .product img,
+  .productMask {
     width: 130px;
     height: 130px;
   }
@@ -1730,8 +1845,12 @@ footer .copyright {
   #Banner {
     height: 70vh;
   }
-  .container, .container2 {
+  .container,
+  .container2 {
     width: 650px;
+  }
+  .headerLines {
+    width: 80px;
   }
   #Events {
     -ms-grid-columns: (50%)[2];
@@ -1744,7 +1863,8 @@ footer .copyright {
     width: 95%;
     margin: 0 0 100px;
   }
-  #Events #BestSellers, #Events #NextWeekend {
+  #Events #BestSellers,
+  #Events #NextWeekend {
     padding-top: 0;
   }
   #Events #BestSellers {
@@ -1820,7 +1940,8 @@ footer .copyright {
         -ms-flex-align: center;
             align-items: center;
   }
-  .eventBlock .eventDescriptionContainer, .eventBlock #mainEventInfo {
+  .eventBlock .eventDescriptionContainer,
+  .eventBlock #mainEventInfo {
     width: 80%;
   }
   .eventBlock .right {
@@ -1853,7 +1974,8 @@ footer .copyright {
   .dataCollection .customerInputContainer {
     width: 90%;
   }
-  .dataCollection .customerInputEmail, .dataCollection .customerInput {
+  .dataCollection .customerInputEmail,
+  .dataCollection .customerInput {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -1877,15 +1999,42 @@ footer .copyright {
   .resaEventTitle {
     font-size: 28px;
   }
-  .resaEventDate, .mainExplanation {
+  .resaEventDate,
+  .mainExplanation {
     font-size: 13px;
   }
   .instructions {
     font-size: 12px;
   }
-  .product img, .productMask {
+  .product img,
+  .productMask {
     width: 150px;
     height: 150px;
+  }
+  .ticketFullName,
+  .ticketEmail,
+  .beverageName,
+  .entryTypeName,
+  .entryTypePrice,
+  .entryTypeQuantity,
+  .totalAmount,
+  .totalTag {
+    font-size: 13px;
+  }
+  #Payment {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #PaymentInstructions {
+    width: 100%;
+  }
+  #CardFields {
+    width: 50%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 
@@ -1893,7 +2042,8 @@ footer .copyright {
   h1 {
     font-size: 28px;
   }
-  h2, h3 {
+  h2,
+  h3 {
     font-size: 24px;
   }
   .eventCardBig .title,
@@ -1904,8 +2054,12 @@ footer .copyright {
   .eventCardSmall .time {
     font-size: 14px;
   }
-  .container, .container2 {
+  .container,
+  .container2 {
     width: 500px;
+  }
+  .headerLines {
+    width: 60px;
   }
   #Events {
     width: 500px;
@@ -1997,7 +2151,8 @@ footer .copyright {
   #Gallery img {
     height: 150px;
   }
-  #Events #NextWeekend, #Events #BestSellers {
+  #Events #NextWeekend,
+  #Events #BestSellers {
     padding-top: 0;
     margin: 0 auto 100px;
   }
@@ -2051,7 +2206,8 @@ footer .copyright {
   #SimilarEvents svg {
     display: none;
   }
-  .productMask, .product img {
+  .productMask,
+  .product img {
     width: 130px;
     height: 130px;
   }
@@ -2102,6 +2258,12 @@ footer .copyright {
   .recapHeader {
     font-size: 16px;
   }
+  #CardFields {
+    width: 70%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -2132,17 +2294,22 @@ footer .copyright {
     font-size: 20px;
     text-align: right;
   }
-  h2, h3 {
+  h2,
+  h3 {
     font-size: 18px;
   }
-  .container, .container2, #Events {
+  .container,
+  .container2,
+  #Events {
     width: 330px;
   }
-  .eventCardContainer img, .eventCardSmall img {
+  .eventCardContainer img,
+  .eventCardSmall img {
     width: 100px;
     height: 132px;
   }
-  .eventCardContainer .eventCardBig, .eventContainerSmall .eventCardSmall {
+  .eventCardContainer .eventCardBig,
+  .eventContainerSmall .eventCardSmall {
     padding: 5px;
   }
   .eventCardBig .title,
@@ -2153,11 +2320,13 @@ footer .copyright {
   .eventCardSmall .time {
     font-size: 12px;
   }
-  .eventCardSmall .title, .eventCardBig .title {
+  .eventCardSmall .title,
+  .eventCardBig .title {
     height: 30.4px;
     margin-bottom: 6px;
   }
-  .eventCardSmall .detailsButton, .eventCardContainer .detailsButton {
+  .eventCardSmall .detailsButton,
+  .eventCardContainer .detailsButton {
     font-size: 10px;
     width: 60%;
     bottom: 5px;
@@ -2275,7 +2444,7 @@ footer .copyright {
     position: absolute;
     top: 0;
     left: 0;
-    content: '';
+    content: "";
     display: block;
     width: 101%;
     height: 1px;
@@ -2345,7 +2514,8 @@ footer .copyright {
   #TicketSection #TableSmall tfoot td::before, #TicketSection #TableSmall tfoot td::after {
     display: none;
   }
-  .eventBlock .eventDescriptionContainer, .eventBlock #mainEventInfo {
+  .eventBlock .eventDescriptionContainer,
+  .eventBlock #mainEventInfo {
     width: 100%;
   }
   .eventBlock #mainEventInfo {
@@ -2369,7 +2539,9 @@ footer .copyright {
   .resaEventTitle {
     font-size: 16px;
   }
-  .resaEventDate, .mainExplanation, .formHeader {
+  .resaEventDate,
+  .mainExplanation,
+  .formHeader {
     font-size: 12px;
   }
   .instructions {
@@ -2379,7 +2551,7 @@ footer .copyright {
     width: 50%;
   }
   .addToCart {
-    width: 330px;
+    width: 270px;
   }
   .resaBlock {
     padding: 20px;
@@ -2393,6 +2565,22 @@ footer .copyright {
   }
   .recapHeader {
     font-size: 14px;
+  }
+  .ticketFullName,
+  .ticketEmail,
+  .beverageName,
+  .entryTypeName,
+  .entryTypePrice,
+  .entryTypeQuantity,
+  .totalAmount,
+  .totalTag {
+    font-size: 12px;
+  }
+  #CardFields {
+    width: 100%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 /*# sourceMappingURL=styles.css.map */

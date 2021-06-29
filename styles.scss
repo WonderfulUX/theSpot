@@ -10,27 +10,27 @@ body {
   letter-spacing: 0.031em;
   font-size: 15px;
   /* width */
-    ::-webkit-scrollbar {
-        width: 5px;
-    }
-    
-    /* Track */
-    ::-webkit-scrollbar-track {
-        //box-shadow: inset 0 0 2px $pink; 
-        background-color: $grey;
-        border-radius: 10px;
-    }
-    
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-        background: $white50; 
-        border-radius: 10px;
-    }
-    
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-        background: $pink; 
-    }
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    //box-shadow: inset 0 0 2px $pink;
+    background-color: $grey;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $white50;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $pink;
+  }
 }
 
 //TITLES
@@ -44,1905 +44,2050 @@ h3 {
 }
 
 //BUTTONS
-.secondaryButton{
-    background-color: $pink;
-    color: $purpleDark;
-    transition: background-color 0.3s linear, filter 0.2s linear;
-    transition: all 0.2s linear;
+.secondaryButton {
+  background-color: $pink;
+  color: $purpleDark;
+  transition: background-color 0.3s linear, filter 0.2s linear;
+  transition: all 0.2s linear;
+  cursor: pointer;
 }
 
 //*************** HEADER ***********
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $headerHeight;
+  background-color: $black;
+  padding: 0 20px;
+  z-index: 10;
+  svg {
+    fill: $white;
+    transition: all 0.2s linear;
+  }
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: $headerHeight;
-    background-color: $black;
-    padding: 0 20px;
-    z-index: 10;
-    svg{
-        fill: $white;
-        transition: all 0.2s linear;
+  nav {
+    @extend %flexRcenterY;
+    justify-content: space-between;
+    height: 100%;
+    * {
+      color: $white;
+      vertical-align: middle;
     }
-
-    nav {
-        @extend %flexRcenterY;
-        justify-content: space-between;
-        height: 100%;
-        * {
-        color: $white;
-        vertical-align: middle;
-        }
-        a,
-        button {
-        cursor: pointer;
-        }
+    a,
+    button {
+      cursor: pointer;
     }
-    #Logo {
-        max-height: 30px;
-        width: auto;
-    }
-    nav ul,
-    ul {
-        display: flex;
-    }
-    .logo,
-    .navItem,
-    .icons {
-        display: block;
-        line-height: $headerHeight;
-    }
-    .navItem {
-        font-size: 13px;
-        margin: 0 1.80em;
-        transition: color 0.2s linear;
-    }
-    .icons {
-        margin: 0 15px;
-        @extend %flexRcenterY;
-    }
+  }
+  #Logo {
+    max-height: 30px;
+    width: auto;
+  }
+  nav ul,
+  ul {
+    display: flex;
+  }
+  .logo,
+  .navItem,
+  .icons {
+    display: block;
+    line-height: $headerHeight;
+  }
+  .navItem {
+    font-size: 13px;
+    margin: 0 1.8em;
+    transition: color 0.2s linear;
+  }
+  .icons {
+    margin: 0 15px;
+    @extend %flexRcenterY;
+  }
 }
 
 #mobileNavIconLinks,
 #MobileMenuButton,
 #MenuHead {
-    display: none;
+  display: none;
 }
 
 //*************** BANNER ***********
 #Banner {
-    width: 100%;
-    height: 85vh;
-    background-image: url(./images/pexels-oleg-magni-1813137.jpg);
-    @extend %covNoRep;
-    margin-bottom: 80px;
+  width: 100%;
+  height: 85vh;
+  background-image: url(./images/pexels-oleg-magni-1813137.jpg);
+  @extend %covNoRep;
+  margin-bottom: 80px;
 }
 #BannerMask {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, $maskLeft, $maskRight 70%);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, $maskLeft, $maskRight 70%);
 }
 #BannerContent {
-    position: absolute;
-    right: 0;
-    bottom: -5%;
-    padding-right: 3%;
-    height: 100%;
-    @extend %flexCcenter;
-    img {
-        height: 50px;
-        margin-bottom: 2.5em;
-    }
+  position: absolute;
+  right: 0;
+  bottom: -5%;
+  padding-right: 3%;
+  height: 100%;
+  @extend %flexCcenter;
+  img {
+    height: 50px;
+    margin-bottom: 2.5em;
+  }
 }
 h1 {
-    font-size: 44px;
-    text-shadow: -5px 10px 5px $white;
-    span {
-        padding-left: 5vh;
-    }
+  font-size: 44px;
+  text-shadow: -5px 10px 5px $white;
+  span {
+    padding-left: 5vh;
+  }
 }
 #NewsletterIcon {
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-    transition: filter 0.2s linear;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  transition: filter 0.2s linear;
 }
 //*************** EVENTS ***********
-.container, .container2 {
-    margin: 0 auto;
+.container,
+.container2 {
+  margin: 0 auto;
 }
-.container{
-    width: $containerW;;
+.container {
+  width: $containerW;
 }
-.container2{
-    width: 960px;
+.container2 {
+  width: 960px;
 }
 #ThisWeekend {
-    grid-area: thisWeekend;
+  grid-area: thisWeekend;
 }
 #NextWeekend {
-    grid-area: nextWeekend;
-    padding-top: 70px;
-    justify-self: stretch;
+  grid-area: nextWeekend;
+  padding-top: 70px;
+  justify-self: stretch;
 }
 #SeeAgenda {
-    grid-area: button;
+  grid-area: button;
 }
 #CantMiss {
-    grid-area: cantMiss;
+  grid-area: cantMiss;
 }
 #BestSellers {
-    grid-area: bestSellers;
-    padding-top: 70px;
-    justify-self: stretch;
+  grid-area: bestSellers;
+  padding-top: 70px;
+  justify-self: stretch;
 }
 #Events {
-    display: grid;
-    grid-template-columns: 66% 30%;
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas:
-        "thisWeekend nextWeekend"
-        "cantMiss bestSellers"
-        "button button";
-    justify-content: space-between;
+  display: grid;
+  grid-template-columns: 66% 30%;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "thisWeekend nextWeekend"
+    "cantMiss bestSellers"
+    "button button";
+  justify-content: space-between;
 }
 h2 {
-    font-size: 35px;
-    width: 100%;
+  font-size: 35px;
+  width: 100%;
 }
 .eventSectionTitle {
-    grid-area: h2;
-    margin-bottom: 10px;
-    &::before,
-    &::after {
-        content: "";
-        display: block;
-        position: relative;
-        width: 100%;
-        height: 1px;
-    }
-    &::before {
-        margin-bottom: 8px;
-        background: linear-gradient(
-        to right,
-        $h2borderTopLeft,
-        $h2borderTopRight 70%
-        );
-    }
-    &::after {
-        margin-top: 8px;
-        background: linear-gradient(to right, $h2borderTopLeft, $h2borderTopRight);
-    }
+  grid-area: h2;
+  margin-bottom: 10px;
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 1px;
+  }
+  &::before {
+    margin-bottom: 8px;
+    background: linear-gradient(
+      to right,
+      $h2borderTopLeft,
+      $h2borderTopRight 70%
+    );
+  }
+  &::after {
+    margin-top: 8px;
+    background: linear-gradient(to right, $h2borderTopLeft, $h2borderTopRight);
+  }
 }
 h3 {
+  width: 100%;
+  margin-bottom: 0.427em;
+  font-size: 18px;
+  justify-self: stretch;
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: relative;
     width: 100%;
-    margin-bottom: 0.427em;
-    font-size: 18px;
-    justify-self: stretch;
-    &::before,
-    &::after {
-        content: "";
-        display: block;
-        position: relative;
-        width: 100%;
-        height: 1px;
-    }
-    &::before {
-        margin-bottom: 0.267em;
-        background: linear-gradient(
-        to right,
-        $h2borderTopLeft,
-        $h2borderTopRight 70%
-        );
-    }
-    &::after {
-        margin-top: 0.267em;
-        background: linear-gradient(to right, $h2borderTopLeft, $h2borderTopRight);
-    }
+    height: 1px;
+  }
+  &::before {
+    margin-bottom: 0.267em;
+    background: linear-gradient(
+      to right,
+      $h2borderTopLeft,
+      $h2borderTopRight 70%
+    );
+  }
+  &::after {
+    margin-top: 0.267em;
+    background: linear-gradient(to right, $h2borderTopLeft, $h2borderTopRight);
+  }
 }
 .eventCardContainer {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    flex-wrap: wrap;
-    margin: 0 0 100px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 0 0 100px;
 }
 .eventCardBig {
-    width: 230px;
-    height: auto;
-    background-color: $purpleDark;
-    text-align: center;
-    padding-bottom: 12px;
-    img {
-        width: 100%;
-        height: 350px;
-        object-fit: cover;
-        margin-bottom: 12px;
+  width: 230px;
+  height: auto;
+  background-color: $purpleDark;
+  text-align: center;
+  padding-bottom: 12px;
+  img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    margin-bottom: 12px;
+  }
+  .title,
+  .time {
+    margin-bottom: 0.95em;
+  }
+  .title {
+    font-size: 14px;
+    height: 32px;
+  }
+  .date,
+  .time,
+  .detailsButton {
+    font-size: 13px;
+  }
+  .detailsButton {
+    text-transform: uppercase;
+    transition: filter 0.2s linear;
+  }
+  .date,
+  .time {
+    color: $white50;
+  }
+  .detailsButton {
+    padding: 15px 0 0 12px;
+    margin-bottom: 12px;
+    display: block;
+    color: $pink;
+    font-weight: 600;
+    &::after {
+      content: url(./icons/ArrowRight.svg);
+      position: relative;
+      padding-left: 12px;
     }
-    .title,
-    .time {
-        margin-bottom: 0.95em;
-    }
-    .title{
-        font-size: 14px;
-        height: 32px;
-    }
-    .date,
-    .time,
-    .detailsButton {
-        font-size: 13px;
-    }
-    .detailsButton {
-        text-transform: uppercase;
-        transition: filter 0.2s linear;
-    }
-    .date,
-    .time {
-        color: $white50;
-    }
-    .detailsButton {
-        padding: 15px 0 0 12px;
-        margin-bottom: 12px;
-        display: block;
-        color: $pink;
-        font-weight: 600;
-        &::after {
-            content: url(./icons/ArrowRight.svg);
-            position: relative;
-            padding-left: 12px;
-        }
-    }
+  }
 }
 .eventContainerSmall {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+  .eventCardSmall {
+    position: relative;
+    padding: 5px;
     width: 100%;
-    text-align: left;
-    .eventCardSmall {
-        position: relative;
-        padding: 5px;
-        width: 100%;
-        background-color: $purpleDark;
-        margin-bottom: 8px;
-    }
-    img {
-        width: $smallImageWH;
-        height: 120px;
-        object-fit: cover;
-        float: left;
-        margin-right: 8px;
-    }
-    .title,
-    .time {
-        margin-bottom: 6px;
-    }
-    .date,
-    .time,
-    .detailsButton,
-    .title {
-        font-size: 13px;
-    }
-    .date,
-    .time {
-        color: $white50;
-    }
-    .title{
-        height: auto;
-    }
-    .detailsButton {
-        position: absolute;
-        bottom: 5px;
-        right: 5px;
-        text-align: center;
-        width: 110px;
-        height: 20px;
-        line-height: 20px;
-        border: 1px solid $pink;
-        color: $pink;
-        background-color: $black;
-        transition: filter 0.2s linear;
-    }
+    background-color: $purpleDark;
+    margin-bottom: 8px;
+  }
+  img {
+    width: $smallImageWH;
+    height: 120px;
+    object-fit: cover;
+    float: left;
+    margin-right: 8px;
+  }
+  .title,
+  .time {
+    margin-bottom: 6px;
+  }
+  .date,
+  .time,
+  .detailsButton,
+  .title {
+    font-size: 13px;
+  }
+  .date,
+  .time {
+    color: $white50;
+  }
+  .title {
+    height: auto;
+  }
+  .detailsButton {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    text-align: center;
+    width: 110px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid $pink;
+    color: $pink;
+    background-color: $black;
+    transition: filter 0.2s linear;
+  }
 }
 .bigButtonBlock {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 100px;
-    .buttonBig {
-        display: block;
-        justify-self: center;
-        width: 300px;
-        height: 60px;
-        font-weight: 600;
-        border: 1px solid $pink;
-        text-align: center;
-        line-height: 60px;
-        color: $pink;
-        background-color: $black;
-        margin: 0 30px;
-        transition: filter 0.2s linear;
-    }
-    hr {
-        width: 20%;
-        height: 1px;
-        background-color: $pink;
-        border: none;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 100px;
+  .buttonBig {
+    display: block;
+    justify-self: center;
+    width: 300px;
+    height: 60px;
+    font-weight: 600;
+    border: 1px solid $pink;
+    text-align: center;
+    line-height: 60px;
+    color: $pink;
+    background-color: $black;
+    margin: 0 30px;
+    transition: filter 0.2s linear;
+  }
+  hr {
+    width: 20%;
+    height: 1px;
+    background-color: $pink;
+    border: none;
+  }
 }
 //*************** GALLERY ***********
 #Gallery {
-    padding-top: 70px;
-    background: linear-gradient(to bottom, $purpleDark, $black);
-    .container{
-        margin: 0 auto 150px;
-    }
-    #GalleryTitle {
-        text-align: center;
-        margin-bottom: 32px;
-    }
-    img {
-        border: 3px solid $white;
-        object-fit: cover;
-        height: 250px;
-        justify-self: stretch;
-    }
-    #img1 {
-        grid-area: im1;
-    }
-    #img2 {
-        grid-area: im2;
-    }
-    #img3 {
-        grid-area: im3;
-        height: 100%;
-    }
-    #img4 {
-        grid-area: im4;
-    }
-    #img5 {
-        grid-area: im5;
-    }
-    #img6 {
-        grid-area: im6;
-    }
-    #img7 {
-        grid-area: im7;
-    }
-    .galleryLegend {
-        grid-area: legend;
-        width: 100%;
-        text-align: right;
-        font-size: 10px;
-    }
-    #GalleryGrid {
-        width: 100%;
-        margin-bottom: 50px;
-        display: grid;
-        gap: 10px;
-        justify-content: space-between;
-        grid-template-columns: repeat(5, 19%);
-        grid-template-rows: 250px 250px auto;
-        grid-template-areas:
-        "im1 im1 im2 im3 im4"
-        "im6 im7 im7 im3 im5"
-        ". . . . legend";
-    }
+  padding-top: 70px;
+  background: linear-gradient(to bottom, $purpleDark, $black);
+  .container {
+    margin: 0 auto 150px;
+  }
+  #GalleryTitle {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  img {
+    border: 3px solid $white;
+    object-fit: cover;
+    height: 250px;
+    justify-self: stretch;
+  }
+  #img1 {
+    grid-area: im1;
+  }
+  #img2 {
+    grid-area: im2;
+  }
+  #img3 {
+    grid-area: im3;
+    height: 100%;
+  }
+  #img4 {
+    grid-area: im4;
+  }
+  #img5 {
+    grid-area: im5;
+  }
+  #img6 {
+    grid-area: im6;
+  }
+  #img7 {
+    grid-area: im7;
+  }
+  .galleryLegend {
+    grid-area: legend;
+    width: 100%;
+    text-align: right;
+    font-size: 10px;
+  }
+  #GalleryGrid {
+    width: 100%;
+    margin-bottom: 50px;
+    display: grid;
+    gap: 10px;
+    justify-content: space-between;
+    grid-template-columns: repeat(5, 19%);
+    grid-template-rows: 250px 250px auto;
+    grid-template-areas:
+      "im1 im1 im2 im3 im4"
+      "im6 im7 im7 im3 im5"
+      ". . . . legend";
+  }
 }
 //*************** SOCIAL NETWORKS ***********
 #SocialNetworksLinks {
-    margin: 0 auto 100px;
-    text-align: center;
-    p {
-        margin-bottom: 50px;
-    }
-    svg {
-        margin: 0 20px;
-        transition: filter 0.2s linear;
-    }
+  margin: 0 auto 100px;
+  text-align: center;
+  p {
+    margin-bottom: 50px;
+  }
+  svg {
+    margin: 0 20px;
+    transition: filter 0.2s linear;
+    cursor: pointer;
+  }
 }
 
 //*************** ABOUT ***********
 
 #about {
-    height: auto;
+  height: auto;
+  width: 100%;
+  background-image: url(./images/aboutBG.jpg);
+  background-size: cover;
+  .mask {
+    background-color: rgba($color: $black, $alpha: 0.8);
     width: 100%;
-    background-image: url(./images/aboutBG.jpg);
-    background-size: cover;
-    .mask{
-        background-color: rgba($color: $black, $alpha: 0.8);
-        width: 100%;
-        height: 100%;
+    height: 100%;
+  }
+  .container {
+    padding: 150px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #slogan {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: right;
+    width: 45%;
+  }
+  #aboutContent {
+    padding-left: 8%;
+    width: 50%;
+    p {
+      margin-bottom: 50px;
+      line-height: 1.5em;
     }
-    .container {
-        padding: 150px 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+  }
+  #ContactInfo > div {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75em;
+    address {
+      font-style: normal;
     }
-    #slogan {
-        font-size: 30px;
-        font-weight: 600;
-        text-align: right;
-        width: 45%;
+    img {
+      margin-right: 10px;
     }
-    #aboutContent {
-        padding-left: 8%;
-        width: 50%;
-        p {
-            margin-bottom: 50px;
-            line-height: 1.5em;
-        }
+    #phoneNumber {
+      margin-right: 50px;
     }
-    #ContactInfo > div {
-        font-size: 13px;
-        display: flex;
-        align-items: center;
-        margin-bottom: 0.75em;
-        address {
-            font-style: normal;
-        }
-        img {
-            margin-right: 10px;
-        }
-        #phoneNumber {
-            margin-right: 50px;
-        }
-    }
+  }
 }
 //*************** FOOTER ***********
 footer {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 7em;
-    background: linear-gradient(to top, $purpleDark, $black);
-    hr {
-        width: 50%;
-        height: 1px;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: $pink;
-        border: none;
-        &:last-of-type {
-        margin-bottom: 50px;
-        }
-    }
-    img {
-        height: 50px;
-        width: auto;
-        margin: 1.25em 0;
-    }
-    .footerLink {
-        text-align: center;
-        margin: 50px 0;
-        font-size: 13px;
-        position: relative;
-        cursor: pointer;
-        transition: filter 0.2s linear;
-        a{
-            color: $white;
-        }
-        &:not(:first-of-type)::before {
-            content: url(./icons/dotFooter.svg);
-            position: absolute;
-            left: 50%;
-            top: -130%;
-            transform: translate(-50%, -50%);
-        }
-    }
-    .copyright {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        font-size: 10px;
-    }
-}
-//*************** EVENTS PAGES***********
-.pageTitles{
-    padding-top: 150px;
-    text-align: center;
-    margin-bottom: 50px;
-}
-.eventTitles{
-    display: inline-block;
-    text-align: left;
-    font-family: "Montserrat", sans-serif;
-    text-shadow: none;
-    font-size: 38px;
-    font-weight: 600;
-    margin-bottom: 50px;
-    -webkit-text-stroke-width: 0;
-}
-.eventBlock{ 
-    margin-bottom: 150px;
-    padding-top: 150px;
-    h1{
-        margin-bottom: 30px;
-    }
-    .left{
-        width: 50%;
-    }
-    .right{
-        float: right;
-        width: 40%;
-        display: flex;
-        justify-content: flex-end;
-    }
-    #RightContainer{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 80%;
-        img{
-            width: 100%;
-            object-fit: cover;
-            margin-bottom: 12px;
-        }
-    }
-    .eventDescriptionContainer{
-        position: relative;
-        height: 250px;
-        margin-bottom: 70px;
-    }
-    .eventDescription{
-        height: 100%;
-        overflow: hidden;
-    }
-    .readMore{
-        position: absolute;
-        bottom: -30px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: auto;
-        height: auto;
-        border: none;
-        color: $pink;
-        text-decoration: underline;
-        background-color: transparent;
-    }
-    #mainEventInfo{
-        width: 100%;
-        padding: 20px 15px;
-        background: linear-gradient(to bottom, $grey, transparent);
-    }
-    .dot{
-        margin-right: 3px;
-        fill: $pink;
-    }
-    .infoLine{
-        margin-bottom: 5px;
-    }
-    .share{
-        margin: 10px;
-        fill: $pink;
-        cursor: pointer;
-        transition: all 0.2s linear;
-    }
-    #Share{
-        position: relative;
-        border-radius: 30px;
-        margin-left: 12px;
-        background: linear-gradient(to bottom, $grey, transparent);
-        &::before{
-            content: url(./icons/shareIcon.svg);
-            position: absolute;
-            top: 50%;
-            left: -25%;
-            transform: translateY(-50%);
-        }
-
-    }
-}
-.sectionHeader{
-        text-shadow: 0 10px 4px $white;
-        margin-bottom: 50px;
-    }
-#TicketSection{
-    margin-bottom: 200px;
-    width: 100%;
-    #TableSmall{
-        display: none;
-    }
-    #TableBig{
-        width: 100%;
-        margin-bottom: 50px;
-    }
-
-    thead, tfoot{
-        height: 40px;
-        font-weight: 500;
-    }
-    tbody tr{
-        height: 90px;
-    }
-    th{
-        text-align: right;
-        position: relative;
-        margin-bottom: 20px;
-        &::after{
-            position: absolute;
-            bottom: 0;
-            content: '';
-            display: block;
-            width: 102%;
-            height: 1px;
-            background-color: $grey;
-        }
-    }
-    tbody tr td{
-        padding-bottom: 35px;
-    }
-    tfoot td{
-        padding-top: 0;
-        position: relative;
-        &::before{
-            position: absolute;
-            top: 0;
-            content: '';
-            display: block;
-            width: 102%;
-            height: 1px;
-            background-color: $grey;
-        }
-    }
-    .xLeft{
-        text-align: left;
-        width: 50%;
-        position: relative;
-    }
-    .xRight{
-        width: 15%;
-        text-align: right;
-    }
-    select{
-        width: 50px;
-        height: 35px;
-        color: $white;
-        background-color: $black;
-        border-radius: 2px;
-    }
-    .fareDescription{
-        color: rgba($color: $white, $alpha: 0.47);
-        margin-top: 6px;
-        position: absolute;
-        top: 35%;
-    }
-    #Validation{
-        display: flex;
-        flex-direction: column;
-        align-self: flex-start;
-    }
-    label[for=Message]{
-        margin-bottom: 5px;
-    }
-    textarea{
-        background-color: $black;
-        margin-bottom: 20px;
-        border: 1px solid $grey;
-        color: rgba($color: $white, $alpha: 0.6);
-        padding: 10px;
-    }
-    #ValidateChoice{
-        width: 300px;
-        height: 50px;
-        line-height: 50px;
-        text-align: center;
-        border: none;
-        align-self: flex-end;
-        cursor: pointer;
-    }
-    
-}
-#SimilarEvents{
-    position: relative;
-    svg{
-        position: absolute;
-        top: 45%;
-        transform: translateY(50%);
-        fill: $grey;
-        cursor: pointer;
-        transition: fill 0.2s linear;
-    }
-    #arrowLeft{
-        left: -6%;
-    }
-    #arrowRight{
-        right: -6%;
-    }
-    .eventCardBig{
-        display: inline-block;
-    }
-    .eventCardBig{
-        margin-right: 13px;
-    }
-    .eventCardContainer{
-        width: 2880px;
-        justify-content: initial;
-    }
-    .caroussel{
-        width: 960px;
-        overflow: hidden;
-    }
-}
-
-
-.topBgFade{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80vh;
-    z-index: -10;
-    background: linear-gradient(to bottom, $purpleDark, $black);
-}
-#Filters{
-    display: flex;
-    justify-content: center;
-}
-#FilterButton, #SearchBar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $grey;
-    height: 40px;
-    padding: 10px;
-}
-#FilterButton{
-    width: 120px;
-    border: none;
-    color: $white;
-    font-family: "Montserrat", sans-serif;
-}
-#SearchBarContainer{
-    position: relative;
-    margin-bottom: 60px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    border: none;
-    overflow: hidden;
-    #SearchBar{
-        margin-left: 15px;
-        width: 350px;
-        height: 100%;
-        color: $white;
-        font-family: "Montserrat", sans-serif;
-        line-height: 100%;
-        border: 0;
-        &::placeholder{
-            color:$white50;
-            font-style: italic;
-        }
-    }
-    img{
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-    }     
-}
-.bigButtonBlock{
-    padding-top: 70px;
-}
-#EventsList{
-    .eventCardBig{
-        margin-bottom: 50px;
-    }
-    .bigButtonBlock{
-        padding-top: 0px;
-    }
-}
-.headerLines{
-    width: 150px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7em;
+  background: linear-gradient(to top, $purpleDark, $black);
+  hr {
+    width: 50%;
     height: 1px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: $pink;
     border: none;
-    margin: 0 auto 50px;
-}
-.margin2{
-    margin-bottom: 30px;
-}
-#EventDetailsRecap{
-    margin: 0 auto 50px;
-}
-.resaEventTitle, .resaEventDate{
-    text-align: center;
-}
-
-.resaEventTitle{
-    font-size: 35px;
-    font-weight: 500;
-    margin-bottom: 12px;
-}
-.resaEventDate{
-    font-size: 15px;
-}
-.resaBlock{
-    position: relative;
-    width: 100%;
-    padding: 30px 30px;
-    background-color: $purpleDark;
-    border-radius: 4px;
-    box-shadow: inset 0 1px 2px 0 #450066;
-    margin-bottom: 24px;
-}
-.resaBlockHeader{
-    font-size: 20px;
-    color: $pink;
-    -webkit-text-stroke-width: 0.3px;
-    -webkit-text-stroke-color: $pink;
-    margin-bottom: 20px;
-}
-
-#Food, #Beverages{
-    &::before{
-        content: url(./icons/arrowExpand.svg);
-        position: absolute;
-        top: 24px;
-        right: 20px;
+    &:last-of-type {
+      margin-bottom: 50px;
     }
-}
-.recapHeader{
-    font-family: "Montserrat", sans-serif;
-    color: $pink;
+  }
+  img {
+    height: 50px;
+    width: auto;
+    margin: 1.25em 0;
+  }
+  .footerLink {
     text-align: center;
-    -webkit-text-stroke-width: 0;
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 50px;
+    margin: 50px 0;
+    font-size: 13px;
+    position: relative;
+    cursor: pointer;
+    transition: filter 0.2s linear;
+    a {
+      color: $white;
+    }
+    &:not(:first-of-type)::before {
+      content: url(./icons/dotFooter.svg);
+      position: absolute;
+      left: 50%;
+      top: -130%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .copyright {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 10px;
+  }
 }
-.mainExplanation{
-    margin-bottom: 10px;
+//*************** EVENTS PAGES***********
+.pageTitles {
+  padding-top: 150px;
+  text-align: center;
+  margin-bottom: 50px;
 }
-.instructions{
-    color: $white50;
-    font-size: 14px;
-    list-style: inside;
-    margin-bottom: 20px;
+.eventTitles {
+  display: inline-block;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: none;
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  -webkit-text-stroke-width: 0;
 }
-.dataCollection{
-    color: $white50;
-    width: 100%;
+.eventBlock {
+  margin-bottom: 150px;
+  padding-top: 150px;
+  h1 {
+    margin-bottom: 30px;
+  }
+  .left {
+    width: 50%;
+  }
+  .right {
+    float: right;
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  #RightContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .customerDetails{
-        display: flex;
-        width: 95%;
-        justify-content: center;
+    width: 80%;
+    img {
+      width: 100%;
+      object-fit: cover;
+      margin-bottom: 12px;
     }
-    .customerInput, .customerInputId, .customerInputEmail{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .customerInputContainer{
-        width: 99%;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .customerInput, .customerInputEmail{
-        width: 30%;
-    }
-    .customerInputId{
-        height: 40px;
-        padding-top: 30px;
-        width: 10%;
-    }
-    .desktopHidden{
-        visibility: hidden;
-    }
-    label{
-        height: 20px;
-    }
-    input{
-        width: 93%;
-        height: 40px;
-        border: 1px solid $grey;
-        background-color: transparent;
-        padding: 5px;
-        color: rgba($color: $white, $alpha: 0.75);
-        letter-spacing: 0.3px;
-    }
-    label{
-        font-size: 14px;
-    }
-}
-.formHeader{
-    text-align: center;
-    text-transform: uppercase;
-    height: 120px;
-    padding-top: 60px;
-    font-weight: 500;
+  }
+  .eventDescriptionContainer {
+    position: relative;
+    height: 250px;
+    margin-bottom: 70px;
+  }
+  .eventDescription {
+    height: 100%;
+    overflow: hidden;
+  }
+  .readMore {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    border: none;
     color: $pink;
+    text-decoration: underline;
+    background-color: transparent;
+  }
+  #mainEventInfo {
+    width: 100%;
+    padding: 20px 15px;
+    background: linear-gradient(to bottom, $grey, transparent);
+  }
+  .dot {
+    margin-right: 3px;
+    fill: $pink;
+  }
+  .infoLine {
+    margin-bottom: 5px;
+  }
+  .share {
+    margin: 10px;
+    fill: $pink;
+    cursor: pointer;
+    transition: all 0.2s linear;
+  }
+  #Share {
+    position: relative;
+    border-radius: 30px;
+    margin-left: 12px;
+    background: linear-gradient(to bottom, $grey, transparent);
+    &::before {
+      content: url(./icons/shareIcon.svg);
+      position: absolute;
+      top: 50%;
+      left: -25%;
+      transform: translateY(-50%);
+    }
+  }
 }
-.productList{
+.sectionHeader {
+  text-shadow: 0 10px 4px $white;
+  margin-bottom: 50px;
+}
+#TicketSection {
+  margin-bottom: 200px;
+  width: 100%;
+  #TableSmall {
+    display: none;
+  }
+  #TableBig {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  thead,
+  tfoot {
+    height: 40px;
+    font-weight: 500;
+  }
+  tbody tr {
+    height: 90px;
+  }
+  th {
+    text-align: right;
+    position: relative;
+    margin-bottom: 20px;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      content: "";
+      display: block;
+      width: 102%;
+      height: 1px;
+      background-color: $grey;
+    }
+  }
+  tbody tr td {
+    padding-bottom: 35px;
+  }
+  tfoot td {
+    padding-top: 0;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 0;
+      content: "";
+      display: block;
+      width: 102%;
+      height: 1px;
+      background-color: $grey;
+    }
+  }
+  .xLeft {
+    text-align: left;
+    width: 50%;
+    position: relative;
+  }
+  .xRight {
+    width: 15%;
+    text-align: right;
+  }
+  select {
+    width: 50px;
+    height: 35px;
+    color: $white;
+    background-color: $black;
+    border-radius: 2px;
+  }
+  .fareDescription {
+    color: rgba($color: $white, $alpha: 0.47);
+    margin-top: 6px;
+    position: absolute;
+    top: 35%;
+  }
+  #Validation {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+  }
+  label[for="Message"] {
+    margin-bottom: 5px;
+  }
+  textarea {
+    background-color: $black;
+    margin-bottom: 20px;
+    border: 1px solid $grey;
+    color: rgba($color: $white, $alpha: 0.6);
+    padding: 10px;
+  }
+  #ValidateChoice {
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: none;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+}
+#SimilarEvents {
+  position: relative;
+  svg {
+    position: absolute;
+    top: 45%;
+    transform: translateY(50%);
+    fill: $grey;
+    cursor: pointer;
+    transition: fill 0.2s linear;
+  }
+  #arrowLeft {
+    left: -6%;
+  }
+  #arrowRight {
+    right: -6%;
+  }
+  .eventCardBig {
+    display: inline-block;
+  }
+  .eventCardBig {
+    margin-right: 13px;
+  }
+  .eventCardContainer {
+    width: 2880px;
+    justify-content: initial;
+  }
+  .caroussel {
+    width: 960px;
+    overflow: hidden;
+  }
+}
+
+.topBgFade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  z-index: -10;
+  background: linear-gradient(to bottom, $purpleDark, $black);
+}
+#Filters {
+  display: flex;
+  justify-content: center;
+}
+#FilterButton,
+#SearchBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $grey;
+  height: 40px;
+  padding: 10px;
+}
+#FilterButton {
+  width: 120px;
+  border: none;
+  color: $white;
+  font-family: "Montserrat", sans-serif;
+}
+#SearchBarContainer {
+  position: relative;
+  margin-bottom: 60px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border: none;
+  overflow: hidden;
+  #SearchBar {
+    margin-left: 15px;
+    width: 350px;
+    height: 100%;
+    color: $white;
+    font-family: "Montserrat", sans-serif;
+    line-height: 100%;
+    border: 0;
+    &::placeholder {
+      color: $white50;
+      font-style: italic;
+    }
+  }
+  img {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.bigButtonBlock {
+  padding-top: 70px;
+}
+#EventsList {
+  .eventCardBig {
+    margin-bottom: 50px;
+  }
+  .bigButtonBlock {
+    padding-top: 0px;
+  }
+}
+.headerLines {
+  width: 150px;
+  height: 1px;
+  background-color: $pink;
+  border: none;
+  margin: 0 auto 50px;
+}
+.margin2 {
+  margin-bottom: 30px;
+}
+#EventDetailsRecap {
+  margin: 0 auto 50px;
+}
+.resaEventTitle,
+.resaEventDate {
+  text-align: center;
+}
+
+.resaEventTitle {
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.resaEventDate {
+  font-size: 15px;
+}
+.resaBlock {
+  position: relative;
+  width: 100%;
+  padding: 30px 30px;
+  background-color: $purpleDark;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 2px 0 #450066;
+  margin-bottom: 24px;
+}
+.resaBlockHeader {
+  font-size: 20px;
+  color: $pink;
+  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: $pink;
+  margin-bottom: 20px;
+}
+
+#Food,
+#Beverages {
+  &::before {
+    content: url(./icons/arrowExpand.svg);
+    position: absolute;
+    top: 24px;
+    right: 20px;
+  }
+}
+.recapHeader {
+  font-family: "Montserrat", sans-serif;
+  color: $pink;
+  text-align: center;
+  -webkit-text-stroke-width: 0;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+.mainExplanation {
+  margin-bottom: 10px;
+}
+.instructions {
+  color: $white50;
+  font-size: 14px;
+  list-style: inside;
+  margin-bottom: 20px;
+}
+.dataCollection {
+  color: $white50;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .customerDetails {
+    display: flex;
+    width: 95%;
+    justify-content: center;
+  }
+  .customerInput,
+  .customerInputId,
+  .customerInputEmail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .customerInputContainer {
+    width: 99%;
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
-    margin: 0 auto;
-}
-.product{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-    text-align: center;
-    width: 25%;
-}
-.productImgContainer{
-    position: relative;
-    margin-bottom: 8px;
-}
-.productMask{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 160px;
-    height: 160px;
-    background-color: rgba($color: $purpleDark, $alpha: 0.3);
-
-}
-.productName, .productPrice{
-    font-size: 13px;
-}
-.productName{
-    margin-bottom: 0.3em;
-    width: 110%;
-    color: rgba($color: $white, $alpha: 0.8);
-}
-.productPrice{
-    color: rgba($color: $white, $alpha: 0.4);
-}
-.product img{
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 2px;
-    overflow: hidden;
-}
-.resaType, .eventName, .totalLine{
-    text-transform: uppercase;
-    color: $white;
-    padding: 4px 0;
-}
-.resaType{
-    border-bottom: 1px solid $white50;
-    font-weight: 600;
-}
-.eventName{
-    margin-bottom: 30px;
-    color: $white50;
-}
-.entryTypeName{
-    color: $pink;
-    margin-bottom: 20px;
-    font-weight: 500;
-}
-.ticketFullName, .beverageName{
-    margin-bottom: 4px;
-}
-.ticketFullName, .ticketEmail, .beverageName, .entryTypeName{
+  }
+  .customerInput,
+  .customerInputEmail {
+    width: 30%;
+  }
+  .customerInputId {
+    height: 40px;
+    padding-top: 30px;
+    width: 10%;
+  }
+  .desktopHidden {
+    visibility: hidden;
+  }
+  label {
+    height: 20px;
+  }
+  input {
+    width: 93%;
+    height: 40px;
+    border: 1px solid $grey;
+    background-color: transparent;
+    padding: 5px;
+    color: rgba($color: $white, $alpha: 0.75);
+    letter-spacing: 0.3px;
+  }
+  label {
     font-size: 14px;
+  }
+}
+.formHeader {
+  text-align: center;
+  text-transform: uppercase;
+  height: 120px;
+  padding-top: 60px;
+  font-weight: 500;
+  color: $pink;
+}
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  text-align: center;
+  width: 25%;
+}
+.productImgContainer {
+  position: relative;
+  margin-bottom: 8px;
+}
+.productMask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 160px;
+  height: 160px;
+  background-color: rgba($color: $purpleDark, $alpha: 0.3);
+}
+.productName,
+.productPrice {
+  font-size: 13px;
+}
+.productName {
+  margin-bottom: 0.3em;
+  width: 110%;
+  color: rgba($color: $white, $alpha: 0.8);
+}
+.productPrice {
+  color: rgba($color: $white, $alpha: 0.4);
+}
+.product img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.resaType,
+.eventName,
+.totalLine {
+  text-transform: uppercase;
+  color: $white;
+  padding: 4px 0;
+}
+.resaType {
+  border-bottom: 1px solid $white50;
+  font-weight: 600;
+}
+.eventName {
+  margin-bottom: 30px;
+  color: $white50;
+}
+.entryTypeName {
+  color: $pink;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.ticketFullName,
+.beverageName {
+  margin-bottom: 4px;
+}
+.ticketFullName,
+.ticketEmail,
+.beverageName,
+.entryTypeName,
+.entryTypePrice,
+.entryTypeQuantity,
+.totalTag,
+.totalAmount {
+  font-size: 14px;
 }
 
-.ticketEmail{
-    margin-bottom: 12px;
-    color: $white50;
+.ticketEmail {
+  margin-bottom: 12px;
+  color: $white50;
 }
-.entryTypeLine, .totalLine{
-    display: flex;
-    justify-content: space-between;
+.entryTypeLine,
+.totalLine {
+  display: flex;
+  justify-content: space-between;
 }
-.entryTypePrice{
-    margin-left: 16px;
-    width: 80px;
-    display: inline-block;
-    text-align: right;
+.entryTypePrice {
+  margin-left: 16px;
+  width: 80px;
+  display: inline-block;
+  text-align: right;
 }
-.totalLine{
-    border-top: 1px solid $grey;
-    font-weight: 600;
+.totalLine {
+  border-top: 1px solid $grey;
+  font-weight: 600;
+  margin-bottom: 30px;
 }
-.entryTypeQuantity{
-    color: $white50;
+.entryTypeQuantity {
+  color: $white50;
 }
-.entryType{
-    margin-bottom: 40px;
+.entryType {
+  margin-bottom: 40px;
 }
-#Recap>div{
-    width: 500px;
-    margin: 0 auto 50px;
+#Recap > div {
+  width: 500px;
+  margin: 0 auto 50px;
 }
 
-.addToCart{
-    display: block;
-    height: 50px;
-    width: 350px;
-    margin: 0 auto 100px;
+.addToCart {
+  display: block;
+  height: 50px;
+  width: 350px;
+  margin: 0 auto 30px;
+  border: none;
+  outline: none;
+}
+#AddToCartButtonContainer {
+  padding-top: 50px;
+}
+#Payment {
+  display: flex;
+  justify-content: space-between;
+  .recapHeader {
+    margin-bottom: 20px;
+  }
+}
+#PaymentInstructions {
+  width: 55%;
+}
+#PaymentAmount {
+  line-height: 150px;
+  text-align: center;
+  color: $pink;
+  font-size: 30px;
+  font-weight: 500;
+}
+#CardFields {
+  width: 35%;
+  padding-top: 45px;
+  button {
+    width: 100%;
+  }
+  input {
+    width: 100%;
     border: none;
-    outline: none;
-}
+    background-color: transparent;
+    border: 1px solid $grey;
+    height: 30px;
+    padding-left: 10px;
+    color: $white;
+    margin-bottom: 12px;
+  }
+  label {
+    color: $white50;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
 
+  .smallInput {
+    width: 48%;
+  }
+}
+.paymentInput {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.paymentLine2 {
+  display: flex;
+  justify-content: space-between;
+}
+#PaymentInputContainer {
+  margin-bottom: 30px;
+}
 //*************** HOVER EFFECTS ***********
-#NavTextLinks a:hover, header svg:hover,
-.footerLink a:hover, .share:hover{
-    color: $brightPink;
-    fill: $brightPink;
-    filter: drop-shadow(0 0 5px $brightPink);
+#NavTextLinks a:hover,
+header svg:hover,
+.footerLink a:hover,
+.share:hover {
+  color: $brightPink;
+  fill: $brightPink;
+  filter: drop-shadow(0 0 5px $brightPink);
 }
 
-.detailsButton:hover, .buttonBig:hover,
-#SocialNetworksLinks svg:hover, #NewsletterIcon:hover{
-    filter: drop-shadow(0 0 5px $brightPink);
+.detailsButton:hover,
+.buttonBig:hover,
+#SocialNetworksLinks svg:hover,
+#NewsletterIcon:hover {
+  filter: drop-shadow(0 0 5px $brightPink);
 }
-.secondaryButton:hover{
-    background-color: $brightPink;
-    filter: drop-shadow(0 0 5px $brightPink);
+.secondaryButton:hover {
+  background-color: $brightPink;
+  filter: drop-shadow(0 0 5px $brightPink);
 }
-.active{
-    color: $brightPink;
-    filter: drop-shadow(0 0 5px $brightPink);
+.active {
+  color: $brightPink;
+  fill: $brightPink;
+  filter: drop-shadow(0 0 5px $brightPink);
 }
-#SimilarEvents svg:hover{
-    fill: $white;
+#SimilarEvents svg:hover {
+  fill: $white;
 }
 //*************** BREAKPOINT 1200PX ***********
 @media screen and (max-width: 1200px) {
-    $containerW: 950px;
-    $smallImageWH: 80px;
-    body {
-        font-size: 14px;
-    }
-    h1 {
-        font-size: 40px;
-    }
+  $containerW: 950px;
+  $smallImageWH: 80px;
+  body {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 40px;
+  }
 
-    h2 {
-        font-size: 30px;
-    }
+  h2 {
+    font-size: 30px;
+  }
 
-    h3 {
-        font-size: 16px;
-    }
+  h3 {
+    font-size: 16px;
+  }
 
-    #Banner{
-        margin-bottom: 50px;
+  #Banner {
+    margin-bottom: 50px;
+  }
+  .eventCardBig .title,
+  .eventCardBig .date,
+  .eventCardBig .time,
+  .eventCardSmall .title,
+  .eventCardSmall .date,
+  .eventCardSmall .time {
+    font-size: 12px;
+  }
+  .eventCardBig .detailsButton,
+  .eventCardSmall .detailsButton {
+    font-size: 11px;
+  }
+  .container {
+    width: $containerW;
+  }
+  .container2 {
+    width: 850px;
+  }
+  .eventCardBig {
+    width: 200px;
+  }
+  .eventCardBig img {
+    height: 300px;
+  }
+  .eventCardSmall img {
+    width: $smallImageWH;
+    height: 96px;
+  }
+  .eventCardSmall .detailsButton {
+    width: 100px;
+    height: 18px;
+  }
+  .bigButtonBlock .buttonBig {
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 13px;
+  }
+  #about .container #slogan {
+    font-size: 25px;
+  }
+  #Gallery {
+    #GalleryGrid {
+      grid-template-rows: 220px 220px auto;
     }
-    .eventCardBig .title,
-    .eventCardBig .date,
-    .eventCardBig .time,
-    .eventCardSmall .title,
-    .eventCardSmall .date,
-    .eventCardSmall .time {
-        font-size: 12px;
+    img {
+      height: 220px;
     }
-    .eventCardBig .detailsButton,
-    .eventCardSmall .detailsButton {
-        font-size: 11px;
-    }
-    .container {
-        width: $containerW;
-    }
-    .container2{
-        width: 850px;
-    }
+  }
+  footer img,
+  #Banner img {
+    height: 40px;
+  }
+  header .navItem,
+  footer .footerLink {
+    font-size: 12px;
+  }
+  #EventsList {
     .eventCardBig {
-        width: 200px;
+      margin-bottom: 40px;
     }
-    .eventCardBig img {
-        height: 300px;
+  }
+  #SimilarEvents {
+    .eventCardBig {
+      margin-right: 16px;
     }
-    .eventCardSmall img {
-        width: $smallImageWH;
-        height: 96px;
+    .caroussel {
+      width: 850px;
     }
-    .eventCardSmall .detailsButton {
-        width: 100px;
-        height: 18px;
-    }
-    .bigButtonBlock .buttonBig {
-        width: 250px;
-        height: 50px;
-        line-height: 50px;
-        font-size: 13px;
-    }
-    #about .container #slogan {
-        font-size: 25px;
-    }
-    #Gallery{
-        #GalleryGrid{
-            grid-template-rows: 220px 220px auto;
-        }
-        img{
-            height: 220px;
-        }
-    }
-    footer img,
-    #Banner img {
-        height: 40px;
-    }
-    header .navItem,
-    footer .footerLink {
-        font-size: 12px;
-    }
-    #EventsList{
-        .eventCardBig{
-            margin-bottom:  40px;
-        }
-    }
-    #SimilarEvents{
-        .eventCardBig{
-            margin-right: 16px;
-        }
-        .caroussel{
-            width: 850px;
-        }
-    }
-    .resaEventTitle{
-        font-size: 32px;
-    }
-    .resaEventDate, .mainExplanation{
-        font-size: 14px;
-    }
-    .instructions{
-        font-size: 13px;
-    }
-    .product img, .productMask{
-        width: 130px;
-        height: 130px;
-    }
+  }
+  .resaEventTitle {
+    font-size: 32px;
+  }
+  .resaEventDate,
+  .mainExplanation {
+    font-size: 14px;
+  }
+  .instructions {
+    font-size: 13px;
+  }
+  .product img,
+  .productMask {
+    width: 130px;
+    height: 130px;
+  }
 }
 //*************** BREAKPOINT 1100PX ***********
 @media screen and (max-width: 1100px) {
-    h1 {
+  h1 {
     font-size: 32px;
+  }
+  h2 {
+    font-size: 27px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  #DesktopNavIconLinks {
+    display: none;
+  }
+  #mobileNavIconLinks,
+  #MenuHead {
+    display: block;
+  }
+  #MobileMenuButton {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: transparent;
+    z-index: 30;
+    .menuLine {
+      width: 20px;
+      height: 1px;
+      background-color: $white;
+      margin: 3px 0;
+      transition: transform 0.3s linear;
     }
-    h2 {
-        font-size: 27px;
+  }
+  #NavTextLinksContainer {
+    position: absolute;
+    top: -1100px;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $black;
+    z-index: 20;
+    transition: transform 0.4s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #NavTextLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $black;
+  }
+  #MenuHead {
+    font-size: 35px;
+    padding-top: 50px;
+    font-family: "Codystar", cursive;
+    font-weight: 300;
+    color: $pink;
+    margin-bottom: 70px;
+  }
+  .navItem {
+    height: 60px;
+    line-height: 60px;
+    margin: 10px 0;
+  }
+  #mobileNavIconLinks {
+    display: flex;
+    justify-self: center;
+    margin-top: 50px;
+    & a {
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      margin: 20px 10px;
     }
-    h3 {
-        font-size: 18px;
+  }
+  .displayed {
+    transform: translateY(1100px);
+  }
+  .topMenuBarChange {
+    margin: 0;
+    transform: translateY(50%) rotate(45deg);
+  }
+  .bottomMenuBarChange {
+    margin: 0;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  .middleMenuBarChange {
+    display: none;
+  }
+  #NewsletterIcon {
+    display: none;
+  }
+  #Banner {
+    height: 70vh;
+  }
+  .container,
+  .container2 {
+    width: 650px;
+  }
+
+  .headerLines {
+    width: 80px;
+  }
+
+  #Events {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "thisWeekend thisWeekend"
+      "cantMiss cantMiss"
+      "nextWeekend bestSellers"
+      "button button";
+  }
+  .eventGridSmall {
+    width: 95%;
+    margin: 0 0 100px;
+  }
+
+  #Events #BestSellers,
+  #Events #NextWeekend {
+    padding-top: 0;
+  }
+  #Events #BestSellers {
+    margin-left: 5%;
+  }
+  .bigButtonBlock {
+    padding: 0;
+  }
+  #about .container {
+    flex-direction: column;
+    #slogan,
+    #aboutContent {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
     }
-    #DesktopNavIconLinks {
-        display: none;
+    #slogan {
+      text-align: center;
+      margin-bottom: 70px;
     }
-    #mobileNavIconLinks,
-    #MenuHead {
-        display: block;
+    #ContactInfo {
+      align-self: center;
     }
-    #MobileMenuButton {
-        position: relative;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: transparent;
-        border: transparent;
-        z-index: 30;
-        .menuLine {
-            width: 20px;
-            height: 1px;
-            background-color: $white;
-            margin: 3px 0;
-            transition: transform 0.3s linear;
-        }
-    }
-    #NavTextLinksContainer {
-        position: absolute;
-        top: -1100px;
-        right: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: $black;
-        z-index: 20;
-        transition: transform 0.4s linear;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    #NavTextLinks {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: $black;
-    }
-    #MenuHead {
-        font-size: 35px;
-        padding-top: 50px;
-        font-family: "Codystar", cursive;
-        font-weight: 300;
-        color: $pink;
+    #aboutContent {
+      padding: 0;
+      p {
         margin-bottom: 70px;
+      }
     }
-    .navItem {
-        height: 60px;
-        line-height: 60px;
-        margin: 10px 0;
+  }
+  #Gallery #GalleryGrid {
+    grid-template-columns: repeat(4, 24%);
+    gap: 8px;
+    grid-template-rows: repeat(4, 200px) 30px;
+    grid-template-areas:
+      "im1 im1 im2 im2"
+      "im5 im5 im6 im6"
+      "im3 im3 im4 im4"
+      "im3 im3 im7 im7"
+      ". . legend legend";
+  }
+  #Gallery img {
+    height: 200px;
+  }
+  #EventsList {
+    .eventCardBig {
+      margin-bottom: 30px;
     }
-    #mobileNavIconLinks {
-        display: flex;
-        justify-self: center;
-        margin-top: 50px;
-        & a {
-            width: 50px;
-            height: 50px;
-            text-align: center;
-            margin: 20px 10px;
-        }
+  }
+  .eventBlock {
+    padding-top: 100px;
+    .eventTitles {
+      display: block;
+      text-align: center;
+      margin-bottom: 50px;
     }
-    .displayed {
-        transform: translateY(1100px);
+    .left {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .topMenuBarChange {
-        margin: 0;
-        transform: translateY(50%) rotate(45deg);
+    .eventDescriptionContainer,
+    #mainEventInfo {
+      width: 80%;
     }
-    .bottomMenuBarChange {
-        margin: 0;
-        transform: translateY(-50%) rotate(-45deg);
+    .right {
+      float: none;
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 50px;
     }
-    .middleMenuBarChange {
-        display: none;
+    #RightContainer {
+      width: 40%;
     }
-    #NewsletterIcon {
-        display: none;
+  }
+  #SimilarEvents {
+    .eventCardBig {
+      margin-right: 24px;
     }
-    #Banner {
-        height: 70vh;
+    .caroussel {
+      width: 650px;
     }
-    .container, .container2 {
-        width: 650px;
+  }
+  .dataCollection {
+    .customerDetails {
+      width: 100%;
+      margin: 0;
     }
-
-    #Events {
-        grid-template-columns: repeat(2, 50%);
-        grid-template-rows: repeat(4, auto);
-        grid-template-areas:
-        "thisWeekend thisWeekend"
-        "cantMiss cantMiss"
-        "nextWeekend bestSellers"
-        "button button";
+    .customerInputId {
+      align-items: flex-start;
+      width: 12%;
     }
-    .eventGridSmall {
-        width: 95%;
-        margin: 0 0 100px;
+    .customerInputContainer {
+      width: 90%;
     }
-
-    #Events #BestSellers, #Events #NextWeekend{
-        padding-top: 0;
+    .customerInputEmail,
+    .customerInput {
+      align-items: flex-start;
     }
-    #Events #BestSellers{
-        margin-left: 5%;
+    .customerInputEmail {
+      width: 48%;
+      input {
+        width: 90%;
+      }
     }
-    .bigButtonBlock{
-        padding: 0;
+    .customerInput {
+      width: 26%;
+      margin-bottom: 8px;
     }
-    #about .container {
-        flex-direction: column;
-        #slogan,
-        #aboutContent {
-            width: 90%;
-            display: flex;
-            flex-direction: column;
-        }
-        #slogan {
-            text-align: center;
-            margin-bottom: 70px;
-        }
-        #ContactInfo{
-            align-self: center;
-        }
-        #aboutContent {
-            padding: 0;
-            p {
-                margin-bottom: 70px;
-            }
-        }
-    }
-    #Gallery #GalleryGrid {
-        grid-template-columns: repeat(4, 24%);
-        gap: 8px;
-        grid-template-rows: repeat(4,200px) 30px;
-        grid-template-areas:
-        "im1 im1 im2 im2"
-        "im5 im5 im6 im6"
-        "im3 im3 im4 im4"
-        "im3 im3 im7 im7"
-        ". . legend legend";
-    }
-    #Gallery img {
-        height: 200px;
-    }
-    #EventsList{
-        .eventCardBig{
-            margin-bottom:  30px;
-        }
-    }
-    .eventBlock{
-        padding-top: 100px;
-        .eventTitles{
-            display: block;
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        .left{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .eventDescriptionContainer, #mainEventInfo{
-            width: 80%;
-        }
-        .right{
-            float: none;
-            width: 100%;
-            justify-content: center;
-            margin-bottom: 50px;
-        }
-        #RightContainer{
-            width: 40%;
-        }
-    }
-    #SimilarEvents{
-        .eventCardBig{
-            margin-right: 24px;
-        }
-        .caroussel{
-            width: 650px;
-        }
-    }
-    .dataCollection{
-        .customerDetails{
-            width: 100%;
-            margin: 0;
-        }
-        .customerInputId{
-            align-items: flex-start;
-            width: 12%;
-        }
-        .customerInputContainer{
-            width: 90%;
-        }
-        .customerInputEmail, .customerInput{
-            align-items: flex-start;
-        }
-        .customerInputEmail{
-            width: 48%;
-            input{
-                width: 90%;
-            }
-        }
-        .customerInput{
-            width: 26%;
-            margin-bottom: 8px;
-        }
-
-    }
-    .productList{
-        width: 100%;
-    }
-    .product{
-        width: 33%;
-    }
-    .resaEventTitle{
-        font-size: 28px;
-    }
-    .resaEventDate, .mainExplanation{
-        font-size: 13px;
-    }
-    .instructions{
-        font-size: 12px;
-    }
-    .product img, .productMask{
-        width: 150px;
-        height: 150px;
-    }
+  }
+  .productList {
+    width: 100%;
+  }
+  .product {
+    width: 33%;
+  }
+  .resaEventTitle {
+    font-size: 28px;
+  }
+  .resaEventDate,
+  .mainExplanation {
+    font-size: 13px;
+  }
+  .instructions {
+    font-size: 12px;
+  }
+  .product img,
+  .productMask {
+    width: 150px;
+    height: 150px;
+  }
+  .ticketFullName,
+  .ticketEmail,
+  .beverageName,
+  .entryTypeName,
+  .entryTypePrice,
+  .entryTypeQuantity,
+  .totalAmount,
+  .totalTag {
+    font-size: 13px;
+  }
+  #Payment {
+    flex-direction: column;
+  }
+  #PaymentInstructions {
+    width: 100%;
+  }
+  #CardFields {
+    width: 50%;
+    align-self: center;
+  }
 }
 //*************** BREAKPOINT 750PX ***********
 @media screen and (max-width: 750px) {
-    h1 {
-        font-size: 28px;
-    }
-    h2, h3 {
-        font-size: 24px;
-    }
-    .eventCardBig .title,
-    .eventCardBig .date,
-    .eventCardBig .time,
-    .eventCardSmall .title,
-    .eventCardSmall .date,
-    .eventCardSmall .time {
-        font-size: 14px;
-    }
-    .container, .container2 {
-        width: 500px;
-    }
-    #Events {
-        width: 500px;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, auto);
-        grid-template-areas:
-        "thisWeekend"
-        "cantMiss"
-        "nextWeekend"
-        "bestSellers"
-        "button";
-    }
-    .eventGridBig {
-        width: 100%;
-        margin: 0 auto 100px;
-    }
-    .eventCardContainer{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-bottom: 0;
-        .eventCardBig {
-            position: relative;
-            padding: 10px;
-            width: 100%;
-            background-color: $purpleDark;
-            margin-bottom: 8px;
-        }
-        img {
-            float: left;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            margin: 0 15px 0 0;
-        }
-        .title,
-        .time {
-            margin-bottom: 12px;
-            width: 100%;
-        }
-        .title{
-            height: 33.6px;
-        }
-        .detailsButton {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            margin-bottom: 0;
-            text-align: center;
-            width: 60%;
-            height: 40px;
-            line-height: 40px;
-            border: 1px solid $pink;
-            border-radius: 20px;
-            color: $pink;
-            padding: 0;
-            &::after {
-                display: none;
-            }
-        }
-        .eventCardSmall .title{
-            height: 33.6px;
-        }
-        #about .container {
-            #aboutContent {
-                width: 100%;
-            }
-            #slogan {
-                text-align: center;
-                margin-bottom: 70px;
-            }
-            #aboutContent {
-                padding: 0;
-                align-items: center;
-                p {
-                    margin-bottom: 70px;
-                }
-            }
-        }
-    }
-    #Gallery #GalleryGrid {
-        grid-template-rows: repeat(4, 150px) 30px;
-        gap: 6px;
-    }
+  h1 {
+    font-size: 28px;
+  }
+  h2,
+  h3 {
+    font-size: 24px;
+  }
+  .eventCardBig .title,
+  .eventCardBig .date,
+  .eventCardBig .time,
+  .eventCardSmall .title,
+  .eventCardSmall .date,
+  .eventCardSmall .time {
+    font-size: 14px;
+  }
+  .container,
+  .container2 {
+    width: 500px;
+  }
 
-    #Gallery img {
-        height: 150px;
+  .headerLines {
+    width: 60px;
+  }
+  #Events {
+    width: 500px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "thisWeekend"
+      "cantMiss"
+      "nextWeekend"
+      "bestSellers"
+      "button";
+  }
+  .eventGridBig {
+    width: 100%;
+    margin: 0 auto 100px;
+  }
+  .eventCardContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0;
+    .eventCardBig {
+      position: relative;
+      padding: 10px;
+      width: 100%;
+      background-color: $purpleDark;
+      margin-bottom: 8px;
     }
-
-    #Events #NextWeekend, #Events #BestSellers{
-        padding-top: 0;
-        margin: 0 auto 100px;
+    img {
+      float: left;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin: 0 15px 0 0;
     }
-    .eventContainerSmall .eventCardSmall {
-        padding: 10px;
+    .title,
+    .time {
+      margin-bottom: 12px;
+      width: 100%;
+    }
+    .title {
+      height: 33.6px;
+    }
+    .detailsButton {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      margin-bottom: 0;
+      text-align: center;
+      width: 60%;
+      height: 40px;
+      line-height: 40px;
+      border: 1px solid $pink;
+      border-radius: 20px;
+      color: $pink;
+      padding: 0;
+      &::after {
+        display: none;
+      }
+    }
+    .eventCardSmall .title {
+      height: 33.6px;
+    }
+    #about .container {
+      #aboutContent {
+        width: 100%;
+      }
+      #slogan {
         text-align: center;
+        margin-bottom: 70px;
+      }
+      #aboutContent {
+        padding: 0;
+        align-items: center;
+        p {
+          margin-bottom: 70px;
+        }
+      }
     }
-    .eventContainerSmall .detailsButton {
-        width: 60%;
-        height: 40px;
-        line-height: 40px;
-        border: 1px solid $pink;
-        border-radius: 20px;
-        text-transform: uppercase;
-        font-weight: 600;
-        background-color: transparent;
-        bottom: 10px;
-        right: 10px;
-    }
+  }
+  #Gallery #GalleryGrid {
+    grid-template-rows: repeat(4, 150px) 30px;
+    gap: 6px;
+  }
 
-    .eventContainerSmall img {
-        width: 150px;
-        height: 150px;
-        margin-right: 15px;
+  #Gallery img {
+    height: 150px;
+  }
+
+  #Events #NextWeekend,
+  #Events #BestSellers {
+    padding-top: 0;
+    margin: 0 auto 100px;
+  }
+  .eventContainerSmall .eventCardSmall {
+    padding: 10px;
+    text-align: center;
+  }
+  .eventContainerSmall .detailsButton {
+    width: 60%;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid $pink;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: transparent;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .eventContainerSmall img {
+    width: 150px;
+    height: 150px;
+    margin-right: 15px;
+  }
+  .eventGridSmall {
+    width: 100%;
+  }
+  .bigButtonBlock {
+    .buttonBig {
+      margin: 0 20px;
     }
-    .eventGridSmall{
-        width: 100%;
+  }
+  #EventsList {
+    .bigButtonBlock {
+      padding-top: 30px;
     }
-    .bigButtonBlock{  
-        .buttonBig{
-            margin: 0 20px;
-        }
+    .eventCardBig {
+      margin-bottom: 10px;
     }
-    #EventsList{
-        .bigButtonBlock{
-            padding-top: 30px;
-        }
-        .eventCardBig{
-            margin-bottom: 10px;
-        }
+  }
+  #TicketSection #ValidateChoice {
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+  }
+  #SimilarEvents {
+    .eventCardBig {
+      margin-right: 24px;
     }
-    #TicketSection #ValidateChoice{
-        width: 100%;
-        height: 42px;
-        line-height: 42px;
+    .caroussel {
+      width: 500px;
     }
-    #SimilarEvents{
-        .eventCardBig{
-            margin-right: 24px;
-        }
-        .caroussel{
-            width: 500px;
-        }
-        .eventCardContainer{
-            width: 100%;
-        }
-        svg{
-            display: none;
-        }
+    .eventCardContainer {
+      width: 100%;
     }
-    .productMask, .product img{
-        width: 130px;
-        height: 130px;
+    svg {
+      display: none;
     }
-    .resaBlockHeader{
-        font-size: 16px;
+  }
+  .productMask,
+  .product img {
+    width: 130px;
+    height: 130px;
+  }
+  .resaBlockHeader {
+    font-size: 16px;
+  }
+  .formHeader {
+    font-size: 13px;
+  }
+  .dataCollection .customerDetails {
+    flex-wrap: wrap;
+  }
+  .dataCollection .customerInput {
+    width: 50%;
+    input {
+      width: 95%;
     }
-    .formHeader{
-        font-size: 13px;
+  }
+  .dataCollection .customerInputContainer {
+    width: 100%;
+  }
+  .dataCollection .customerInputEmail {
+    width: 100%;
+    margin-bottom: 30px;
+    input {
+      width: 98%;
     }
-    .dataCollection .customerDetails{
-        flex-wrap: wrap;
-    }
-    .dataCollection .customerInput{
-        width: 50%;
-        input{
-            width: 95%;
-        }
-    }
-    .dataCollection .customerInputContainer{
-        width: 100%;
-    }
-    .dataCollection .customerInputEmail{
-        width: 100%;
-        margin-bottom: 30px;
-        input{
-            width: 98%;
-        }
-    }
-    .dataCollection .desktopHidden{
-        visibility: visible;
-    }
-    .dataCollection .customerInputId{
-        width: 100%;
-        margin-bottom: 16px;
-        color: $white;
-    }
-    .dataCollection label{
-        font-size: 12px;
-    }
-    .resaBlock::before{
-        transform: scale(0.7);
-    }
-    #Recap>div{
-        width: 90%;
-    }
-    .recapHeader{
-        font-size: 16px;
-    }
+  }
+  .dataCollection .desktopHidden {
+    visibility: visible;
+  }
+  .dataCollection .customerInputId {
+    width: 100%;
+    margin-bottom: 16px;
+    color: $white;
+  }
+  .dataCollection label {
+    font-size: 12px;
+  }
+  .resaBlock::before {
+    transform: scale(0.7);
+  }
+  #Recap > div {
+    width: 90%;
+  }
+  .recapHeader {
+    font-size: 16px;
+  }
+  #CardFields {
+    width: 70%;
+    align-self: center;
+  }
 }
 
 //*************** BREAKPOINT 600PX ***********
 @media screen and (max-width: 600px) {
-    $headerHeight:50px;
-    body{
-        font-size: 12px;
+  $headerHeight: 50px;
+  body {
+    font-size: 12px;
+  }
+  header {
+    height: $headerHeight;
+    padding: 0 10px;
+  }
+  #Banner {
+    height: 60vh;
+    img {
+      height: 30px;
+      margin-bottom: 20px;
     }
-    header{
-        height: $headerHeight;
-        padding: 0 10px;
+    h1 span {
+      padding-left: 0;
     }
-    #Banner{
-        height: 60vh;
-        img{
-            height: 30px;
-            margin-bottom: 20px;
-        }
-        h1 span {
-            padding-left: 0;
-          }
-          #BannerContent{
-              top: -6%;
-          }
-          #BannerMask{
-              background: rgba($color: $purpleDark, $alpha: 0.7);
-          }
+    #BannerContent {
+      top: -6%;
     }
-    h1 {
-        font-size: 20px;
-        text-align: right;
-      }
-    
-      h2, h3 {
-        font-size: 18px;
-      }
-      .container, .container2, #Events{
-          width: 330px;
-      }
-      .eventCardContainer img, .eventCardSmall img{
-          width: 100px;
-          height: 132px;
-      }
+    #BannerMask {
+      background: rgba($color: $purpleDark, $alpha: 0.7);
+    }
+  }
+  h1 {
+    font-size: 20px;
+    text-align: right;
+  }
 
-      .eventCardContainer .eventCardBig, .eventContainerSmall .eventCardSmall {
-          padding: 5px;
-      }
-    .eventCardBig .title,
-    .eventCardBig .date,
-    .eventCardBig .time,
-    .eventCardSmall .title,
-    .eventCardSmall .date,
-    .eventCardSmall .time {
-        font-size: 12px;
-    }
-    .eventCardSmall .title, .eventCardBig .title {
-        height: 30.4px;
-        margin-bottom: 6px;
-    }
-    .eventCardSmall .detailsButton, .eventCardContainer .detailsButton {
-        font-size: 10px;
-        width: 60%;
-        bottom: 5px;
-        right: 5px;
-    }
+  h2,
+  h3 {
+    font-size: 18px;
+  }
+  .container,
+  .container2,
+  #Events {
+    width: 330px;
+  }
+  .eventCardContainer img,
+  .eventCardSmall img {
+    width: 100px;
+    height: 132px;
+  }
 
-    .bigButtonBlock .buttonBig{
-        width: 180px;
+  .eventCardContainer .eventCardBig,
+  .eventContainerSmall .eventCardSmall {
+    padding: 5px;
+  }
+  .eventCardBig .title,
+  .eventCardBig .date,
+  .eventCardBig .time,
+  .eventCardSmall .title,
+  .eventCardSmall .date,
+  .eventCardSmall .time {
+    font-size: 12px;
+  }
+  .eventCardSmall .title,
+  .eventCardBig .title {
+    height: 30.4px;
+    margin-bottom: 6px;
+  }
+  .eventCardSmall .detailsButton,
+  .eventCardContainer .detailsButton {
+    font-size: 10px;
+    width: 60%;
+    bottom: 5px;
+    right: 5px;
+  }
+
+  .bigButtonBlock .buttonBig {
+    width: 180px;
+    font-size: 11px;
+    height: 45px;
+    line-height: 45px;
+    margin: 0 10px;
+  }
+
+  #Gallery #GalleryGrid {
+    grid-template-rows: repeat(4, 100px) 20px;
+    gap: 4px;
+    img:not(#img3) {
+      height: 100px;
+    }
+    .galleryLegend {
+      font-size: 9px;
+    }
+  }
+  #about .container {
+    #slogan,
+    #aboutContent {
+      width: 330px;
+      #ContactInfo > div {
         font-size: 11px;
-        height: 45px;
-        line-height: 45px;
-        margin: 0 10px;
+      }
     }
+    #slogan {
+      font-size: 18px;
+    }
+  }
+  footer .footerLink {
+    font-size: 11px;
+  }
+  footer img {
+    height: 30px;
+  }
+  footer .copyright {
+    font-size: 9px;
+  }
+  .pageTitles {
+    padding-top: 90px;
+    margin-bottom: 20px;
+  }
 
-    #Gallery #GalleryGrid {
-        grid-template-rows: repeat(4,100px) 20px;
-        gap: 4px;
-        img:not(#img3) {
-            height: 100px;
-        }
-        .galleryLegend {
-            font-size: 9px;
-        }
+  #Filters {
+    #FilterButton {
+      width: 90px;
     }
-    #about .container {
-        #slogan,
-        #aboutContent {
-        width: 330px;
-        #ContactInfo > div{
-            font-size: 11px;
-        }
-        }
-        #slogan {
-        font-size: 18px;
-        }
-        
+    #SearchBar {
+      width: 240px;
+      margin-left: 10px;
     }
-    footer .footerLink{
-        font-size: 11px;
+    #SearchBarContainer {
+      margin-bottom: 50px;
     }
-    footer img{
-        height: 30px;
+  }
+  .eventBlock {
+    padding-top: 80px;
+    margin-bottom: 100px;
+    .eventTitles {
+      font-size: 22px;
+      margin-bottom: 20px;
     }
-    footer .copyright{
-        font-size: 9px;
+  }
+  #TicketSection {
+    margin-bottom: 100px;
+  }
+  #TableBig {
+    display: none;
+  }
+  .sectionHeader {
+    margin-bottom: 15px;
+  }
+  #TicketSection #TableSmall {
+    display: flex;
+    height: 900px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    thead {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
     }
-    .pageTitles{
-        padding-top: 90px;
-        margin-bottom: 20px;
-    }
-
-    #Filters{
-        #FilterButton{
-            width: 90px;
-        }
-        #SearchBar{
-            width: 240px;
-            margin-left: 10px;
-        }
-        #SearchBarContainer{
-            margin-bottom: 50px;
-        }
-    }
-    .eventBlock{
-        padding-top: 80px;
-        margin-bottom: 100px;
-        .eventTitles{
-            font-size: 22px;
-            margin-bottom: 20px;
-        }
-    }
-    #TicketSection{
-        margin-bottom: 100px;
-    }
-    #TableBig{
+    th {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      font-weight: 500;
+      height: 20px;
+      &::after,
+      &::before {
         display: none;
+      }
     }
-    .sectionHeader{
-        margin-bottom: 15px;
+    .fare {
+      position: relative;
+      margin-bottom: 75px;
+      padding-top: 10px;
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        display: block;
+        width: 101%;
+        height: 1px;
+        background-color: $grey;
+      }
     }
-    #TicketSection #TableSmall{
+    tbody {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      tr {
         display: flex;
-        height: 900px;
-        flex-wrap: wrap;
-        margin-bottom: 30px;
-        thead{
-            display: flex;
-            flex-direction: column;
-            width: 40%;
+        flex-direction: column;
+        height: 215px;
+        text-align: left;
+        color: rgba($color: $white, $alpha: 0.7);
+      }
+      td {
+        height: 20px;
+        padding-bottom: 0;
+        margin-bottom: 10px;
+      }
+      select {
+        color: rgba($color: $white, $alpha: 0.7);
+      }
+      .amount {
+        padding-top: 5px;
+      }
+      .quantity {
+        height: 40px;
+        margin-bottom: 5px;
+      }
+      .fareDescriptionMobile {
+        color: rgba($color: $white, $alpha: 0.3);
+      }
+    }
+    tfoot {
+      width: 55%;
+      height: 30px;
+      background: linear-gradient(to right, $pink, transparent);
+      padding: 5px;
+      tr {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 500;
+      }
+      td {
+        display: inline-block;
+        font-size: 13px;
+        height: 20px;
+        &::before,
+        &::after {
+          display: none;
         }
-        th{
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-            font-weight: 500;
-            height: 20px;
-            &::after, &::before{
-                display: none;
-            }
-        }
-        .fare{
-            position: relative;
-            margin-bottom: 75px;
-            padding-top: 10px;
-            &::before{
-                position: absolute;
-                top: 0;
-                left: 0;
-                content: '';
-                display: block;
-                width: 101%;
-                height: 1px;
-                background-color: $grey;
-            }
-
-        }
-        tbody{
-            display: flex;
-            flex-direction: column;
-            width: 60%;
-            tr{
-                display: flex;
-                flex-direction: column;
-                height: 215px;
-                text-align: left;
-                color: rgba($color: $white, $alpha: 0.7);
-            }
-            td{
-                height: 20px;
-                padding-bottom: 0;
-                margin-bottom: 10px;
-            }
-            select{
-                color: rgba($color: $white, $alpha: 0.7);
-            }
-            .amount{
-                padding-top: 5px;
-            }
-            .quantity{
-                height: 40px;
-                margin-bottom: 5px;
-            }
-            .fareDescriptionMobile{
-                color: rgba($color: $white, $alpha: 0.3);
-            }
-        }
-        tfoot{
-            width: 55%;
-            height: 30px;
-            background: linear-gradient(to right, $pink, transparent);
-            padding: 5px;
-            tr{
-                display: flex;
-                justify-content: space-between;
-                font-weight: 500;
-            }
-            td{
-                display: inline-block;
-                font-size: 13px;
-                height: 20px;
-                &::before, &::after{
-                    display: none;
-                }
-            }
-        }
+      }
     }
-    .eventBlock .eventDescriptionContainer,
-    .eventBlock #mainEventInfo{
-        width: 100%;
+  }
+  .eventBlock .eventDescriptionContainer,
+  .eventBlock #mainEventInfo {
+    width: 100%;
+  }
+  .eventBlock #mainEventInfo {
+    padding: 10px;
+  }
+  .eventBlock #RightContainer {
+    width: 70%;
+  }
+  .eventBlock .share {
+    margin: 10px 20px;
+  }
+  #SimilarEvents {
+    .caroussel {
+      width: 330px;
     }
-    .eventBlock #mainEventInfo{
-        padding: 10px;
+    .eventCardContainer {
+      width: 100%;
     }
-    .eventBlock #RightContainer{
-        width: 70%;
+    svg {
+      display: none;
     }
-    .eventBlock .share{
-        margin: 10px 20px;
-    }
-    #SimilarEvents{
-        .caroussel{
-            width: 330px;
-        }
-        .eventCardContainer{
-            width: 100%;
-        }
-        svg{
-            display: none;
-        }
-    }
-    .resaEventTitle{
-        font-size: 16px;
-    }
-    .resaEventDate, .mainExplanation, .formHeader{
-        font-size: 12px;
-    }
-    .instructions{
-        font-size: 11px;
-    }
-    .product{
-        width: 50%;
-    }
-    .addToCart{
-        width: 330px;
-    }
-    .resaBlock{
-        padding: 20px;
-    }
-    .entryTypePrice{
-        width: 65px;
-        margin-left: 8px;
-    }
-    #Recap>div{
-        width: 100%;
-    }
-    .recapHeader{
-        font-size: 14px;
-    }
-    
+  }
+  .resaEventTitle {
+    font-size: 16px;
+  }
+  .resaEventDate,
+  .mainExplanation,
+  .formHeader {
+    font-size: 12px;
+  }
+  .instructions {
+    font-size: 11px;
+  }
+  .product {
+    width: 50%;
+  }
+  .addToCart {
+    width: 270px;
+  }
+  .resaBlock {
+    padding: 20px;
+  }
+  .entryTypePrice {
+    width: 65px;
+    margin-left: 8px;
+  }
+  #Recap > div {
+    width: 100%;
+  }
+  .recapHeader {
+    font-size: 14px;
+  }
+  .ticketFullName,
+  .ticketEmail,
+  .beverageName,
+  .entryTypeName,
+  .entryTypePrice,
+  .entryTypeQuantity,
+  .totalAmount,
+  .totalTag {
+    font-size: 12px;
+  }
+  #CardFields {
+    width: 100%;
+    align-self: center;
+  }
 }
