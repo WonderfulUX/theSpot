@@ -69,29 +69,61 @@
         <hr class="headerLines">
         <!----------- CUSTOMER INFO ----------->
         <section id="MyInformation">
-            <div id="OngoingReservation">
-                <p class="blockHead">Réservations en cours</p>
-                <p class="blockValue">1</p>
-            </div>
-            <div id="CustomerId">
-                <h2 class="sectionHeader2">Mes informations</h2>
-                <div class="customerIdLine">
-                    <svg class="profileIcon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 0C10.1935 0 11.3381 0.474106 12.182 1.31802C13.0259 2.16193 13.5 3.30653 13.5 4.5C13.5 5.69347 13.0259 6.83807 12.182 7.68198C11.3381 8.52589 10.1935 9 9 9C7.80653 9 6.66193 8.52589 5.81802 7.68198C4.97411 6.83807 4.5 5.69347 4.5 4.5C4.5 3.30653 4.97411 2.16193 5.81802 1.31802C6.66193 0.474106 7.80653 0 9 0ZM9 10.125C12.0037 10.125 18 11.6212 18 14.625V18H0V14.625C0 11.6212 5.99625 10.125 9 10.125Z"/>
-                    </svg>
-                    <span>Boris Boulogne</span>
+            <!-- <h2 class="sectionHeader2">Mes informations</h2> -->
+            <div id="MyInformationContainer">
+                <div id="MyInformationDetails">
+                    <div id="CustomerCapitals">BB</div>
+                    <div class="infoBox" id="CustomerId">
+                        <div class="customerIdLine">
+                            <span class="idLineTitle">Nom</span>
+                            <span>Boulogne</span>
+                        </div>
+                        <div class="customerIdLine">
+                            <span class="idLineTitle">Prénom</span>
+                            <span>Boris</span>
+                        </div>
+                        <div class="customerIdLine">
+                            <span class="idLineTitle">Téléphone</span>
+                            <span>0690321456</span>
+                        </div>
+                        <div class="customerIdLine">
+                            <span class="idLineTitle">Email</span>
+                            <span>boris@gmail.com</span>
+                        </div>
+                        <div class="customerIdLine">
+                            <span class="idLineTitle">Adresse</span>
+                            <span>6 Allée des Bégonias <br>Les Jardins d'Arnouville <br>97170 Petit-Bourg </span>
+                        </div>
+                        <div class="customerIdLine">
+                            <span class="idLineTitle"></span>
+                            <small>Modifier mes informations</small>
+                        </div>
+                    </div>
+                    <!-- <div class="infoBox" id="Account">
+                        <div class="customerIdLine">
+                            <span class="idLineTitle">Compte</span>
+                            <span>Créé le 12/02/2021</span>
+                        </div>
+                        <div class="customerIdLine">
+                            <span class="idLineTitle">Connexion</span>
+                            <span>Dernière connexion le 18/02/2021</span>
+                        </div>
+                        <div class="customerIdLine">
+                            <span class="idLineTitle">Réservations</span>
+                            <span>1</span>
+                        </div>
+                    </div> -->
                 </div>
-                <div class="customerIdLine">
-                    <svg class="profileIcon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3.62 7.79C5.06 10.62 7.38 12.94 10.21 14.38L12.41 12.18C12.69 11.9 13.08 11.82 13.43 11.93C14.55 12.3 15.75 12.5 17 12.5C17.2652 12.5 17.5196 12.6054 17.7071 12.7929C17.8946 12.9804 18 13.2348 18 13.5V17C18 17.2652 17.8946 17.5196 17.7071 17.7071C17.5196 17.8946 17.2652 18 17 18C12.4913 18 8.1673 16.2089 4.97918 13.0208C1.79107 9.8327 0 5.50868 0 1C0 0.734784 0.105357 0.48043 0.292893 0.292893C0.48043 0.105357 0.734784 0 1 0H4.5C4.76522 0 5.01957 0.105357 5.20711 0.292893C5.39464 0.48043 5.5 0.734784 5.5 1C5.5 2.25 5.7 3.45 6.07 4.57C6.18 4.92 6.1 5.31 5.82 5.59L3.62 7.79Z"/>
-                    </svg>
-                    <span>0690321456</span>
-                </div>
-                <div class="customerIdLine">
-                    <svg class="profileIcon" width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.2 3.6L9 8.1L1.8 3.6V1.8L9 6.3L16.2 1.8V3.6ZM16.2 0H1.8C0.801 0 0 0.801 0 1.8V12.6C0 13.0774 0.189642 13.5352 0.527208 13.8728C0.864773 14.2104 1.32261 14.4 1.8 14.4H16.2C16.6774 14.4 17.1352 14.2104 17.4728 13.8728C17.8104 13.5352 18 13.0774 18 12.6V1.8C18 0.801 17.19 0 16.2 0Z"/>
-                    </svg>
-                    <span>boris@gmail.com</span>
+                <div id="ReservationCount">
+                    <div>
+
+                        <p class="countHead">Création du compte</p>
+                        <p class="countvalue">Le 18/02/2021</p>
+                        <p class="countHead">Dernière connexion</p>
+                        <p class="countvalue">Le 18/02/2021</p>
+                        <p class="countHead">Réservations</p>
+                        <p class="countvalue">1</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -180,6 +212,62 @@
                     <button class="secondaryButton addToCart">Télécharger mes billets</button>
                 </div>
             </div>
+        </section>
+        <!----------- MY EVENTS ----------->
+        <section id="MyEvents">
+            <svg id="arrowLeft" width="22" height="42" viewBox="0 0 22 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.2929 0.292893C20.6834 -0.0976311 21.3166 -0.0976311 21.7071 0.292893C22.0976 0.683418 22.0976 1.31658 21.7071 1.70711L20.2929 0.292893ZM1 21L0.292893 21.7071C-0.0976311 21.3166 -0.0976311 20.6834 0.292893 20.2929L1 21ZM21.7071 40.2929C22.0976 40.6834 22.0976 41.3166 21.7071 41.7071C21.3166 42.0976 20.6834 42.0976 20.2929 41.7071L21.7071 40.2929ZM21.7071 1.70711L1.70711 21.7071L0.292893 20.2929L20.2929 0.292893L21.7071 1.70711ZM1.70711 20.2929L21.7071 40.2929L20.2929 41.7071L0.292893 21.7071L1.70711 20.2929Z"/>
+            </svg>
+            <h2 class="sectionHeader">Mes évènements</h2>
+            <div class="caroussel">
+                <ul class="eventCardContainer">
+                    <li class="eventCardBig">
+                        <img src="./images/events/ANR1.jpg" alt="">
+                        <p class="title">Beach Party</p>
+                        <p class="date">Jeudi 8 Juillet</p>
+                        <p class="time">À partir de 19h00</p>
+                        <a href="" class="detailsButton">Voir l'évènement</a>
+                    </li>
+                    <li class="eventCardBig">
+                        <img src="./images/events/ANR2.jpg" alt="">
+                        <p class="title">Red Party</p>
+                        <p class="date">Jeudi 8 Juillet</p>
+                        <p class="time">À partir de 19h00</p>
+                        <a href="" class="detailsButton">Voir l'évènement</a>
+                    </li>
+                    <li class="eventCardBig">
+                        <img src="./images/events/ANR3.jpg" alt="">
+                        <p class="title">Black and Gold Party</p>
+                        <p class="date">Jeudi 8 Juillet</p>
+                        <p class="time">À partir de 19h00</p>
+                        <a href="" class="detailsButton">Voir l'évènement</a>
+                    </li>
+                    <li class="eventCardBig">
+                        <img src="./images/events/ANR4.jpg" alt="">
+                        <p class="title">Boat Party</p>
+                        <p class="date">Jeudi 8 Juillet</p>
+                        <p class="time">À partir de 19h00</p>
+                        <a href="" class="detailsButton">Voir l'évènement</a>
+                    </li>
+                    <li class="eventCardBig">
+                        <img src="./images/events/ANR4.jpg" alt="">
+                        <p class="title">Boat Party</p>
+                        <p class="date">Jeudi 8 Juillet</p>
+                        <p class="time">À partir de 19h00</p>
+                        <a href="" class="detailsButton">Voir l'évènement</a>
+                    </li>
+                    <li class="eventCardBig">
+                        <img src="./images/events/ANR4.jpg" alt="">
+                        <p class="title">Boat Party</p>
+                        <p class="date">Jeudi 8 Juillet</p>
+                        <p class="time">À partir de 19h00</p>
+                        <a href="" class="detailsButton">Voir l'évènement</a>
+                    </li>
+                </ul>
+            </div>
+            <svg id="arrowRight" width="22" height="42" viewBox="0 0 22 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683418 -0.0976311 0.292893 0.292893C-0.0976311 0.683418 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM21 21L21.7071 21.7071C22.0976 21.3166 22.0976 20.6834 21.7071 20.2929L21 21ZM0.292893 40.2929C-0.0976311 40.6834 -0.0976311 41.3166 0.292893 41.7071C0.683418 42.0976 1.31658 42.0976 1.70711 41.7071L0.292893 40.2929ZM0.292893 1.70711L20.2929 21.7071L21.7071 20.2929L1.70711 0.292893L0.292893 1.70711ZM20.2929 20.2929L0.292893 40.2929L1.70711 41.7071L21.7071 21.7071L20.2929 20.2929Z"/>
+            </svg>       
         </section>
     </div>
     <script src="./functions.js"></script>
