@@ -92,6 +92,7 @@ h3 {
 }
 
 .secondaryButton {
+  font-family: "Montserrat", sans-serif;
   background-color: #C66FD0;
   color: #20002f;
   -webkit-transition: background-color 0.3s linear, -webkit-filter 0.2s linear;
@@ -101,6 +102,7 @@ h3 {
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
   cursor: pointer;
+  font-weight: 600;
 }
 
 header {
@@ -1661,7 +1663,7 @@ header svg:hover,
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
   padding-top: 50px;
 }
 
@@ -1750,6 +1752,31 @@ header svg:hover,
   left: 24px;
   font-size: 10px;
   cursor: pointer;
+}
+
+.ticketRecapContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ticketRecap {
+  width: 55%;
+}
+
+.ticketDownload {
+  width: 30%;
+}
+
+.ticketDownload img, .ticketDownload button {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 1200px) {

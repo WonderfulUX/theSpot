@@ -44,11 +44,13 @@ h3 {
 
 //BUTTONS
 .secondaryButton {
+    font-family: "Montserrat", sans-serif;
   background-color: $pink;
   color: $purpleDark;
   transition: background-color 0.3s linear, filter 0.2s linear;
   transition: all 0.2s linear;
   cursor: pointer;
+  font-weight: 600;
 }
 
 //*************** HEADER ***********
@@ -1208,7 +1210,7 @@ header svg:hover,
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    margin-bottom: 80px;
+    margin-bottom: 120px;
     padding-top: 50px;
 }
 #OngoingReservation{
@@ -1279,6 +1281,21 @@ header svg:hover,
     left: 24px;
     font-size: 10px;
     cursor: pointer;
+}
+.ticketRecapContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ticketRecap{
+    width: 55%;
+}
+.ticketDownload{
+    width: 30%;
+    img, button{
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 //*************** BREAKPOINT 1200PX ***********
