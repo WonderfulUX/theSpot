@@ -1145,6 +1145,7 @@ footer {
 .paymentLine2 {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 12px;
 }
 #PaymentInputContainer {
   margin-bottom: 30px;
@@ -1230,6 +1231,56 @@ header svg:hover,
         text-transform: uppercase;
     }
 }
+#CGVcontainer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+#CGVcontainer #CGV{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 10;
+
+}
+.checkmarkBox{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background-color: transparent;
+    border: 1px solid $grey;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.checkmark{
+    position: absolute;
+    top: 0;
+    transform: translateY(-60%);
+    left: 3px;
+    fill: $pink;
+    display: none;
+    cursor: pointer;
+}
+#CGV:checked ~ .checkmark{
+    display: inline;
+}
+#CardFields #CGVcontainer label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 24px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
 //*************** BREAKPOINT 1200PX ***********
 @media screen and (max-width: 1200px) {
   $containerW: 950px;

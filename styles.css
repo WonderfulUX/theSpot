@@ -1579,6 +1579,7 @@ footer .copyright {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 12px;
 }
 
 #PaymentInputContainer {
@@ -1687,6 +1688,68 @@ header svg:hover,
 
 #OngoingReservation .blockHead {
   text-transform: uppercase;
+}
+
+#CGVcontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+#CGVcontainer #CGV {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.checkmarkBox {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  background-color: transparent;
+  border: 1px solid #5b4963;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(-60%);
+          transform: translateY(-60%);
+  left: 3px;
+  fill: #C66FD0;
+  display: none;
+  cursor: pointer;
+}
+
+#CGV:checked ~ .checkmark {
+  display: inline;
+}
+
+#CardFields #CGVcontainer label {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 24px;
+  font-size: 10px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1200px) {
