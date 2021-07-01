@@ -1204,7 +1204,8 @@ footer .copyright {
   position: relative;
 }
 
-#ArrowLeft, #ArrowRight {
+#ArrowLeft,
+#ArrowRight {
   position: absolute;
   top: 45%;
   -webkit-transform: translateY(50%);
@@ -1844,7 +1845,8 @@ header svg:hover,
           filter: drop-shadow(0 0 5px #f480ff);
 }
 
-#ArrowRight:hover, #ArrowLeft:hover {
+#ArrowRight:hover,
+#ArrowLeft:hover {
   fill: #F8F5FA;
 }
 
@@ -2034,7 +2036,8 @@ header svg:hover,
   width: 50%;
 }
 
-#InfoCollectionFreeReservation, #DateSelectionFreeReservation {
+#InfoCollectionFreeReservation,
+#DateSelectionFreeReservation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2084,7 +2087,8 @@ header svg:hover,
   height: 292px;
 }
 
-#Calendar th, td {
+#Calendar th,
+td {
   width: 40px;
   height: 40px;
   font-size: 13px;
@@ -2576,6 +2580,30 @@ header svg:hover,
   #ReservationCount {
     display: none;
   }
+  #DateSelectionFreeReservation,
+  #InfoCollectionFreeReservation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .resaBlockLeft,
+  .resaBlockRight {
+    width: 100%;
+  }
+  .resaBlockRight .customerInput {
+    width: 50%;
+  }
+  .resaBlockRight .email {
+    width: 99.5%;
+  }
+  #Calendar td {
+    width: 50px;
+    height: 50px;
+  }
+  #CalendarContainer {
+    height: 362px;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -2816,7 +2844,8 @@ header svg:hover,
     height: 42px;
     line-height: 42px;
   }
-  #ArrowRight, #ArrowLeft {
+  #ArrowRight,
+  #ArrowLeft {
     display: none;
   }
   .productMask,
@@ -2860,6 +2889,9 @@ header svg:hover,
   }
   .dataCollection label {
     font-size: 12px;
+  }
+  .resaBlock {
+    padding: 30px 20px;
   }
   .resaBlock::before {
     -webkit-transform: scale(0.7);
@@ -2935,6 +2967,12 @@ header svg:hover,
   }
   .ticketDownload img {
     display: none;
+  }
+  .resaBlockRight .email, .resaBlockRight .email input {
+    width: 100%;
+  }
+  .resaBlockRight .email input {
+    width: 97.5%;
   }
 }
 
@@ -3268,6 +3306,13 @@ header svg:hover,
   }
   #MyInformation {
     padding-top: 0;
+  }
+  #Calendar td {
+    width: 45px;
+    height: 45px;
+  }
+  #CalendarContainer {
+    height: 322px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

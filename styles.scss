@@ -111,68 +111,67 @@ header {
 #MenuHead {
   display: none;
 }
-.displayed{
-    transform: translateY(1100px);
+.displayed {
+  transform: translateY(1100px);
 }
 
-.modale{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba($color: $black, $alpha: 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    z-index: -10;
-    transition: all 0.3s linear;
+.modale {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($color: $black, $alpha: 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: -10;
+  transition: all 0.3s linear;
 }
-.modaleBox{
-    position: relative;
-    top: -5%;
-    width: 600px;
-    height: auto;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: $purpleDark;
-    border: 1px solid $grey;
-    transition: all 0.1s ease-out;
+.modaleBox {
+  position: relative;
+  top: -5%;
+  width: 600px;
+  height: auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $purpleDark;
+  border: 1px solid $grey;
+  transition: all 0.1s ease-out;
 }
-.closeIcon{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    fill: $pink;
+.closeIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  fill: $pink;
 }
-.closeArea{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-}
-
-#ModaleLogo{
-    height: 40px;
-    margin-bottom: 50px;
-}
-.modale .InfoContact{
-    width: auto;
-    margin-bottom: 40px;
-}
-.slide{
-    top: 0;
-}
-.modaleDisplay{
-    z-index: 20;
-    opacity: 1;
+.closeArea {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
 }
 
+#ModaleLogo {
+  height: 40px;
+  margin-bottom: 50px;
+}
+.modale .InfoContact {
+  width: auto;
+  margin-bottom: 40px;
+}
+.slide {
+  top: 0;
+}
+.modaleDisplay {
+  z-index: 20;
+  opacity: 1;
+}
 
 //*************** BANNER ***********
 #Banner {
@@ -606,11 +605,11 @@ h3 {
   }
 }
 
-.modale .InfoContact rect{
-    stroke: $pink;
+.modale .InfoContact rect {
+  stroke: $pink;
 }
-.modale .InfoContact path{
-    fill: $white;
+.modale .InfoContact path {
+  fill: $white;
 }
 //*************** FOOTER ***********
 footer {
@@ -863,35 +862,36 @@ footer {
 }
 
 .eventsCarousselGridContainer {
-    display: flex;
-    width: 1000px;
-    overflow: hidden;
-  .eventsGridContainer{
-      width: 3000px;
-      flex-wrap: nowrap;
+  display: flex;
+  width: 1000px;
+  overflow: hidden;
+  .eventsGridContainer {
+    width: 3000px;
+    flex-wrap: nowrap;
   }
-  .singleEventContainer{
-      width: 250px;
+  .singleEventContainer {
+    width: 250px;
   }
 }
 #MyEvents .container2,
-#SimilarEvents .container2{
-    position: relative;
+#SimilarEvents .container2 {
+  position: relative;
 }
-#ArrowLeft, #ArrowRight{
-    position: absolute;
-    top: 45%;
-    transform: translateY(50%);
-    fill: $grey;
-    cursor: pointer;
-    transition: fill 0.2s linear;
+#ArrowLeft,
+#ArrowRight {
+  position: absolute;
+  top: 45%;
+  transform: translateY(50%);
+  fill: $grey;
+  cursor: pointer;
+  transition: fill 0.2s linear;
 }
 #ArrowLeft {
-    left: -6%;
-  }
-  #ArrowRight {
-    right: -6%;
-  }
+  left: -6%;
+}
+#ArrowRight {
+  right: -6%;
+}
 
 .topBgFade {
   position: absolute;
@@ -1031,17 +1031,17 @@ footer {
   margin-bottom: 20px;
 }
 .instructions li {
-    display: flex;
-    position: relative;
+  display: flex;
+  position: relative;
 }
-.instructions li p{
-    padding-left: 10px;
+.instructions li p {
+  padding-left: 10px;
 }
-.listStyle{
-    position: absolute;
-    top: 5px;
-    left: 0;
-    fill: $grey;
+.listStyle {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  fill: $grey;
 }
 .dataCollection {
   color: $white50;
@@ -1347,7 +1347,8 @@ header svg:hover,
   fill: $brightPink;
   filter: drop-shadow(0 0 5px $brightPink);
 }
-#ArrowRight:hover, #ArrowLeft:hover {
+#ArrowRight:hover,
+#ArrowLeft:hover {
   fill: $white;
 }
 #MyInformation {
@@ -1477,90 +1478,92 @@ header svg:hover,
     margin-bottom: 20px;
   }
 }
-.resaBlockRight .customerInput{
-    width: 50%;
+.resaBlockRight .customerInput {
+  width: 50%;
 }
 
-#InfoCollectionFreeReservation, #DateSelectionFreeReservation{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+#InfoCollectionFreeReservation,
+#DateSelectionFreeReservation {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-.resaBlockLeft{
-    width: 55%;
+.resaBlockLeft {
+  width: 55%;
 }
-.resaBlockRight{
-    width: 40%;
-    padding-top: 42px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.resaBlockRight .customerInput{
-    align-items: flex-start;
-    margin-bottom: 12px;
-}
-.resaBlockRight .email{
-    width: 100%;
+.resaBlockRight {
+  width: 40%;
+  padding-top: 42px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.resaBlockRight .email input{
-    width: 97%;
+.resaBlockRight .customerInput {
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+.resaBlockRight .email {
+  width: 100%;
 }
 
-#CalendarContainer{
-    height: 292px;
-}
-#Calendar th, td{
-    width: 40px;
-    height: 40px;
-    font-size: 13px;
+.resaBlockRight .email input {
+  width: 97%;
 }
 
-.calendarCircle{
-    width: 28px;
-    height: 28px;
-    line-height: 28px;
-    margin: 0 auto;
-    text-align: center;
+#CalendarContainer {
+  height: 292px;
+}
+#Calendar th,
+td {
+  width: 40px;
+  height: 40px;
+  font-size: 13px;
 }
 
-.selectedDate{
-    border-radius: 50%;
-    background-color: $pink;
+.calendarCircle {
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  margin: 0 auto;
+  text-align: center;
 }
-.month{
-    margin-bottom: 20px;
-    text-align: center;
-    width: 150px;
+
+.selectedDate {
+  border-radius: 50%;
+  background-color: $pink;
 }
-#MonthsCaroussel{
-    display: flex;
-    justify-content: center;
+.month {
+  margin-bottom: 20px;
+  text-align: center;
+  width: 150px;
 }
-#MonthsCaroussel svg{
-    fill: $grey;
+#MonthsCaroussel {
+  display: flex;
+  justify-content: center;
+}
+#MonthsCaroussel svg {
+  fill: $grey;
 }
 
 #Calendar th {
-    color: $pink;
+  color: $pink;
 }
 #Calendar td {
-    position: relative;
+  position: relative;
 }
 #Calendar svg {
-    position: absolute;
-    fill: transparent;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
+  position: absolute;
+  fill: transparent;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-#Calendar .booked{
-    fill: $pink;
+#Calendar .booked {
+  fill: $pink;
 }
-.out{
-    color: rgba($color: $white, $alpha: 0.1);
+.out {
+  color: rgba($color: $white, $alpha: 0.1);
 }
 
 //*************** BREAKPOINT 1200PX ***********
@@ -1649,11 +1652,11 @@ header svg:hover,
   }
   .eventsCarousselGridContainer {
     width: 900px;
-    .eventsGridContainer{
-        width: 2700px;
+    .eventsGridContainer {
+      width: 2700px;
     }
-    .singleEventContainer{
-        width: 225px;
+    .singleEventContainer {
+      width: 225px;
     }
   }
   .resaEventTitle {
@@ -1807,10 +1810,10 @@ header svg:hover,
       margin-bottom: 70px;
     }
     #aboutContent {
-        padding: 0;
-        p {
-            margin-bottom: 70px;
-        }
+      padding: 0;
+      p {
+        margin-bottom: 70px;
+      }
     }
     .InfoContact {
       align-self: center;
@@ -1868,11 +1871,11 @@ header svg:hover,
 
   .eventsCarousselGridContainer {
     width: 650px;
-    .eventsGridContainer{
-        width: 1950px;
+    .eventsGridContainer {
+      width: 1950px;
     }
-    .singleEventContainer{
-        width: 214.5px;
+    .singleEventContainer {
+      width: 214.5px;
     }
   }
   .dataCollection {
@@ -1955,6 +1958,27 @@ header svg:hover,
   }
   #ReservationCount {
     display: none;
+  }
+  #DateSelectionFreeReservation,
+  #InfoCollectionFreeReservation {
+    flex-direction: column;
+  }
+  .resaBlockLeft,
+  .resaBlockRight {
+    width: 100%;
+  }
+  .resaBlockRight .customerInput {
+    width: 50%;
+  }
+  .resaBlockRight .email {
+    width: 99.5%;
+  }
+  #Calendar td {
+    width: 50px;
+    height: 50px;
+  }
+  #CalendarContainer {
+    height: 362px;
   }
 }
 
@@ -2114,12 +2138,12 @@ header svg:hover,
   }
   .eventsCarousselGridContainer {
     width: 500px;
-    .eventsGridContainer{
-        width: 100%;
-        flex-direction: column;
+    .eventsGridContainer {
+      width: 100%;
+      flex-direction: column;
     }
-    .singleEventContainer{
-        width: 100%;
+    .singleEventContainer {
+      width: 100%;
     }
   }
   #Gallery #GalleryGrid {
@@ -2174,7 +2198,7 @@ header svg:hover,
     transform: scale(1.5);
   }
   #EventsList {
-      margin-bottom: 50px;
+    margin-bottom: 50px;
     .bigButtonBlock {
       padding-top: 30px;
     }
@@ -2182,7 +2206,7 @@ header svg:hover,
       margin-bottom: 10px;
     }
   }
-  #MyEvents{
+  #MyEvents {
     margin-bottom: 50px;
   }
   #TicketSection #ValidateChoice {
@@ -2190,8 +2214,9 @@ header svg:hover,
     height: 42px;
     line-height: 42px;
   }
-  #ArrowRight, #ArrowLeft{
-      display: none;
+  #ArrowRight,
+  #ArrowLeft {
+    display: none;
   }
   .productMask,
   .product img {
@@ -2233,6 +2258,9 @@ header svg:hover,
   }
   .dataCollection label {
     font-size: 12px;
+  }
+  .resaBlock {
+    padding: 30px 20px;
   }
   .resaBlock::before {
     transform: scale(0.7);
@@ -2293,6 +2321,12 @@ header svg:hover,
   }
   .ticketDownload img {
     display: none;
+  }
+  .resaBlockRight .email, .resaBlockRight .email input{
+    width: 100%;
+  }
+  .resaBlockRight .email input{
+    width: 97.5%;
   }
 }
 
@@ -2607,5 +2641,12 @@ header svg:hover,
   }
   #MyInformation {
     padding-top: 0;
+  }
+  #Calendar td {
+    width: 45px;
+    height: 45px;
+  }
+  #CalendarContainer {
+    height: 322px;
   }
 }
