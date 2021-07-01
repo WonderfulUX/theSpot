@@ -432,9 +432,12 @@ h3::after {
           align-items: center;
 }
 
-.heart {
+.heart, .heartFilled {
   stroke: #C66FD0;
-  fill: transparent;
+}
+
+.heartFilled {
+  fill: #C66FD0;
 }
 
 #Favorites {

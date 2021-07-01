@@ -310,9 +310,11 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-.heart {
+.heart, .heartFilled{
   stroke: $pink;
-  fill: transparent;
+}
+.heartFilled{
+    fill: $pink;
 }
 #Favorites {
   position: absolute;
@@ -327,6 +329,9 @@ h3 {
 #Favorites:checked ~ .heart {
     fill: $pink;
 }
+// #Favorites:checked ~ .heartFilled {
+//     fill: transparent;
+// }
 
 .eventContainerSmall {
   display: flex;
