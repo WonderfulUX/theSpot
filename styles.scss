@@ -44,7 +44,7 @@ h3 {
 
 //BUTTONS
 .secondaryButton {
-    font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: $pink;
   color: $purpleDark;
   transition: background-color 0.3s linear, filter 0.2s linear;
@@ -253,6 +253,7 @@ h3 {
   margin: 0 0 100px;
 }
 .eventCardBig {
+  position: relative;
   width: 230px;
   height: auto;
   background-color: $purpleDark;
@@ -298,6 +299,35 @@ h3 {
     }
   }
 }
+.svgContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  background: rgba($color: $purpleDark, $alpha: 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heart {
+  stroke: $pink;
+  fill: transparent;
+}
+#Favorites {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 10;
+}
+#Favorites:checked ~ .heart {
+    fill: $pink;
+}
+
 .eventContainerSmall {
   display: flex;
   flex-direction: column;
@@ -578,6 +608,7 @@ footer {
     justify-content: flex-end;
   }
   #RightContainer {
+      position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -645,9 +676,9 @@ footer {
   text-shadow: 0 10px 4px $white;
   margin-bottom: 50px;
 }
-.sectionHeader2{
-    font-size: 28px;
-    margin-bottom: 50px;
+.sectionHeader2 {
+  font-size: 28px;
+  margin-bottom: 50px;
 }
 #TicketSection {
   margin-bottom: 200px;
@@ -1166,31 +1197,31 @@ footer {
   display: none;
 }
 
-.customerInfo{
-    margin-bottom: 8px;
+.customerInfo {
+  margin-bottom: 8px;
 }
-.profileIcon{
-    fill: $pink;
-    margin-right: 8px;
-    vertical-align: middle;
+.profileIcon {
+  fill: $pink;
+  margin-right: 8px;
+  vertical-align: middle;
 }
-.customerIdLine{
-    margin: 4px 0;
-    display: flex;
-    line-height: 1.5em;
+.customerIdLine {
+  margin: 4px 0;
+  display: flex;
+  line-height: 1.5em;
 }
-#TicketsListing{
-    margin-bottom: 100px;
+#TicketsListing {
+  margin-bottom: 100px;
 }
-#MyInformationDetails{
-    display: flex;
-    align-items: flex-start;
+#MyInformationDetails {
+  display: flex;
+  align-items: flex-start;
 }
-.customerIdLine small{
-    text-decoration: underline;
-    color: $pink;
-    line-height: 40px;
-    cursor: pointer;
+.customerIdLine small {
+  text-decoration: underline;
+  color: $pink;
+  line-height: 40px;
+  cursor: pointer;
 }
 //*************** HOVER EFFECTS ***********
 #NavTextLinks a:hover,
@@ -1220,131 +1251,132 @@ header svg:hover,
 #SimilarEvents svg:hover {
   fill: $white;
 }
-#MyInformation{
-    padding-top: 50px;
+#MyInformation {
+  padding-top: 50px;
 }
-#MyInformationContainer{
-    display: flex;
-    margin-bottom: 120px;
-    justify-content: space-between;
+#MyInformationContainer {
+  display: flex;
+  margin-bottom: 120px;
+  justify-content: space-between;
 }
-.countvalue{
-    color: $white;
+.countvalue {
+  color: $white;
 }
-.countvalue:not(:last-child){
-    margin-bottom: 24px;
+.countvalue:not(:last-child) {
+  margin-bottom: 24px;
 }
-.countHead{
-    margin-bottom: 6px;
-    color: $white50;
+.countHead {
+  margin-bottom: 6px;
+  color: $white50;
 }
-#ReservationCount{
-    width: 250px;
-    height: 220px;
-    padding: 20px;
+#ReservationCount {
+  width: auto;
+  height: 220px;
+  padding: 20px 30px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: inset 0 1px 2px 0 #450066;
+}
+#CustomerCapitals {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: $purpleDark;
+  box-shadow: 0 0 10px $brightPink;
+  margin-right: 32px;
+}
+.idLineTitle {
+  font-weight: 500;
+  color: $grey;
+  width: 120px;
+  display: inline-block;
+}
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 50px;
+  .blockHead,
+  .blockValue {
+    line-height: 50px;
     text-align: center;
-    border-radius: 20px;
-    box-shadow: inset 0 1px 2px 0 #450066;
-}
-#CustomerCapitals{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  }
+  .blockValue {
     font-size: 30px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: $purpleDark;
-    box-shadow: 0 0 10px $brightPink;
-    margin-right: 32px;
-}
-.idLineTitle{
+    color: $pink;
     font-weight: 500;
-    color: $grey;
-    width: 120px;
-    display: inline-block;
+  }
+  .blockHead {
+    text-transform: uppercase;
+  }
 }
-.infoBox{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 50px;
-    .blockHead,.blockValue{
-        line-height: 50px;
-        text-align: center;
-    }
-    .blockValue{
-        font-size: 30px;
-        color: $pink;
-        font-weight: 500;
-    }
-    .blockHead{
-        text-transform: uppercase;
-    }
+#CGVcontainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
 }
-#CGVcontainer{
-    display: flex;
-    align-items: center;
+#CGVcontainer #CGV {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+.checkmarkBox {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  background-color: transparent;
+  border: 1px solid $grey;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  transform: translateY(-60%);
+  left: 3px;
+  fill: $pink;
+  display: none;
+  cursor: pointer;
+}
+#CGV:checked ~ .checkmark {
+  display: inline;
+}
+#CardFields #CGVcontainer label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 24px;
+  font-size: 10px;
+  cursor: pointer;
+}
+.ticketRecapContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ticketRecap {
+  width: 55%;
+}
+.ticketDownload {
+  width: 30%;
+  img,
+  button {
     width: 100%;
-    position: relative;
-}
-#CGVcontainer #CGV{
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    top: 0;
-    transform: translateY(-50%);
-    left: 0;
-    opacity: 0;
-    cursor: pointer;
-    z-index: 10;
-
-}
-.checkmarkBox{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    background-color: transparent;
-    border: 1px solid $grey;
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
-}
-.checkmark{
-    position: absolute;
-    top: 0;
-    transform: translateY(-60%);
-    left: 3px;
-    fill: $pink;
-    display: none;
-    cursor: pointer;
-}
-#CGV:checked ~ .checkmark{
-    display: inline;
-}
-#CardFields #CGVcontainer label{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 24px;
-    font-size: 10px;
-    cursor: pointer;
-}
-.ticketRecapContainer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.ticketRecap{
-    width: 55%;
-}
-.ticketDownload{
-    width: 30%;
-    img, button{
-        width: 100%;
-        margin-bottom: 20px;
-    }
+    margin-bottom: 20px;
+  }
 }
 
 //*************** BREAKPOINT 1200PX ***********
@@ -1745,6 +1777,9 @@ header svg:hover,
   #CardFields {
     padding: 0;
   }
+  #ReservationCount {
+    display: none;
+  }
 }
 
 //*************** BREAKPOINT 750PX ***********
@@ -1753,6 +1788,7 @@ header svg:hover,
     font-size: 28px;
   }
   h2,
+  .sectionHeader2,
   h3 {
     font-size: 24px;
   }
@@ -1990,6 +2026,46 @@ header svg:hover,
   #CardFields label {
     font-size: 12px;
   }
+  #CustomerCapitals {
+    width: 80px;
+    height: 80px;
+    margin: 0 0 50px;
+    font-size: 25px;
+  }
+  .idLineTitle {
+    width: 90px;
+    margin-right: 16px;
+  }
+  #MyInformation {
+    padding-top: 20px;
+  }
+  #MyInformationContainer {
+    justify-content: center;
+  }
+  #MyInformationDetails {
+    flex-direction: column;
+    align-items: center;
+  }
+  .infoBox {
+    margin-right: 0;
+  }
+  .ticketRecapContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ticketRecap,
+  .ticketDownload {
+    width: 100%;
+  }
+  .ticketDownload {
+    width: 60%;
+  }
+  .ticketRecap {
+    margin-bottom: 50px;
+  }
+  .ticketDownload img {
+    display: none;
+  }
 }
 
 //*************** BREAKPOINT 600PX ***********
@@ -2024,6 +2100,7 @@ header svg:hover,
   }
 
   h2,
+  .sectionHeader2,
   h3 {
     font-size: 18px;
   }
@@ -2303,5 +2380,11 @@ header svg:hover,
   }
   #CardFields label {
     font-size: 11px;
+  }
+  .ticketDownload {
+    width: 100%;
+  }
+  #MyInformation {
+    padding-top: 0;
   }
 }
