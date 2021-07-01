@@ -255,7 +255,6 @@ h3 {
 .eventsGridContainer {
   display: flex;
   width: 100%;
-  justify-content: center;
   flex-wrap: wrap;
   margin: 0 0 100px;
 }
@@ -794,37 +793,37 @@ footer {
     cursor: pointer;
   }
 }
-#SimilarEvents {
-  position: relative;
-  svg {
+
+.eventsCarousselGridContainer {
+    display: flex;
+    width: 1000px;
+    overflow: hidden;
+  .eventsGridContainer{
+      width: 3000px;
+      flex-wrap: nowrap;
+  }
+  .singleEventContainer{
+      width: 250px;
+  }
+}
+#MyEvents .container2,
+#SimilarEvents .container2{
+    position: relative;
+}
+#ArrowLeft, #ArrowRight{
     position: absolute;
     top: 45%;
     transform: translateY(50%);
     fill: $grey;
     cursor: pointer;
     transition: fill 0.2s linear;
-  }
-  #arrowLeft {
+}
+#ArrowLeft {
     left: -6%;
   }
-  #arrowRight {
+  #ArrowRight {
     right: -6%;
   }
-  .eventCardBig {
-    display: inline-block;
-  }
-  .eventCardBig {
-    margin-right: 13px;
-  }
-  .eventCardContainer {
-    width: 2880px;
-    justify-content: initial;
-  }
-  .caroussel {
-    width: 960px;
-    overflow: hidden;
-  }
-}
 
 .topBgFade {
   position: absolute;
@@ -1266,7 +1265,7 @@ header svg:hover,
   fill: $brightPink;
   filter: drop-shadow(0 0 5px $brightPink);
 }
-#SimilarEvents svg:hover {
+#ArrowRight:hover, #ArrowLeft:hover {
   fill: $white;
 }
 #MyInformation {
@@ -1481,12 +1480,13 @@ header svg:hover,
       margin-bottom: 40px;
     }
   }
-  #SimilarEvents {
-    .eventCardBig {
-      margin-right: 16px;
+  .eventsCarousselGridContainer {
+    width: 900px;
+    .eventsGridContainer{
+        width: 2700px;
     }
-    .caroussel {
-      width: 850px;
+    .singleEventContainer{
+        width: 225px;
     }
   }
   .resaEventTitle {
@@ -1712,12 +1712,14 @@ header svg:hover,
       width: 40%;
     }
   }
-  #SimilarEvents {
-    .eventCardBig {
-      margin-right: 24px;
+
+  .eventsCarousselGridContainer {
+    width: 650px;
+    .eventsGridContainer{
+        width: 1950px;
     }
-    .caroussel {
-      width: 650px;
+    .singleEventContainer{
+        width: 214.5px;
     }
   }
   .dataCollection {
@@ -1909,8 +1911,8 @@ header svg:hover,
       }
     }
   }
-  .singleEventContainer{
-      width: 100%;
+  .singleEventContainer {
+    width: 100%;
   }
   .eventsGridContainer {
     display: flex;
@@ -1956,7 +1958,17 @@ header svg:hover,
         display: none;
       }
     }
-}
+  }
+  .eventsCarousselGridContainer {
+    width: 500px;
+    .eventsGridContainer{
+        width: 100%;
+        flex-direction: column;
+    }
+    .singleEventContainer{
+        width: 100%;
+    }
+  }
   #Gallery #GalleryGrid {
     grid-template-rows: repeat(4, 150px) 30px;
     gap: 6px;
@@ -2009,6 +2021,7 @@ header svg:hover,
     transform: scale(1.5);
   }
   #EventsList {
+      margin-bottom: 50px;
     .bigButtonBlock {
       padding-top: 30px;
     }
@@ -2016,24 +2029,16 @@ header svg:hover,
       margin-bottom: 10px;
     }
   }
+  #MyEvents{
+    margin-bottom: 50px;
+  }
   #TicketSection #ValidateChoice {
     width: 100%;
     height: 42px;
     line-height: 42px;
   }
-  #SimilarEvents {
-    .eventCardBig {
-      margin-right: 24px;
-    }
-    .caroussel {
-      width: 500px;
-    }
-    .eventCardContainer {
-      width: 100%;
-    }
-    svg {
+  #ArrowRight, #ArrowLeft{
       display: none;
-    }
   }
   .productMask,
   .product img {
@@ -2209,6 +2214,10 @@ header svg:hover,
     width: 60%;
     bottom: 5px;
     right: 5px;
+  }
+
+  .eventsCarousselGridContainer {
+    width: 330px;
   }
   .bigButtonBlock .buttonBig {
     width: 180px;
@@ -2388,17 +2397,6 @@ header svg:hover,
   }
   .eventBlock .share {
     margin: 10px 20px;
-  }
-  #SimilarEvents {
-    .caroussel {
-      width: 330px;
-    }
-    .eventCardContainer {
-      width: 100%;
-    }
-    svg {
-      display: none;
-    }
   }
   .resaEventTitle {
     font-size: 16px;

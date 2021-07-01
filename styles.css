@@ -359,9 +359,6 @@ h3::after {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 0 100px;
@@ -1094,11 +1091,30 @@ footer .copyright {
   cursor: pointer;
 }
 
-#SimilarEvents {
+.eventsCarousselGridContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1000px;
+  overflow: hidden;
+}
+
+.eventsCarousselGridContainer .eventsGridContainer {
+  width: 3000px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.eventsCarousselGridContainer .singleEventContainer {
+  width: 250px;
+}
+
+#MyEvents .container2,
+#SimilarEvents .container2 {
   position: relative;
 }
 
-#SimilarEvents svg {
+#ArrowLeft, #ArrowRight {
   position: absolute;
   top: 45%;
   -webkit-transform: translateY(50%);
@@ -1109,32 +1125,12 @@ footer .copyright {
   transition: fill 0.2s linear;
 }
 
-#SimilarEvents #arrowLeft {
+#ArrowLeft {
   left: -6%;
 }
 
-#SimilarEvents #arrowRight {
+#ArrowRight {
   right: -6%;
-}
-
-#SimilarEvents .eventCardBig {
-  display: inline-block;
-}
-
-#SimilarEvents .eventCardBig {
-  margin-right: 13px;
-}
-
-#SimilarEvents .eventCardContainer {
-  width: 2880px;
-  -webkit-box-pack: initial;
-      -ms-flex-pack: initial;
-          justify-content: initial;
-}
-
-#SimilarEvents .caroussel {
-  width: 960px;
-  overflow: hidden;
 }
 
 .topBgFade {
@@ -1739,7 +1735,7 @@ header svg:hover,
           filter: drop-shadow(0 0 5px #f480ff);
 }
 
-#SimilarEvents svg:hover {
+#ArrowRight:hover, #ArrowLeft:hover {
   fill: #F8F5FA;
 }
 
@@ -2000,11 +1996,14 @@ header svg:hover,
   #EventsList .eventCardBig {
     margin-bottom: 40px;
   }
-  #SimilarEvents .eventCardBig {
-    margin-right: 16px;
+  .eventsCarousselGridContainer {
+    width: 900px;
   }
-  #SimilarEvents .caroussel {
-    width: 850px;
+  .eventsCarousselGridContainer .eventsGridContainer {
+    width: 2700px;
+  }
+  .eventsCarousselGridContainer .singleEventContainer {
+    width: 225px;
   }
   .resaEventTitle {
     font-size: 32px;
@@ -2271,11 +2270,14 @@ header svg:hover,
   .eventBlock #RightContainer {
     width: 40%;
   }
-  #SimilarEvents .eventCardBig {
-    margin-right: 24px;
-  }
-  #SimilarEvents .caroussel {
+  .eventsCarousselGridContainer {
     width: 650px;
+  }
+  .eventsCarousselGridContainer .eventsGridContainer {
+    width: 1950px;
+  }
+  .eventsCarousselGridContainer .singleEventContainer {
+    width: 214.5px;
   }
   .dataCollection .customerDetails {
     width: 100%;
@@ -2527,6 +2529,19 @@ header svg:hover,
   .eventsGridContainer .detailsButton::after {
     display: none;
   }
+  .eventsCarousselGridContainer {
+    width: 500px;
+  }
+  .eventsCarousselGridContainer .eventsGridContainer {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .eventsCarousselGridContainer .singleEventContainer {
+    width: 100%;
+  }
   #Gallery #GalleryGrid {
     -ms-grid-rows: (150px)[4] 30px;
         grid-template-rows: repeat(4, 150px) 30px;
@@ -2575,27 +2590,24 @@ header svg:hover,
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
   }
+  #EventsList {
+    margin-bottom: 50px;
+  }
   #EventsList .bigButtonBlock {
     padding-top: 30px;
   }
   #EventsList .eventCardBig {
     margin-bottom: 10px;
   }
+  #MyEvents {
+    margin-bottom: 50px;
+  }
   #TicketSection #ValidateChoice {
     width: 100%;
     height: 42px;
     line-height: 42px;
   }
-  #SimilarEvents .eventCardBig {
-    margin-right: 24px;
-  }
-  #SimilarEvents .caroussel {
-    width: 500px;
-  }
-  #SimilarEvents .eventCardContainer {
-    width: 100%;
-  }
-  #SimilarEvents svg {
+  #ArrowRight, #ArrowLeft {
     display: none;
   }
   .productMask,
@@ -2784,6 +2796,9 @@ header svg:hover,
     width: 60%;
     bottom: 5px;
     right: 5px;
+  }
+  .eventsCarousselGridContainer {
+    width: 330px;
   }
   .bigButtonBlock .buttonBig {
     width: 180px;
@@ -2986,15 +3001,6 @@ header svg:hover,
   }
   .eventBlock .share {
     margin: 10px 20px;
-  }
-  #SimilarEvents .caroussel {
-    width: 330px;
-  }
-  #SimilarEvents .eventCardContainer {
-    width: 100%;
-  }
-  #SimilarEvents svg {
-    display: none;
   }
   .resaEventTitle {
     font-size: 16px;
