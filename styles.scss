@@ -160,7 +160,7 @@ h1 {
   width: $containerW;
 }
 .container2 {
-  width: 960px;
+  width: 1000px;
 }
 #ThisWeekend {
   grid-area: thisWeekend;
@@ -252,6 +252,18 @@ h3 {
   flex-wrap: wrap;
   margin: 0 0 100px;
 }
+.eventsGridContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 0 100px;
+}
+.singleEventContainer {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+}
 .eventCardBig {
   position: relative;
   width: 230px;
@@ -310,11 +322,12 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-.heart, .heartFilled{
+.heart,
+.heartFilled {
   stroke: $pink;
 }
-.heartFilled{
-    fill: $pink;
+.heartFilled {
+  fill: $pink;
 }
 #Favorites {
   position: absolute;
@@ -327,7 +340,7 @@ h3 {
   z-index: 10;
 }
 #Favorites:checked ~ .heart {
-    fill: $pink;
+  fill: $pink;
 }
 // #Favorites:checked ~ .heartFilled {
 //     fill: transparent;
@@ -613,7 +626,7 @@ footer {
     justify-content: flex-end;
   }
   #RightContainer {
-      position: relative;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1422,7 +1435,7 @@ header svg:hover,
     width: $containerW;
   }
   .container2 {
-    width: 850px;
+    width: 900px;
   }
   .eventCardBig {
     width: 200px;
@@ -1669,6 +1682,9 @@ header svg:hover,
       margin-bottom: 30px;
     }
   }
+  .singleEventContainer {
+    width: 33%;
+  }
   .eventBlock {
     padding-top: 100px;
     .eventTitles {
@@ -1828,6 +1844,7 @@ header svg:hover,
     width: 100%;
     margin: 0 auto 100px;
   }
+
   .eventCardContainer {
     display: flex;
     flex-direction: column;
@@ -1892,6 +1909,54 @@ header svg:hover,
       }
     }
   }
+  .singleEventContainer{
+      width: 100%;
+  }
+  .eventsGridContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0;
+    .eventCardBig {
+      position: relative;
+      padding: 10px;
+      width: 100%;
+      background-color: $purpleDark;
+      margin-bottom: 8px;
+    }
+    img {
+      float: left;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin: 0 15px 0 0;
+    }
+    .title,
+    .time {
+      margin-bottom: 12px;
+      width: 100%;
+    }
+    .title {
+      height: 33.6px;
+    }
+    .detailsButton {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      margin-bottom: 0;
+      text-align: center;
+      width: 60%;
+      height: 40px;
+      line-height: 40px;
+      border: 1px solid $pink;
+      border-radius: 20px;
+      color: $pink;
+      padding: 0;
+      &::after {
+        display: none;
+      }
+    }
+}
   #Gallery #GalleryGrid {
     grid-template-rows: repeat(4, 150px) 30px;
     gap: 6px;
@@ -2115,6 +2180,7 @@ header svg:hover,
     width: 330px;
   }
   .eventCardContainer img,
+  .eventsGridContainer img,
   .eventCardSmall img {
     width: 100px;
     height: 132px;
@@ -2144,7 +2210,6 @@ header svg:hover,
     bottom: 5px;
     right: 5px;
   }
-
   .bigButtonBlock .buttonBig {
     width: 180px;
     font-size: 11px;

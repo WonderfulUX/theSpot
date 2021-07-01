@@ -232,7 +232,7 @@ h1 span {
 }
 
 .container2 {
-  width: 960px;
+  width: 1000px;
 }
 
 #ThisWeekend {
@@ -354,6 +354,29 @@ h3::after {
   margin: 0 0 100px;
 }
 
+.eventsGridContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 0 100px;
+}
+
+.singleEventContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 25%;
+}
+
 .eventCardBig {
   position: relative;
   width: 230px;
@@ -432,7 +455,8 @@ h3::after {
           align-items: center;
 }
 
-.heart, .heartFilled {
+.heart,
+.heartFilled {
   stroke: #C66FD0;
 }
 
@@ -1933,7 +1957,7 @@ header svg:hover,
     width: 950px;
   }
   .container2 {
-    width: 850px;
+    width: 900px;
   }
   .eventCardBig {
     width: 200px;
@@ -2208,6 +2232,9 @@ header svg:hover,
   #EventsList .eventCardBig {
     margin-bottom: 30px;
   }
+  .singleEventContainer {
+    width: 33%;
+  }
   .eventBlock {
     padding-top: 100px;
   }
@@ -2446,6 +2473,60 @@ header svg:hover,
   .eventCardContainer #about .container #aboutContent p {
     margin-bottom: 70px;
   }
+  .singleEventContainer {
+    width: 100%;
+  }
+  .eventsGridContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .eventsGridContainer .eventCardBig {
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    background-color: #20002f;
+    margin-bottom: 8px;
+  }
+  .eventsGridContainer img {
+    float: left;
+    width: 150px;
+    height: 150px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: 0 15px 0 0;
+  }
+  .eventsGridContainer .title,
+  .eventsGridContainer .time {
+    margin-bottom: 12px;
+    width: 100%;
+  }
+  .eventsGridContainer .title {
+    height: 33.6px;
+  }
+  .eventsGridContainer .detailsButton {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin-bottom: 0;
+    text-align: center;
+    width: 60%;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #C66FD0;
+    border-radius: 20px;
+    color: #C66FD0;
+    padding: 0;
+  }
+  .eventsGridContainer .detailsButton::after {
+    display: none;
+  }
   #Gallery #GalleryGrid {
     -ms-grid-rows: (150px)[4] 30px;
         grid-template-rows: repeat(4, 150px) 30px;
@@ -2675,6 +2756,7 @@ header svg:hover,
     width: 330px;
   }
   .eventCardContainer img,
+  .eventsGridContainer img,
   .eventCardSmall img {
     width: 100px;
     height: 132px;
