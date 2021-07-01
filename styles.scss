@@ -142,18 +142,21 @@ header {
     border: 1px solid $grey;
     transition: all 0.1s ease-out;
 }
-.close{
+.closeIcon{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    fill: $pink;
+}
+.closeArea{
     position: absolute;
     top: 10px;
     right: 10px;
     width: 40px;
     height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    fill: $white;
     cursor: pointer;
 }
+
 #ModaleLogo{
     height: 40px;
     margin-bottom: 50px;
@@ -603,10 +606,10 @@ h3 {
   }
 }
 
-.modale rect{
+.modale .InfoContact rect{
     stroke: $pink;
 }
-.modale path{
+.modale .InfoContact path{
     fill: $white;
 }
 //*************** FOOTER ***********
@@ -635,15 +638,14 @@ footer {
     margin: 1.25em 0;
   }
   .footerLink {
+    display: block;
     text-align: center;
     margin: 50px 0;
     font-size: 13px;
     position: relative;
     cursor: pointer;
     transition: filter 0.2s linear;
-    a {
-      color: $white;
-    }
+    color: $white;
     &:not(:first-of-type)::before {
       content: url(./icons/dotFooter.svg);
       position: absolute;
@@ -1308,7 +1310,9 @@ footer {
 }
 //*************** HOVER EFFECTS ***********
 #NavTextLinks a:hover,
+.navItem:hover,
 header svg:hover,
+.footerLink:hover,
 .footerLink a:hover,
 .share:hover {
   color: $brightPink;

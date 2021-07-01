@@ -224,22 +224,19 @@ header .icons {
   transition: all 0.1s ease-out;
 }
 
-.close {
+.closeIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  fill: #C66FD0;
+}
+
+.closeArea {
   position: absolute;
   top: 10px;
   right: 10px;
   width: 40px;
   height: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  fill: #F8F5FA;
   cursor: pointer;
 }
 
@@ -849,11 +846,11 @@ h3::after {
   margin-right: 50px;
 }
 
-.modale rect {
+.modale .InfoContact rect {
   stroke: #C66FD0;
 }
 
-.modale path {
+.modale .InfoContact path {
   fill: #F8F5FA;
 }
 
@@ -896,6 +893,7 @@ footer img {
 }
 
 footer .footerLink {
+  display: block;
   text-align: center;
   margin: 50px 0;
   font-size: 13px;
@@ -905,9 +903,6 @@ footer .footerLink {
   transition: -webkit-filter 0.2s linear;
   transition: filter 0.2s linear;
   transition: filter 0.2s linear, -webkit-filter 0.2s linear;
-}
-
-footer .footerLink a {
   color: #F8F5FA;
 }
 
@@ -1800,7 +1795,9 @@ footer .copyright {
 }
 
 #NavTextLinks a:hover,
+.navItem:hover,
 header svg:hover,
+.footerLink:hover,
 .footerLink a:hover,
 .share:hover {
   color: #f480ff;

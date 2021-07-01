@@ -2,7 +2,7 @@ const mobileMenu = document.getElementById('NavTextLinksContainer');
 const button = document.getElementById('MobileMenuButton');
 const menuLines = document.querySelectorAll('.menuLine');
 let menuDisplayed = false;
-const closeModaleButtons = document.querySelectorAll('.close');
+const closeModaleButtons = document.querySelectorAll('.closeArea');
 const contactNavButton = document.querySelectorAll('.contact');
 const modaleContact = document.getElementById('InfoContactModale');
 
