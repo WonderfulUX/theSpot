@@ -1101,16 +1101,16 @@ footer .copyright {
   background-color: #5b4963;
 }
 
-#TicketSection tbody tr td {
+#TicketSection #TableBig tbody tr td {
   padding-bottom: 35px;
 }
 
-#TicketSection tfoot td {
+#TicketSection #TableBig tfoot td {
   padding-top: 0;
   position: relative;
 }
 
-#TicketSection tfoot td::before {
+#TicketSection #TableBig tfoot td::before {
   position: absolute;
   top: 0;
   content: "";
@@ -2088,7 +2088,7 @@ header svg:hover,
 }
 
 #Calendar th,
-td {
+#Calendar td {
   width: 40px;
   height: 40px;
   font-size: 13px;

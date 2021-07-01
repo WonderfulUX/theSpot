@@ -797,10 +797,10 @@ footer {
       background-color: $grey;
     }
   }
-  tbody tr td {
+  #TableBig tbody tr td {
     padding-bottom: 35px;
   }
-  tfoot td {
+  #TableBig tfoot td {
     padding-top: 0;
     position: relative;
     &::before {
@@ -1515,7 +1515,7 @@ header svg:hover,
   height: 292px;
 }
 #Calendar th,
-td {
+#Calendar td {
   width: 40px;
   height: 40px;
   font-size: 13px;
