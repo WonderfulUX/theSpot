@@ -1406,8 +1406,25 @@ footer .copyright {
 .instructions {
   color: #8F8097;
   font-size: 14px;
-  list-style: inside;
   margin-bottom: 20px;
+}
+
+.instructions li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.instructions li p {
+  padding-left: 10px;
+}
+
+.listStyle {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  fill: #5b4963;
 }
 
 .dataCollection {
@@ -2011,6 +2028,123 @@ header svg:hover,
 .ticketDownload button {
   width: 100%;
   margin-bottom: 20px;
+}
+
+.resaBlockRight .customerInput {
+  width: 50%;
+}
+
+#InfoCollectionFreeReservation, #DateSelectionFreeReservation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.resaBlockLeft {
+  width: 55%;
+}
+
+.resaBlockRight {
+  width: 40%;
+  padding-top: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.resaBlockRight .customerInput {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.resaBlockRight .email {
+  width: 100%;
+}
+
+.resaBlockRight .email input {
+  width: 97%;
+}
+
+#CalendarContainer {
+  height: 292px;
+}
+
+#Calendar th, td {
+  width: 40px;
+  height: 40px;
+  font-size: 13px;
+}
+
+.calendarCircle {
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.selectedDate {
+  border-radius: 50%;
+  background-color: #C66FD0;
+}
+
+.month {
+  margin-bottom: 20px;
+  text-align: center;
+  width: 150px;
+}
+
+#MonthsCaroussel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#MonthsCaroussel svg {
+  fill: #5b4963;
+}
+
+#Calendar th {
+  color: #C66FD0;
+}
+
+#Calendar td {
+  position: relative;
+}
+
+#Calendar svg {
+  position: absolute;
+  fill: transparent;
+  bottom: 5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#Calendar .booked {
+  fill: #C66FD0;
+}
+
+.out {
+  color: rgba(248, 245, 250, 0.1);
 }
 
 @media screen and (max-width: 1200px) {

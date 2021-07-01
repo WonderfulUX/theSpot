@@ -12,7 +12,7 @@ button.addEventListener('click', ()=>{
 
 
 for(i=0; i<contactNavButton.length; i++){
-    contactNavButton[i].addEventListener('click',displayModale);
+    contactNavButton[i].addEventListener('click',displayMenu);
 }
 for(i=0; i<closeModaleButtons.length; i++){
     closeModaleButtons[i].addEventListener('click',closeModale);
@@ -21,7 +21,7 @@ for(i=0; i<closeModaleButtons.length; i++){
 
 
 
-function displayModale(){
+function displayMenu(){
     modaleContact.classList.add("modaleDisplay");
     setTimeout(()=>{
         modaleContact.querySelector(".modaleBox").classList.add("slide");
@@ -29,7 +29,6 @@ function displayModale(){
 }
 
 function closeModale(e){
-    console.log(e.target);
     e.target.parentElement.parentElement.classList.remove("modaleDisplay");
     setTimeout(()=>{
         e.target.parentElement.classList.remove("slide");

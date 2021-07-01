@@ -22,8 +22,8 @@
             <div id="NavTextLinksContainer">
                 <ul id="NavTextLinks">
                     <li id="MenuHead">menu</li>
-                    <li><a href="./events.html" class="navItem active">Évènements</a></li>
-                    <li><a href="./reservation.html" class="navItem">Réservation</a></li>
+                    <li><a href="./events.html" class="navItem">Évènements</a></li>
+                    <li><a href="" class="navItem active">Réservation</a></li>
                     <li><a href="" class="navItem">Galerie</a></li>
                     <li class="navItem contact">Infos / contact</li>
                     <li>
@@ -107,145 +107,345 @@
         </div>
     </div>
     <div class="topBgFade"></div>
-    <!-- BACK -->
-    <a href="javascript:history.back()"class="back">
-        <svg  width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M31.6667 8.73737V11.2626H4.89533L11.9069 18.2071L10.0966 20L0 10L10.0966 0L11.9069 1.79293L4.89533 8.73737H31.6667Z" fill="#C66FD0"/>
-        </svg>
-    </a>
-    <a href="javascript:history.back()" class="backMobile">
-        <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9.2625 13.225L3.5375 7.5L9.2625 1.7625L7.5 0L0 7.5L7.5 15L9.2625 13.225Z" fill="#F8F5FA"/>
-        </svg>
-    </a>
     <div class="container2">
         <h1 class="pageTitles margin2">Réservation</h1>
         <hr class="headerLines">
-        <div id="EventDetailsRecap">
-            <p class="resaEventTitle">Red Party</p>
-            <p class="resaEventDate">Vendredi 11 Juin 2021</p>
-        </div>
         <!---------------- BLOCKS ---------------------->
-        <section class="resaBlock" id="Names">
-            <h2 class="resaBlockHeader">Informations</h2>
-            <div class="explanation">
-                <p class="mainExplanation">Saisissez les information de vos billets</p>
-                <ul class="instructions">
-                    <li>
-                        <svg class="listStyle" width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="2.5" cy="2.5" r="2.5"/>
-                        </svg>
-                        <p>Seules les informations de la personne collectant les billets sont obligatoires</p></li>
-                    <li>
-                        <svg class="listStyle" width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="2.5" cy="2.5" r="2.5"/>
-                        </svg>
-                        <p>Si vous souhaitez transmettre un ticket directement à un membre de votre groupe, renseignez tous les champs</p></li>
-                </ul>
+        <section class="resaBlock" id="DateSelectionFreeReservation">
+            <!-- BLOCK LEFT -->
+            <div class="resaBlockLeft">
+                <h2 class="resaBlockHeader">Date</h2>
+                <div class="explanation">
+                    <p class="mainExplanation">Choisissez une date dans le calendrier</p>
+                    <ul class="instructions dateInstructions">
+                        <li>
+                            <svg class="listStyle" width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="2.5" cy="2.5" r="2.5"/>
+                            </svg>
+                            <p>Les pastilles indiquent les jours de programmation notre l'établissement</p>
+                        </li>
+                        <li>
+                            <svg class="listStyle" width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="2.5" cy="2.5" r="2.5"/>
+                            </svg>
+                            <p>Vous pouvez réserver pour ces dates sous-réserve de places disponibles</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- BLOCK RIGHT -->
+            <div class="resaBlockRight">
+                <div id="MonthsCaroussel">
+                    <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 20L0 10L10 0V20Z"/>
+                    </svg>
+                    <p class="month">Juillet 2021</p>
+                    <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 20L10 10L0 0V20Z"/>
+                    </svg>
+                </div>
+                <div id="CalendarContainer">
+                    <table id="Calendar">
+                        <thead>
+                            <tr>
+                                <th><div class="calendarCircle">L</th>
+                                <th><div class="calendarCircle">M</th>
+                                <th><div class="calendarCircle">M</th>
+                                <th><div class="calendarCircle">J</th>
+                                <th><div class="calendarCircle">V</th>
+                                <th><div class="calendarCircle">S</th>
+                                <th><div class="calendarCircle">D</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="out"><div class="calendarCircle">26</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td class="out"><div class="calendarCircle">27</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td class="out"><div class="calendarCircle">28</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td class="out"><div class="calendarCircle">29</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td class="out"><div class="calendarCircle">30</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td class="out"><div class="calendarCircle">31</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">1</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="calendarCircle">2</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">3</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">4</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">5</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">6</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">7</div>
+                                    <svg class="booked" width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">8</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="calendarCircle">9</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">10</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">11</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">12</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">13</div>
+                                    <svg class="booked" width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">14</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">15</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="calendarCircle">16</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">17</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">18</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">19</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">20</div>
+                                    <svg class="booked" width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">21</div>
+                                    <svg class="booked" width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">21</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="calendarCircle">23</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">24</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">25</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">26</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">27</div>
+                                    <svg class="booked" width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle selectedDate">28</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td><div class="calendarCircle">29</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="calendarCircle">30</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td class="out"><div class="calendarCircle">1</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td class="out"><div class="calendarCircle">2</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td class="out"><div class="calendarCircle">3</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td class="out"><div class="calendarCircle">4</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td class="out"><div class="calendarCircle">5</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                                <td class="out"><div class="calendarCircle">6</div>
+                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.5" cy="2.5" r="2.5"/>
+                                    </svg>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <!----------- CUSTOMER INFO  ----------->
+        <section class="resaBlock" id="InfoCollectionFreeReservation">
+            <!-- BLOCK LEFT -->
+            <div class="resaBlockLeft">
+                <h2 class="resaBlockHeader">Informations</h2>
+                <div class="explanation">
+                    <p class="mainExplanation">Saisissez les informations de votre réservation</p>
+                    <ul class="instructions dateInstructions">
+                        <li>
+                            <svg class="listStyle" width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="2.5" cy="2.5" r="2.5"/>
+                            </svg>
+                            <p>Indiquez le nombre de personnes d’entrées de la la réservation</p>
+                        </li>
+                        <li>
+                            <svg class="listStyle" width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="2.5" cy="2.5" r="2.5"/>
+                            </svg>
+                            <p>Choisissez l’espace désiré</p>
+                        </li>
+                        <li>
+                            <svg class="listStyle" width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="2.5" cy="2.5" r="2.5"/>
+                            </svg>
+                            <p>Indiquez vos coordonnées</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- BLOCK RIGHT -->
+            <div class="resaBlockRight">
                 <form class="dataCollection">
-                    <!-- ENTRIES TYPE 1 -->
-                    <p class="formHeader">Entrées simples</p>
                     <div class="customerDetails">
-                        <div class="customerInputId">Ticket 1</div>
                         <div class="customerInputContainer">
                             <div class="customerInput">
-                                <label for="name6_fname">Prénom</label>
+                                <label for="name6_fname">Nb entrées</label>
                                 <input type="text" id="name6_fname" name="name1">
                             </div>
                             <div class="customerInput">
-                                <label for="name6_lname">Nom</label>
+                                <label for="name6_lname">Espace</label>
                                 <input type="text" id="name6_lname" name="name1">
                             </div>
-                            <div class="customerInputEmail">
-                                <label for="name6_email">Email</label>
-                                <input type="email" id="name6_email" name="name1">
-                            </div>
                         </div>
                     </div>
-                    <div class="customerDetails">
-                        <div class="customerInputId">Ticket 2</div>
-                        <div class="customerInputContainer">
-                            <div class="customerInput">
-                                <label for="name6_fname" class="desktopHidden">Prénom</label>
-                                <input type="text" id="name6_fname" name="name2">
-                            </div>
-                            <div class="customerInput">
-                                <label for="name6_lname" class="desktopHidden">Nom</label>
-                                <input type="text" id="name6_lname" name="name2">
-                            </div>
-                            <div class="customerInputEmail">
-                                <label for="name6_email" class="desktopHidden">Email</label>
-                                <input type="email" id="name6_email" name="name2">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ENTRIES TYPE 2 -->
-                    <p class="formHeader">Entrées sur bouteilles</p>
-                    <div class="customerDetails">
-                        <div class="customerInputId">Ticket 1</div>
+                    <div class="customerDetails">                      
                         <div class="customerInputContainer">
                             <div class="customerInput">
                                 <label for="name6_fname">Prénom</label>
-                                <input type="text" id="name1_fname" name="name3">
+                                <input type="text" id="name6_fname" name="name2">
                             </div>
                             <div class="customerInput">
                                 <label for="name6_lname">Nom</label>
-                                <input type="text" id="name6_lname" name="name3">
-                            </div>
-                            <div class="customerInputEmail">
-                                <label for="name6_email">Email</label>
-                                <input type="email" id="name6_email" name="name3">
+                                <input type="text" id="name6_lname" name="name2">
                             </div>
                         </div>
                     </div>
                     <div class="customerDetails">
-                        <div class="customerInputId">Ticket 2</div>
                         <div class="customerInputContainer">
-                            <div class="customerInput">
-                                <label for="name6_fname" class="desktopHidden">Prénom</label>
-                                <input type="text" id="name6_fname" name="name4">
-                            </div>
-                            <div class="customerInput">
-                                <label for="name6_lname" class="desktopHidden">Nom</label>
-                                <input type="text" id="name6_lname" name="name4">
-                            </div>
-                            <div class="customerInputEmail">
-                                <label for="name6_email" class="desktopHidden">Email</label>
-                                <input type="email" id="name6_email" name="name4">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="customerDetails">
-                        <div class="customerInputId">Ticket 3</div>
-                        <div class="customerInputContainer">
-                            <div class="customerInput">
-                                <label for="name6_fname" class="desktopHidden">Prénom</label>
-                                <input type="text" id="name6_fname" name="name5">
-                            </div>
-                            <div class="customerInput">
-                                <label for="name6_lname" class="desktopHidden">Nom</label>
-                                <input type="text" id="name6_lname" name="name5">
-                            </div>
-                            <div class="customerInputEmail">
-                                <label for="name6_email" class="desktopHidden">Email</label>
-                                <input type="email" id="name6_email" name="name5">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="customerDetails">
-                        <div class="customerInputId">Ticket 4</div>
-                        <div class="customerInputContainer">
-                            <div class="customerInput">
-                                <label for="name6_fname" class="desktopHidden">Prénom</label>
-                                <input type="text" id="name6_fname" name="name6">
-                            </div>
-                            <div class="customerInput">
-                                <label for="name6_lname" class="desktopHidden">Nom</label>
-                                <input type="text" id="name6_lname" name="name6">
-                            </div>
-                            <div class="customerInputEmail">
-                                <label for="name6_email" class="desktopHidden">Email</label>
-                                <input type="email" id="name6_email" name="name6">
+                            <div class="customerInput email">
+                                <label for="name6_lname">Email</label>
+                                <input type="text" id="name6_lname" name="name2">
                             </div>
                         </div>
                     </div>
@@ -595,49 +795,32 @@
         <section class="resaBlock" id="Recap">
             <div>
                 <h2 class="recapHeader">Récapitulatif</h2>
-                <p class="resaType">Réservation d'évènement</p>
-                <p class="eventName">Red party</p>
+                <p class="resaType">Réservation par date</p>
+                <p class="eventName"></p>
                 <div class="recap">
                     <div class="entryType">
                         <div class="entryTypeLine">
-                            <span class="entryTypeName">Entrées simples</span>
-                            <div>
-                                <span class="entryTypeQuantity">(×2)</span>
-                                <span class="entryTypePrice">20,00 €</span>
-                            </div>
+                            <span class="entryTypeName">Nom de la réservation</span>                        
                         </div>
                         <div class="ticket">
                             <p class="ticketFullName">Boris Boulogne</p>
                             <p class="ticketEmail">boris@gmail.com</p>
                         </div>
-                        <div class="ticket">
-                            <p class="ticketFullName">Floriane Vaudein</p>
-                            <p class="ticketEmail">floriane@gmail.com</p>
-                        </div>
                     </div>
                     <div class="entryType">
+                        <p class="entryTypeName">Détails</p>
                         <div class="entryTypeLine">
-                            <span class="entryTypeName">Entrées sur bouteille</span>
+                            <span class="beverageName">4 Entrées Salons</span>
                             <div>
                                 <span class="entryTypeQuantity">(×4)</span>
                                 <span class="entryTypePrice">35,00 €</span>
                             </div>
                         </div>
-                        <div class="ticket">
-                            <p class="ticketFullName">Axel Robert-Naudin</p>
-                            <p class="ticketEmail">axel@gmail.com</p>
+                        <div class="entryTypeLine">
+                            <span class="beverageName">Le 19 Juillet 2021</span>
                         </div>
-                        <div class="ticket">
-                            <p class="ticketFullName">Sébastien Bordelais</p>
-                            <p class="ticketEmail">floriane@gmail.com</p>
-                        </div>
-                        <div class="ticket">
-                            <p class="ticketFullName">Floriane Vaudein</p>
-                            <p class="ticketEmail">floriane@gmail.com</p>
-                        </div>
-                        <div class="ticket">
-                            <p class="ticketFullName">Floriane Vaudein</p>
-                            <p class="ticketEmail">floriane@gmail.com</p>
+                        <div class="entryTypeLine">
+                            <span class="beverageName">Espace Salon</span>
                         </div>
                     </div>
                     <div class="entryType">

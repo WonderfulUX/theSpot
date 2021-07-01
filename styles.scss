@@ -1028,8 +1028,20 @@ footer {
 .instructions {
   color: $white50;
   font-size: 14px;
-  list-style: inside;
   margin-bottom: 20px;
+}
+.instructions li {
+    display: flex;
+    position: relative;
+}
+.instructions li p{
+    padding-left: 10px;
+}
+.listStyle{
+    position: absolute;
+    top: 5px;
+    left: 0;
+    fill: $grey;
 }
 .dataCollection {
   color: $white50;
@@ -1464,6 +1476,91 @@ header svg:hover,
     width: 100%;
     margin-bottom: 20px;
   }
+}
+.resaBlockRight .customerInput{
+    width: 50%;
+}
+
+#InfoCollectionFreeReservation, #DateSelectionFreeReservation{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.resaBlockLeft{
+    width: 55%;
+}
+.resaBlockRight{
+    width: 40%;
+    padding-top: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resaBlockRight .customerInput{
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+.resaBlockRight .email{
+    width: 100%;
+}
+
+.resaBlockRight .email input{
+    width: 97%;
+}
+
+#CalendarContainer{
+    height: 292px;
+}
+#Calendar th, td{
+    width: 40px;
+    height: 40px;
+    font-size: 13px;
+}
+
+.calendarCircle{
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.selectedDate{
+    border-radius: 50%;
+    background-color: $pink;
+}
+.month{
+    margin-bottom: 20px;
+    text-align: center;
+    width: 150px;
+}
+#MonthsCaroussel{
+    display: flex;
+    justify-content: center;
+}
+#MonthsCaroussel svg{
+    fill: $grey;
+}
+
+#Calendar th {
+    color: $pink;
+}
+#Calendar td {
+    position: relative;
+}
+#Calendar svg {
+    position: absolute;
+    fill: transparent;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#Calendar .booked{
+    fill: $pink;
+}
+.out{
+    color: rgba($color: $white, $alpha: 0.1);
 }
 
 //*************** BREAKPOINT 1200PX ***********
