@@ -76,7 +76,7 @@ header {
       color: $white;
       vertical-align: middle;
     }
-    a,
+    .navItem,
     button {
       cursor: pointer;
     }
@@ -111,6 +111,65 @@ header {
 #MenuHead {
   display: none;
 }
+.displayed{
+    transform: translateY(1100px);
+}
+
+.modale{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($color: $black, $alpha: 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: -10;
+    transition: all 0.3s linear;
+}
+.modaleBox{
+    position: relative;
+    top: -5%;
+    width: 600px;
+    height: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $purpleDark;
+    border: 1px solid $grey;
+    transition: all 0.1s ease-out;
+}
+.close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: $white;
+    cursor: pointer;
+}
+#ModaleLogo{
+    height: 40px;
+    margin-bottom: 50px;
+}
+.modale .InfoContact{
+    width: auto;
+    margin-bottom: 40px;
+}
+.slide{
+    top: 0;
+}
+.modaleDisplay{
+    z-index: 20;
+    opacity: 1;
+}
+
 
 //*************** BANNER ***********
 #Banner {
@@ -527,21 +586,28 @@ h3 {
       line-height: 1.5em;
     }
   }
-  #ContactInfo > div {
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.75em;
-    address {
-      font-style: normal;
-    }
-    img {
-      margin-right: 10px;
-    }
-    #phoneNumber {
-      margin-right: 50px;
-    }
+}
+.InfoContact > div {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75em;
+  address {
+    font-style: normal;
   }
+  svg {
+    margin-right: 10px;
+  }
+  #phoneNumber {
+    margin-right: 50px;
+  }
+}
+
+.modale rect{
+    stroke: $pink;
+}
+.modale path{
+    fill: $white;
 }
 //*************** FOOTER ***********
 footer {
@@ -1585,20 +1651,6 @@ header svg:hover,
       margin: 20px 10px;
     }
   }
-  .displayed {
-    transform: translateY(1100px);
-  }
-  .topMenuBarChange {
-    margin: 0;
-    transform: translateY(50%) rotate(45deg);
-  }
-  .bottomMenuBarChange {
-    margin: 0;
-    transform: translateY(-50%) rotate(-45deg);
-  }
-  .middleMenuBarChange {
-    display: none;
-  }
   #NewsletterIcon {
     display: none;
   }
@@ -1653,14 +1705,14 @@ header svg:hover,
       text-align: center;
       margin-bottom: 70px;
     }
-    #ContactInfo {
-      align-self: center;
-    }
     #aboutContent {
-      padding: 0;
-      p {
-        margin-bottom: 70px;
-      }
+        padding: 0;
+        p {
+            margin-bottom: 70px;
+        }
+    }
+    .InfoContact {
+      align-self: center;
     }
   }
   #Gallery #GalleryGrid {
@@ -2237,13 +2289,13 @@ header svg:hover,
       font-size: 9px;
     }
   }
+  .InfoContact > div {
+    font-size: 11px;
+  }
   #about .container {
     #slogan,
     #aboutContent {
       width: 330px;
-      #ContactInfo > div {
-        font-size: 11px;
-      }
     }
     #slogan {
       font-size: 18px;

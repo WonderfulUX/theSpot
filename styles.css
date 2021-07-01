@@ -134,7 +134,7 @@ header nav * {
   vertical-align: middle;
 }
 
-header nav a,
+header nav .navItem,
 header nav button {
   cursor: pointer;
 }
@@ -173,6 +173,93 @@ header .icons {
 #MobileMenuButton,
 #MenuHead {
   display: none;
+}
+
+.displayed {
+  -webkit-transform: translateY(1100px);
+          transform: translateY(1100px);
+}
+
+.modale {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(9, 0, 13, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  z-index: -10;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.modaleBox {
+  position: relative;
+  top: -5%;
+  width: 600px;
+  height: auto;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #20002f;
+  border: 1px solid #5b4963;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  fill: #F8F5FA;
+  cursor: pointer;
+}
+
+#ModaleLogo {
+  height: 40px;
+  margin-bottom: 50px;
+}
+
+.modale .InfoContact {
+  width: auto;
+  margin-bottom: 40px;
+}
+
+.slide {
+  top: 0;
+}
+
+.modaleDisplay {
+  z-index: 20;
+  opacity: 1;
 }
 
 #Banner {
@@ -739,7 +826,7 @@ h3::after {
   line-height: 1.5em;
 }
 
-#about #ContactInfo > div {
+.InfoContact > div {
   font-size: 13px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -750,16 +837,24 @@ h3::after {
   margin-bottom: 0.75em;
 }
 
-#about #ContactInfo > div address {
+.InfoContact > div address {
   font-style: normal;
 }
 
-#about #ContactInfo > div img {
+.InfoContact > div svg {
   margin-right: 10px;
 }
 
-#about #ContactInfo > div #phoneNumber {
+.InfoContact > div #phoneNumber {
   margin-right: 50px;
+}
+
+.modale rect {
+  stroke: #C66FD0;
+}
+
+.modale path {
+  fill: #F8F5FA;
 }
 
 footer {
@@ -2131,23 +2226,6 @@ header svg:hover,
     text-align: center;
     margin: 20px 10px;
   }
-  .displayed {
-    -webkit-transform: translateY(1100px);
-            transform: translateY(1100px);
-  }
-  .topMenuBarChange {
-    margin: 0;
-    -webkit-transform: translateY(50%) rotate(45deg);
-            transform: translateY(50%) rotate(45deg);
-  }
-  .bottomMenuBarChange {
-    margin: 0;
-    -webkit-transform: translateY(-50%) rotate(-45deg);
-            transform: translateY(-50%) rotate(-45deg);
-  }
-  .middleMenuBarChange {
-    display: none;
-  }
   #NewsletterIcon {
     display: none;
   }
@@ -2206,16 +2284,16 @@ header svg:hover,
     text-align: center;
     margin-bottom: 70px;
   }
-  #about .container #ContactInfo {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
   #about .container #aboutContent {
     padding: 0;
   }
   #about .container #aboutContent p {
     margin-bottom: 70px;
+  }
+  #about .container .InfoContact {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   #Gallery #GalleryGrid {
     -ms-grid-columns: (24%)[4];
@@ -2818,13 +2896,12 @@ header svg:hover,
   #Gallery #GalleryGrid .galleryLegend {
     font-size: 9px;
   }
+  .InfoContact > div {
+    font-size: 11px;
+  }
   #about .container #slogan,
   #about .container #aboutContent {
     width: 330px;
-  }
-  #about .container #slogan #ContactInfo > div,
-  #about .container #aboutContent #ContactInfo > div {
-    font-size: 11px;
   }
   #about .container #slogan {
     font-size: 18px;
