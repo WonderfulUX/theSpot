@@ -2688,4 +2688,15 @@ header svg:hover,
   #CalendarContainer {
     height: 322px;
   }
+  .filterLabel{
+    font-size: 11px;
+    padding-left: 5px;
+  }
+  .filterCheckmark{
+    right: 2px;
+    transform: scale(0.6);
+  }
+  .filterLine:hover{
+    background-color: transparent;
+  }
 }
