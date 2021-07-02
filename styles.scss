@@ -2371,6 +2371,9 @@ header svg:hover,
     top: 5px;
     left: 5px;
   }
+  .filterLine:hover{
+    background-color: transparent;
+  }
 }
 
 //*************** BREAKPOINT 600PX ***********
@@ -2699,8 +2702,5 @@ header svg:hover,
   .filterCheckmark{
     right: 2px;
     transform: scale(0.6);
-  }
-  .filterLine:hover{
-    background-color: transparent;
   }
 }
