@@ -107,10 +107,42 @@
     <h1 class="pageTitles">Nos évènements</h1>
     <!----------- FILTERS ----------->
     <section id="Filters">
-        <button id="FilterButton">
-            <span id="FilterText">Filtrer</span>
-            <img src="./icons/filterIcon.svg" alt="">
-        </button>
+        <div id="FilterContainer">
+            <button id="FilterButton">
+                <span>Filtrer</span>
+                <img src="./icons/filterIcon.svg" alt="">
+            </button>
+            <ul id="FiltersList">
+                <li class="filterLine">
+                    <label class="filterLabel" for="Afterworks">Afterworks</label>
+                    <input class="filterCheckbox" type="checkbox" name="category" id="Afterworks" checked>
+                    <svg class="filterCheckmark" width="18" height="14" viewBox="0 0 18 14" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.5 1.41L5.5 13.41L0 7.91L1.41 6.5L5.5 10.58L16.09 0L17.5 1.41Z"/>
+                    </svg>
+                </li>
+                <li class="filterLine">
+                    <label class="filterLabel" for="Soirées">Soirées</label>
+                    <input class="filterCheckbox" type="checkbox" name="category" id="Soirées" checked>
+                    <svg class="filterCheckmark" width="18" height="14" viewBox="0 0 18 14" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.5 1.41L5.5 13.41L0 7.91L1.41 6.5L5.5 10.58L16.09 0L17.5 1.41Z"/>
+                    </svg>
+                </li>
+                <li class="filterLine">
+                    <label class="filterLabel" for="Showcases">Showcases</label>
+                    <input class="filterCheckbox" type="checkbox" name="category" id="Showcases" checked>
+                    <svg class="filterCheckmark" width="18" height="14" viewBox="0 0 18 14" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.5 1.41L5.5 13.41L0 7.91L1.41 6.5L5.5 10.58L16.09 0L17.5 1.41Z"/>
+                    </svg>
+                </li>
+                <li class="filterLine">
+                    <label class="filterLabel" for="Concerts">Concerts</label>
+                    <input class="filterCheckbox" type="checkbox" name="category" id="Concerts" checked>
+                    <svg class="filterCheckmark" width="18" height="14" viewBox="0 0 18 14" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.5 1.41L5.5 13.41L0 7.91L1.41 6.5L5.5 10.58L16.09 0L17.5 1.41Z"/>
+                    </svg>
+                </li>
+            </ul>
+        </div>
         <div id="SearchBarContainer">
             <input id="SearchBar" type="text" placeholder="Recherchez un évènement">
             <img src="./icons/searchIcon.svg" alt="">

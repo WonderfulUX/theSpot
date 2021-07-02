@@ -9,27 +9,6 @@ body {
   background-color: $black;
   letter-spacing: 0.031em;
   font-size: 15px;
-  /* width */
-  ::-webkit-scrollbar {
-    width: 5px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background-color: $grey;
-    border-radius: 10px;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: $white50;
-    border-radius: 10px;
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: $pink;
-  }
 }
 
 //TITLES
@@ -920,7 +899,57 @@ footer {
   border: none;
   color: $white;
   font-family: "Montserrat", sans-serif;
+  z-index: 10;
+  cursor: pointer;
 }
+#FiltersList{
+  background-color: $grey;
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  z-index: 5;
+  box-shadow: 0 10px 15px 2px $purpleDark;
+  display: none;
+  
+}
+#FilterContainer{
+  position: relative;
+}
+
+.filterLabel{
+  display: inline-block;
+  cursor: pointer;
+  line-height: 40px;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 13px;
+}
+.filterCheckbox{
+  height: 40px;
+  width: 30%;
+  border: none;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 9;
+}
+.filterLine{
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.filterCheckmark{
+  fill: $pink;
+  position: absolute;
+  right: 5px;
+  display: none;
+  transform: scale(0.8);
+}
+
+.filterCheckbox:checked ~ .filterCheckmark{
+  display: inline;
+}
+
 #SearchBarContainer {
   position: relative;
   margin-bottom: 60px;
@@ -1320,37 +1349,6 @@ footer {
   line-height: 40px;
   cursor: pointer;
 }
-//*************** HOVER EFFECTS ***********
-#NavTextLinks a:hover,
-.navItem:hover,
-header svg:hover,
-.footerLink:hover,
-.footerLink a:hover,
-.share:hover {
-  color: $brightPink;
-  fill: $brightPink;
-  filter: drop-shadow(0 0 5px $brightPink);
-}
-
-.detailsButton:hover,
-.buttonBig:hover,
-#SocialNetworksLinks svg:hover,
-#NewsletterIcon:hover {
-  filter: drop-shadow(0 0 5px $brightPink);
-}
-.secondaryButton:hover {
-  background-color: $brightPink;
-  filter: drop-shadow(0 0 5px $brightPink);
-}
-.active {
-  color: $brightPink;
-  fill: $brightPink;
-  filter: drop-shadow(0 0 5px $brightPink);
-}
-#ArrowRight:hover,
-#ArrowLeft:hover {
-  fill: $white;
-}
 #MyInformation {
   padding-top: 50px;
 }
@@ -1566,6 +1564,47 @@ header svg:hover,
   color: rgba($color: $white, $alpha: 0.1);
 }
 
+//*************** HOVER EFFECTS ***********
+#NavTextLinks a:hover,
+.navItem:hover,
+header svg:hover,
+.footerLink:hover,
+.footerLink a:hover,
+.share:hover {
+  color: $brightPink;
+  fill: $brightPink;
+  filter: drop-shadow(0 0 5px $brightPink);
+}
+
+.detailsButton:hover,
+.buttonBig:hover,
+#SocialNetworksLinks svg:hover,
+#NewsletterIcon:hover {
+  filter: drop-shadow(0 0 5px $brightPink);
+}
+.secondaryButton:hover {
+  background-color: $brightPink;
+  filter: drop-shadow(0 0 5px $brightPink);
+}
+.active {
+  color: $brightPink;
+  fill: $brightPink;
+  filter: drop-shadow(0 0 5px $brightPink);
+}
+#ArrowRight:hover,
+#ArrowLeft:hover {
+  fill: $white;
+}
+#FilterButton:hover{
+  color: $pink;
+}
+
+#FilterContainer:hover > #FiltersList{
+  display: block;
+}
+.filterLine:hover{
+  background-color: hsl(282, 15%, 24%);
+}
 //*************** BREAKPOINT 1200PX ***********
 @media screen and (max-width: 1200px) {
   $containerW: 950px;

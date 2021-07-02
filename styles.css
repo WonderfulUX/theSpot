@@ -58,28 +58,6 @@ body {
   background-color: #09000D;
   letter-spacing: 0.031em;
   font-size: 15px;
-  /* width */
-  /* Track */
-  /* Handle */
-  /* Handle on hover */
-}
-
-body ::-webkit-scrollbar {
-  width: 5px;
-}
-
-body ::-webkit-scrollbar-track {
-  background-color: #5b4963;
-  border-radius: 10px;
-}
-
-body ::-webkit-scrollbar-thumb {
-  background: #8F8097;
-  border-radius: 10px;
-}
-
-body ::-webkit-scrollbar-thumb:hover {
-  background: #C66FD0;
 }
 
 h1,
@@ -1265,6 +1243,65 @@ footer .copyright {
   border: none;
   color: #F8F5FA;
   font-family: "Montserrat", sans-serif;
+  z-index: 10;
+  cursor: pointer;
+}
+
+#FiltersList {
+  background-color: #5b4963;
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  z-index: 5;
+  -webkit-box-shadow: 0 10px 15px 2px #20002f;
+          box-shadow: 0 10px 15px 2px #20002f;
+  display: none;
+}
+
+#FilterContainer {
+  position: relative;
+}
+
+.filterLabel {
+  display: inline-block;
+  cursor: pointer;
+  line-height: 40px;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 13px;
+}
+
+.filterCheckbox {
+  height: 40px;
+  width: 30%;
+  border: none;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 9;
+}
+
+.filterLine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filterCheckmark {
+  fill: #C66FD0;
+  position: absolute;
+  right: 5px;
+  display: none;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.filterCheckbox:checked ~ .filterCheckmark {
+  display: inline;
 }
 
 #SearchBarContainer {
@@ -1812,44 +1849,6 @@ footer .copyright {
   cursor: pointer;
 }
 
-#NavTextLinks a:hover,
-.navItem:hover,
-header svg:hover,
-.footerLink:hover,
-.footerLink a:hover,
-.share:hover {
-  color: #f480ff;
-  fill: #f480ff;
-  -webkit-filter: drop-shadow(0 0 5px #f480ff);
-          filter: drop-shadow(0 0 5px #f480ff);
-}
-
-.detailsButton:hover,
-.buttonBig:hover,
-#SocialNetworksLinks svg:hover,
-#NewsletterIcon:hover {
-  -webkit-filter: drop-shadow(0 0 5px #f480ff);
-          filter: drop-shadow(0 0 5px #f480ff);
-}
-
-.secondaryButton:hover {
-  background-color: #f480ff;
-  -webkit-filter: drop-shadow(0 0 5px #f480ff);
-          filter: drop-shadow(0 0 5px #f480ff);
-}
-
-.active {
-  color: #f480ff;
-  fill: #f480ff;
-  -webkit-filter: drop-shadow(0 0 5px #f480ff);
-          filter: drop-shadow(0 0 5px #f480ff);
-}
-
-#ArrowRight:hover,
-#ArrowLeft:hover {
-  fill: #F8F5FA;
-}
-
 #MyInformation {
   padding-top: 50px;
 }
@@ -2149,6 +2148,56 @@ header svg:hover,
 
 .out {
   color: rgba(248, 245, 250, 0.1);
+}
+
+#NavTextLinks a:hover,
+.navItem:hover,
+header svg:hover,
+.footerLink:hover,
+.footerLink a:hover,
+.share:hover {
+  color: #f480ff;
+  fill: #f480ff;
+  -webkit-filter: drop-shadow(0 0 5px #f480ff);
+          filter: drop-shadow(0 0 5px #f480ff);
+}
+
+.detailsButton:hover,
+.buttonBig:hover,
+#SocialNetworksLinks svg:hover,
+#NewsletterIcon:hover {
+  -webkit-filter: drop-shadow(0 0 5px #f480ff);
+          filter: drop-shadow(0 0 5px #f480ff);
+}
+
+.secondaryButton:hover {
+  background-color: #f480ff;
+  -webkit-filter: drop-shadow(0 0 5px #f480ff);
+          filter: drop-shadow(0 0 5px #f480ff);
+}
+
+.active {
+  color: #f480ff;
+  fill: #f480ff;
+  -webkit-filter: drop-shadow(0 0 5px #f480ff);
+          filter: drop-shadow(0 0 5px #f480ff);
+}
+
+#ArrowRight:hover,
+#ArrowLeft:hover {
+  fill: #F8F5FA;
+}
+
+#FilterButton:hover {
+  color: #C66FD0;
+}
+
+#FilterContainer:hover > #FiltersList {
+  display: block;
+}
+
+.filterLine:hover {
+  background-color: #413446;
 }
 
 @media screen and (max-width: 1200px) {

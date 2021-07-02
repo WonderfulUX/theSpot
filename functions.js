@@ -34,3 +34,22 @@ function closeModale(e){
         e.target.parentElement.classList.remove("slide");
     },300)
 }
+
+
+// //CALENDAR
+// fetch("https://world-clock.p.rapidapi.com/jsonp/cet/utc?callback=callback", {
+// 	"method": "GET",
+// 	"headers": {
+// 		"x-rapidapi-key": "a0c10f9e8fmsh43cf769a4c9cf9bp1faa7cjsn20435422cd83",
+// 		"x-rapidapi-host": "world-clock.p.rapidapi.com"
+// 	}
+// })
+// .then(response=> {
+// 	console.log(response.json());
+// })
+// // .then(data=>{
+// //     console.log(data);
+// // })
+// .catch(err => {
+// 	console.error(err);
+// });
