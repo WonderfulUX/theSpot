@@ -3023,6 +3023,10 @@ header svg:hover,
   .resaBlockRight .email input {
     width: 97.5%;
   }
+  .svgContainer {
+    top: 5px;
+    left: 5px;
+  }
 }
 
 @media screen and (max-width: 600px) {
