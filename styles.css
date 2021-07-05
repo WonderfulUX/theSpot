@@ -185,7 +185,7 @@ header .icons {
   top: -5%;
   width: 600px;
   height: auto;
-  padding: 30px;
+  padding: 24px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,8 +204,8 @@ header .icons {
 
 .closeIcon {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 8px;
+  right: 5px;
   fill: #C66FD0;
 }
 
@@ -235,6 +235,47 @@ header .icons {
 .modaleDisplay {
   z-index: 20;
   opacity: 1;
+}
+
+.modaleBoxQuantityInstructions {
+  color: #8F8097;
+  font-size: 14px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.editQuantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+
+.quantityValue {
+  height: 100%;
+  font-size: 18px;
+  width: 60px;
+  text-align: center;
+}
+
+.quantityEditButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.quantityEditButton svg {
+  fill: #C66FD0;
+}
+
+.add {
+  height: 50px;
+  width: 400px;
+  border: none;
+  margin-bottom: 12px;
 }
 
 #Banner {
@@ -830,6 +871,14 @@ h3::after {
 
 .modale .InfoContact path {
   fill: #F8F5FA;
+}
+
+.modaleBoxQuantityHeader {
+  width: 100%;
+  text-align: left;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #C66FD0;
 }
 
 footer {
