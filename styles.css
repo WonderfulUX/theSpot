@@ -2231,6 +2231,28 @@ footer .copyright {
   color: rgba(248, 245, 250, 0.1);
 }
 
+.modale hr {
+  height: 1px;
+  width: 250px;
+  background-color: #C66FD0;
+  border: none;
+}
+
+.socialMedia {
+  padding: 0 20px;
+  border-radius: 30px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#5b4963), to(transparent));
+  background: linear-gradient(to bottom, #5b4963, transparent);
+}
+
+.modale .socialMedia svg {
+  margin: 0 5px;
+}
+
+.modale .socialMedia path {
+  fill: #F8F5FA;
+}
+
 #NavTextLinks a:hover,
 .navItem:hover,
 header svg:hover,
@@ -3128,6 +3150,19 @@ header svg:hover,
   }
   .add {
     width: 80%;
+  }
+  .modale .InfoContact {
+    width: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 

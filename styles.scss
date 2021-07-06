@@ -1627,6 +1627,28 @@ footer {
 .out {
   color: rgba($color: $white, $alpha: 0.1);
 }
+.modale hr{
+  height: 1px;
+  width: 250px;
+  background-color: $pink;
+  border: none;
+}
+
+.socialMedia{
+  padding: 0 20px;
+  border-radius: 30px;
+  background: linear-gradient(to bottom, $grey, transparent);
+}
+
+.modale .socialMedia{
+  svg{
+    margin: 0 5px;
+  }
+  path{
+    fill: $white;
+  }
+}
+
 
 //*************** HOVER EFFECTS ***********
 #NavTextLinks a:hover,
@@ -2456,6 +2478,12 @@ header svg:hover,
   }
   .add{
     width: 80%;
+  }
+  .modale .InfoContact{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
