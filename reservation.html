@@ -66,10 +66,11 @@
     <!----------- INFO / CONTACT MODALE----------->
     <div id="InfoContactModale" class="modale">
         <div class="modaleBox">
-            <svg class="closeIcon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M26 15.2086L24.7914 14L20 18.7914L15.2086 14L14 15.2086L18.7914 20L14 24.7914L15.2086 26L20 21.2086L24.7914 26L26 24.7914L21.2086 20L26 15.2086Z" fill="#F8F5FA"/>
-            </svg>
-            <div class="closeArea"></div>
+            <button class="close">
+                <svg class="closeIcon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M26 15.2086L24.7914 14L20 18.7914L15.2086 14L14 15.2086L18.7914 20L14 24.7914L15.2086 26L20 21.2086L24.7914 26L26 24.7914L21.2086 20L26 15.2086Z"/>
+                </svg>
+            </button>
             <img src="./images/theSpotLogo.svg" alt="" id="ModaleLogo">
             <div class="InfoContact">
                 <div>
@@ -107,12 +108,13 @@
         </div>
     </div>
     <!----------- MODALE CHANGE QUANTITY----------->
-    <div id="ModaleQuantity" class="modale modaleDisplay">
+    <div id="ModaleQuantity" class="modale">
         <div class="modaleBox">
-            <svg class="closeIcon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M26 15.2086L24.7914 14L20 18.7914L15.2086 14L14 15.2086L18.7914 20L14 24.7914L15.2086 26L20 21.2086L24.7914 26L26 24.7914L21.2086 20L26 15.2086Z" fill="#F8F5FA"/>
-            </svg>
-            <div class="closeArea"></div>
+            <button class="close">
+                <svg class="closeIcon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M26 15.2086L24.7914 14L20 18.7914L15.2086 14L14 15.2086L18.7914 20L14 24.7914L15.2086 26L20 21.2086L24.7914 26L26 24.7914L21.2086 20L26 15.2086Z"/>
+                </svg>
+            </button>
             <p class="modaleBoxQuantityHeader">Quantité</p>
             <p class="modaleBoxQuantityInstructions">Ajustez la quantité souhaitée pour cet article</p>
             <div class="editQuantity">
@@ -128,7 +130,7 @@
                     </svg>
                 </button>          
             </div>
-            <button class="secondaryButton add">Valider</button>
+            <button class="secondaryButton add" id="ValidateQuantity">Valider</button>
         </div>
     </div>
     <div class="topBgFade"></div>
@@ -501,124 +503,156 @@
                 <p class="formHeader">Bouteilles</p>
                 <ul class="productList">
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/Vin1.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/Vin1.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">AIX rosé</p>
+                            <p class="productPrice">10,00 €</p>
+                            <div class="quantityIndicator">4</div>
                         </div>
-                        <p class="productName">AIX rosé</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/Vin3.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/Vin3.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Miraval Rosé</p>
+                            <p class="productPrice">10,00 €</p>
+                            <div class="quantityIndicator">3</div>
                         </div>
-                        <p class="productName">Miraval Rosé</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/vodka1.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/vodka1.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Eristoff Ice</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Eristoff Ice</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/vodka2.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/vodka2.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Ciroc</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Ciroc</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/vodka3.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/vodka3.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Grey Goose</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Biere Heineken</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/gin1.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/gin1.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Tanqueray</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Verre de vin blanc</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/gin2.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/gin2.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Bombay Sapphire</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Verre de vin blanc</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/rhum1.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/rhum1.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Saint James blanc</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Verre de vin blanc</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/rhum2.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/rhum2.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Captain Morgan</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Verre de vin blanc</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/rhum3.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/rhum3.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Black Cane</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Verre de vin blanc</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/whisky1.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/whisky1.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Jack Daniels</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Verre de vin blanc</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/whisky2.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/whisky2.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Henessy</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Verre de vin blanc</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/champ1.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/champ1.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Mumm</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Verre de vin blanc</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/champ2.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/champ2.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Ruinart</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Verre de vin blanc</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/champ3.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/champ3.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Dom Perigon</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Verre de vin blanc</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                 </ul>
             </div>
@@ -626,92 +660,114 @@
                 <p class="formHeader">Alcools</p>
                 <ul class="productList">
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/glass1.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/glass1.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Verre de vin blanc</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Verre de vin blanc</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/glass2.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/glass2.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Verre de vin rouge</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Verre de vin rouge</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/glass3.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/glass3.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Coupe de champagne</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Coupe de champagne</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/Biere1.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/Biere1.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Corona</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Bière corona</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/Biere3.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/Biere3.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Heineken</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Biere Heineken</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/Biere2.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/Biere2.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Smirnoff</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Verre de vin blanc</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/Mix1.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/Mix1.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Mix Vodka</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Verre de vin blanc</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/Mix2.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/Mix2.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Mix rhum</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Verre de vin blanc</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/Mix3.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/Mix3.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Mix whisky</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Verre de vin blanc</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/bucket1.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/bucket1.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Corona Bucket</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Verre de vin blanc</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
-                            <img src="./images/products/bucket2.jpg" alt="">
-                            <div class="productMask"></div>
+                        <div class="productContainer">
+                            <div class="imgContainer">
+                                <img src="./images/products/bucket2.jpg" alt="">
+                                <div class="productMask"></div>
+                            </div>
+                            <p class="productName">Heineken Bucket</p>
+                            <p class="productPrice">10,00 €</p>
                         </div>
-                        <p class="productName">Verre de vin blanc</p>
-                        <p class="productPrice">10,00 €</p>
                     </li>
                 </ul>
             </div>
@@ -719,7 +775,7 @@
                 <p class="formHeader">Softs</p>
                 <ul class="productList">
                     <li class="product">
-                        <div class="productImgContainer">
+                        <div class="imgContainer">
                             <img src="./images/products/jus1.jpg" alt="">
                             <div class="productMask"></div>
                         </div>
@@ -727,7 +783,7 @@
                         <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
+                        <div class="imgContainer">
                             <img src="./images/products/jus2.jpg" alt="">
                             <div class="productMask"></div>
                         </div>
@@ -735,7 +791,7 @@
                         <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
+                        <div class="imgContainer">
                             <img src="./images/products/soda1.jpg" alt="">
                             <div class="productMask"></div>
                         </div>
@@ -743,7 +799,7 @@
                         <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
+                        <div class="imgContainer">
                             <img src="./images/products/Soda2.jpg" alt="">
                             <div class="productMask"></div>
                         </div>
@@ -751,7 +807,7 @@
                         <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
+                        <div class="imgContainer">
                             <img src="./images/products/Soda3.webp" alt="">
                             <div class="productMask"></div>
                         </div>
@@ -759,7 +815,7 @@
                         <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
+                        <div class="imgContainer">
                             <img src="./images/products/en1.jpg" alt="">
                             <div class="productMask"></div>
                         </div>
@@ -767,7 +823,7 @@
                         <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
+                        <div class="imgContainer">
                             <img src="./images/products/en2.png" alt="">
                             <div class="productMask"></div>
                         </div>
@@ -775,7 +831,7 @@
                         <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
+                        <div class="imgContainer">
                             <img src="./images/products/eau1.jpg" alt="">
                             <div class="productMask"></div>
                         </div>
@@ -783,7 +839,7 @@
                         <p class="productPrice">10,00 €</p>
                     </li>
                     <li class="product">
-                        <div class="productImgContainer">
+                        <div class="imgContainer">
                             <img src="./images/products/eau2.jpg" alt="">
                             <div class="productMask"></div>
                         </div>

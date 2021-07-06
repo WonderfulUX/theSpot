@@ -204,18 +204,29 @@ header .icons {
 
 .closeIcon {
   position: absolute;
-  top: 8px;
-  right: 5px;
-  fill: #C66FD0;
+  top: 0;
+  left: 0;
+  fill: #F8F5FA;
 }
 
-.closeArea {
+.close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 0px;
   width: 40px;
   height: 40px;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.quantityIndicator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  line-height: 30px;
+  background-color: #C66FD0;
 }
 
 #ModaleLogo {
@@ -1631,7 +1642,7 @@ footer .copyright {
   width: 25%;
 }
 
-.productImgContainer {
+.imgContainer {
   position: relative;
   margin-bottom: 8px;
 }
@@ -1643,6 +1654,27 @@ footer .copyright {
   width: 160px;
   height: 160px;
   background-color: rgba(32, 0, 47, 0.3);
+}
+
+.productContainer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2px;
+  padding-bottom: 8px;
+  cursor: pointer;
+}
+
+.selectedProduct {
+  background-color: #C66FD0;
 }
 
 .productName,
@@ -2702,6 +2734,12 @@ header svg:hover,
   #CalendarContainer {
     height: 362px;
   }
+  .modaleBox {
+    width: 500px;
+  }
+  .add {
+    height: 45px;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -3078,6 +3116,18 @@ header svg:hover,
   }
   .filterLine:hover {
     background-color: transparent;
+  }
+  .modaleBox {
+    width: 320px;
+  }
+  .modaleBoxQuantityInstructions {
+    font-size: 11px;
+  }
+  .quantityValue {
+    font-size: 16px;
+  }
+  .add {
+    width: 80%;
   }
 }
 
