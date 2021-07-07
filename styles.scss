@@ -233,6 +233,13 @@ h1 {
   bottom: 5%;
   right: 5%;
   transition: filter 0.2s linear;
+  circle{
+    fill: $black;
+    stroke: $pink;
+  }
+  path{
+    fill: $pink;
+  }
 }
 //*************** EVENTS ***********
 .container,
@@ -575,6 +582,12 @@ h3 {
     margin: 0 20px;
     transition: filter 0.2s linear;
     cursor: pointer;
+  }
+  circle{
+    fill: $black;
+  }
+  path{
+    fill: $pink;
   }
 }
 
@@ -1651,11 +1664,9 @@ footer {
 
 
 //*************** HOVER EFFECTS ***********
-#NavTextLinks a:hover,
 .navItem:hover,
 header svg:hover,
 .footerLink:hover,
-.footerLink a:hover,
 .share:hover {
   color: $brightPink;
   fill: $brightPink;

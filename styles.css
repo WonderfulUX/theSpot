@@ -336,6 +336,15 @@ h1 span {
   transition: filter 0.2s linear, -webkit-filter 0.2s linear;
 }
 
+#NewsletterIcon circle {
+  fill: #09000D;
+  stroke: #C66FD0;
+}
+
+#NewsletterIcon path {
+  fill: #C66FD0;
+}
+
 .container,
 .container2 {
   margin: 0 auto;
@@ -808,6 +817,14 @@ h3::after {
   transition: filter 0.2s linear;
   transition: filter 0.2s linear, -webkit-filter 0.2s linear;
   cursor: pointer;
+}
+
+#SocialNetworksLinks circle {
+  fill: #09000D;
+}
+
+#SocialNetworksLinks path {
+  fill: #C66FD0;
 }
 
 #about {
@@ -2253,11 +2270,9 @@ footer .copyright {
   fill: #F8F5FA;
 }
 
-#NavTextLinks a:hover,
 .navItem:hover,
 header svg:hover,
 .footerLink:hover,
-.footerLink a:hover,
 .share:hover {
   color: #f480ff;
   fill: #f480ff;

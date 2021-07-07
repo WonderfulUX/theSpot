@@ -30,7 +30,7 @@ function closeModale(){
     this.parentElement.parentElement.classList.remove("modaleDisplay");
     setTimeout(()=>{
         this.parentElement.classList.remove("slide");
-        if(this.parentElement.classList.contains('modaleBox')){
+        if(this.parentElement.parentElement==modaleQuantity){
             quantityValue.innerText='1';
         }
     },300);
@@ -48,20 +48,26 @@ for(let i=0; i<closeModaleButtons.length; i++){
 
 
 // MODALE QUANTITY
-minus.addEventListener('click',()=>{
-    if(quantityValue.innerText!=0){
-        quantityValue.innerText = +quantityValue.innerText-1;
-    }
-});
+if(minus){
+    minus.addEventListener('click',()=>{
+        if(quantityValue.innerText!=0){
+            quantityValue.innerText = +quantityValue.innerText-1;
+        }
+    });
+}
 
-plus.addEventListener('click',()=>{
-    quantityValue.innerText = +quantityValue.innerText+1;
-});
+if(plus){
+    plus.addEventListener('click',()=>{
+        quantityValue.innerText = +quantityValue.innerText+1;
+    });
+}
 
 for (product of productList){
     product.addEventListener('click',setQuantityValue);
 }
-validateButton.addEventListener('click', updateQuantityIndicator);
+if(validateButton){
+    validateButton.addEventListener('click', updateQuantityIndicator);
+}
 
 
 
