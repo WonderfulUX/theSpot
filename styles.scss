@@ -2835,4 +2835,23 @@ header svg:hover,
     width: 350px;
     padding: 20px 15px;
   }
+  #InfoContactModale{
+    background-color: $purpleDark;
+  }
+  #InfoContactModale .modaleBox{
+    background-color: transparent;
+    padding: 20px 10px 0;
+    width: 100%;
+    border: none;
+  }
+
+  #InfoContactModale .closeIcon{
+    fill: $brightPink;
+  }
+  #InfoContactModale .close{
+    top: 150%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
 }

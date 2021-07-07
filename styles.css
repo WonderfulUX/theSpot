@@ -3538,5 +3538,23 @@ header svg:hover,
     width: 350px;
     padding: 20px 15px;
   }
+  #InfoContactModale {
+    background-color: #20002f;
+  }
+  #InfoContactModale .modaleBox {
+    background-color: transparent;
+    padding: 20px 10px 0;
+    width: 100%;
+    border: none;
+  }
+  #InfoContactModale .closeIcon {
+    fill: #f480ff;
+  }
+  #InfoContactModale .close {
+    top: 150%;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
