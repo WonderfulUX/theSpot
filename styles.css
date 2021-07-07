@@ -885,7 +885,7 @@ h3::after {
   font-style: normal;
 }
 
-.InfoContact > div svg {
+.InfoContact > div svg, .InfoContact > div img {
   margin-right: 10px;
 }
 
@@ -952,7 +952,6 @@ footer .footerLink {
   text-align: center;
   margin: 50px 0;
   font-size: 13px;
-  position: relative;
   cursor: pointer;
   -webkit-transition: -webkit-filter 0.2s linear;
   transition: -webkit-filter 0.2s linear;
@@ -961,13 +960,17 @@ footer .footerLink {
   color: #F8F5FA;
 }
 
-footer .footerLink:not(:first-of-type)::before {
-  content: url(./icons/dotFooter.svg);
+footer li {
+  position: relative;
+}
+
+footer svg {
   position: absolute;
   left: 50%;
   top: -130%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  fill: #C66FD0;
 }
 
 footer .copyright {
@@ -3158,7 +3161,7 @@ header svg:hover,
     background-color: transparent;
   }
   .modaleBox {
-    width: 320px;
+    width: 450px;
   }
   .modaleBoxQuantityInstructions {
     font-size: 11px;
@@ -3170,7 +3173,7 @@ header svg:hover,
     width: 80%;
   }
   .modale .InfoContact {
-    width: 300px;
+    width: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3178,9 +3181,6 @@ header svg:hover,
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -3275,6 +3275,9 @@ header svg:hover,
   }
   .InfoContact > div {
     font-size: 11px;
+  }
+  .InfoContact > div #phoneNumber {
+    margin-right: 25px;
   }
   #about .container #slogan,
   #about .container #aboutContent {
@@ -3530,6 +3533,10 @@ header svg:hover,
     right: 2px;
     -webkit-transform: scale(0.6);
             transform: scale(0.6);
+  }
+  .modaleBox {
+    width: 350px;
+    padding: 20px 15px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

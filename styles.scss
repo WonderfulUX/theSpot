@@ -632,7 +632,7 @@ h3 {
   address {
     font-style: normal;
   }
-  svg {
+  svg, img {
     margin-right: 10px;
   }
   #phoneNumber {
@@ -683,17 +683,19 @@ footer {
     text-align: center;
     margin: 50px 0;
     font-size: 13px;
-    position: relative;
     cursor: pointer;
     transition: filter 0.2s linear;
     color: $white;
-    &:not(:first-of-type)::before {
-      content: url(./icons/dotFooter.svg);
-      position: absolute;
-      left: 50%;
-      top: -130%;
-      transform: translate(-50%, -50%);
-    }
+  }
+  li{
+    position: relative;
+  }
+  svg{
+    position: absolute;
+    left: 50%;
+    top: -130%;
+    transform: translate(-50%, -50%);
+    fill: $pink;
   }
   .copyright {
     position: absolute;
@@ -2481,7 +2483,7 @@ header svg:hover,
     background-color: transparent;
   }
   .modaleBox{
-    width: 320px;
+    width: 450px;
   }
   .modaleBoxQuantityInstructions{
     font-size: 11px;
@@ -2493,10 +2495,9 @@ header svg:hover,
     width: 80%;
   }
   .modale .InfoContact{
-    width: 300px;
+    width: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
   }    
 }
 
@@ -2596,6 +2597,9 @@ header svg:hover,
   }
   .InfoContact > div {
     font-size: 11px;
+  }
+  .InfoContact > div #phoneNumber{
+    margin-right: 25px;
   }
   #about .container {
     #slogan,
@@ -2826,5 +2830,9 @@ header svg:hover,
   .filterCheckmark{
     right: 2px;
     transform: scale(0.6);
+  }
+  .modaleBox{
+    width: 350px;
+    padding: 20px 15px;
   }
 }
