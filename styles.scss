@@ -2836,7 +2836,7 @@ header svg:hover,
     padding: 20px 15px;
   }
   #InfoContactModale{
-    background-color: $purpleDark;
+    background-color: $black;
   }
   #InfoContactModale .modaleBox{
     background-color: transparent;
@@ -2849,7 +2849,7 @@ header svg:hover,
     fill: $brightPink;
   }
   #InfoContactModale .close{
-    top: 150%;
+    top: 120%;
     right: 50%;
     transform: translateX(50%);
   }
