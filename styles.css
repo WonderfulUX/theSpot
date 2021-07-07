@@ -3539,11 +3539,11 @@ header svg:hover,
     padding: 20px 15px;
   }
   #InfoContactModale {
-    background-color: #20002f;
+    background-color: #09000D;
   }
   #InfoContactModale .modaleBox {
     background-color: transparent;
-    padding: 20px 10px 0;
+    padding: 0 10px;
     width: 100%;
     border: none;
   }
@@ -3551,7 +3551,7 @@ header svg:hover,
     fill: #f480ff;
   }
   #InfoContactModale .close {
-    top: 150%;
+    top: 140%;
     right: 50%;
     -webkit-transform: translateX(50%);
             transform: translateX(50%);
