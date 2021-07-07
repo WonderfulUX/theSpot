@@ -52,17 +52,15 @@ minus.addEventListener('click',()=>{
     if(quantityValue.innerText!=0){
         quantityValue.innerText = +quantityValue.innerText-1;
     }
-})
+});
+
 plus.addEventListener('click',()=>{
     quantityValue.innerText = +quantityValue.innerText+1;
-})
-
-
+});
 
 for (product of productList){
     product.addEventListener('click',setQuantityValue);
 }
-
 validateButton.addEventListener('click', updateQuantityIndicator);
 
 
