@@ -2762,6 +2762,9 @@ header svg:hover,
   .add {
     height: 45px;
   }
+  #ModaleLogo {
+    height: 35px;
+  }
 }
 
 @media screen and (max-width: 750px) {

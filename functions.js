@@ -1,7 +1,6 @@
 
 const mobileMenuBlock = document.getElementById('NavTextLinksContainer'),
       mobileMenuButton = document.getElementById('MobileMenuButton'),
-      menuLines = document.querySelectorAll('.menuLine'),
       closeModaleButtons = document.querySelectorAll('.close'),
       contactNavButton = document.querySelectorAll('.contact'),
       modaleContact = document.getElementById('InfoContactModale'),
@@ -9,13 +8,11 @@ const mobileMenuBlock = document.getElementById('NavTextLinksContainer'),
       plus = document.getElementById('PlusButton'),
       productList = document.querySelectorAll('.productContainer'),
       modaleQuantity = document.getElementById('ModaleQuantity'),
-      modaleBox = document.getElementById('closeMenu'),
       validateButton = document.getElementById('ValidateQuantity');
 
 
-let temporaryValue,
-    temporaryElement,
-    quantityValue = document.querySelector('.quantityValue') ;
+let quantityValue = document.querySelector('.quantityValue'),
+    selectedProduct;
 
 //MOBILE MENU
 mobileMenuButton.addEventListener('click', ()=>{
@@ -54,49 +51,51 @@ for(let i=0; i<closeModaleButtons.length; i++){
 minus.addEventListener('click',()=>{
     if(quantityValue.innerText!=0){
         quantityValue.innerText = +quantityValue.innerText-1;
-        temporaryValue = +quantityValue.innerTex;
     }
 })
 plus.addEventListener('click',()=>{
     quantityValue.innerText = +quantityValue.innerText+1;
-    temporaryValue = +quantityValue.innerText;
 })
 
 
+
 for (product of productList){
-        product.addEventListener('click',()=>{
-            modaleQuantity.classList.add('modaleDisplay');
-        });
+    product.addEventListener('click',setQuantityValue);
+}
+
+validateButton.addEventListener('click', updateQuantityIndicator);
+
+
+
+function setQuantityValue(){
+    modaleQuantity.classList.add('modaleDisplay');
+    selectedProduct= this;
+    if(!selectedProduct.querySelector('.quantityIndicator')){
+        quantityValue.innerText='1';
+        console.log("New assignment");
     }
+    else{
+        console.log("Update");
+        quantityValue.innerText=selectedProduct.querySelector('.quantityIndicator').innerText;
+    }
+}
 
-
-// for (product of productList){
-//     product.addEventListener('click',changeQuantity);
-// }
-
-
-// function changeQuantity(e){
-//     console.log(e.target);
-//     elementSelection(e.target);
-//     updateQuantity();
-// }
-
-// function elementSelection(){
-//     console.log('selection');
-//     console.log(this);
-//     temporaryElement = product;
-//     quantityValue = product.querySelector('.quantityIndicator').innerText;
-//     console.log(temporaryElement);
-//     console.log(quantityValue);
-// }
-
-// function updateQuantity(){
-//     console.log('update');
-//     modaleQuantity.classList.add('modaleDisplay');
-//     validateButton.addEventListener('click',(element)=>{
-//         console.log('click');
-//         element.innerText = temporaryValue;
-//         console.log(element);
-//     });
-// }
-
+function updateQuantityIndicator(e){
+    e.stopImmediatePropagation();
+    let newValue;
+    if(selectedProduct.querySelector('.quantityIndicator')){
+        selectedProduct.querySelector('.quantityIndicator').innerText=quantityValue.innerText;
+    }
+    else{
+        newValue = document.createElement('div');
+        newValue.classList.add('quantityIndicator');
+        newValue.innerText = quantityValue.innerText;
+        selectedProduct.appendChild(newValue );
+    }
+    selectedProduct.classList.add('selectedProduct');
+    if(quantityValue.innerText=='0'){
+        selectedProduct.querySelector('.quantityIndicator').remove();
+        selectedProduct.classList.remove('selectedProduct');
+    }
+    modaleQuantity.classList.remove('modaleDisplay');
+}

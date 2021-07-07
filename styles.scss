@@ -2111,7 +2111,9 @@ header svg:hover,
   .add{
     height: 45px;
   }
-
+  #ModaleLogo{
+    height: 35px;
+  }
 }
 
 //*************** BREAKPOINT 750PX ***********
@@ -2484,7 +2486,7 @@ header svg:hover,
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+  }    
 }
 
 //*************** BREAKPOINT 600PX ***********
